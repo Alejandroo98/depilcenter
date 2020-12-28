@@ -1,0 +1,154 @@
+/* .ul-nav {
+  margin-left: auto;
+} */
+
+.navbar {
+  background-color: #f6e1eb;
+}
+
+.nav-item {
+  margin: 0 20px 0 20px;
+}
+
+.cajaPrincipal {
+  display: flex;
+  height: 850px;
+  background-color: #f6e1eb;
+}
+
+.reservas-caja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex-grow: 3;
+}
+
+.reservas-caja input {
+  border: none;
+  border-radius: 8px;
+}
+
+.reservar-boton {
+  display: flex;
+  justify-content: center;
+}
+
+.cajaDatos-caja {
+  margin-top: -180px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#tituloDepilPro {
+  /* background-color: #a0004d; */
+  animation: depilPro 1s;
+  animation-timing-function: ease-in;
+  opacity: 1;
+  animation-direction: reverse;
+}
+
+@keyframes depilPro {
+  100% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+}
+
+#tituloDepilPro h3 {
+  font-family: 'Poiret One', cursive;
+  font-size: 100px;
+  line-height: 80px;
+  color: #ce327d;
+}
+
+.background-mujer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.background-mujer img {
+  max-width: 900px;
+  margin-left: 2rem;
+  animation: foto-mujer 0.9s;
+  animation-direction: reverse;
+  animation-timing-function: ease-in-out;
+  /* flex-grow: 1; */
+}
+
+@keyframes foto-mujer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.agendarCita {
+  text-decoration: none;
+  color: white;
+  border: none;
+  margin-top: 200px;
+  padding: 10px 20px 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ce327d;
+}
+
+.agendarCita:hover {
+  color: #ce327d;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 2px #ce327d;
+  font-weight: 600;
+}
+
+.conocenos {
+  text-decoration: none;
+  color: #ce327d;
+  /* border: 2px solid #ce327d; */
+  box-shadow: inset 0 0 0 2px #ce327d;
+  margin-top: 200px;
+  padding: 10px 20px 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.conocenos:hover {
+  text-decoration: none;
+  color: #a0004d;
+  box-shadow: inset 0 0 0 2px #a0004d;
+}
+
+.cajaDatos-caja p {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  color: #a0004d;
+}
+
+.cajaDatos-caja img {
+  width: 200px;
+}
+
+.cajaDatos-caja span {
+  font-size: 21px;
+  font-weight: 600;
+  font-family: 'Poiret One', cursive;
+}
+
+#linkAgendar {
+  animation: botonesAgendar 1.5s;
+  opacity: 1;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+
+@keyframes botonesAgendar {
+  100% {
+    opacity: 0;
+  }
+}
+
+.pintarNav {
+  border-bottom: 2px solid #a0004d;
+}
