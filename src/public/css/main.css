@@ -1,9 +1,16 @@
 /* .ul-nav {
   margin-left: auto;
 } */
+:root {
+  --colorFondo: #f6e1eb;
+}
 
 .navbar {
   background-color: #f6e1eb;
+}
+
+body {
+  background-color: var(--colorFondo);
 }
 
 .nav-item {
@@ -12,8 +19,7 @@
 
 .cajaPrincipal {
   display: flex;
-  height: 850px;
-  background-color: #f6e1eb;
+  /* height: 500px; */
 }
 
 .reservas-caja {
@@ -35,7 +41,7 @@
 }
 
 .cajaDatos-caja {
-  margin-top: -180px;
+  /* margin-top: -150px; */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -151,4 +157,19 @@
 
 .pintarNav {
   border-bottom: 2px solid #a0004d;
+}
+
+@media (max-width: 993px) {
+  .background-mujer {
+    display: none;
+  }
+
+  .reservas-caja {
+    align-items: center;
+  }
+
+  #tituloDepilPro h3 {
+    font-size: 75px;
+    line-height: 70px;
+  }
 }
