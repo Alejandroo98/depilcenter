@@ -24,15 +24,16 @@ class ajustarPantalla {
   constructor(anchura, altura) {
     this.anchura = anchura;
     this.altura = altura;
+    this.ajustarAltura = 8;
     this.pantallaTam();
     this.cargarPagina();
   }
 
   cargarPagina() {
     var cajaContendor = document.querySelector('.cajaPrincipal');
-    let ajustarAltura = this.altura - 58;
+    let ajustarAltura = this.altura - this.ajustarAltura;
     cajaContendor.style.height = ajustarAltura + 'px';
-    cajaContendor.style.width = this.anchura + 'px';
+    // cajaContendor.style.width = this.anchura + 'px';
   }
 
   pantallaTam() {
@@ -43,10 +44,43 @@ class ajustarPantalla {
 
   cambiarAtri(anchura, altura) {
     var cajaContendor = document.querySelector('.cajaPrincipal');
-    let ajustarAltura = altura - 58;
+    let ajustarAltura = altura - this.ajustarAltura;
     cajaContendor.style.height = ajustarAltura + 'px';
-    cajaContendor.style.width = anchura + 'px';
+    // cajaContendor.style.width = anchura + 'px';
   }
 }
 
 let activarClasss = new ajustarPantalla(tamVentana()[0], tamVentana()[1]);
+
+/* Lo que hace esto es crear una caja del tamaño de la caja de arriba luego  escrolea la pantalla y muestra sus elementos. Calculamos el tamaño del div  */
+class ajustarPantallaReserva {
+  constructor() {
+    this.div = document.querySelector('.cajaPrincipal');
+    this.cajaReserva = document.querySelector('.cajaMainReservar');
+    this.alturaDiv = this.div.clientHeight;
+    this.anchuraDiv = this.div.clientWidth;
+    this.scroll();
+  }
+
+  tamDiv() {
+    let tamPantalla = `${this.alturaDiv}`;
+    this.cajaReserva.style.height = `${this.alturaDiv}px`;
+    this.ocultarMostrarReserva();
+    return tamPantalla;
+  }
+
+  scroll() {
+    window.scroll({
+      top: this.tamDiv() + 15,
+      behavior: 'smooth',
+    });
+  }
+
+  ocultarMostrarReserva() {
+    this.cajaReserva.style.display = 'flex';
+  }
+}
+
+document.querySelector('.agendarCita').addEventListener('click', () => {
+  let activarClassReserva = new ajustarPantallaReserva();
+});

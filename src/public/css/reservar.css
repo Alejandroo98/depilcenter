@@ -1,0 +1,94 @@
+:root {
+  --colorFondo: #f6e1eb;
+  --colorInputs: #ec99c1;
+  --bordes: #a0004d;
+  --rosaFuerte: #a0004d;
+}
+
+.cajaMainReservar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.cajaSegundaReservar {
+  border: 3px solid var(--bordes);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cajaDatosLocalesServicios :nth-child(1) {
+  display: inline-block;
+}
+
+.cajaDatosLocalesServicios :nth-child(2) {
+  display: inline-block;
+}
+
+.cajaDatosLocalesServicios .locales select {
+  display: block;
+}
+
+.cajaDatosLocalesServicios .serviciosSelect select {
+  display: block;
+}
+
+.cajaDatosLocalesServicios select {
+  border: 2px solid var(--bordes);
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  color: var(--bordes);
+}
+
+.reserva {
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+}
+
+.cajaSegundaReservar {
+  padding: 50px;
+}
+
+.cajaDatosHoraFecha input {
+  width: 200px;
+  height: 35px;
+  border: 2px solid var(--bordes);
+  border-radius: 5px;
+  color: var(--bordes);
+}
+
+.cajaDatosHoraFecha :nth-child(1) {
+  display: inline-block;
+}
+
+.cajaDatosHoraFecha :nth-child(2) {
+  display: inline-block;
+}
+
+.cajaDatosHoraFecha .hora input {
+  display: block;
+}
+
+.cajaDatosHoraFecha .fecha input {
+  display: block;
+}
+
+.locales label {
+  margin: 15px 25px;
+}
+
+.serviciosSelect label {
+  margin: 15px 25px;
+}
+
+.hora label {
+  margin: 15px 25px;
+}
+
+.fecha label {
+  margin: 15px 25px;
+}

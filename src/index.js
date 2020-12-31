@@ -20,7 +20,7 @@ app.use(express.static(path.resolve(__dirname, './public')));
 hbs.registerPartials(__dirname + '/partials');
 app.set('view engine', 'hbs');
 app.set('views', path.resolve(__dirname, 'public/views'));
-// app.engine('hbs', engine); //Aqui lo creamos
+app.engine('css', engine); //Aqui lo creamos
 
 //middlewares => Son funciones que se ejecutan antes de que pasen a las rutas
 

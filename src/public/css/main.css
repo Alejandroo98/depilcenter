@@ -6,11 +6,11 @@
 }
 
 .navbar {
-  background-color: #f6e1eb;
-}
-
-body {
   background-color: var(--colorFondo);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .nav-item {
@@ -19,15 +19,26 @@ body {
 
 .cajaPrincipal {
   display: flex;
-  /* height: 500px; */
+  background: var(--colorFondo);
+  /* background-color: #ce327d; */
+  width: 100%;
+  overflow: hidden;
 }
 
 .reservas-caja {
   display: flex;
+  /* background-color: #a0004d; */
   flex-direction: column;
+  top: -100px;
   justify-content: center;
   align-items: flex-end;
   flex-grow: 3;
+}
+
+.reservas-caja div:only-of-type {
+  position: relative;
+  top: -100px;
+  /* background-color: aqua; */
 }
 
 .reservas-caja input {
@@ -41,14 +52,13 @@ body {
 }
 
 .cajaDatos-caja {
-  /* margin-top: -150px; */
   display: flex;
   flex-direction: column;
+  /* background-color: #ce327d; */
   text-align: center;
 }
 
 #tituloDepilPro {
-  /* background-color: #a0004d; */
   animation: depilPro 1s;
   animation-timing-function: ease-in;
   opacity: 1;
@@ -70,7 +80,6 @@ body {
 }
 
 .background-mujer {
-  overflow: hidden;
   display: flex;
   align-items: center;
   flex-grow: 1;
@@ -159,17 +168,33 @@ body {
   border-bottom: 2px solid #a0004d;
 }
 
+@media (max-width: 1485px) {
+  #tituloDepilPro h3 {
+    margin-left: 50px;
+  }
+}
+
 @media (max-width: 993px) {
   .background-mujer {
     display: none;
   }
 
   .reservas-caja {
+    /* position: relative; */
     align-items: center;
+    justify-content: center;
+    /* background-color: #a0004d; */
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    box-shadow: 5px 5px 5px rgba(5, 5, 5, 0.1);
   }
 
   #tituloDepilPro h3 {
-    font-size: 75px;
+    margin-left: auto;
+    font-size: 65px;
     line-height: 70px;
   }
 }
