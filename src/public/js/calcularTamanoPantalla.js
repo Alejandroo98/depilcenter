@@ -56,7 +56,9 @@ let activarClasss = new ajustarPantalla(tamVentana()[0], tamVentana()[1]);
 class ajustarPantallaReserva {
   constructor() {
     this.div = document.querySelector('.cajaPrincipal');
-    this.cajaReserva = document.querySelector('.cajaMainReservar');
+    this.cajaReserva = document.querySelector('.reservarHBS');
+    this.cajaSegundaReservar = document.querySelector('.cajaSegundaReservar');
+    this.cajaMainReservar = document.querySelector('.cajaMainReservar');
     this.alturaDiv = this.div.clientHeight;
     this.anchuraDiv = this.div.clientWidth;
     this.scroll();
@@ -77,7 +79,7 @@ class ajustarPantallaReserva {
   }
 
   ocultarMostrarReserva() {
-    this.cajaReserva.style.display = 'flex';
+    this.cajaMainReservar.style.display = 'flex';
   }
 }
 

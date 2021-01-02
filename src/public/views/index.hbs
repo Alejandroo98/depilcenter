@@ -2,23 +2,21 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+    <title>DepilCenter</title>
+    <link rel="icon" href="../img/quito.png">
+    <meta name="description" content="" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/reservar.css" />
-    <meta name="description" content="" />
-    <title>DepilCenter</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
@@ -41,7 +39,7 @@
                       
                         <div id="linkAgendar" >
                           
-                        <a class="agendarCita"  onClick="scroll(0, 100);" >AGENDAR CITA</a>
+                        <a class="agendarCita">AGENDAR CITA</a>
                         <a class="conocenos" >CONÓCENOS</a>
                         </div>
                         
@@ -56,7 +54,19 @@
               </div>
       </section>
       <section  class="reservarHBS">
+
+    <form  id="registrarReserva"  method="POST">
+        
+        <div  class="reservarBox">
         {{>  reservar }}
+        </div>
+
+        <div class="datosReservaBox">
+          {{> datosReserva   }}
+        </div>
+
+    </form>
+        
       </section>
       
     </main>

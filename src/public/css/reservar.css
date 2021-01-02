@@ -92,3 +92,44 @@
 .fecha label {
   margin: 15px 25px;
 }
+
+.reservarHBS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservarBox {
+  background-color: aqua;
+}
+
+.datosReservaBox {
+  background-color: brown;
+}
+
+.datoNombres {
+  display: inline;
+}
+.datoEmail {
+  display: inline;
+}
+.datoNum {
+  display: inline;
+}
+
+.cajaMainDatos {
+  text-align: center;
+}
+
+.cajaMainDatos button {
+  display: block;
+}
+
+.material-icons {
+  background: #a0004d;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  float: right;
+}

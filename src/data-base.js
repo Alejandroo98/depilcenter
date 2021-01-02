@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
-const { mongodb } = require('./keys');
+require('./config/config');
 
-mongoose
-  .connect(mongodb.URI, { useNewUrlParser: true, useUnifiedTopology: true }) //Lo parametors vendran del archivo keys.js
-  .then((db) => console.log('Database is connected'))
-  .catch((err) => console.error(err));
+mongoose.connect(
+  process.env.URLDB,
+  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
+  (err, res) => {
+    if (err) throw err;
+    console.log('Data base is alive in port ', process.env.URLDB);
+  }
+);
