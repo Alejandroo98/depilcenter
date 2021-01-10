@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-   <link
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
@@ -21,21 +17,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</body>
+  </head>
 
+  <body>
+      
 <header>
-  {{#if error}}
+ {{#if error}}
  <div class="ajustarAlert">
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>{{error.errOne}}</strong>&nbsp{{error.errTwo}}.
+  <strong>{{error.errOne}}</strong> &nbsp {{error.errTwo}}.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
  </div>
   {{/if}}
-   {{> navbar }}
+  
+      {{> navbar }}
 </header>
 
- <main>
+    <main>
       <section>
             <div class="cajaPrincipal"  >
 
@@ -57,9 +56,9 @@
 
                   </div>
                   
-                   <div class="background-mujer">
+                  {{!-- <div class="background-mujer">
                       <img src="../img/fondo.png" alt="">
-                  </div> 
+                  </div>  --}}
 
               </div>
       </section>

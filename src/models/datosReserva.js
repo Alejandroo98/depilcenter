@@ -18,7 +18,7 @@ let datosReservaSchema = new Schema({
   },
 
   fechaRegistro: {
-    type: Number,
+    type: String,
     required: [true, 'La fecha de registro es importante'],
   },
 });

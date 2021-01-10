@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.set('views', path.resolve(__dirname, '../public/views'));
 
-app.post('/', (req, res, next) => {
+app.post('/', async (req, res, next) => {
   let datos = req.body;
   if (
     datos.nombres === '' ||
@@ -23,6 +23,37 @@ app.post('/', (req, res, next) => {
     };
     req.flash('error', error);
     return res.redirect('/');
+  } else {
+    let horaActual = new Date();
+    let guardarHora = `${horaActual.getHours()}:${horaActual.getMinutes()}`;
+    let guardarFecha = `${horaActual.getDate()}-${
+      horaActual.getMonth() + 1
+    }-${horaActual.getUTCFullYear()}`;
+    let dateDB = `${guardarFecha} / ${guardarHora}`;
+
+    datosReservaDB = new datosReserva({
+      nombres: req.body.nombres,
+      email: req.body.email,
+      numeroTelefono: req.body.numeroCelular,
+      fechaRegistro: dateDB,
+    });
+
+    await datosReservaDB.save();
+
+    datosReserva.findOne({ email: req.body.email }, (err, emailUser) => {
+      let reserva = new Reserva({
+        idUser: emailUser.id,
+        local: req.body.locales,
+        servicio: req.body.servicios,
+        hora: req.body.hora,
+        fecha: req.body.fecha,
+        fechaRegistro: dateDB,
+      });
+
+      reserva.save();
+    });
+
+    res.send('bien');
   }
 
   next();

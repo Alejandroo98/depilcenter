@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const datosReserva = require('./datosReserva');
 
 let reservaSchema = new Schema({
   local: {
@@ -18,13 +19,18 @@ let reservaSchema = new Schema({
   },
 
   fecha: {
-    type: Number,
+    type: String,
     required: [true, 'La fecha es necesario'],
   },
 
   fechaRegistro: {
-    type: Number,
+    type: String,
     required: [true, 'La fecha de registro es importante'],
+  },
+
+  idUser: {
+    type: Schema.Types.ObjectId,
+    ref: datosReserva,
   },
 });
 

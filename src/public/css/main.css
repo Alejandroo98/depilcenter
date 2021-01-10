@@ -204,7 +204,7 @@
 
   #tituloDepilPro h3 {
     margin-left: auto;
-    /* font-size: 65px; */
+    font-size: 65px;
     line-height: 70px;
   }
 }
