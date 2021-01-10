@@ -5,11 +5,17 @@ const path = require('path'); //Sirve para unir directorios o escribir una ruta 
 const hbs = require('hbs');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+
+const app = express(); //Ejecuto express y lo gardo en una constante
+
 mongoose.set('useCreateIndex', true);
+require('./passport/passport-auth');
 require('./config/config');
 
 //Inicialicacion
-const app = express(); //Ejecuto express y lo gardo en una constante
 require('./data-base');
 // app.set('port', process.env.PORT || 3000);
 
@@ -21,12 +27,29 @@ app.use(bodyParser.json());
 //Configurarciones
 app.use(express.static(path.resolve(__dirname, './public')));
 hbs.registerPartials(__dirname + '/partials');
-app.set('view engine', 'hbs');
 app.set('views', path.resolve(__dirname, 'public/views'));
-app.engine('css', engine); //Aqui lo creamos
-app.use(require('./routes/registroReserva'));
+app.set('view engine', 'hbs');
+// app.engine('css', engine); //Aqui lo creamos
+
+app.use(
+  session({
+    secret: 'estaEsUnaClaveDePrueba',
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+app.use(flash());
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+app.use((req, res, next) => {
+  app.locals.error = req.flash('error')[0];
+  next();
+});
 
 //Routs
+app.use(require('./routes/registroReserva'));
 app.use(function (req, res, next) {
   app.use(require('./routes/index')(req.url));
   next();
