@@ -168,6 +168,14 @@
   top: 58px;
 }
 
+.planta img {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 300px;
+}
+
 @keyframes botonesAgendar {
   100% {
     opacity: 0;

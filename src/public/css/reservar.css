@@ -7,16 +7,53 @@
 
 .cajaMainReservar {
   display: none;
+  position: relative;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   /* text-align: center; */
 }
 
 .cajaSegundaReservar {
-  border: 3px solid var(--bordes);
+  /* border: 3px solid var(--bordes); */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border: 10px solid white;
+  /* background-color: rgb(253, 215, 222); */
   border-radius: 7px;
   display: flex;
   flex-direction: column;
+}
+
+.cajaMainReservarDeslizar {
+  animation: ocultarReserva 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.cajaMainReservarDeslizarDatos {
+  animation: ocultarReservaDatos 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.datosReservaBox {
+  position: absolute;
+  background-color: rgba(165, 42, 42, 0.616);
+  width: 100%;
+  height: 100%;
+  left: 100%;
+}
+
+@keyframes ocultarReservaDatos {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes ocultarReserva {
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .cajaDatosLocalesServicios :nth-child(1) {
@@ -29,14 +66,15 @@
 
 .cajaDatosLocalesServicios .locales select {
   display: block;
+  border: 1px solid rgba(0, 0, 0, 0.164);
 }
 
 .cajaDatosLocalesServicios .serviciosSelect select {
   display: block;
+  border: 1px solid rgba(0, 0, 0, 0.164);
 }
 
 .cajaDatosLocalesServicios select {
-  border: 2px solid var(--bordes);
   border-radius: 5px;
   width: 200px;
   height: 35px;
@@ -45,7 +83,6 @@
 
 .reserva {
   text-align: center;
-  font-family: 'Amatic SC', cursive;
   font-size: 25px;
 }
 
@@ -56,9 +93,15 @@
 .cajaDatosHoraFecha input {
   width: 200px;
   height: 35px;
-  border: 2px solid var(--bordes);
+  /* border: 2px solid var(--bordes); */
   border-radius: 5px;
+  border: none;
   color: var(--bordes);
+}
+
+textarea.cajaDatosHoraFecha {
+  /* border: 3px solid orangered; */
+  border: none;
 }
 
 .cajaDatosHoraFecha :nth-child(1) {
@@ -71,10 +114,12 @@
 
 .cajaDatosHoraFecha .hora input {
   display: block;
+  border: 1px solid rgba(0, 0, 0, 0.164);
 }
 
 .cajaDatosHoraFecha .fecha input {
   display: block;
+  border: 1px solid rgba(0, 0, 0, 0.164);
 }
 
 .locales label {
@@ -95,18 +140,18 @@
 
 .reservarHBS {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-image: url('../img/bacgrkound.jpg'); */
+  background-color: rgb(245, 224, 227);
+  opacity: 100px;
 }
 
-.reservarBox {
+/* .reservarBox {
   background-color: aqua;
-}
-
-.datosReservaBox {
-  background-color: brown;
-}
+} */
 
 .datoNombres {
   display: inline;
@@ -132,4 +177,8 @@
   border-radius: 50%;
   color: white;
   float: right;
+}
+
+.material-icons {
+  cursor: pointer;
 }

@@ -1,6 +1,8 @@
 var URLactual = window.location;
 let URLpintar = URLactual.pathname;
 let etiquetaPintar = document.querySelector('.inicio');
+let next = document.querySelector('.material-icons');
+
 let registrarReserva = document
   .getElementById('registrarReserva')
   .addEventListener('submit', (e) => {
@@ -14,7 +16,22 @@ if (URLpintar === '/') {
 class Reserva {
   constructor() {
     this.cajaDatos = document.querySelector('.cajaMainDatos');
+    this.deslizarDatos = document.querySelector('.cajaSegundaReservar');
+    this.datosReservaBox = document.querySelector('.datosReservaBox');
+    this.mostrarDatosClientes();
   }
 
-  mostrarCajaDatos = () => {};
+  deslizarDatosReserva = () => {
+    this.deslizarDatos.classList.add('cajaMainReservarDeslizar');
+    this.datosReservaBox.classList.add('cajaMainReservarDeslizarDatos');
+  };
+
+  mostrarDatosClientes = () => {
+    // this.mostrarDatos.style.display = 'block';
+  };
 }
+
+next.addEventListener('click', () => {
+  let newReserva = new Reserva();
+  newReserva.deslizarDatosReserva();
+});
