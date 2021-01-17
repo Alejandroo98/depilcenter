@@ -1,0 +1,47 @@
+.cajaOpciones {
+  display: flex;
+  justify-content: center;
+}
+
+.borraOpciones {
+  box-sizing: content-box;
+  max-width: 900px;
+  width: 900px;
+  position: relative;
+  top: 100px;
+}
+
+.tab-content {
+  box-sizing: content-box;
+  padding: 20px;
+  border-right: 1px solid rgb(209, 209, 209);
+  border-bottom: 1px solid rgb(209, 209, 209);
+  border-left: 1px solid rgb(209, 209, 209);
+}
+
+/* ====COTIZAR MUJER ===== */
+.cajaMainCotizarMujer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1em;
+}
+
+.cajaMainCotizarMujer > div {
+  box-sizing: content-box;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgb(240, 221, 192);
+}
+
+.cajaMainCotizarMujer > div:hover {
+  transform: scale(1.03);
+  background-color: rgb(231, 205, 165);
+}
+
+.cajaSelecionada {
+  background-color: rgb(231, 205, 165) !important;
+  transform: scale(1.03);
+}
+
+/* ====FIN COTIZAR MUJER ===== */

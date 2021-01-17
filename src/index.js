@@ -45,6 +45,7 @@ app.use(flash());
 
 app.use((req, res, next) => {
   app.locals.error = req.flash('error')[0];
+  app.locals.cotizar = req.flash('cotizar')[0];
   next();
 });
 

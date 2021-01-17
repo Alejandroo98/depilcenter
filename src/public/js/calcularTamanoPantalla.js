@@ -59,6 +59,7 @@ class ajustarPantallaReserva {
     this.cajaReserva = document.querySelector('.reservarHBS');
     this.cajaSegundaReservar = document.querySelector('.cajaSegundaReservar');
     this.cajaMainReservar = document.querySelector('.cajaMainReservar');
+    this.footer = document.querySelector('.boxFooter');
     this.alturaDiv = this.div.clientHeight;
     this.anchuraDiv = this.div.clientWidth;
     this.scroll();
@@ -76,6 +77,8 @@ class ajustarPantallaReserva {
       top: this.tamDiv() + 15,
       behavior: 'smooth',
     });
+
+    this.footer.style.display = 'flex';
   }
 
   ocultarMostrarReserva() {

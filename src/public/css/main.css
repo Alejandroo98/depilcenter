@@ -186,6 +186,30 @@
   border-bottom: 2px solid #a0004d;
 }
 
+/* =============================FOOTER=============================== */
+.boxFooter {
+  /* display: flex; */
+  justify-content: center;
+  background-color: #ce3232;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  position: absolute;
+  display: none;
+  align-items: center;
+}
+
+.boxFooter footer {
+  color: #f6e1eb;
+}
+
+/* 
+.footer {
+  position: absolute;
+  bottom: 0;
+} */
+/* ================================================================= */
+
 @media (max-width: 1485px) {
   #tituloDepilPro h3 {
     margin-left: 50px;
