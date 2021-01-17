@@ -64,6 +64,6 @@ app.use(function (req, res, next) {
 //DB
 
 //Empezando el servidor
-app.listen(process.env.PORT, () => {
+server.listen(process.env.PORT, () => {
   console.log('Puerto conectado en ', process.env.PORT);
 });

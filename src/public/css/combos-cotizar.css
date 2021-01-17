@@ -22,21 +22,49 @@
 /* ====COTIZAR MUJER ===== */
 .cajaMainCotizarMujer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(1, -1);
+  /* grid-template-rows: repeat(15, auto); */
   gap: 1em;
 }
 
-.cajaMainCotizarMujer > div {
-  box-sizing: content-box;
-  border-radius: 10px;
-  padding: 1rem;
-  background-color: rgb(240, 221, 192);
+.cajaCotizarCorporal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
 }
 
-.cajaMainCotizarMujer > div:hover {
-  transform: scale(1.03);
-  background-color: rgb(231, 205, 165);
+.cajaCotizarCorporal > div {
+  background-color: coral;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.cajaCotizarFacial {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.cajaCotizarFacial > div {
+  background-color: cornflowerblue;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.nombreCotizarCorporal {
+  grid-column: 1/-1;
+}
+
+.nombreCotizarFacial {
+  grid-column: 1/-1;
+}
+
+.totalCotizarCorporalFacial {
+  padding: 1em;
+  background-color: crimson;
+  border-radius: 10px;
+  color: #fff;
 }
 
 .cajaSelecionada {

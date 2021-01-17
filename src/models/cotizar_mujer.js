@@ -1,4 +1,4 @@
-const mongoose = require('moongose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let datosCotizarMujer = new Schema({
@@ -6,13 +6,17 @@ let datosCotizarMujer = new Schema({
     type: String,
   },
 
-  precioindividual: {
+  precioIndividual: {
     type: String,
   },
 
   precioCombo: {
     type: String,
   },
+
+  tipo: {
+    type: String,
+  },
 });
 
-module.exports = mongoose.model('cotizarMujer', datosCotizarMujer);
+module.exports = mongoose.model('cotizarmujeres', datosCotizarMujer);
