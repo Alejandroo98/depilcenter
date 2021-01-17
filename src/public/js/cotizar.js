@@ -1,3 +1,4 @@
+let socket = io();
 let etiquetaPintar = document.querySelector('.cotizar');
 var URLactual = window.location;
 let URLpintar = URLactual.pathname;

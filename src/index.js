@@ -8,8 +8,13 @@ const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
-
 const app = express(); //Ejecuto express y lo gardo en una constante
+const http = require('http');
+const server = http.createServer(app);
+const socketIo = require('socket.io');
+
+module.exports.io = socketIo(server);
+require('./socket/socket_servidor');
 
 mongoose.set('useCreateIndex', true);
 require('./passport/passport-auth');
