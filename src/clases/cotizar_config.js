@@ -35,6 +35,7 @@ class CotizarMujer {
     this.mayor = 0;
     this.guardarMayor = [];
     this.precioFijo = '';
+    this.precioSoloCombo = 0;
     // this.buscarDatos();
   };
 
@@ -55,16 +56,16 @@ class CotizarMujer {
       this.suma.splice(posicionELiminar, 1);
       restarPrecio = this.guardarMayor.indexOf(comprovar[0].precioIndividual);
       this.guardarMayor.splice(restarPrecio, 1);
-      this.sumarTotal();
       this.actualizarNumeroMayor();
+      this.sumarTotal();
     } else {
       this.suma.push({
         precioCombo: precioCombo.precioCombo,
         id,
         precioIndividual: precioCombo.precioIndividual,
       });
-      this.sumarTotal();
       this.guardarMayorPrecio(precioCombo.precioIndividual);
+      this.sumarTotal();
       // console.log(this.suma, 'suma');
     }
 
@@ -96,11 +97,29 @@ class CotizarMujer {
   };
 
   sumarTotal = () => {
-    this.totalPAgar = 0;
-    this.suma.forEach((x) => {
-      let X = Number(x.precio);
-      this.totalPAgar += X;
+    let precioMasAlto = this.precioFijo[0];
+    let eliminarPrecioAltoById = this.suma.filter((x) => {
+      return x.id != precioMasAlto.id;
     });
+
+    // console.log(eliminarPrecioAltoById);
+    // console.log(this.suma);
+    // this.suma.filter()
+
+    this.precioSoloCombo = 0;
+    this.totalPAgar = 0;
+    eliminarPrecioAltoById.forEach((x) => {
+      let X = Number(x.precioCombo);
+      this.precioSoloCombo += X;
+    });
+
+    if (this.precioFijo[0] != undefined) {
+      this.totalPAgar =
+        parseInt(this.precioFijo[0].precioIndividual) +
+        parseInt(this.precioSoloCombo);
+    } else {
+      this.totalPAgar = 0;
+    }
   };
 }
 

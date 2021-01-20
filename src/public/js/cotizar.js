@@ -17,28 +17,9 @@ socket.on('connect', () => {
 
 /* ==================PRECIOS COMBO======================== */
 
-// let cantidad = [];
-// class indivicualCombo {
-
-//   constructor( can ){
-
-//     this.cantidad = can;
-
-//   }
-
-//   comboIndividual = ( id ) => {
-
-//     this.cantidad.push( id )
-//     return this.cantidad
-//   }
-
-// }
-
 document
   .querySelector('.cajaCotizarCorporal')
   .addEventListener('click', (e) => {
-    // let newIndComb = new comboIndividual( cantidad )
-
     if (e.target.id != '') {
       socket.on('preciosCombosCorporal', (dataDBB) => {
         let dataDB = dataDBB.filterCorporal;
@@ -62,19 +43,6 @@ document
     }
   });
 
-// document
-//   .querySelector('.cajaCotizarCorporal')
-//   .addEventListener('click', (e) => {
-//     if (e.target.id != '') {
-//       socket.emit('preciosCombosCorporalUnico', e.target.id, function (dataDB) {
-//         for (let i = 0; i < dataDB.length; i++) {
-//           document.querySelector(`.a${dataDB[i]._id}`).innerHTML =
-//             dataDB[i].precioCombo;
-//         }
-//       });
-//     }
-//   });
-
 /* ==================FIN PRECIOS COMBO======================== */
 
 let etiquetaPintar = document.querySelector('.cotizar');
@@ -96,10 +64,10 @@ class Cotizar {
 
   pintarDespintar = (corporal) => {
     this.toggle(corporal.id);
-    socket.emit('sumarValores', corporal.id, function (corporal) {
+    socket.emit('sumarValores', corporal.id, function (precioCorporal) {
       document.querySelector(
         '.totalCotizarCorporalFacial'
-      ).innerHTML = `Total : ${corporal}`;
+      ).innerHTML = `Total : ${precioCorporal}`;
     });
   };
 

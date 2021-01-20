@@ -52,7 +52,6 @@ io.on('connection', (cliente) => {
 
     if (precioDB.cantidad != 0) {
       let numeroMayor = precioDB.precioMayor[0];
-      console.log(numeroMayor.id);
       let filterCorporalMayor = filterCorporal.filter((x) => {
         return numeroMayor.id != x.id;
       });
