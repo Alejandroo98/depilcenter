@@ -42,10 +42,15 @@ document
     if (e.target.id != '') {
       socket.on('preciosCombosCorporal', (dataDBB) => {
         let dataDB = dataDBB.filterCorporal;
+        let dataBDCombo = dataDBB.filterCorporalMayor;
         if (dataDBB.val === true) {
-          for (let i = 0; i < dataDB.length; i++) {
-            document.querySelector(`.a${dataDB[i]._id}`).innerHTML =
-              dataDB[i].precioCombo;
+          let numeroNoPRomo = dataDBB.numeroMayor;
+          document.querySelector(`.a${numeroNoPRomo.id}`).innerHTML =
+            numeroNoPRomo.precioIndividual;
+
+          for (let i = 0; i < dataBDCombo.length; i++) {
+            document.querySelector(`.a${dataBDCombo[i]._id}`).innerHTML =
+              dataBDCombo[i].precioCombo;
           }
         } else if (dataDBB.val === false) {
           for (let i = 0; i < dataDB.length; i++) {

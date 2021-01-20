@@ -48,13 +48,19 @@ io.on('connection', (cliente) => {
 
   cliente.on('sumarValores', async (id, callback) => {
     let precioDB = await imprimirCotizarMujer.buscarPrecioId(id);
-    console.log(precioDB.precioMayor[0], 'bieeeeeeeeeen');
     let filterCorporal = datosDB[0].corporalDB;
 
     if (precioDB.cantidad != 0) {
+      let numeroMayor = precioDB.precioMayor[0];
+      console.log(numeroMayor.id);
+      let filterCorporalMayor = filterCorporal.filter((x) => {
+        return numeroMayor.id != x.id;
+      });
+
       cliente.emit('preciosCombosCorporal', {
-        filterCorporal,
+        filterCorporalMayor: filterCorporalMayor,
         val: true,
+        numeroMayor,
       });
     } else {
       cliente.emit('preciosCombosCorporal', {
