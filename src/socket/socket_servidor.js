@@ -3,8 +3,6 @@ const { io } = require('../index');
 io.on('connection', (cliente) => {
   /* ===============DATOS IMPORTANTES================= */
   const { CotizarMujer } = require('../clases/cotizar_config');
-  const corporal = [];
-  const facial = [];
   let corporalBaseDatos = [];
   let facialBaseDatos = [];
   const sumaTotal = [];
@@ -12,13 +10,7 @@ io.on('connection', (cliente) => {
   let datosDB = [];
   let guardarMayor = [];
 
-  imprimirCotizarMujer = new CotizarMujer(
-    corporal,
-    facial,
-    cotizar,
-    guardarMayor,
-    sumaTotal
-  );
+  imprimirCotizarMujer = new CotizarMujer(cotizar, guardarMayor, sumaTotal);
   /* ===============FIN DATOS IMPORTANTES================= */
 
   console.log('usuario nuevo conectado');
@@ -46,7 +38,7 @@ io.on('connection', (cliente) => {
     await callback(corporalBaseDatos, facialBaseDatos);
   });
 
-  cliente.on('sumarValores', async (id, callback) => {
+  cliente.on('sumarValoresMujerCorporal', async (id, callback) => {
     let precioDB = await imprimirCotizarMujer.buscarPrecioId(id);
     let filterCorporal = datosDB[0].corporalDB;
 
@@ -56,30 +48,31 @@ io.on('connection', (cliente) => {
         return numeroMayor.id != x.id;
       });
 
-      cliente.emit('preciosCombosCorporal', {
-        filterCorporalMayor: filterCorporalMayor,
-        val: true,
-        numeroMayor,
-      });
+      callback(filterCorporalMayor, true, numeroMayor);
     } else {
-      cliente.emit('preciosCombosCorporal', {
-        filterCorporal,
-        val: false,
-      });
+      callback(filterCorporal, false);
     }
 
-    callback(precioDB.totalPagar);
+    // callback(precioDB.totalPagar);
   });
 
-  // cliente.on('preciosCombosCorporalUnico', (data, callback) => {
-  //   /* Aqui lo que aremos es con filter es trare todos los datos que sena diferentes al id que me envian y solo a esos les bajare el precio */
-  //   let filterCorporal = datosDB[0].corporalDB;
-  //   let dbCorporal = filterCorporal.filter((x) => {
-  //     return x._id != data;
-  //   });
+  cliente.on('sumarValoresMujerFacial', async (id, callback) => {
+    let precioDB = await imprimirCotizarMujer.buscarPrecioIdFacial(id);
+    let filterFacial = datosDB[0].facialDB;
 
-  //   callback(dbCorporal);
-  // });
+    if (precioDB.cantidad != 0) {
+      let numeroMayor = precioDB.precioMayor[0];
+      let filterCorporalMayor = filterCorporal.filter((x) => {
+        return numeroMayor.id != x.id;
+      });
+
+      callback(filterCorporalMayor, true, numeroMayor);
+    } else {
+      callback(filterCorporal, false);
+    }
+
+    // callback(precioDB.totalPagar);
+  });
 
   cliente.on('disconnect', () => {
     eliminarDatos();

@@ -17,31 +17,14 @@ socket.on('connect', () => {
 
 /* ==================PRECIOS COMBO======================== */
 
-document
-  .querySelector('.cajaCotizarCorporal')
-  .addEventListener('click', (e) => {
-    if (e.target.id != '') {
-      socket.on('preciosCombosCorporal', (dataDBB) => {
-        let dataDB = dataDBB.filterCorporal;
-        let dataBDCombo = dataDBB.filterCorporalMayor;
-        if (dataDBB.val === true) {
-          let numeroNoPRomo = dataDBB.numeroMayor;
-          document.querySelector(`.a${numeroNoPRomo.id}`).innerHTML =
-            numeroNoPRomo.precioIndividual;
+/* ==================IMPRIMIR PRECIO FINAL DE LA COTIZACION======================== */
+socket.on('imprimirTotalCotizacioMujer', (valorTotal) => {
+  document.querySelector(
+    '.totalCotizarCorporalFacial'
+  ).innerHTML = `Total : ${valorTotal}`;
+});
 
-          for (let i = 0; i < dataBDCombo.length; i++) {
-            document.querySelector(`.a${dataBDCombo[i]._id}`).innerHTML =
-              dataBDCombo[i].precioCombo;
-          }
-        } else if (dataDBB.val === false) {
-          for (let i = 0; i < dataDB.length; i++) {
-            document.querySelector(`.a${dataDB[i]._id}`).innerHTML =
-              dataDB[i].precioIndividual;
-          }
-        }
-      });
-    }
-  });
+/* ==================FIN IMPRIMIR PRECIO FINAL DE LA COTIZACION======================== */
 
 /* ==================FIN PRECIOS COMBO======================== */
 
@@ -54,34 +37,79 @@ if (URLpintar === '/cotizar-combos') {
 
 // ================COTIZAR PRECIO=================
 let cajaMainCotizarMujer = document.querySelector('.cajaMainCotizarMujer');
+let cajaCotizarCorporal = document.querySelector('.cajaCotizarCorporal');
+let cajaCotizarFacial = document.querySelector('.cajaCotizarFacial');
 let preciosPagar = [0];
 let sumador = 0;
 
 class Cotizar {
-  constructor() {
+  constructor(idCaja) {
     this.totalPAgar = 0;
+    this.idCaja = idCaja;
+    this.pintarDespintar(idCaja);
   }
 
-  pintarDespintar = (corporal) => {
-    this.toggle(corporal.id);
-    socket.emit('sumarValores', corporal.id, function (precioCorporal) {
-      document.querySelector(
-        '.totalCotizarCorporalFacial'
-      ).innerHTML = `Total : ${precioCorporal}`;
-    });
+  totalCotizarMujerCorporal = () => {
+    socket.emit(
+      'sumarValoresMujerCorporal',
+      this.idCaja,
+      function (dataCorporal, bool, numeroMayor) {
+        if (bool === true) {
+          document.querySelector(`.a${numeroMayor.id}`).innerHTML =
+            numeroMayor.precioIndividual;
+
+          for (let i = 0; i < dataCorporal.length; i++) {
+            document.querySelector(`.a${dataCorporal[i]._id}`).innerHTML =
+              dataCorporal[i].precioCombo;
+          }
+        } else if (bool === false) {
+          for (let i = 0; i < dataCorporal.length; i++) {
+            document.querySelector(`.a${dataCorporal[i]._id}`).innerHTML =
+              dataCorporal[i].precioIndividual;
+          }
+        }
+      }
+    );
   };
 
-  toggle = (id) => {
+  totalCotizarMujerFacial = () => {
+    socket.emit(
+      'sumarValoresMujerFacial',
+      this.idCaja,
+      function (dataFacial, bool, numeroMayor) {
+        if (bool === true) {
+          document.querySelector(`.a${numeroMayor.id}`).innerHTML =
+            numeroMayor.precioIndividual;
+
+          for (let i = 0; i < dataFacial.length; i++) {
+            document.querySelector(`.a${dataFacial[i]._id}`).innerHTML =
+              dataFacial[i].precioCombo;
+          }
+        } else if (bool === false) {
+          for (let i = 0; i < dataFacial.length; i++) {
+            document.querySelector(`.a${dataFacial[i]._id}`).innerHTML =
+              dataCorporal[i].precioIndividual;
+          }
+        }
+      }
+    );
+  };
+
+  pintarDespintar = (id) => {
     let cajaDespintar = document.getElementById(id);
     cajaDespintar.classList.toggle('cajaSelecionada');
   };
 }
 
-cajaMainCotizarMujer.addEventListener('click', (e) => {
+cajaCotizarFacial.addEventListener('click', (e) => {
   if (e.target.id != '') {
-    let pintarCotizar = new Cotizar();
-    pintarCotizar.pintarDespintar({
-      id: e.target.id,
-    });
+    let pintarCotizar = new Cotizar(e.target.id);
+  }
+});
+
+cajaCotizarCorporal.addEventListener('click', (e) => {
+  if (e.target.id != '') {
+    let pintarCotizar = new Cotizar(e.target.id);
+    pintarCotizar.totalCotizarMujerCorporal();
   }
 });

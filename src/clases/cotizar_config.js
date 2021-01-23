@@ -2,7 +2,7 @@ const CotizarMujerDB = require('../models/cotizar_mujer');
 const Reservas = require('../models/reserva');
 
 class CotizarMujer {
-  constructor(corporal, facial, cotizar, guardarMayor, sumaTotal) {
+  constructor(cotizar, sumaTotal) {
     this.corporal = [];
     this.facial = [];
     this.suma = sumaTotal;
@@ -69,13 +69,14 @@ class CotizarMujer {
       // console.log(this.suma, 'suma');
     }
 
-    // console.log(this.arreglo);
     return {
       totalPagar: this.totalPAgar,
       cantidad: this.suma.length,
       precioMayor: this.precioFijo,
     };
   };
+
+  // buscarPrecioIdFacial = (id) =>
 
   guardarMayorPrecio = (precio) => {
     this.guardarMayor.push(precio);
@@ -101,10 +102,6 @@ class CotizarMujer {
     let eliminarPrecioAltoById = this.suma.filter((x) => {
       return x.id != precioMasAlto.id;
     });
-
-    // console.log(eliminarPrecioAltoById);
-    // console.log(this.suma);
-    // this.suma.filter()
 
     this.precioSoloCombo = 0;
     this.totalPAgar = 0;
