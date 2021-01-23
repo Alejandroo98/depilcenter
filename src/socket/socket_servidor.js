@@ -49,8 +49,10 @@ io.on('connection', (cliente) => {
       });
 
       callback(filterCorporalMayor, true, numeroMayor);
+      cliente.emit('imprimirTotalCotizacioMujer', precioDB.totalPagar);
     } else {
       callback(filterCorporal, false);
+      cliente.emit('imprimirTotalCotizacioMujer', precioDB.totalPagar);
     }
 
     // callback(precioDB.totalPagar);
@@ -67,8 +69,10 @@ io.on('connection', (cliente) => {
       });
 
       callback(filterFacialMayor, true, numeroMayor);
+      cliente.emit('imprimirTotalCotizacioMujer', precioDB.totalPagar);
     } else {
       callback(filterFacial, false);
+      cliente.emit('imprimirTotalCotizacioMujer', precioDB.totalPagar);
     }
 
     // callback(precioDB.totalPagar);

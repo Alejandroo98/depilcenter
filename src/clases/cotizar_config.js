@@ -16,6 +16,7 @@ class CotizarMujer {
     this.precioFijo = '';
     this.precioFijoFacial = '';
     this.sumaFacial = sumaTotalFacial;
+    this.finCotizacionMujer = 0;
   }
 
   buscarDatos = async () => {
@@ -45,6 +46,7 @@ class CotizarMujer {
     this.precioSoloCombo = 0;
     this.sumaFacial = [];
     this.guardarMayorFacial = [];
+    this.finCotizacionMujer = 0;
   };
 
   /* ============================================= */
@@ -80,7 +82,7 @@ class CotizarMujer {
     }
 
     return {
-      totalPagar: this.totalPAgar,
+      totalPagar: this.finCotizacionMujer,
       cantidad: this.suma.length,
       precioMayor: this.precioFijo,
     };
@@ -110,7 +112,7 @@ class CotizarMujer {
 
       this.guardarMayorFacial.splice(restarPrecio, 1);
       this.actualizarNumeroMayorFacial();
-      // this.sumarTotal();
+      this.sumarTotalFacial();
     } else {
       this.sumaFacial.push({
         precioCombo: precioCombo.precioCombo,
@@ -119,11 +121,11 @@ class CotizarMujer {
       });
 
       this.guardarMayorPrecioFacial(precioCombo.precioIndividual);
-      // this.sumarTotal();
+      this.sumarTotalFacial();
     }
 
     return {
-      totalPagar: this.totalPAgarFacial,
+      totalPagar: this.finCotizacionMujer,
       cantidad: this.sumaFacial.length,
       precioMayor: this.precioFijoFacial,
     };
@@ -172,19 +174,18 @@ class CotizarMujer {
   };
   /* ============================================ */
 
-  sumarTotal = () => {
+  sumarTotalFacial = () => {
     let precioMasAltoFacial = this.precioFijoFacial[0];
+    this.precioSoloComboFacial = 0;
+    this.totalPAgarFacial = 0;
 
     let eliminarPrecioAltoByIdFacial = this.sumaFacial.filter((x) => {
       return x.id != precioMasAltoFacial.id;
     });
 
-    this.precioSoloComboFacial = 0;
-    this.totalPAgarFacial = 0;
-
     eliminarPrecioAltoByIdFacial.forEach((x) => {
       let X = Number(x.precioCombo);
-      this.precioFijoFacial += X;
+      this.precioSoloComboFacial += X;
     });
 
     if (this.precioFijoFacial[0] != undefined) {
@@ -195,8 +196,10 @@ class CotizarMujer {
       this.totalPAgarFacial = 0;
     }
 
-    /* ============================================== */
+    this.sumarTotalCorporalFacial();
+  };
 
+  sumarTotal = () => {
     let precioMasAlto = this.precioFijo[0];
     this.precioSoloCombo = 0;
     this.totalPAgar = 0;
@@ -217,6 +220,14 @@ class CotizarMujer {
     } else {
       this.totalPAgar = 0;
     }
+
+    this.sumarTotalCorporalFacial();
+  };
+
+  sumarTotalCorporalFacial = () => {
+    let sumaTotalCotizacionCorporalFacialMujer =
+      parseInt(this.totalPAgar) + parseInt(this.totalPAgarFacial);
+    this.finCotizacionMujer = sumaTotalCotizacionCorporalFacialMujer;
   };
 }
 

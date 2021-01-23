@@ -77,8 +77,6 @@ class Cotizar {
       'sumarValoresMujerFacial',
       this.idCaja,
       function (dataFacial, bool, numeroMayor) {
-        console.log(numeroMayor);
-
         if (bool === true) {
           document.querySelector(`.a${numeroMayor.id}`).innerHTML =
             numeroMayor.precioIndividual;
