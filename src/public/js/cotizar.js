@@ -77,6 +77,8 @@ class Cotizar {
       'sumarValoresMujerFacial',
       this.idCaja,
       function (dataFacial, bool, numeroMayor) {
+        console.log(numeroMayor);
+
         if (bool === true) {
           document.querySelector(`.a${numeroMayor.id}`).innerHTML =
             numeroMayor.precioIndividual;
@@ -88,7 +90,7 @@ class Cotizar {
         } else if (bool === false) {
           for (let i = 0; i < dataFacial.length; i++) {
             document.querySelector(`.a${dataFacial[i]._id}`).innerHTML =
-              dataCorporal[i].precioIndividual;
+              dataFacial[i].precioIndividual;
           }
         }
       }
@@ -104,6 +106,7 @@ class Cotizar {
 cajaCotizarFacial.addEventListener('click', (e) => {
   if (e.target.id != '') {
     let pintarCotizar = new Cotizar(e.target.id);
+    pintarCotizar.totalCotizarMujerFacial();
   }
 });
 

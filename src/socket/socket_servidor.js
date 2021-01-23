@@ -62,13 +62,13 @@ io.on('connection', (cliente) => {
 
     if (precioDB.cantidad != 0) {
       let numeroMayor = precioDB.precioMayor[0];
-      let filterCorporalMayor = filterCorporal.filter((x) => {
+      let filterFacialMayor = filterFacial.filter((x) => {
         return numeroMayor.id != x.id;
       });
 
-      callback(filterCorporalMayor, true, numeroMayor);
+      callback(filterFacialMayor, true, numeroMayor);
     } else {
-      callback(filterCorporal, false);
+      callback(filterFacial, false);
     }
 
     // callback(precioDB.totalPagar);

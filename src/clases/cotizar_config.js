@@ -2,15 +2,20 @@ const CotizarMujerDB = require('../models/cotizar_mujer');
 const Reservas = require('../models/reserva');
 
 class CotizarMujer {
-  constructor(cotizar, sumaTotal) {
+  constructor(cotizar, sumaTotal, sumaTotalFacial) {
     this.corporal = [];
     this.facial = [];
     this.suma = sumaTotal;
     this.totalPAgar = 0;
+    this.totalPAgarFacial = 0;
     this.dataCotizar = cotizar;
     this.mayor = 0;
+    this.mayorFacial = 0;
     this.guardarMayor = [];
+    this.guardarMayorFacial = [];
     this.precioFijo = '';
+    this.precioFijoFacial = '';
+    this.sumaFacial = sumaTotalFacial;
   }
 
   buscarDatos = async () => {
@@ -33,11 +38,16 @@ class CotizarMujer {
     this.facial = [];
     this.totalPAgar = 0;
     this.mayor = 0;
+    this.mayorFacial = 0;
     this.guardarMayor = [];
     this.precioFijo = '';
+    this.precioFijoFacial = '';
     this.precioSoloCombo = 0;
-    // this.buscarDatos();
+    this.sumaFacial = [];
+    this.guardarMayorFacial = [];
   };
+
+  /* ============================================= */
 
   buscarPrecioId = async (id) => {
     let restarPrecio;
@@ -76,7 +86,71 @@ class CotizarMujer {
     };
   };
 
-  // buscarPrecioIdFacial = (id) =>
+  /* ===================================== */
+
+  buscarPrecioIdFacial = async (id) => {
+    let restarPrecio;
+    let precioCombo = await CotizarMujerDB.findById(id);
+
+    let comprovar = this.sumaFacial.filter((x) => {
+      return x.id === id;
+    });
+
+    // console.log(comprovar, 'comprovar');
+
+    if (comprovar != '') {
+      let posicionELiminar = this.sumaFacial.findIndex((x) => {
+        return x.id === id;
+      });
+
+      this.sumaFacial.splice(posicionELiminar, 1);
+      restarPrecio = this.guardarMayorFacial.indexOf(
+        comprovar[0].precioIndividual
+      );
+
+      this.guardarMayorFacial.splice(restarPrecio, 1);
+      this.actualizarNumeroMayorFacial();
+      // this.sumarTotal();
+    } else {
+      this.sumaFacial.push({
+        precioCombo: precioCombo.precioCombo,
+        id,
+        precioIndividual: precioCombo.precioIndividual,
+      });
+
+      this.guardarMayorPrecioFacial(precioCombo.precioIndividual);
+      // this.sumarTotal();
+    }
+
+    return {
+      totalPagar: this.totalPAgarFacial,
+      cantidad: this.sumaFacial.length,
+      precioMayor: this.precioFijoFacial,
+    };
+  };
+
+  /* ================================================= */
+
+  guardarMayorPrecioFacial = (precio) => {
+    this.guardarMayorFacial.push(precio);
+    this.actualizarNumeroMayorFacial();
+  };
+
+  actualizarNumeroMayorFacial = () => {
+    let max = Math.max(...this.guardarMayorFacial);
+    this.mayorFacial = max;
+    this.precioMayorFacial();
+  };
+
+  precioMayorFacial = () => {
+    let precioFijoFacial = this.sumaFacial.filter((x) => {
+      return x.precioIndividual >= this.mayorFacial;
+    });
+
+    this.precioFijoFacial = precioFijoFacial;
+  };
+
+  /* ================================================= */
 
   guardarMayorPrecio = (precio) => {
     this.guardarMayor.push(precio);
@@ -96,15 +170,41 @@ class CotizarMujer {
     /* esto devuelto el el id de los seleccionados mas alto */
     this.precioFijo = precioFijo;
   };
+  /* ============================================ */
 
   sumarTotal = () => {
+    let precioMasAltoFacial = this.precioFijoFacial[0];
+
+    let eliminarPrecioAltoByIdFacial = this.sumaFacial.filter((x) => {
+      return x.id != precioMasAltoFacial.id;
+    });
+
+    this.precioSoloComboFacial = 0;
+    this.totalPAgarFacial = 0;
+
+    eliminarPrecioAltoByIdFacial.forEach((x) => {
+      let X = Number(x.precioCombo);
+      this.precioFijoFacial += X;
+    });
+
+    if (this.precioFijoFacial[0] != undefined) {
+      this.totalPAgarFacial =
+        parseInt(this.precioFijoFacial[0].precioIndividual) +
+        parseInt(this.precioSoloComboFacial);
+    } else {
+      this.totalPAgarFacial = 0;
+    }
+
+    /* ============================================== */
+
     let precioMasAlto = this.precioFijo[0];
+    this.precioSoloCombo = 0;
+    this.totalPAgar = 0;
+
     let eliminarPrecioAltoById = this.suma.filter((x) => {
       return x.id != precioMasAlto.id;
     });
 
-    this.precioSoloCombo = 0;
-    this.totalPAgar = 0;
     eliminarPrecioAltoById.forEach((x) => {
       let X = Number(x.precioCombo);
       this.precioSoloCombo += X;
