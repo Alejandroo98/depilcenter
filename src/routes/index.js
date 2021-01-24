@@ -21,6 +21,6 @@ module.exports = function (url) {
     });
   }
   return router.get(url, (req, res, next) => {
-    res.render('index');
+    res.redirect('/');
   });
 };

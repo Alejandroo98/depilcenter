@@ -3,6 +3,10 @@ let URLpintar = URLactual.pathname;
 let etiquetaPintar = document.querySelector('.inicio');
 let next = document.querySelector('.material-icons');
 
+// window.location.href.replace(window.location.search, 'asdsfddsfdsf  ');
+var url = window.location.href.split('whaaaaaaaaat');
+// url = url.split('asfdfasdgf');
+
 let registrarReserva = document
   .getElementById('registrarReserva')
   .addEventListener('submit', (e) => {

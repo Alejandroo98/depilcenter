@@ -20,32 +20,37 @@
 }
 
 /* ====COTIZAR MUJER ===== */
-.cajaMainCotizarMujer {
+.cajaMainCotizarMujer,
+.cajaMainCotizarHombre {
   display: grid;
   grid-template-columns: repeat(1, -1);
   /* grid-template-rows: repeat(15, auto); */
   gap: 1em;
 }
 
-.cajaCotizarCorporal {
+.cajaCotizarCorporal,
+.cajaCotizarCorporalHombre {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
 }
 
-.cajaCotizarCorporal > div {
+.cajaCotizarCorporal > div,
+.cajaCotizarCorporalHombre > div {
   background-color: coral;
   padding: 1em;
   border-radius: 10px;
 }
 
-.cajaCotizarFacial {
+.cajaCotizarFacial,
+.cajaCotizarFacialHombre {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
 }
 
-.cajaCotizarFacial > div {
+.cajaCotizarFacial > div,
+.cajaCotizarFacialHombre > div {
   background-color: cornflowerblue;
   grid-template-columns: repeat(4, 1fr);
   padding: 1em;

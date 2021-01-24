@@ -1,7 +1,6 @@
-const CotizarMujerDB = require('../models/cotizar_mujer');
-const Reservas = require('../models/reserva');
+const CotizarHombreDB = require('../models/cotizar_hombre');
 
-class CotizarMujer {
+class CotizarHombre {
   constructor(sumaTotal, sumaTotalFacial) {
     this.corporal = [];
     this.facial = [];
@@ -19,8 +18,8 @@ class CotizarMujer {
   }
 
   buscarDatos = async () => {
-    let datosCotizarCorporal = await CotizarMujerDB.find({ tipo: 'corporal' });
-    let datosCotizarFacial = await CotizarMujerDB.find({ tipo: 'facial' });
+    let datosCotizarCorporal = await CotizarHombreDB.find({ tipo: 'corporal' });
+    let datosCotizarFacial = await CotizarHombreDB.find({ tipo: 'facial' });
     this.corporal.push(...datosCotizarCorporal);
     this.facial.push(...datosCotizarFacial);
 
@@ -231,5 +230,5 @@ class CotizarMujer {
 }
 
 module.exports = {
-  CotizarMujer,
+  CotizarHombre,
 };
