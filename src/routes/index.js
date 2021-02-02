@@ -6,6 +6,7 @@ module.exports = function (url) {
   const routes = [
     '/',
     '/cotizar-combos',
+    '/cotizar-combos/hombre',
     '/blog',
     '/ubicacion',
     '/servicios',
@@ -14,6 +15,12 @@ module.exports = function (url) {
 
   let comrpovarRuta = routes.includes(url);
   let urlCut = url.substr(1, url.length - 1);
+
+  if (url === '/cotizar-combos/hombre') {
+    return router.get(url, (req, res, next) => {
+      res.render('cotizar-combos');
+    });
+  }
 
   if (comrpovarRuta) {
     return router.get(url, (req, res, next) => {

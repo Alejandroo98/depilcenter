@@ -29,6 +29,9 @@ var URLactual = window.location;
 let URLpintar = URLactual.pathname;
 if (URLpintar === '/cotizar-combos') {
   etiquetaPintar.classList.add('pintarNav');
+} else if (URLpintar === '/cotizar-combos/hombre') {
+  console.log('dentro');
+  document.getElementById('profile-tab').click();
 }
 
 // ================COTIZAR PRECIO=================
