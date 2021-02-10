@@ -34,6 +34,8 @@ socket.on('imprimirTotalCotizacionHombre', (valorTotal) => {
 let etiquetaPintar = document.querySelector('.cotizar');
 var URLactual = window.location;
 let URLpintar = URLactual.pathname;
+etiquetaPintar.classList.add('pintarNav');
+
 /* =======================FIN PINTAR NAV========================== */
 
 // ================COTIZAR PRECIO=================
