@@ -51,7 +51,7 @@ class CotizarHombre {
 
   buscarPrecioId = async (id) => {
     let restarPrecio;
-    let precioCombo = await CotizarMujerDB.findById(id);
+    let precioCombo = await CotizarHombreDB.findById(id);
 
     let comprovar = this.suma.filter((x) => {
       return x.id === id;
@@ -90,7 +90,7 @@ class CotizarHombre {
 
   buscarPrecioIdFacial = async (id) => {
     let restarPrecio;
-    let precioCombo = await CotizarMujerDB.findById(id);
+    let precioCombo = await CotizarHombreDB.findById(id);
 
     let comprovar = this.sumaFacial.filter((x) => {
       return x.id === id;

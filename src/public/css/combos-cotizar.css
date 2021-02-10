@@ -57,11 +57,13 @@
   border-radius: 10px;
 }
 
-.nombreCotizarCorporal {
+.nombreCotizarCorporal,
+.nombreCotizarCorporalHombre {
   grid-column: 1/-1;
 }
 
-.nombreCotizarFacial {
+.nombreCotizarFacial,
+.nombreCotizarFacialHombre {
   grid-column: 1/-1;
 }
 

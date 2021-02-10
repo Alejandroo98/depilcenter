@@ -15,10 +15,16 @@ socket.on('connect', () => {
 
 /* ==========FIN SOCKET============ */
 
-/* ==================IMPRIMIR PRECIO FINAL DE LA COTIZACION======================== */
+/* ==================IMPRIMIR PRECIO FINAL DE LA COTIZACION MUJER======================== */
 socket.on('imprimirTotalCotizacioMujer', (valorTotal) => {
   document.querySelector(
     '.totalCotizarCorporalFacial'
+  ).innerHTML = `Total : ${valorTotal}`;
+});
+
+socket.on('imprimirTotalCotizacionHombre', (valorTotal) => {
+  document.querySelector(
+    '.totalCotizarCorporalFacialHombre'
   ).innerHTML = `Total : ${valorTotal}`;
 });
 

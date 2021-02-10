@@ -2,7 +2,6 @@ const { io } = require('../index');
 
 io.on('connection', (cliente) => {
   /* ===============DATOS IMPORTANTES COTIZAR MUJER================= */
-  const { CotizarMujer } = require('../clases/cotizar_config');
   let corporalBaseDatos = [];
   let facialBaseDatos = [];
   const sumaTotalFacial = [];
@@ -11,14 +10,21 @@ io.on('connection', (cliente) => {
   let guardarMayor = [];
   let facialBaseDatosHombre = [];
   let corporalBaseDatosHombre = [];
-
+  let guardarMayorHombre = [];
+  let sumaTotalFacialHombre = [];
+  /* EXPORTAR CLASE MUJER */
+  const { CotizarMujer } = require('../clases/cotizar_config');
   imprimirCotizarMujer = new CotizarMujer(guardarMayor, sumaTotalFacial);
   /* ===============FIN DATOS IMPORTANTES COTIZAR MUJER================= */
 
   /* ===============DATOS IMPORTANTES COTIZAR HOMBRE================= */
 
+  /* EXPORTAR CLASE HOMBRE*/
   const { CotizarHombre } = require('../clases/cotizar_hombre');
-  imprimirCotizarHombre = new CotizarHombre();
+  imprimirCotizarHombre = new CotizarHombre(
+    guardarMayorHombre,
+    sumaTotalFacialHombre
+  );
 
   /* ===============FIN DATOS IMPORTANTES COTIZAR HOMBRE================= */
 
@@ -92,6 +98,7 @@ io.on('connection', (cliente) => {
   cliente.on('datosCotizarHombre', async (data, callback) => {
     let datos = await imprimirCotizarHombre.buscarDatos();
     datosHombreDB.push(datos);
+
     // console.log(datos.facialDB);
 
     let corporalDB = datos.corporalDB;
@@ -112,11 +119,50 @@ io.on('connection', (cliente) => {
     await callback(corporalBaseDatosHombre, facialBaseDatosHombre);
   });
 
+  cliente.on('sumarValoresHombreCorporal', async (id, callback) => {
+    let precioDB = await imprimirCotizarHombre.buscarPrecioId(id);
+    let filterCorporal = datosHombreDB[0].corporalDB;
+
+    if (precioDB.cantidad != 0) {
+      let numeroMayor = precioDB.precioMayor[0];
+      let filterCorporalMayor = filterCorporal.filter((x) => {
+        return numeroMayor.id != x.id;
+      });
+
+      callback(filterCorporalMayor, true, numeroMayor);
+      cliente.emit('imprimirTotalCotizacionHombre', precioDB.totalPagar);
+    } else {
+      callback(filterCorporal, false);
+      cliente.emit('imprimirTotalCotizacionHombre', precioDB.totalPagar);
+    }
+  });
+
+  cliente.on('sumarValoresHombreFacial', async (id, callback) => {
+    let precioDB = await imprimirCotizarHombre.buscarPrecioIdFacial(id);
+    let filterFacial = datosHombreDB[0].facialDB;
+
+    if (precioDB.cantidad != 0) {
+      let numeroMayor = precioDB.precioMayor[0];
+      let filterFacialMayor = filterFacial.filter((x) => {
+        return numeroMayor.id != x.id;
+      });
+
+      callback(filterFacialMayor, true, numeroMayor);
+      cliente.emit('imprimirTotalCotizacionHombre', precioDB.totalPagar);
+    } else {
+      callback(filterFacial, false);
+      cliente.emit('imprimirTotalCotizacionHombre', precioDB.totalPagar);
+    }
+
+    // callback(precioDB.totalPagar);
+  });
+
   /* FIN FUNCIONES PARA COTIZACION HOMBRE */
 
   cliente.on('disconnect', () => {
     eliminarDatos();
     imprimirCotizarMujer.reiniciarArray();
+    imprimirCotizarHombre.reiniciarArray();
   });
 });
 
