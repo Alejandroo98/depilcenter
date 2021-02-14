@@ -53,10 +53,16 @@ app.post('/', async (req, res, next) => {
       reserva.save();
     });
 
-    res.send('bien');
+    res.send('DATOS GUARDADOS');
   }
 
   next();
+});
+
+app.post('/cotizar-combos/combos', (req, res) => {
+  datos = JSON.parse(JSON.stringify(req.body));
+  console.log(datos);
+  // res.send(`<h1>Alejo</h1>`);
 });
 
 module.exports = app;

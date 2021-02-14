@@ -175,11 +175,28 @@ class Cotizar {
       }
     );
   };
-
   /*FIN FUNCIONES PARA COTIZACION DEL HOMBRE */
+
+  /* CARGAR DATOS DE LOS COMBOS */
+  cargarDatosCombosDB = () => {
+    let combosDOM = document.querySelector('.cajaMainCombos');
+    socket.emit('cargarDatosCombosDB', null, function (datos) {
+      for (let i = 0; i < datos.length; i++) {
+        combosDOM.innerHTML += datos[i];
+      }
+    });
+  };
+
+  /* FIN CARGAR DATOS DE LOS COMBOS */
 }
 
 /* ====================EVENTOS DE COTIZACION============================== */
+/* COMBOS */
+let cargarDatosCombos = () => {
+  let cargarDatosCombos = new Cotizar();
+  cargarDatosCombos.cargarDatosCombosDB();
+};
+
 /* HOMBRE */
 let cargarDatosCotizarHombre = () => {
   let pintarCotizarHombre = new Cotizar();
@@ -238,5 +255,6 @@ switch (url) {
     document.getElementById('combosCotizar').style.display = 'block';
     document.getElementById('cotizarMujer').style.display = 'none';
     document.getElementById('cotizarHombre').style.display = 'none';
+    cargarDatosCombos();
 }
 /* =============FIN ABIRI COTIZACION HOMBRE O MUJER =============*/

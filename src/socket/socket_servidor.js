@@ -12,6 +12,8 @@ io.on('connection', (cliente) => {
   let corporalBaseDatosHombre = [];
   let guardarMayorHombre = [];
   let sumaTotalFacialHombre = [];
+  let enviarDatosDOM = [];
+  let DatosCombosDB = require('../models/combos');
   /* EXPORTAR CLASE MUJER */
   const { CotizarMujer } = require('../clases/cotizar_config');
   imprimirCotizarMujer = new CotizarMujer(guardarMayor, sumaTotalFacial);
@@ -159,6 +161,27 @@ io.on('connection', (cliente) => {
 
   /* FIN FUNCIONES PARA COTIZACION HOMBRE */
 
+  cliente.on('cargarDatosCombosDB', async (data, callback) => {
+    let combosDB = await DatosCombosDB.find({});
+    let datosLi = [];
+    for (let i = 0; i < combosDB.length; i++) {
+      for (let a = 0; a < combosDB[i].zonas.length; a++) {
+        datosLi.push(`<li>${combosDB[i].zonas[a]}</li>`);
+      }
+      enviarDatosDOM.push(
+        `<div class="a${combosDB[i].id}" id="porDefinir"><h5>${
+          combosDB[i].nombreCombo
+        }</h5><ul>${datosLi.join('')}</ul><p>Precio: ${
+          combosDB[i].precio
+        }</p><a id="${combosDB[i].id}" > Agendar Cita </a></div>`
+      );
+
+      datosLi = [];
+    }
+
+    callback(enviarDatosDOM);
+  });
+
   cliente.on('disconnect', () => {
     eliminarDatos();
     imprimirCotizarMujer.reiniciarArray();
@@ -171,6 +194,7 @@ let eliminarDatos = () => {
   facialBaseDatos = [];
   corporalBaseDatos = [];
   datosDB = [];
+  enviarDatosDOM = [];
   /* ====HOMBRE===== */
   facialBaseDatosHombre = [];
   corporalBaseDatosHombre = [];

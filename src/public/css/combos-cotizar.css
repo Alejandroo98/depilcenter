@@ -80,3 +80,30 @@
 }
 
 /* ====FIN COTIZAR MUJER ===== */
+
+/* COMBOS */
+
+.cajaMainCombos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.cajaMainCombos > div {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.cajaMainCombos > div:hover {
+  background-color: rgb(231, 205, 165);
+  transform: scale(1.01);
+}
+
+.cajaMainCombos > div a {
+  /* Todos los botones */
+  /* background-color: red; */
+  color: red !important;
+  cursor: pointer;
+}
+/* FIN COMBOS */
