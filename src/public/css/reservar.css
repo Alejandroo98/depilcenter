@@ -1,8 +1,9 @@
 :root {
-  --colorFondo: #f6e1eb;
+  --colorFondo: #e8908b;
   --colorInputs: #ec99c1;
-  --bordes: #a0004d;
-  --rosaFuerte: #a0004d;
+  --colorCoorporativo: #e8908b;
+  --bordes: #504f4f;
+  --rosaFuerte: #e8908b;
 }
 
 .cajaMainReservar {
@@ -11,14 +12,17 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* text-align: center; */
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cajaMainReservar label {
+  color: var(--colorCoorporativo);
+  font-weight: 450;
 }
 
 .cajaSegundaReservar {
-  /* border: 3px solid var(--bordes); */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  border: 10px solid white;
-  /* background-color: rgb(253, 215, 222); */
   border-radius: 7px;
   display: flex;
   flex-direction: column;
@@ -82,12 +86,17 @@
 }
 
 .reserva {
-  text-align: center;
-  font-size: 25px;
+  font-weight: 500;
+  display: flex;
+  height: auto;
+  background-color: #e8908b;
+  justify-content: center;
+  align-items: center;
 }
 
-.cajaSegundaReservar {
-  padding: 50px;
+.reserva p {
+  padding: 15px;
+  margin: 0;
 }
 
 .cajaDatosHoraFecha input {
@@ -172,13 +181,14 @@ textarea.cajaDatosHoraFecha {
 }
 
 .material-icons {
-  background: #a0004d;
+  padding: 15px;
+}
+
+.material-icons span {
+  background: var(--colorFondo);
   padding: 10px;
   border-radius: 50%;
   color: white;
   float: right;
-}
-
-.material-icons {
   cursor: pointer;
 }

@@ -2,15 +2,24 @@
   margin-left: auto;
 } */
 :root {
-  --colorFondo: #f6e1eb;
+  --fondo: rgb(245, 224, 227);
+  --general: #e8908b;
 }
 
 .navbar {
-  background-color: var(--colorFondo);
   position: fixed;
+  /* background-color: var(--general); */
   top: 0;
   width: 100%;
   z-index: 100;
+}
+
+.logo img {
+  margin: 10px;
+  position: fixed;
+  top: 0;
+  width: 200px;
+  z-index: 101;
 }
 
 .nav-item {
@@ -19,10 +28,21 @@
 
 .cajaPrincipal {
   display: flex;
-  background: var(--colorFondo);
-  /* background-color: #ce327d; */
+  background: var(--fondo);
+  /* background-color: var(--general); */
   width: 100%;
   overflow: hidden;
+  background-image: url(../img/lineas\ cuervadas.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cajaDatos-caja {
+  display: flex;
+  flex-direction: column;
+  /* background-color: var(--general); */
+  text-align: center;
 }
 
 .reservas-caja {
@@ -32,7 +52,8 @@
   top: -100px;
   justify-content: center;
   align-items: flex-end;
-  flex-grow: 3;
+  /* background-color: salmon; */
+  flex-grow: 1;
 }
 
 .reservas-caja div:only-of-type {
@@ -51,18 +72,26 @@
   justify-content: center;
 }
 
-.cajaDatos-caja {
-  display: flex;
-  flex-direction: column;
-  /* background-color: #ce327d; */
-  text-align: center;
-}
-
 #tituloDepilPro {
   animation: depilPro 1s;
   animation-timing-function: ease-in;
   opacity: 1;
   animation-direction: reverse;
+}
+
+.conCera {
+  margin-top: -40px;
+  transform: rotate(-1deg);
+}
+
+.conCera img {
+  max-width: 350px;
+}
+
+#tituloDepilPro img {
+  /* background-color: salmon; */
+  margin: 0;
+  width: 30rem;
 }
 
 @keyframes depilPro {
@@ -76,13 +105,14 @@
   font-family: 'Poiret One', cursive;
   font-size: 100px;
   line-height: 80px;
-  color: #ce327d;
+  color: var(--colorCorpotativo);
 }
 
 .background-mujer {
   display: flex;
-  align-items: center;
+  justify-content: center;
   flex-grow: 1;
+  /* background-color: royalblue;  */
 }
 
 .background-mujer img {
@@ -100,39 +130,49 @@
   }
 }
 
-.agendarCita {
+#linkAgendar {
+  margin-top: 35px;
+  animation: botonesAgendar 1.5s;
+  opacity: 1;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  height: auto;
+}
+
+#linkAgendar a {
+  display: inline-flex;
+  width: 160px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#linkAgendar a:nth-child(1) {
+  background: var(--general);
   color: white;
-  border: none;
-  margin-top: 200px;
-  padding: 10px 20px 10px 20px;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: #ce327d;
-}
-
-.agendarCita:hover {
-  color: #ce327d;
-  background-color: #ffffff;
-  box-shadow: inset 0 0 0 2px #ce327d;
-  font-weight: 600;
-}
-
-.conocenos {
-  text-decoration: none;
-  color: #ce327d;
-  /* border: 2px solid #ce327d; */
-  box-shadow: inset 0 0 0 2px #ce327d;
-  margin-top: 200px;
-  padding: 10px 20px 10px 20px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 
-.conocenos:hover {
-  text-decoration: none;
-  color: #a0004d;
-  box-shadow: inset 0 0 0 2px #a0004d;
+#linkAgendar a:hover:nth-child(1) {
+  background: #db7a74;
+  cursor: pointer;
+}
+
+#linkAgendar a:nth-child(2) {
+  border: 3px solid #72c1b7;
+  color: #72c1b7;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#linkAgendar a:hover:nth-child(2) {
+  border: 3px solid #61b9ad;
+  color: #61b9ad;
+  cursor: pointer;
 }
 
 .cajaDatos-caja p {
@@ -149,13 +189,6 @@
   font-size: 21px;
   font-weight: 600;
   font-family: 'Poiret One', cursive;
-}
-
-#linkAgendar {
-  animation: botonesAgendar 1.5s;
-  opacity: 1;
-  animation-direction: reverse;
-  animation-timing-function: ease-in;
 }
 
 .ajustarAlert {
