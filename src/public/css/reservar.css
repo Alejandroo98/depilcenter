@@ -8,6 +8,7 @@
 
 .cajaMainReservar {
   display: none;
+  flex-direction: column;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -42,15 +43,50 @@
 
 .datosReservaBox {
   position: absolute;
-  background-color: rgba(165, 42, 42, 0.616);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(165, 42, 42, 0.616) */
   width: 100%;
   height: 100%;
   left: 100%;
 }
 
+.datosReservaBox > div input {
+  border: none;
+  border-bottom: 1px solid rgb(163, 163, 163);
+  margin: 20px 0;
+  inline-size: 200px;
+  color: rgb(83, 83, 83);
+}
+
+.datosReservaBox > div input:focus {
+  outline: none;
+  color: rgb(83, 83, 83);
+}
+
+.datosReservaBox button {
+  background-color: var(--colorCoorporativo);
+  font-weight: 500;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 20px;
+}
+
+.datosReservaBox button span {
+  display: inline-block;
+  text-align: right;
+  padding: 0;
+  margin-left: 5px;
+}
+
 @keyframes ocultarReservaDatos {
   100% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
 }
 
@@ -92,6 +128,7 @@
   background-color: #e8908b;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .reserva p {
@@ -159,7 +196,9 @@ textarea.cajaDatosHoraFecha {
 }
 
 /* .reservarBox {
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } */
 
 .datoNombres {
@@ -172,19 +211,29 @@ textarea.cajaDatosHoraFecha {
   display: inline;
 }
 
-.cajaMainDatos {
-  text-align: center;
-}
-
 .cajaMainDatos button {
   display: block;
 }
 
-.material-icons {
+.material-icons-next {
   padding: 15px;
 }
 
-.material-icons span {
+.material-icons-back span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--colorFondo);
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  float: right;
+  cursor: pointer;
+  margin: 15px;
+  transform: rotate(180deg);
+}
+
+.material-icons-next span {
   background: var(--colorFondo);
   padding: 10px;
   border-radius: 50%;
