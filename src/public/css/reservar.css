@@ -6,6 +6,23 @@
   --rosaFuerte: #e8908b;
 }
 
+/* ===VALIDACION DATOS==== */
+.errDatos {
+  font-size: 14px;
+  position: absolute;
+  color: rgb(109, 107, 107);
+  left: 25%;
+  bottom: -18px;
+}
+
+.errDatos span {
+  position: relative;
+  float: left;
+  top: 2px;
+  font-size: 17px;
+}
+/* === FIN VALIDACION DATOS==== */
+
 .cajaMainReservar {
   display: none;
   flex-direction: column;
@@ -31,13 +48,13 @@
 
 .cajaMainReservarDeslizar {
   animation: ocultarReserva 0.5s;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
 .cajaMainReservarDeslizarDatos {
   animation: ocultarReservaDatos 0.5s;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -84,6 +101,29 @@
   margin-left: 5px;
 }
 
+.backCajaMain {
+  animation: backReservaMain 0.5s;
+  /* animation-timing-function: ease-in; */
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+.backCajaDos {
+  animation: backReservaDos 0.5s;
+  /* animation-timing-function: ease-in; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes backReservaMain {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @keyframes ocultarReservaDatos {
   100% {
     transform: translateX(0);
@@ -102,6 +142,24 @@
 
 .cajaDatosLocalesServicios :nth-child(2) {
   display: inline-block;
+}
+
+.locales label::after {
+  position: absolute;
+  content: 'Ubicación';
+  font-size: 14px;
+  color: rgb(128, 126, 126);
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.hora label::after {
+  position: absolute;
+  content: 'Horarios de atencion';
+  font-size: 14px;
+  color: rgb(128, 126, 126);
+  cursor: pointer;
+  text-decoration-line: underline;
 }
 
 .cajaDatosLocalesServicios .locales select {
@@ -203,11 +261,14 @@ textarea.cajaDatosHoraFecha {
 
 .datoNombres {
   display: inline;
+  position: relative;
 }
 .datoEmail {
+  position: relative;
   display: inline;
 }
 .datoNum {
+  position: relative;
   display: inline;
 }
 

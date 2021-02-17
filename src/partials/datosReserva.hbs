@@ -1,11 +1,17 @@
     <div class="datoNombres">
-        <label for="nombres">Nombres: <input type="text" name="nombres" ></label>
+        <label for="nombres">Nombres: <input id="nombres" type="text" name="nombres" autocomplete="off"></label>
+        {{!-- <p class="errDatos errNombres">Ingresa un nombre valido<span class="material-icons errIcon">error_outline</span></p> --}}
+        <p class="errDatos errNombres"></p>
     </div>
     <div class="datoEmail">
-        <label for="email">Email: <input type="email" name="email"></label>
+        <label for="email">Email: <input id="email" type="text" name="email" autocomplete="off"></label>
+        {{!-- <p class="errDatos errEmail">Ingresa un email valido<span class="material-icons errIcon">error_outline</span></p> --}}
+        <p class="errDatos errEmail"></p>
     </div>
     <div class="datoNum">
-        <label for="numeroTelefono">Celular: <input type="number" name="numeroCelular"></label>
+        <label for="numeroTelefono">Celular: <input id="numeroCelular" type="text" name="numeroCelular" autocomplete="off"></label>
+        {{!-- <p class="errDatos errNumero">Ingresa un numero valido<span class="material-icons errIcon">error_outline</span></p> --}}
+        <p class="errDatos errNumero"></p>
     </div>
 
     <button  type="submit">Agendar
@@ -17,5 +23,5 @@
     </button>
 
     <div class="material-icons-back">
-    <span class="material-icons"> keyboard_arrow_right</span>
+    <span class="material-icons back"> keyboard_arrow_right</span>
     </div>
