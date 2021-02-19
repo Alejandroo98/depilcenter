@@ -13,6 +13,7 @@
   color: rgb(109, 107, 107);
   left: 25%;
   bottom: -18px;
+  width: 100%;
 }
 
 .errDatos span {
@@ -92,6 +93,7 @@
   justify-content: center;
   align-items: center;
   padding: 7px 20px;
+  margin: 15px;
 }
 
 .datosReservaBox button span {
@@ -301,4 +303,35 @@ textarea.cajaDatosHoraFecha {
   color: white;
   float: right;
   cursor: pointer;
+}
+
+/* FECHA INPUT */
+.fecha {
+  position: relative;
+  display: flex;
+}
+
+.fecha p {
+  position: absolute;
+  bottom: -23px;
+  left: 18%;
+  font-size: 14px;
+  position: absolute;
+  color: rgb(109, 107, 107);
+  width: 100%;
+}
+
+.fecha span {
+  position: relative;
+  float: left;
+  top: 2px;
+  font-size: 17px;
+}
+
+/* INPUTS */
+#nombres::placeholder,
+#email::placeholder,
+#numeroCelular::placeholder {
+  color: rgb(199, 195, 195);
+  font-size: 14px;
 }

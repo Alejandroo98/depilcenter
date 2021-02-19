@@ -32,11 +32,12 @@
 
         <div class="cajaDatosHoraFecha">
             <div class="hora">
-                <label for="hora">Hora<input type="time" name="hora" min="07:59" value="08:00"></label>
+                <label for="hora">Hora<input id="hora" type="time" name="hora" min="07:59" value="08:00"></label>
             </div>
 
             <div class="fecha">
-                <label for="fecha">Fecha<input type="date" name="fecha" ></label> {{!--  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"   (Para editar el orden en el que los datos se guardan) --}}
+                <label for="fecha">Fecha<input id="fecha" type="date" name="fecha" ></label> {{!--  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"   (Para editar el orden en el que los datos se guardan) --}}
+                <p class="errFecha"></p>
             </div>
         </div>
 

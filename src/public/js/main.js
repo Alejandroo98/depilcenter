@@ -6,6 +6,8 @@ let back = document.querySelector('.back');
 let nombres = document.getElementById('nombres');
 let email = document.getElementById('email');
 let numeroCelular = document.getElementById('numeroCelular');
+let fecha = document.getElementById('fecha');
+let hora = document.getElementById('hora');
 
 if (URLpintar === '/') {
   etiquetaPintar.classList.add('pintarNav');
@@ -37,33 +39,46 @@ class ValidarDatos {
     this.errNombres = document.querySelector('.errNombres');
     this.errEmail = document.querySelector('.errEmail');
     this.errNumero = document.querySelector('.errNumero');
+    this.errFecha = document.querySelector('.errFecha');
     this.nombres = datos.nombres;
     this.email = datos.email;
     this.telefono = datos.telefono;
+    this.fecha = datos.fecha;
   }
 
   validarDatos = () => {
     let nombreOk = this.validarNombres();
     let emailOk = this.validarEmail();
     let numeroOk = this.validarNumero();
+    let fechaOk = this.validarFecha();
 
-    if (nombreOk === false && emailOk === false && numeroOk === false) {
+    if (
+      nombreOk.err === false &&
+      emailOk.err === false &&
+      numeroOk.err === false &&
+      fechaOk.err == false
+    ) {
       this.enviarForm();
     } else {
       if (nombreOk.err === true) {
-        this.errNombres.innerHTML = `${nombreOk.msg}<span class="material-icons errIcon">error_outline</span>`;
+        this.errNombres.innerHTML = `&nbsp${nombreOk.msg}<span class="material-icons errIcon">error_outline</span>`;
       } else {
         this.errNombres.innerHTML = ``;
       }
       if (emailOk.err === true) {
-        this.errEmail.innerHTML = `${emailOk.msg}<span class="material-icons errIcon">error_outline</span>`;
+        this.errEmail.innerHTML = `&nbsp${emailOk.msg}<span class="material-icons errIcon">error_outline</span>`;
       } else {
         this.errEmail.innerHTML = ``;
       }
       if (numeroOk.err === true) {
-        this.errNumero.innerHTML = `${numeroOk.msg}<span class="material-icons errIcon">error_outline</span>`;
+        this.errNumero.innerHTML = `&nbsp${numeroOk.msg}<span class="material-icons errIcon">error_outline</span>`;
       } else {
         this.errNumero.innerHTML = ``;
+      }
+      if (fechaOk.err === true) {
+        this.errFecha.innerHTML = `&nbsp${fechaOk.msg}<span class="material-icons errIcon">error_outline</span>`;
+      } else {
+        this.errFecha.innerHTML = ``;
       }
     }
   };
@@ -88,15 +103,10 @@ class ValidarDatos {
         err: true,
         msg: 'Campo obligatorio',
       };
-    } else if (tieneNumeros === 1) {
+    } else if (tieneNumeros === 1 || !nombresOk) {
       return {
         err: true,
         msg: 'Ingresa un nombre valido',
-      };
-    } else if (!nombresOk) {
-      return {
-        err: true,
-        msg: 'Ingresa un nombre y un apellido',
       };
     }
     return {
@@ -105,18 +115,9 @@ class ValidarDatos {
   };
 
   validarEmail = () => {
-    // let emailOk = /^\w+([\.-]?\w+)*\@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(
-    //   this.email
-    // );
-
-    /* jefferon.asds@gmail.com */
-
     let emailOk = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(
       this.email
     );
-
-    console.log(emailOk);
-    console.log(this.email);
 
     if (this.email == '') {
       return {
@@ -155,6 +156,18 @@ class ValidarDatos {
   enviarForm = () => {
     this.registrarReserva.submit();
   };
+
+  validarFecha = () => {
+    if (this.fecha == '') {
+      return {
+        err: true,
+        msg: 'Ingresa una fecha',
+      };
+    }
+    return {
+      err: false,
+    };
+  };
 }
 
 registrarReserva.addEventListener('submit', (x) => {
@@ -163,14 +176,16 @@ registrarReserva.addEventListener('submit', (x) => {
     nombres: nombres.value,
     email: email.value,
     telefono: numeroCelular.value,
+    fecha: fecha.value,
   };
 
   validarDatos = new ValidarDatos(datosReserva);
   validarDatos.validarDatos();
+
+  validarDatos.validarFecha();
 });
 
 back.addEventListener('click', () => {
-  console.log('Dentro');
   let backDatos = new Reserva();
   backDatos.backDeslizarRserva();
 });
