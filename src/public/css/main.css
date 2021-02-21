@@ -201,13 +201,77 @@
   top: 58px;
 }
 
-.planta img {
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  max-width: 300px;
+/* ======= SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
+.reservarHBS {
+  display: none;
+  grid-template-areas:
+    'agendarCita agendarCita agendarCita agendarCita info'
+    'navbar navbar navbar navbar navbar';
+  background-color: rgb(245, 224, 227);
+  opacity: 100px;
+  grid-template-rows: 95% 5%;
 }
+
+.infoIndex {
+  background-color: var(--general);
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+}
+
+.horariosContactos {
+  /* background-color: blueviolet; */
+}
+
+.atencion,
+.contactosInfo {
+  flex-grow: 1;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px sold black;
+  margin: 25px;
+  background-color: rgba(255, 255, 255, 0.397);
+}
+
+.maps {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maps iframe {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.397);
+  margin: 25px;
+}
+
+.divReservaGrid {
+  grid-area: agendarCita;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============================FOOTER=============================== */
+.boxFooter {
+  justify-content: center;
+  background-color: #ce3232;
+  /* width: 100%;
+  bottom: 0;
+  height: 50px; */
+  /* position: absolute; */
+  /* align-items: center; */
+  grid-area: navbar;
+  /* grid-column: 1/-1; */
+}
+
+.boxFooter footer {
+  color: #f6e1eb;
+}
+
+/* ================================================================= */
+/* ======= FIN SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
 
 @keyframes botonesAgendar {
   100% {
@@ -218,30 +282,6 @@
 .pintarNav {
   border-bottom: 2px solid #a0004d;
 }
-
-/* =============================FOOTER=============================== */
-.boxFooter {
-  /* display: flex; */
-  justify-content: center;
-  background-color: #ce3232;
-  width: 100%;
-  bottom: 0;
-  height: 50px;
-  position: absolute;
-  display: none;
-  align-items: center;
-}
-
-.boxFooter footer {
-  color: #f6e1eb;
-}
-
-/* 
-.footer {
-  position: absolute;
-  bottom: 0;
-} */
-/* ================================================================= */
 
 @media (max-width: 1485px) {
   #tituloDepilPro h3 {

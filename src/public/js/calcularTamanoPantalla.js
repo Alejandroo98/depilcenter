@@ -73,12 +73,14 @@ class ajustarPantallaReserva {
   }
 
   scroll() {
-    window.scroll({
-      top: this.tamDiv() + 15,
-      behavior: 'smooth',
-    });
+    this.cajaReserva.style.display = 'grid';
 
-    this.footer.style.display = 'flex';
+    setTimeout((x) => {
+      window.scroll({
+        top: this.tamDiv() + 15,
+        behavior: 'smooth',
+      });
+    }, 10);
   }
 
   ocultarMostrarReserva() {

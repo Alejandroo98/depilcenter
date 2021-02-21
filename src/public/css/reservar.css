@@ -244,23 +244,6 @@ textarea.cajaDatosHoraFecha {
   margin: 15px 25px;
 }
 
-.reservarHBS {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* background-image: url('../img/bacgrkound.jpg'); */
-  background-color: rgb(245, 224, 227);
-  opacity: 100px;
-}
-
-/* .reservarBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .datoNombres {
   display: inline;
   position: relative;

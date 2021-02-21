@@ -9,8 +9,7 @@ module.exports = function (url) {
     '/cotizar-combos/mujer',
     '/cotizar-combos/combos',
     '/blog',
-    '/ubicacion',
-    '/servicios',
+    '/conocenos',
     '/contactos',
   ];
 
