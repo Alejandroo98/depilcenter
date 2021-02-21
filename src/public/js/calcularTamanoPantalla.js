@@ -25,69 +25,71 @@ class ajustarPantalla {
     this.anchura = anchura;
     this.altura = altura;
     this.ajustarAltura = 8;
-    this.pantallaTam();
-    this.cargarPagina();
+    this.ajustarPantalla();
   }
 
-  cargarPagina() {
+  ajustarPantalla() {
     var cajaContendor = document.querySelector('.cajaPrincipal');
-    let ajustarAltura = this.altura - this.ajustarAltura;
-    cajaContendor.style.height = ajustarAltura + 'px';
-    // cajaContendor.style.width = this.anchura + 'px';
-  }
-
-  pantallaTam() {
-    window.addEventListener('resize', () => {
-      this.cambiarAtri(tamVentana()[0], tamVentana()[1]);
-    });
-  }
-
-  cambiarAtri(anchura, altura) {
-    var cajaContendor = document.querySelector('.cajaPrincipal');
-    let ajustarAltura = altura - this.ajustarAltura;
-    cajaContendor.style.height = ajustarAltura + 'px';
-    // cajaContendor.style.width = anchura + 'px';
+    cajaContendor.style.height = this.altura + 'px';
   }
 }
+
+window.addEventListener('resize', () => {
+  let activarClasss = new ajustarPantalla(tamVentana()[0], tamVentana()[1]);
+});
 
 let activarClasss = new ajustarPantalla(tamVentana()[0], tamVentana()[1]);
 
 /* Lo que hace esto es crear una caja del tamaño de la caja de arriba luego  escrolea la pantalla y muestra sus elementos. Calculamos el tamaño del div  */
 class ajustarPantallaReserva {
-  constructor() {
+  constructor(anchura, altura) {
     this.div = document.querySelector('.cajaPrincipal');
     this.cajaReserva = document.querySelector('.reservarHBS');
     this.cajaSegundaReservar = document.querySelector('.cajaSegundaReservar');
-    this.cajaMainReservar = document.querySelector('.cajaMainReservar');
     this.footer = document.querySelector('.boxFooter');
-    this.alturaDiv = this.div.clientHeight;
-    this.anchuraDiv = this.div.clientWidth;
-    this.scroll();
+    this.click = document.getElementById('click');
+    this.altura = altura;
+    this.anchura = anchura;
+    this.bajarScroll();
+  }
+
+  bajarScroll() {
+    // this.click.click();
+    this.cajaReserva.scrollTop = 9999;
   }
 
   tamDiv() {
-    let tamPantalla = `${this.alturaDiv}`;
-    this.cajaReserva.style.height = `${this.alturaDiv}px`;
-    this.ocultarMostrarReserva();
+    let tamPantalla = `${this.altura}`;
+    this.cajaReserva.style.height = `${this.altura - 54}px`;
     return tamPantalla;
   }
 
   scroll() {
     this.cajaReserva.style.display = 'grid';
-
     setTimeout((x) => {
       window.scroll({
-        top: this.tamDiv() + 15,
+        top: this.tamDiv(),
         behavior: 'smooth',
       });
-    }, 10);
-  }
-
-  ocultarMostrarReserva() {
-    this.cajaMainReservar.style.display = 'flex';
+    }, 20);
   }
 }
 
+let data = false;
+
 document.querySelector('.agendarCita').addEventListener('click', () => {
-  let activarClassReserva = new ajustarPantallaReserva();
+  data = true;
+  let activarClassReserva = new ajustarPantallaReserva(
+    tamVentana()[0],
+    tamVentana()[1]
+  );
+  activarClassReserva.scroll();
+});
+
+window.addEventListener('resize', () => {
+  let activarClass = new ajustarPantallaReserva(
+    tamVentana()[0],
+    tamVentana()[1]
+  );
+  activarClass.tamDiv();
 });

@@ -25,7 +25,6 @@
 /* === FIN VALIDACION DATOS==== */
 
 .cajaMainReservar {
-  display: none;
   flex-direction: column;
   position: relative;
   justify-content: center;

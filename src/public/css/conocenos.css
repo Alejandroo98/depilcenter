@@ -1,0 +1,32 @@
+:root {
+  --fondo: rgb(245, 224, 227);
+  --general: #e8908b;
+}
+
+body,
+html {
+  background-color: var(--fondo);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.contenedorQuienesSomos {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.quienesSomos {
+  margin: 5% 0 5% 0;
+  padding: 20px;
+  background-color: white;
+  max-width: 45%;
+  min-width: 40%;
+  border-radius: 15px;
+}
+
+.quienesSomos img {
+  width: 100%;
+}

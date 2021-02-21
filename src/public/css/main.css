@@ -1,6 +1,11 @@
 /* .ul-nav {
   margin-left: auto;
 } */
+#click {
+  pointer-events: none;
+  cursor: default;
+}
+
 :root {
   --fondo: rgb(245, 224, 227);
   --general: #e8908b;
@@ -8,7 +13,7 @@
 
 .navbar {
   position: fixed;
-  /* background-color: var(--general); */
+  background-color: var(--general);
   top: 0;
   width: 100%;
   z-index: 100;
@@ -219,10 +224,6 @@
   flex-direction: column;
 }
 
-.horariosContactos {
-  /* background-color: blueviolet; */
-}
-
 .atencion,
 .contactosInfo {
   flex-grow: 1;
@@ -256,7 +257,7 @@
 /* =============================FOOTER=============================== */
 .boxFooter {
   justify-content: center;
-  background-color: #ce3232;
+  background-color: var(--general);
   /* width: 100%;
   bottom: 0;
   height: 50px; */
