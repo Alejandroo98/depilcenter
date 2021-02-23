@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </body>
-
 <header>
   {{#if error}}
  <div class="ajustarAlert">
@@ -34,44 +35,28 @@
   {{/if}}
    {{> navbar }}
    <div class="logo">
-   <img src="../img/logo_blanco.png" width="200px" alt="Logo - Depilcenter">
+   <img src="../img/Depilcenter-logo.svg" width="200px" alt="Logo - Depilcenter">
    </div>
 </header>
  <main>
-      <section>
-            <div class="cajaPrincipal"  >
+   
+      <section class="cajaPrincipal">
 
                   <div class="reservas-caja">
-                    
-                    <div class="cajaDatos-caja">
-
-                      <div id=tituloDepilPro>
-                          <div>
-                            <img src="../img/centro de depilacion.png" alt="Centro de depilacion - Servicios">
-                          </div>
-                          <div class="conCera">
-                            <img src="../img/con cera tibia.png"  alt="depilacion con cera">
-                          </div>
-                        {{!-- <h3>Centro  de <br> depilacion <br></h3><p> <span>con cera tibia 100% natural.</span> </p> --}}
+                      <div class="datosMain">
+                        <p>Centro de depilación.</p>
+                        <p>Por que lo bueno #NoTieneQueSerCaro.</p>
                       </div>
-                      
-                        <div id="linkAgendar" >
-                          
+                      <div class="linkAgendar" >
                         <a class="agendarCita">AGENDAR CITA</a>
                         <a class="conocenos" >CONÓCENOS</a>
-                        </div>
-                        
-                    </div>
-
+                      </div>
                   </div>
                   
-                   <div class="background-mujer">
-                      <img src="../img/fondo2.png" alt="">
-                  </div> 
+                  {{!-- <div class="imagenMain"></div> --}}
 
-
-            </div>
       </section>
+      
       <section  class="reservarHBS" id="reservarHBS">
 
         <div class="divReservaGrid">

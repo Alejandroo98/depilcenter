@@ -1,150 +1,108 @@
-/* .ul-nav {
-  margin-left: auto;
-} */
-#click {
-  pointer-events: none;
-  cursor: default;
-}
-
 :root {
   --fondo: rgb(245, 224, 227);
   --general: #e8908b;
 }
 
-.navbar {
-  position: fixed;
-  background-color: var(--general);
-  top: 0;
+html,
+body {
+  margin: 0;
   width: 100%;
-  z-index: 100;
+  height: 100%;
 }
 
 .logo img {
   margin: 10px;
   position: fixed;
   top: 0;
-  width: 200px;
+  left: 6%;
+  width: 230px;
   z-index: 101;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-item a {
+  color: white !important;
+  font-weight: 500;
 }
 
 .nav-item {
   margin: 0 20px 0 20px;
+  color: white;
 }
 
 .cajaPrincipal {
-  display: flex;
-  background: var(--fondo);
-  /* background-color: var(--general); */
-  width: 100%;
-  overflow: hidden;
-  background-image: url(../img/lineas\ cuervadas.png);
-  background-repeat: no-repeat;
+  background-color: var(--fondo);
+  border-top: 1px solid transparent; /* Cuando le puse un margin a un de sus hijos tambien fue afectado el div padre es decir este, y para solucionar eso se pone esta linea. https://es.stackoverflow.com/questions/155171/duda-b%C3%A1sica-con-margin-padre-e-hijo-css */
+  background-image: url(../img/background-female.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  animation-name: fondo;
+  /* animation-delay: 5s; */
+  animation-iteration-count: infinite;
+  animation-duration: 16s;
 }
 
-.cajaDatos-caja {
+@keyframes fondo {
+  0% {
+    background-image: url(../img/background-female.jpg);
+  }
+
+  25% {
+    background-image: url(../img/background-female.jpg);
+  }
+
+  50% {
+    background-image: url(../img/bacgrkound-male.jpg);
+  }
+
+  75% {
+    background-image: url(../img/bacgrkound-male.jpg);
+  }
+
+  100% {
+    background-image: url(../img/background-female.jpg);
+  }
+}
+
+/* BOTONES DE AGENDAR Y CONOCENOS E INFO */
+.datosMain {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  /* background-color: var(--general); */
+}
+
+.datosMain p:nth-child(1) {
+  color: rgb(255, 255, 255);
+  font-size: 80px;
+  text-align: center;
+  line-height: 70px;
+  font-weight: 600;
+}
+
+.datosMain p:nth-child(2) {
+  color: rgb(80, 78, 78);
+  font-size: 15px;
   text-align: center;
 }
 
 .reservas-caja {
   display: flex;
-  /* background-color: #a0004d; */
   flex-direction: column;
-  top: -100px;
   justify-content: center;
-  align-items: flex-end;
-  /* background-color: salmon; */
-  flex-grow: 1;
+  align-items: center;
+  margin-top: 58px;
 }
 
-.reservas-caja div:only-of-type {
-  position: relative;
-  top: -100px;
-  /* background-color: aqua; */
-}
-
-.reservas-caja input {
-  border: none;
-  border-radius: 8px;
-}
-
-.reservar-boton {
-  display: flex;
-  justify-content: center;
-}
-
-#tituloDepilPro {
-  animation: depilPro 1s;
-  animation-timing-function: ease-in;
-  opacity: 1;
-  animation-direction: reverse;
-}
-
-.conCera {
-  margin-top: -40px;
-  transform: rotate(-1deg);
-}
-
-.conCera img {
-  max-width: 350px;
-}
-
-#tituloDepilPro img {
-  /* background-color: salmon; */
-  margin: 0;
-  width: 30rem;
-}
-
-@keyframes depilPro {
-  100% {
-    transform: translateY(-150%);
-    opacity: 0;
-  }
-}
-
-#tituloDepilPro h3 {
-  font-family: 'Poiret One', cursive;
-  font-size: 100px;
-  line-height: 80px;
-  color: var(--colorCorpotativo);
-}
-
-.background-mujer {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  /* background-color: royalblue;  */
-}
-
-.background-mujer img {
-  max-width: 900px;
-  margin-left: 2rem;
-  animation: foto-mujer 0.9s;
-  animation-direction: reverse;
-  animation-timing-function: ease-in-out;
-  /* flex-grow: 1; */
-}
-
-@keyframes foto-mujer {
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-#linkAgendar {
-  margin-top: 35px;
-  animation: botonesAgendar 1.5s;
-  opacity: 1;
-  animation-direction: reverse;
-  animation-timing-function: ease-in;
-  height: auto;
-}
-
-#linkAgendar a {
+.linkAgendar a {
   display: inline-flex;
   width: 160px;
   height: 42px;
@@ -155,30 +113,31 @@
   cursor: pointer;
 }
 
-#linkAgendar a:nth-child(1) {
-  background: var(--general);
+.linkAgendar a:nth-child(1) {
+  background: #f58882;
   color: white;
   font-weight: 500;
   cursor: pointer;
 }
 
-#linkAgendar a:hover:nth-child(1) {
+.linkAgendar a:hover:nth-child(1) {
   background: #db7a74;
   cursor: pointer;
 }
 
-#linkAgendar a:nth-child(2) {
+.linkAgendar a:nth-child(2) {
   border: 3px solid #72c1b7;
   color: #72c1b7;
   font-weight: 500;
   cursor: pointer;
 }
 
-#linkAgendar a:hover:nth-child(2) {
+.linkAgendar a:hover:nth-child(2) {
   border: 3px solid #61b9ad;
   color: #61b9ad;
   cursor: pointer;
 }
+/* FIN BOTONES DE AGENDAR Y CONOCENOS */
 
 .cajaDatos-caja p {
   margin-top: 10px;
@@ -258,13 +217,7 @@
 .boxFooter {
   justify-content: center;
   background-color: var(--general);
-  /* width: 100%;
-  bottom: 0;
-  height: 50px; */
-  /* position: absolute; */
-  /* align-items: center; */
   grid-area: navbar;
-  /* grid-column: 1/-1; */
 }
 
 .boxFooter footer {
@@ -281,7 +234,7 @@
 }
 
 .pintarNav {
-  border-bottom: 2px solid #a0004d;
+  border-bottom: 2px solid white;
 }
 
 @media (max-width: 1485px) {
@@ -296,10 +249,8 @@
   }
 
   .reservas-caja {
-    /* position: relative; */
     align-items: center;
     justify-content: center;
-    /* background-color: #a0004d; */
   }
 }
 

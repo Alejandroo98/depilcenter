@@ -1,3 +1,5 @@
+let navbar = document.querySelector('.navbar');
+navbar.setAttribute('style', 'background-color : #e8908b');
 let ajax = (id) => {
   const http = new XMLHttpRequest();
   const url = '/cotizar-combos/combos'; //Una vez le de click a donde quiere que me lleve
