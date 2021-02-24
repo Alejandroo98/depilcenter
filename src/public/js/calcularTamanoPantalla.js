@@ -50,6 +50,7 @@ class ajustarPantallaReserva {
     this.click = document.getElementById('click');
     this.altura = altura;
     this.anchura = anchura;
+    this.ultimoScroll = 0;
     this.bajarScroll();
   }
 
@@ -93,3 +94,38 @@ window.addEventListener('resize', () => {
   );
   activarClass.tamDiv();
 });
+
+/* CONTROL DE SCROLL PARA PINTAR EL NAV */
+let lastScrollTop = 0;
+let pintarOpacity = 0;
+// window.addEventListener(
+//   'scroll',
+//   function () {
+//     let st = window.pageYOffset || document.documentElement.scrollTop;
+//     // let entero = st.toFixed();
+//     let divicion = st / 3;
+//     console.log(divicion);
+//     let navbar = document.querySelector('.navbar');
+//     if (st > divicion) {
+//       //baja
+//       console.log('Desaparecer');
+//     } else {
+//       //sube
+//       console.log('Mostrar');
+//     }
+//     lastScrollTop = st;
+//   },
+//   false
+// );
+window.onscroll = function () {
+  let navbar = document.querySelector('.navbar');
+  console.log('Vertical: ' + window.scrollY);
+  let vertical = window.scrollY;
+  if (vertical > 450) {
+    navbar.classList.add('navbarBackground');
+  } else {
+    navbar.classList.remove('navbarBackground');
+  }
+};
+
+/*FIN CONTROL DE SCROLL PARA PINTAR EL NAV */

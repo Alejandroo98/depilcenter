@@ -22,7 +22,13 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
+  transition: all 0.5s ease-in-out;
   z-index: 100;
+  /* background-color: rgba(253, 144, 144); */
+}
+
+.navbarBackground {
+  background-color: var(--general);
 }
 
 .nav-item a {
