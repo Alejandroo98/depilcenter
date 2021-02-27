@@ -1,0 +1,69 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iconsContenedor {
+  display: flex;
+  padding: 100px 0;
+  /* background-color: #7fffd4; */
+  justify-content: center;
+  background-color: skyblue;
+}
+
+.iconsBoxCentrar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em;
+  /* padding: 3em; */
+  max-width: 60%;
+  height: auto;
+  /* background-color: var(--general); */
+  border-radius: 15px;
+}
+
+.iconsBoxCentrar .overflow {
+  grid-column: span 2;
+  border-radius: 15px;
+  height: 500px;
+  overflow: auto;
+  background: white;
+  padding: 20px;
+}
+
+.iconsBoxCentrar .imgIcons {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(8, 122px);
+  gap: 0.5em 0;
+}
+
+.iconsBoxCentrar .imgIcons > div {
+  border-left: 8px solid var(--general);
+  border-radius: 10px;
+  overflow: auto;
+  background-color: rgb(255, 238, 238);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 12px;
+}
+
+.imgIcons p {
+  font-size: 12px;
+  color: rgb(90, 88, 88);
+}
+
+.iconsBoxCentrar .imgIcons img {
+  width: 100px;
+  /* background-color: violet; */
+  float: left;
+  margin-right: 10px;
+}
+
+.ceraInfo {
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}

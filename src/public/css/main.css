@@ -47,6 +47,7 @@ body {
   background-image: url(../img/background-female.jpg);
   background-size: cover;
   display: flex;
+  background-attachment: fixed;
   justify-content: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
@@ -86,18 +87,22 @@ body {
   flex-direction: column;
 }
 
-.datosMain p:nth-child(1) {
+.datosMain h1 {
   color: rgb(255, 255, 255);
   font-size: 80px;
   text-align: center;
   line-height: 70px;
   font-weight: 600;
+  margin: 0;
 }
 
-.datosMain p:nth-child(2) {
-  color: rgb(80, 78, 78);
+.datosMain h2 {
+  /* color: rgb(80, 78, 78); */
+  color: white;
   font-size: 15px;
   text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
 }
 
 .reservas-caja {

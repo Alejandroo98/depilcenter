@@ -121,7 +121,7 @@ window.onscroll = function () {
   let navbar = document.querySelector('.navbar');
   console.log('Vertical: ' + window.scrollY);
   let vertical = window.scrollY;
-  if (vertical > 450) {
+  if (vertical > 380) {
     navbar.classList.add('navbarBackground');
   } else {
     navbar.classList.remove('navbarBackground');
