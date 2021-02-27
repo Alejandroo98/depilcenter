@@ -57,16 +57,58 @@
                   {{!-- <div class="imagenMain"></div> --}}
 
       </section>
+
+
+       <section  class="reservarHBS" id="reservarHBS">
+
+        <div class="divReservaGrid">
+          <form  id="registrarReserva"  method="POST">
+              
+              <div  class="reservarBox">
+              {{>  reservar }}
+              </div>
+
+          </form>
+        </div>
+
+        <div class="infoIndex">
+
+            <div class="horariosContactos">
+              
+                <div class="atencion">
+                    <h5>Horarios de atencion</h5>
+                    <h6>Lunes - h6iernes : 09:00 a 18:00</p>
+                    {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p> --}}
+                    <h6>Sabados h6 09:00 a 17:00</p>
+                    {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p> --}}
+                </div>
+                <div class="contactosInfo">
+                    <h5>Contactos</h5>
+                    <h6>098 426 h6244</p>
+                    {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p> --}}
+                    <h6>depilcenh6er2021@gmail.com</p>
+                    {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p> --}}
+                </div>
+                
+            </div>
+            
+            <div class="maps">
+              {{!-- <h5>Nuestra Ubicacion</h5> --}}
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec" width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+        </div>
+      </section>
+      
       
       <section class="iconsContenedor">
-        <div class="iconsBoxCentrar">
-        
-        <div class="overflow">
-          <div class="imgIcons">
 
-                 <div class="tituloIcons">
-                  <img src="../img/depilacion-con-cera-09.png" alt="">
-                 </div>
+        <div class="iconsImg-info">
+
+          <div class="iconsImg">
+                <div class="tituloIcons">
+                    <img src="../img/depilacion-con-cera-09.png" alt="">
+                </div>
 
                 <div class="icon1">
                   <img src="../img/icons/icons-depilation-01.png " alt="Depilacion, paso uno">
@@ -109,66 +151,26 @@
                   <h6>Paso 6</h6>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
                 </div>
-                
           </div>
-        </div>
-          
+
+
           <div class="ceraInfo">
-            <h6>Cera</h6>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ipsum est culpa reprehenderit. Officia vero rerum reprehenderit distinctio consectetur, quos tempora minus quo repudiandae placeat modi sapiente ratione, quas quidem?</p>
+            <div class="infoCeraInfo">
+              <h6>Cera</h6>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit mollitia sit, in commodi nulla, porro recusandae placeat hic aspernatur officia, pariatur possimus natus veritatis iure accusantium facere velit laudantium!</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit mollitia sit, in commodi nulla, porro recusandae placeat hic aspernatur officia, pariatur possimus natus veritatis iure accusantium facere velit laudantium!</p>
+            </div>
+            <div class="botonesCeraInfo">
+              <a href="/cotizar-combos/mujer">Cotizar</a>
+              <a href="/conocenos">Conócenos</a>
+            </div>
           </div>
 
         </div>
+
       </section>
       
-      <section  class="reservarHBS" id="reservarHBS">
-
-        <div class="divReservaGrid">
-          <form  id="registrarReserva"  method="POST">
-              
-              <div  class="reservarBox">
-              {{>  reservar }}
-              </div>
-
-          </form>
-        </div>
-
-        <div class="infoIndex">
-
-            <div class="horariosContactos">
-              
-                <div class="atencion">
-                    <h5>Horarios de atencion</h5>
-                    <h6>Lunes - h6iernes : 09:00 a 18:00</p>
-                    {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p> --}}
-                    <h6>Sabados h6 09:00 a 17:00</p>
-                    {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p> --}}
-                </div>
-                <div class="contactosInfo">
-                    <h5>Contactos</h5>
-                    <h6>098 426 h6244</p>
-                    {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p> --}}
-                    <h6>depilcenh6er2021@gmail.com</p>
-                    {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p> --}}
-                </div>
-                
-            </div>
-            
-            <div class="maps">
-              {{!-- <h5>Nuestra Ubicacion</h5> --}}
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec" width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            
-        </div>
-          {{!-- <div class="planta">
-          <img src="../img/planta-02.png" alt="">
-          </div> --}}
-
-
-        <div class="boxFooter" id="boxFooter">
-                  {{> footer }}
-        </div>
-      </section>
+     
 
     </main>
     

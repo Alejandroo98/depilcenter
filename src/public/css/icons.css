@@ -7,63 +7,80 @@ body {
 
 .iconsContenedor {
   display: flex;
-  padding: 100px 0;
-  /* background-color: #7fffd4; */
   justify-content: center;
-  background-color: skyblue;
+  align-items: center;
+  padding: 100px 0;
+  background-color: rgb(227, 247, 248);
+  background-image: url(../img/background-mujer-01.png);
+  background-size: cover;
 }
 
-.iconsBoxCentrar {
+.iconsContenedor .iconsImg-info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5em;
-  /* padding: 3em; */
-  max-width: 60%;
-  height: auto;
-  /* background-color: var(--general); */
-  border-radius: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  /* background-color: white; */
+  gap: 0 15px;
+  width: 80%;
 }
 
-.iconsBoxCentrar .overflow {
-  grid-column: span 2;
-  border-radius: 15px;
-  height: 500px;
-  overflow: auto;
-  background: white;
-  padding: 20px;
-}
-
-.iconsBoxCentrar .imgIcons {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(8, 122px);
-  gap: 0.5em 0;
-}
-
-.iconsBoxCentrar .imgIcons > div {
-  border-left: 8px solid var(--general);
+.iconsImg > div {
+  /* background-color: turquoise; */
+  padding: 10px;
   border-radius: 10px;
-  overflow: auto;
-  background-color: rgb(255, 238, 238);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 12px;
+  box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.712);
 }
 
-.imgIcons p {
-  font-size: 12px;
-  color: rgb(90, 88, 88);
+.iconsImg {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* background-color: rgb(189, 184, 184); */
+  text-align: center;
+  font-size: 13px;
+  color: rgb(98, 97, 97);
+  gap: 08px;
 }
 
-.iconsBoxCentrar .imgIcons img {
-  width: 100px;
-  /* background-color: violet; */
-  float: left;
-  margin-right: 10px;
+.iconsImg-info img {
+  width: 120px;
+}
+
+.iconsImg .tituloIcons {
+  grid-column: span 7;
+}
+
+.iconsImg .tituloIcons img {
+  width: 200px;
 }
 
 .ceraInfo {
-  background-color: white;
-  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.712);
   border-radius: 10px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.botonesCeraInfo a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 20px;
+  border-radius: 1rem;
+  color: rgb(37, 37, 37);
+}
+
+.botonesCeraInfo a:nth-child(1) {
+  background-color: rgb(241, 241, 125);
+}
+
+.botonesCeraInfo a:hover {
+  -webkit-filter: contrast(150%);
+  filter: contrast(150%);
+}
+
+.botonesCeraInfo a:nth-child(2) {
+  background-color: salmon;
 }
