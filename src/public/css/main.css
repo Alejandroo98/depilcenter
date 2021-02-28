@@ -1,6 +1,9 @@
 :root {
   --fondo: rgb(245, 224, 227);
   --general: #e8908b;
+  --amarillo: rgb(255, 255, 166);
+  --celeste: rgb(150, 230, 226);
+  --rojo: rgb(250, 173, 173);
 }
 
 html,
@@ -178,64 +181,123 @@ body {
 
 /* ======= SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
 .reservarHBS {
-  display: none;
-  grid-template-areas:
-    'agendarCita agendarCita agendarCita agendarCita info'
-    'navbar navbar navbar navbar navbar';
-  background-color: rgb(245, 224, 227);
-  opacity: 100px;
-  grid-template-rows: 95% 5%;
-}
-
-.infoIndex {
-  background-color: var(--general);
-  grid-area: info;
+  /* display: none; */
   display: flex;
-  flex-direction: column;
-}
-
-.atencion,
-.contactosInfo {
-  flex-grow: 1;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px sold black;
-  margin: 25px;
-  background-color: rgba(255, 255, 255, 0.397);
-}
-
-.maps {
-  flex-grow: 1;
-  display: flex;
+  background-image: url(../img/background-reserva-02.png);
+  background-size: cover;
   justify-content: center;
-  align-items: center;
-}
-
-.maps iframe {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.397);
-  margin: 25px;
 }
 
 .divReservaGrid {
-  grid-area: agendarCita;
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5em;
+  padding: 100px 0;
+  min-width: 1060px;
+}
+
+.divReservaGrid > div,
+form {
+  border-radius: 10px;
+}
+
+/* =========RESERVA GRID============== */
+#registrarReserva {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: span 3;
+  background-color: rgba(255, 255, 255, 0.712);
+  box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
+  gap: 20px;
+  padding: 15px;
+}
+
+.reserva {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  grid-column: span 3;
+  /* background-color: var(--celeste); */
+  border-radius: 50px;
+}
+
+.agendarBoton {
+  display: flex;
+  grid-column: span 3;
+  /* background-color: brown; */
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+}
+
+/* =========FIN RESERVA GRID============== */
+
+.datosReserva {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column: span 2;
+  /* padding: 20px; */
+  gap: 15px 0;
+}
+
+.datosReserva > div {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.datosReserva > div > h5 {
+  height: 33px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(77, 76, 76);
+  font-size: 17px;
 }
 
-/* =============================FOOTER=============================== */
-.boxFooter {
-  justify-content: center;
-  background-color: var(--general);
-  grid-area: navbar;
+.horariosReserva {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+  height: 190px;
+  grid-row: span 2;
+  background-color: rgb(243, 245, 214);
 }
 
-.boxFooter footer {
-  color: #f6e1eb;
+.datosReserva .horariosReserva h5 {
+  margin: 0;
 }
 
-/* ================================================================= */
+.ubicacionReserva {
+  background-color: rgb(212, 248, 246);
+  grid-row: span 2;
+}
+
+.covid19Reservar {
+  background-color: rgb(255, 231, 231);
+}
+
+.horariosReserva h5 {
+  background-color: var(--amarillo);
+}
+
+.ubicacionReserva h5 {
+  background-color: var(--celeste);
+  margin: 0;
+}
+
+.covid19Reservar h5 {
+  background-color: var(--rojo);
+}
+
+.imgResera {
+  background-image: url(../img/background-local.png);
+  background-size: cover;
+}
 /* ======= FIN SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
 
 @keyframes botonesAgendar {

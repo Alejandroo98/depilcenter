@@ -61,12 +61,12 @@ class ajustarPantallaReserva {
 
   tamDiv() {
     let tamPantalla = `${this.altura}`;
-    this.cajaReserva.style.height = `${this.altura - 54}px`;
+    // this.cajaReserva.style.height = `${this.altura}px`;
     return tamPantalla;
   }
 
   scroll() {
-    this.cajaReserva.style.display = 'grid';
+    // this.cajaReserva.style.display = 'block';
     setTimeout((x) => {
       window.scroll({
         top: this.tamDiv(),

@@ -1,319 +1,102 @@
-:root {
-  --colorFondo: #e8908b;
-  --colorInputs: #ec99c1;
-  --colorCoorporativo: #e8908b;
-  --bordes: #504f4f;
-  --rosaFuerte: #e8908b;
-}
-
-/* ===VALIDACION DATOS==== */
-.errDatos {
-  font-size: 14px;
-  position: absolute;
-  color: rgb(109, 107, 107);
-  left: 25%;
-  bottom: -18px;
-  width: 100%;
-}
-
-.errDatos span {
-  position: relative;
-  float: left;
-  top: 2px;
-  font-size: 17px;
-}
-/* === FIN VALIDACION DATOS==== */
-
-.cajaMainReservar {
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.2);
-}
-
-.cajaMainReservar label {
-  color: var(--colorCoorporativo);
-  font-weight: 450;
-}
-
-.cajaSegundaReservar {
-  border-radius: 7px;
-  display: flex;
-  flex-direction: column;
-}
-
-.cajaMainReservarDeslizar {
-  animation: ocultarReserva 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-.cajaMainReservarDeslizarDatos {
-  animation: ocultarReservaDatos 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-.datosReservaBox {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* background-color: rgba(165, 42, 42, 0.616) */
-  width: 100%;
-  height: 100%;
-  left: 100%;
-}
-
-.datosReservaBox > div input {
-  border: none;
-  border-bottom: 1px solid rgb(163, 163, 163);
-  margin: 20px 0;
-  inline-size: 200px;
-  color: rgb(83, 83, 83);
-}
-
-.datosReservaBox > div input:focus {
-  outline: none;
-  color: rgb(83, 83, 83);
-}
-
-.datosReservaBox button {
-  background-color: var(--colorCoorporativo);
-  font-weight: 500;
-  border-radius: 25px;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 7px 20px;
-  margin: 15px;
-}
-
-.datosReservaBox button span {
-  display: inline-block;
-  text-align: right;
-  padding: 0;
-  margin-left: 5px;
-}
-
-.backCajaMain {
-  animation: backReservaMain 0.5s;
-  /* animation-timing-function: ease-in; */
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
-}
-
-.backCajaDos {
-  animation: backReservaDos 0.5s;
-  /* animation-timing-function: ease-in; */
-  animation-fill-mode: forwards;
-}
-
-@keyframes backReservaMain {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes ocultarReservaDatos {
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes ocultarReserva {
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.cajaDatosLocalesServicios :nth-child(1) {
-  display: inline-block;
-}
-
-.cajaDatosLocalesServicios :nth-child(2) {
-  display: inline-block;
-}
-
-.locales label::after {
-  position: absolute;
-  content: 'Ubicación';
-  font-size: 14px;
-  color: rgb(128, 126, 126);
-  cursor: pointer;
-  text-decoration-line: underline;
-}
-
-.hora label::after {
-  position: absolute;
-  content: 'Horarios de atencion';
-  font-size: 14px;
-  color: rgb(128, 126, 126);
-  cursor: pointer;
-  text-decoration-line: underline;
-}
-
-.cajaDatosLocalesServicios .locales select {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.164);
-}
-
-.cajaDatosLocalesServicios .serviciosSelect select {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.164);
-}
-
-.cajaDatosLocalesServicios select {
-  border-radius: 5px;
-  width: 200px;
-  height: 35px;
-  color: var(--bordes);
-}
-
-.reserva {
-  font-weight: 500;
-  display: flex;
-  height: auto;
-  background-color: #e8908b;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.reserva p {
-  padding: 15px;
+body {
   margin: 0;
 }
 
-.cajaDatosHoraFecha input {
-  width: 200px;
-  height: 35px;
-  /* border: 2px solid var(--bordes); */
-  border-radius: 5px;
-  border: none;
-  color: var(--bordes);
+:root {
+  --fondo: rgb(245, 224, 227);
+  --general: #e8908b;
+  --amarillo: rgb(255, 255, 166);
+  --celeste: rgb(150, 230, 226);
+  --rojo: rgb(250, 173, 173);
+  --letras: rgb(119, 119, 119);
 }
-
-textarea.cajaDatosHoraFecha {
-  /* border: 3px solid orangered; */
-  border: none;
-}
-
-.cajaDatosHoraFecha :nth-child(1) {
-  display: inline-block;
-}
-
-.cajaDatosHoraFecha :nth-child(2) {
-  display: inline-block;
-}
-
-.cajaDatosHoraFecha .hora input {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.164);
-}
-
-.cajaDatosHoraFecha .fecha input {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.164);
-}
-
-.locales label {
-  margin: 15px 25px;
-}
-
-.serviciosSelect label {
-  margin: 15px 25px;
-}
-
-.hora label {
-  margin: 15px 25px;
-}
-
-.fecha label {
-  margin: 15px 25px;
-}
-
-.datoNombres {
-  display: inline;
-  position: relative;
-}
-.datoEmail {
-  position: relative;
-  display: inline;
-}
-.datoNum {
-  position: relative;
-  display: inline;
-}
-
-.cajaMainDatos button {
-  display: block;
-}
-
-.material-icons-next {
-  padding: 15px;
-}
-
-.material-icons-back span {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: var(--colorFondo);
-  padding: 10px;
-  border-radius: 50%;
-  color: white;
-  float: right;
-  cursor: pointer;
-  margin: 15px;
-  transform: rotate(180deg);
-}
-
-.material-icons-next span {
-  background: var(--colorFondo);
-  padding: 10px;
-  border-radius: 50%;
-  color: white;
-  float: right;
-  cursor: pointer;
-}
-
-/* FECHA INPUT */
-.fecha {
-  position: relative;
-  display: flex;
-}
-
-.fecha p {
-  position: absolute;
-  bottom: -23px;
-  left: 18%;
-  font-size: 14px;
-  position: absolute;
-  color: rgb(109, 107, 107);
+/* ==================FORMULARIO============= */
+#registrarReserva input,
+select {
   width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid rgb(156, 156, 156);
+  background: none;
+  font-weight: 500;
 }
 
-.fecha span {
-  position: relative;
-  float: left;
-  top: 2px;
-  font-size: 17px;
+#registrarReserva label {
+  color: rgb(102, 101, 101);
 }
 
-/* INPUTS */
-#nombres::placeholder,
-#email::placeholder,
-#numeroCelular::placeholder {
-  color: rgb(199, 195, 195);
-  font-size: 14px;
+#registrarReserva > div > label > span {
+  color: rgb(238, 74, 74);
+  /* background-color: red; */
 }
+
+#registrarReserva > div > p {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+#registrarReserva > div > p > span {
+  font-size: 20px;
+}
+
+.reserva h5 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.reserva p {
+  color: var(--letras);
+}
+
+.errDatos {
+  color: rgb(246, 151, 151);
+  font-size: 13px;
+}
+
+.horariosAtenconChild {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8px;
+  gap: 8px;
+}
+
+.horariosAtenconChild > div {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.horariosReserva .horariosAtenconChild > div > h6,
+.horariosReserva .horariosAtenconChild > div > p {
+  margin: 0;
+}
+.datosReserva .horariosAtenconChild p {
+  background: none;
+}
+
+.horariosAtenconChild div:nth-child(3) {
+  grid-column: span 2;
+}
+
+.agendarBoton > button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background-color: var(--celeste);
+  color: rgb(75, 75, 75);
+  font-weight: 500;
+}
+
+.agendarBoton span {
+  padding: 0;
+  margin: -3px;
+}
+
+/* ================FIN FORMULARIO=========== */

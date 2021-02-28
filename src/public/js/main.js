@@ -61,22 +61,22 @@ class ValidarDatos {
       this.enviarForm();
     } else {
       if (nombreOk.err === true) {
-        this.errNombres.innerHTML = `&nbsp${nombreOk.msg}<span class="material-icons errIcon">error_outline</span>`;
+        this.errNombres.innerHTML = `<span class="material-icons errIcon">error_outline</span>${nombreOk.msg}`;
       } else {
         this.errNombres.innerHTML = ``;
       }
       if (emailOk.err === true) {
-        this.errEmail.innerHTML = `&nbsp${emailOk.msg}<span class="material-icons errIcon">error_outline</span>`;
+        this.errEmail.innerHTML = `<span class="material-icons errIcon">error_outline</span>${emailOk.msg}`;
       } else {
         this.errEmail.innerHTML = ``;
       }
       if (numeroOk.err === true) {
-        this.errNumero.innerHTML = `&nbsp${numeroOk.msg}<span class="material-icons errIcon">error_outline</span>`;
+        this.errNumero.innerHTML = `<span class="material-icons errIcon">error_outline</span>${numeroOk.msg}`;
       } else {
         this.errNumero.innerHTML = ``;
       }
       if (fechaOk.err === true) {
-        this.errFecha.innerHTML = `&nbsp${fechaOk.msg}<span class="material-icons errIcon">error_outline</span>`;
+        this.errFecha.innerHTML = `<span class="material-icons errIcon">error_outline</span>${fechaOk.msg}`;
       } else {
         this.errFecha.innerHTML = ``;
       }
