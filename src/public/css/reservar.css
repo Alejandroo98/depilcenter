@@ -11,6 +11,7 @@ body {
   --letras: rgb(119, 119, 119);
 }
 /* ==================FORMULARIO============= */
+
 #registrarReserva input,
 select {
   width: 100%;
@@ -92,6 +93,7 @@ select {
   background-color: var(--celeste);
   color: rgb(75, 75, 75);
   font-weight: 500;
+  max-height: 40px;
 }
 
 .agendarBoton span {

@@ -47,6 +47,7 @@
 </nav>
 
  <main>
+
       <section class="cajaPrincipal">
 
                   <div class="reservas-caja">
@@ -63,129 +64,133 @@
                   {{!-- <div class="imagenMain"></div> --}}
 
       </section>
+      
+  </main>
+  
+    <section class="background">
+          <section  class="reservarHBS" id="reservarHBS">
 
+            <div class="divReservaGrid">
 
-       <section  class="reservarHBS" id="reservarHBS">
+              <form  id="registrarReserva"  method="POST">
+                  
+                  {{>  reservar }}
 
-        <div class="divReservaGrid">
+              </form>
 
-          <form  id="registrarReserva"  method="POST">
-              
-              {{>  reservar }}
+              <div class="datosReserva">
 
-          </form>
+                  <div class="horariosReserva">
+                    <h5>HORARIOS DE ATENCION</h5>
+                    
+                      <div class="horariosAtenconChild">
+                        <div>
+                        <h6>Lunes - Viernes</h6>
+                        <p>9:00 AM - 6:00 PM</p>
+                        </div>
+                        <div>
+                        <h6>Sabados</h6>
+                        <p>9:00 AM - 5:00 PM</p>
+                        </div>
+                        <div>
+                        <h6 class="horariosExtendidos">*OFRECEMOS HORARIOS EXTENDIDOS CON CITA PREVIA</h6>
+                        </div>
+                      </div>
 
-          <div class="datosReserva">
-
-              <div class="horariosReserva">
-                <h5>HORARIOS DE ATENCION</h5>
-                
-                  <div class="horariosAtenconChild">
-                    <div>
-                    <h6>Lunes - Viernes</h6>
-                    <p>9:00 AM - 6:00 PM</p>
-                    </div>
-                    <div>
-                    <h6>Sabados</h6>
-                    <p>9:00 AM - 5:00 PM</p>
-                    </div>
-                    <div>
-                    <h6>OFRECEMOS HORARIO EXTENDIDO <br> CON CITA PREVIA</h6>
+                  </div>
+                  
+                  <div class="ubicacionReserva">
+                    <h5>NUESTRA UBICACIÓN</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec" width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                  
+                  <div class="covid19Reservar">
+                    <h5>#stayPositive</h5>
+                    <div class="covid19">
+                      <img src="../img/covid-19/covid.png" alt="">
                     </div>
                   </div>
+                  
+              </div>
 
+              <div class="imgResera">
+                {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolor quo animi odio voluptate repudiandae qui, distinctio maxime quasi! Id alias unde sunt odit veniam. Consequatur magni debitis explicabo accusantium.</p> --}}
               </div>
               
-              <div class="ubicacionReserva">
-                <h5>NUESTRA UBICACIÓN</h5>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec" width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-              
-              <div class="covid19Reservar">
-                <h5>MEDIDAS DE SEGURIDAD</h5>
-              </div>
-              
-          </div>
-
-          <div class="imgResera">
-            {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolor quo animi odio voluptate repudiandae qui, distinctio maxime quasi! Id alias unde sunt odit veniam. Consequatur magni debitis explicabo accusantium.</p> --}}
-          </div>
+            </div>
+            
+          </section>
           
-        </div>
-        
-      </section>
-      
-      
-      <section class="iconsContenedor">
+          
+          <section class="iconsContenedor">
 
-        <div class="iconsImg-info">
+            <div class="iconsImg-info">
 
-          <div class="iconsImg">
-                <div class="tituloIcons">
-                    <img src="../img/depilacion-con-cera-09.png" alt="">
+              <div class="iconsImg">
+                    <div class="tituloIcons">
+                        <img src="../img/depilacion-con-cera-09.png" alt="">
+                    </div>
+
+                    <div class="icon1">
+                      <img src="../img/icons/icons-depilation-01.png " alt="Depilacion, paso uno">
+                      <h6>Paso 1</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
+                    </div>
+
+                    <div class="icon3">
+                      <img src="../img/icons/icons-depilation-03.png" alt="Depilacion, paso tres">
+                      <h6>Paso 2</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
+                    </div>
+
+                    <div class="icon4">
+                      <img src="../img/icons/icons-depilation-04.png" alt="Depilacion, paso cuatro">
+                      <h6>Paso 3</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
+                    </div>
+
+                    <div class="icon5">
+                      <img src="../img/icons/icons-depilation-05.png" alt="Depilacion, paso cinco">
+                      <h6>Paso 4</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
+                    </div>
+
+                    <div class="icon6">
+                      <img src="../img/icons/icons-depilation-06.png" alt="Depilacion, paso seis">
+                      <h6>Paso 5</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
+                    </div>
+
+                    <div class="icon7">
+                      <img src="../img/icons/icons-depilation-07.png" alt="Depilacion, paso siete">
+                      <h6>Paso 5</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
+                    </div>
+
+                    <div class="icon8">
+                      <img src="../img/icons/icons-depilation-08.png" alt="Depilacion, paso ocho">
+                      <h6>Paso 6</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
+                    </div>
+              </div>
+
+
+              <div class="ceraInfo">
+                <div class="infoCeraInfo">
+                  <h6>Cera</h6>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit mollitia sit, in commodi nulla, porro recusandae placeat hic aspernatur officia, pariatur possimus natus veritatis iure accusantium facere velit laudantium!</p>
                 </div>
-
-                <div class="icon1">
-                  <img src="../img/icons/icons-depilation-01.png " alt="Depilacion, paso uno">
-                  <h6>Paso 1</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
+                <div class="botonesCeraInfo">
+                  <a href="/conocenos">Conócenos</a>
+                  <a href="/cotizar-combos/mujer">Cotizar</a>
+                  <a href="/conocenos">Productos</a>
                 </div>
+              </div>
 
-                <div class="icon3">
-                  <img src="../img/icons/icons-depilation-03.png" alt="Depilacion, paso tres">
-                  <h6>Paso 2</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                </div>
-
-                <div class="icon4">
-                  <img src="../img/icons/icons-depilation-04.png" alt="Depilacion, paso cuatro">
-                  <h6>Paso 3</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                </div>
-
-                <div class="icon5">
-                  <img src="../img/icons/icons-depilation-05.png" alt="Depilacion, paso cinco">
-                  <h6>Paso 4</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                </div>
-
-                <div class="icon6">
-                  <img src="../img/icons/icons-depilation-06.png" alt="Depilacion, paso seis">
-                  <h6>Paso 5</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                </div>
-
-                <div class="icon7">
-                  <img src="../img/icons/icons-depilation-07.png" alt="Depilacion, paso siete">
-                  <h6>Paso 5</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                </div>
-
-                <div class="icon8">
-                  <img src="../img/icons/icons-depilation-08.png" alt="Depilacion, paso ocho">
-                  <h6>Paso 6</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                </div>
-          </div>
-
-
-          <div class="ceraInfo">
-            <div class="infoCeraInfo">
-              <h6>Cera</h6>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit mollitia sit, in commodi nulla, porro recusandae placeat hic aspernatur officia, pariatur possimus natus veritatis iure accusantium facere velit laudantium!</p>
             </div>
-            <div class="botonesCeraInfo">
-              <a href="/conocenos">Conócenos</a>
-              <a href="/cotizar-combos/mujer">Cotizar</a>
-              <a href="/conocenos">Productos</a>
-            </div>
-          </div>
 
-        </div>
-
-      </section>
-
-    </main>
+          </section>
+    </section>
 
     <footer class="footer"></footer>    
  

@@ -10,9 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 100px 0;
-  background-color: rgb(227, 247, 248);
-  background-image: url(../img/background-mujer-01.png);
-  background-size: cover;
+  /* background-color: rgb(227, 247, 248); */
 }
 
 .iconsContenedor .iconsImg-info {

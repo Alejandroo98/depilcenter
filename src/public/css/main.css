@@ -180,9 +180,16 @@ body {
 }
 
 /* ======= SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
+.background {
+  background-image: url(../img/backgroundDos-01.svg);
+  background-size: cover;
+  background-clip: padding-box;
+  /* background-attachment: fixed; */
+}
+
 .reservarHBS {
   /* display: none; */
-  display: flex;
+  display: none;
   background-image: url(../img/background-reserva-02.png);
   background-size: cover;
   justify-content: center;
@@ -192,9 +199,11 @@ body {
   display: grid;
   width: 70%;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100%;
   gap: 0.5em;
   padding: 100px 0;
   min-width: 1060px;
+  align-self: center;
 }
 
 .divReservaGrid > div,
@@ -211,6 +220,7 @@ form {
   box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
   gap: 20px;
   padding: 15px;
+  /* height: 100%; */
 }
 
 .reserva {
@@ -238,16 +248,18 @@ form {
 .datosReserva {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(5, 1fr);
+  /* grid-auto-rows: minmax(40px, auto); */
+  grid-template-rows: repeat(5, 1fr) auto;
   grid-column: span 2;
   /* padding: 20px; */
-  gap: 15px 0;
+  gap: 10px 0;
 }
 
 .datosReserva > div {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
+  height: auto;
 }
 
 .datosReserva > div > h5 {
@@ -263,9 +275,14 @@ form {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr;
-  height: 190px;
+  /* height: 190px; */
+  background-color: rgba(243, 245, 214, 0.815);
   grid-row: span 2;
-  background-color: rgb(243, 245, 214);
+}
+
+.horariosAtenconChild .horariosExtendidos {
+  /* background-color: rgb(241, 238, 238); */
+  font-size: 12px;
 }
 
 .datosReserva .horariosReserva h5 {
@@ -274,11 +291,19 @@ form {
 
 .ubicacionReserva {
   background-color: rgb(212, 248, 246);
-  grid-row: span 2;
+  grid-row: span 3;
 }
 
 .covid19Reservar {
-  background-color: rgb(255, 231, 231);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+  background-color: rgba(255, 255, 255, 0.733);
+}
+
+.covid19Reservar h5 {
+  background-color: var(--rojo);
+  margin: 0;
 }
 
 .horariosReserva h5 {
@@ -290,15 +315,25 @@ form {
   margin: 0;
 }
 
-.covid19Reservar h5 {
-  background-color: var(--rojo);
-}
-
 .imgResera {
   background-image: url(../img/background-local.png);
   background-size: cover;
 }
 /* ======= FIN SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
+
+/* ==========MEDIADAS DE SEGURIDAD================= */
+.covid19Reservar .covid19 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.datosReserva .covid19Reservar .covid19 img {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+}
+/* ==========FIN MEDIADAS DE SEGURIDAD================= */
 
 @keyframes botonesAgendar {
   100% {
