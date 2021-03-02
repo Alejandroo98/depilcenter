@@ -180,6 +180,98 @@ body {
 }
 
 /* ======= SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
+
+/* ===========FORMULARIO================= */
+#registrarReserva input,
+select {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid rgb(156, 156, 156);
+  background: none;
+  font-weight: 500;
+}
+
+#registrarReserva label {
+  color: rgb(102, 101, 101);
+}
+
+#registrarReserva > div > label > span {
+  color: rgb(238, 74, 74);
+  /* background-color: red; */
+}
+
+#registrarReserva > div > p {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+#registrarReserva > div > p > span {
+  font-size: 20px;
+}
+
+.reserva h5 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.reserva p {
+  color: var(--letras);
+}
+
+.errDatos {
+  color: rgb(246, 151, 151);
+  font-size: 13px;
+}
+/* ===========FIN FORMULARIO================= */
+
+.horariosAtenconChild {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8px;
+  gap: 8px;
+}
+
+.horariosAtenconChild > div {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.horariosReserva .horariosAtenconChild > div > h6,
+.horariosReserva .horariosAtenconChild > div > p {
+  margin: 0;
+}
+.datosReserva .horariosAtenconChild p {
+  background: none;
+}
+
+.horariosAtenconChild div:nth-child(3) {
+  grid-column: span 2;
+}
+
+.agendarBoton > button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background-color: var(--celeste);
+  color: rgb(75, 75, 75);
+  font-weight: 500;
+  max-height: 40px;
+}
+
+.agendarBoton span {
+  padding: 0;
+  margin: -3px;
+}
+
 .background {
   background-image: url(../img/backgroundDos-01.svg);
   background-size: cover;
@@ -242,8 +334,6 @@ form {
   align-content: center;
   margin: 0;
 }
-
-/* =========FIN RESERVA GRID============== */
 
 .datosReserva {
   display: grid;
@@ -319,7 +409,6 @@ form {
   background-image: url(../img/background-local.png);
   background-size: cover;
 }
-/* ======= FIN SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
 
 /* ==========MEDIADAS DE SEGURIDAD================= */
 .covid19Reservar .covid19 {
@@ -334,6 +423,7 @@ form {
   padding: 10px 15px;
 }
 /* ==========FIN MEDIADAS DE SEGURIDAD================= */
+/* ======= FIN SECCION DE RESERVA - INFROMACION ==============*/
 
 @keyframes botonesAgendar {
   100% {
