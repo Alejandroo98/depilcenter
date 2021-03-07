@@ -151,6 +151,35 @@ body {
   color: #61b9ad;
   cursor: pointer;
 }
+
+/* ICONO DE FLECHA */
+.cajaPrincipal span {
+  position: absolute;
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  bottom: 0;
+  margin: 15px;
+  animation-name: iconoMain;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes iconoMain {
+  0% {
+    margin: 20px;
+  }
+
+  50% {
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: 20px;
+  }
+}
+
 /* FIN BOTONES DE AGENDAR Y CONOCENOS */
 
 .cajaDatos-caja p {
@@ -293,15 +322,35 @@ select {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 100%;
   gap: 0.5em;
-  padding: 100px 0;
+  /* margin: 100px 0; */
+  /* padding: 100px 0; */
   min-width: 1060px;
   align-self: center;
+  /* background-color: steelblue; */
+  animation-name: ejectoReserva;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
 
 .divReservaGrid > div,
 form {
   border-radius: 10px;
 }
+
+/* ===========APAREZCA SUABE LA PARTE DE RESERVAR ============== */
+@keyframes ejectoReserva {
+  from {
+    margin-top: 300px;
+    opacity: 0;
+  }
+
+  to {
+    margin: 100px;
+    opacity: 1;
+  }
+}
+/* ===========FIN APAREZCA SUABE LA PARTE DE RESERVAR ============== */
 
 /* =========RESERVA GRID============== */
 #registrarReserva {

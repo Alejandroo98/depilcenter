@@ -76,14 +76,37 @@ body {
   justify-self: center;
   align-self: center;
   gap: 5px;
+  /* background-color: blue; */
 }
 
-.socialeFooter > div {
-  /* background-color: cadetblue; */
+.atencionFooter{
+  grid-column: span 3;
+}
+
+.socialeFooter > div > a > img {
+  /* background-color: aqua; */
+  width: 25px;
 }
 
 .socialeFooter .telefonoFooter {
   grid-column: span 3;
+}
+
+.socialeFooter .telefonoFooter a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.socialeFooter .telefonoFooter a {
+  font-size: 20px;
+  /* background-color: steelblue; */
+}
+
+.socialeFooter .telefonoFooter img {
+  width: 30px;
+  padding: 3px;
+  /* background-color: skyblue; */
 }
 
 .webDesign {
