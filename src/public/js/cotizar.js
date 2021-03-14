@@ -8,7 +8,7 @@ socket.on('connect', () => {
     }
 
     for (let i = 0; i < facial.length; i++) {
-      document.querySelector('.cajaCotizarFacial').innerHTML += facial[i];
+      document.querySelector('.cajaCotizarFacial').innerHTML +=  facial[i];
     }
   });
 });
@@ -18,24 +18,29 @@ socket.on('connect', () => {
 /* ==================IMPRIMIR PRECIO FINAL DE LA COTIZACION MUJER======================== */
 socket.on('imprimirTotalCotizacioMujer', (valorTotal) => {
   document.querySelector(
-    '.totalCotizarCorporalFacial'
-  ).innerHTML = `Total : ${valorTotal}`;
+    '.imprimirValorTotalCotizarCorporalFacial'
+  ).innerHTML = `Total : $ ${valorTotal} `;
 });
 
 socket.on('imprimirTotalCotizacionHombre', (valorTotal) => {
   document.querySelector(
-    '.totalCotizarCorporalFacialHombre'
-  ).innerHTML = `Total : ${valorTotal}`;
+    '.imprimirValorTotalCotizarCorporalFacialHombre'
+  ).innerHTML = `Total : $ ${valorTotal}`;
 });
 
 /* ==================FIN IMPRIMIR PRECIO FINAL DE LA COTIZACION======================== */
 
-/* =======================PINTAR NAV========================== */
-let etiquetaPintar = document.querySelector('.cotizar');
+/* =======================PINTAR NAV Y CAMBIAR DE FOTOGRAFIAS========================== */
+let etiquetaPintar = document.querySelector('.navbar');
 var URLactual = window.location;
 let URLpintar = URLactual.pathname;
-etiquetaPintar.classList.add('pintarNav');
-
+let imgCotizarContainer = document.querySelector(".imgCotizarContainer");
+if(URLpintar === '/cotizar-combos/mujer'){
+  imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/mujer_modelo_cotizar.png" alt="Modelo cotizar mujer - Depilcenter - Centro de depilacion"></img>`
+}else if(URLpintar === '/cotizar-combos/hombre' ){
+  imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/hombre_modelo_cotizar.png" alt="Modelo cotizar hombre- Depilcenter - Centro de depilacion"></img>`
+}
+  etiquetaPintar.setAttribute("style" , "transition : none ; background : var(--rojo)")
 /* =======================FIN PINTAR NAV========================== */
 
 // ================COTIZAR PRECIO=================
@@ -46,6 +51,7 @@ let cajaCotizarFacial = document.querySelector('.cajaCotizarFacial');
 let cajaCotizarCorporalHombre = document.querySelector(
   '.cajaCotizarCorporalHombre'
 );
+
 let cajaCotizarFacialHombre = document.querySelector(
   '.cajaCotizarFacialHombre'
 );
@@ -60,23 +66,23 @@ class Cotizar {
   }
 
   totalCotizarMujerCorporal = (id) => {
-    this.pintarDespintar(id);
+    this.pintarDespintarCorporal(id);
     socket.emit(
       'sumarValoresMujerCorporal',
       this.idCaja,
       function (dataCorporal, bool, numeroMayor) {
         if (bool === true) {
           document.querySelector(`.a${numeroMayor.id}`).innerHTML =
-            numeroMayor.precioIndividual;
+            `$ ${numeroMayor.precioIndividual}`;
 
           for (let i = 0; i < dataCorporal.length; i++) {
             document.querySelector(`.a${dataCorporal[i]._id}`).innerHTML =
-              dataCorporal[i].precioCombo;
+              `$ ${dataCorporal[i].precioCombo}`;
           }
         } else if (bool === false) {
           for (let i = 0; i < dataCorporal.length; i++) {
             document.querySelector(`.a${dataCorporal[i]._id}`).innerHTML =
-              dataCorporal[i].precioIndividual;
+              `$ ${dataCorporal[i].precioIndividual}`;
           }
         }
       }
@@ -84,22 +90,22 @@ class Cotizar {
   };
 
   totalCotizarMujerFacial = (id) => {
-    this.pintarDespintar(id);
+    this.pintarDespintarFacial(id);
     socket.emit(
       'sumarValoresMujerFacial',
       this.idCaja,
       function (dataFacial, bool, numeroMayor) {
         if (bool === true) {
-          document.querySelector(`.a${numeroMayor.id}`).innerHTML =
+          document.querySelector(`.a${numeroMayor.id}`).innerHTML = '$' +
             numeroMayor.precioIndividual;
 
           for (let i = 0; i < dataFacial.length; i++) {
-            document.querySelector(`.a${dataFacial[i]._id}`).innerHTML =
+            document.querySelector(`.a${dataFacial[i]._id}`).innerHTML = '$' +
               dataFacial[i].precioCombo;
           }
         } else if (bool === false) {
           for (let i = 0; i < dataFacial.length; i++) {
-            document.querySelector(`.a${dataFacial[i]._id}`).innerHTML =
+            document.querySelector(`.a${dataFacial[i]._id}`).innerHTML = '$' +
               dataFacial[i].precioIndividual;
           }
         }
@@ -107,17 +113,27 @@ class Cotizar {
     );
   };
 
-  pintarDespintar = (id) => {
+  cajaSelecionadaFacialHombre = ( id ) => {
     let cajaDespintar = document.getElementById(id);
-    cajaDespintar.classList.toggle('cajaSelecionada');
+    cajaDespintar.classList.toggle('cajaSelecionadaFacialHombre');
+  }
+
+  pintarDespintarCorporal = (id) => {
+    let cajaDespintar = document.getElementById(id);
+    cajaDespintar.classList.toggle('cajaSelecionadaCorporal');
   };
+
+  pintarDespintarFacial = ( id ) => {
+    let cajaDespintar = document.getElementById(id);
+    cajaDespintar.classList.toggle('cajaSelecionadaFacial');
+  }
 
   /* FUNCIONES PARA COTIZACION DEL HOMBRE */
 
   cargarMostrarDatosCotizarHombre = () => {
     socket.emit('datosCotizarHombre', null, function (corporal, facial) {
       for (let i = 0; i < corporal.length; i++) {
-        document.querySelector('.cajaCotizarCorporalHombre').innerHTML +=
+        document.querySelector('.cajaCotizarCorporalHombre').innerHTML += 
           corporal[i];
       }
 
@@ -129,22 +145,22 @@ class Cotizar {
   };
 
   totalCotizarHombreCorporal = (id) => {
-    this.pintarDespintar(id);
+    this.pintarDespintarCorporal(id);
     socket.emit(
       'sumarValoresHombreCorporal',
       id,
       function (dataCorporal, bool, numeroMayor) {
         if (bool === true) {
-          document.querySelector(`.a${numeroMayor.id}`).innerHTML =
+          document.querySelector(`.a${numeroMayor.id}`).innerHTML = '$' +
             numeroMayor.precioIndividual;
 
           for (let i = 0; i < dataCorporal.length; i++) {
-            document.querySelector(`.a${dataCorporal[i]._id}`).innerHTML =
+            document.querySelector(`.a${dataCorporal[i]._id}`).innerHTML = '$' +
               dataCorporal[i].precioCombo;
           }
         } else if (bool === false) {
           for (let i = 0; i < dataCorporal.length; i++) {
-            document.querySelector(`.a${dataCorporal[i]._id}`).innerHTML =
+            document.querySelector(`.a${dataCorporal[i]._id}`).innerHTML = '$' +
               dataCorporal[i].precioIndividual;
           }
         }
@@ -153,7 +169,7 @@ class Cotizar {
   };
 
   totalCotizarHombreFacial = (id) => {
-    this.pintarDespintar(id);
+    this.pintarDespintarFacial(id);
     socket.emit(
       'sumarValoresHombreFacial',
       id,
@@ -213,7 +229,7 @@ cajaCotizarCorporalHombre.addEventListener('click', (e) => {
 cajaCotizarFacialHombre.addEventListener('click', (e) => {
   if (e.target.id != '') {
     let pintarCotizar = new Cotizar(e.target.id);
-    pintarCotizar.totalCotizarHombreFacial(e.target.id);
+    pintarCotizar.cajaSelecionadaFacialHombre(e.target.id);
   }
 });
 
@@ -232,6 +248,53 @@ cajaCotizarCorporal.addEventListener('click', (e) => {
   }
 });
 /* ====================FIN EVENTOS DE COTIZACION============================== */
+
+
+/* =======================MOSTRAR EL CUADRO DE REGISTRO DE DATOS PARA GENDAR CITA DESDE COTIZAR =========*/
+let cajaMainCombos = document.querySelector(".cajaMainCombos")
+let __datosReservaContendor = document.querySelector(".__datosReservaContendor");
+let divReservaGridCentrar = document.querySelector(".divReservaGridCentrar");
+class AgendarCita{
+  constructor(){
+  }
+
+  mostrarCajaDatos = () => {
+
+    __datosReservaContendor.classList.remove("ocultarCajaDatosReservaFondo")
+    divReservaGridCentrar.classList.remove("ocultarCajaDatosReserva")
+    __datosReservaContendor.style.display = "flex"
+  }
+
+  ocultarCajaDatos = () => {
+
+    __datosReservaContendor.classList.add("ocultarCajaDatosReservaFondo")
+    divReservaGridCentrar.classList.add("ocultarCajaDatosReserva")
+    setTimeout(() => {
+      __datosReservaContendor.style.display = "none"
+    },800)
+
+  }
+  
+}
+
+cajaMainCombos.addEventListener("click" , x => {
+  if( x.target.id  != ''){
+    let newAgendarCita = new AgendarCita()
+    newAgendarCita.mostrarCajaDatos()
+  }
+})
+
+__datosReservaContendor.addEventListener("click" , x => {
+    if(x.target.id === 'cerrarContainerDatos'){
+      let newAgendarCita = new AgendarCita()
+      newAgendarCita.ocultarCajaDatos()
+    }
+})
+/* =======================*FIN MOSTRAR EL CUADRO DE REGISTRO DE DATOS PARA GENDAR CITA DESDE COTIZAR =======*/
+
+
+
+
 
 /* =============ABIRI COTIZACION HOMBRE O MUJER ==================*/
 let idCotizar;

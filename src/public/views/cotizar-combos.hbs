@@ -13,69 +13,90 @@
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/combos-cotizar.css">
     <link rel="stylesheet" href="../css/redesSociales.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/datosReservaPartial.css">
   </head>
   <body>
-    
-      {{> navbar }}
-      
-    <div class="cajaOpciones">
-      <div class="borraOpciones">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            
-            <li class="nav-item" >
-              <a class="nav-link" id="home-tab"  href="mujer">Mujer</a>
-            </li>
-            
-            <li class="nav-item">
-              {{!-- data-bs-toggle="tab"  -> Esto es para que al darle click no aumenta nada en la url --}}
-              <a class="nav-link " id="profile-tab" href="hombre">Hombre</a>
-            </li>
-            
-            <li class="nav-item" >
-              <a class="nav-link" id="contact-tab"  href="combos" role="tab" >Combos</a>
-            </li>
-            
-          </ul>
-          
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane" id="cotizarMujer">
 
-              {{!-- fade(ocultar) - active --}}
-
-             {{> cotizarMujer }}
-              
+    <section class="__datosReservaContendor" id="cerrarContainerDatos">
+      <div class="divReservaGridCentrar">
+        {{> reservar}}
+        {{> informacionReserva }}
+        <div class="imgResera">
+                {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolor quo animi odio voluptate repudiandae qui, distinctio maxime quasi! Id alias unde sunt odit veniam. Consequatur magni debitis explicabo accusantium.</p> --}}
               </div>
-            <div class="tab-pane" id="cotizarHombre" role="tabpanel" aria-labelledby="profile-tab">
+        </div>  
+    </section>
 
-             {{> cotizarHombre }}
+      {{> redesSociales }}
+      {{> navbar }}
 
-              
-            </div>
-            <div class="tab-pane" id="combosCotizar" role="tabpanel" aria-labelledby="contact-tab">
 
-            {{> combos }}
+
+      <main class="__cotizarContainer">
+
+        <section class="imgCotizarContainer">
+            
+        </section>  
+        
+        <section class="cajaOpciones">
+              <div class="nameCotizar">
+                <h1>Arma tu combo y agenda tu cita.</h1>
+                <p>Elige las zonas deseadas a depilar dependiendo el genero o mira nuestros combos actuales.</p>
+              </div>
+
+                <div class="borraOpciones">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" >
+                        <a class="nav-link" id="home-tab"  href="mujer">Mujer</a>
+                      </li>
+                      <li class="nav-item">
+                        {{!-- data-bs-toggle="tab"  -> Esto es para que al darle click no aumenta nada en la url --}}
+                        <a class="nav-link" id="profile-tab" href="hombre">Hombre</a>
+                      </li>
+                      <li class="nav-item" >
+                        <a class="nav-link" id="contact-tab"  href="combos" role="tab" >Combos</a>
+                      </li>
+                    </ul>
                     
-            </div>
-          </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane" id="cotizarMujer">
+                          {{!-- fade(ocultar) - active --}}
+                            {{> cotizarMujer }}
+                        </div>
 
-      </div>
-    </div>
-  
+                        <div class="tab-pane" id="cotizarHombre" role="tabpanel" aria-labelledby="profile-tab">
+                          {{> cotizarHombre }}
+                        </div>
+
+                        <div class="tab-pane" id="combosCotizar" role="tabpanel" aria-labelledby="contact-tab">
+                          {{> combos }}
+                        </div>
+                    </div>
+
+                </div>
+
+          </section>
+
+      </main>
+        
+      {{> footer}}
       
+  
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"
+      ></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+
+
+        
+      </script>
+    <script src="../js/cotizar-combos.js"></script>
+    <script src="../js/cotizar.js"></script>
   </body>
-  
-
-  <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-
-
-      
-    </script>
-  <script src="../js/cotizar.js"></script>
-  <script src="../js/cotizar-combos.js"></script>
 </html>

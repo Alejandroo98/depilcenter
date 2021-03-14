@@ -1,61 +1,200 @@
-.cajaOpciones {
+:root {
+  --fondo: rgb(245, 224, 227);
+  --general: #e8908b;
+  --amarillo: rgb(255, 255, 166);
+  --celeste: rgb(150, 230, 226);
+  --rojo: rgb(250, 173, 173);
+  --letras: rgb(119, 119, 119);
+  --negro : rgb(56, 56, 56);
+  --sombra : 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.__cotizarContainer{
+  background-color: var(--celeste);
   display: flex;
   justify-content: center;
+  margin-top: 57px;
+  padding: 14px 0;
+}
+
+.__cotizarContainer > section{
+  margin: 15px;
+  /* background-color: rgb(224, 111, 111); */
+} 
+
+.imgCotizarContainer{
+  /* background-color: rgb(56, 56, 56); */
+}
+
+.imgCotizarContainer  img{
+  /* object-fit: contain; */
+  height: 100%;
+  /* background-color: yellow; */
+  /* max-width: 252px; */
+}
+
+
+.cajaOpciones {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(255, 255, 255, 0.705); */
+  max-width: 900px;
+  border-radius: 15px;
+  /* width: 900px; */
 }
 
 .borraOpciones {
-  box-sizing: content-box;
-  max-width: 900px;
-  width: 900px;
-  position: relative;
-  top: 100px;
+  animation-name: mostrarMujer;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes mostrarMujer{
+  from {
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
 }
 
 .tab-content {
   box-sizing: content-box;
-  padding: 20px;
-  border-right: 1px solid rgb(209, 209, 209);
+  padding:30px;
+  /* border-right: 1px solid rgb(209, 209, 209);
   border-bottom: 1px solid rgb(209, 209, 209);
-  border-left: 1px solid rgb(209, 209, 209);
+  border-left: 1px solid rgb(209, 209, 209); */
+  background-color: rgba(255, 255, 255, 0.63);
+  border-radius: 18px;
+  /* border: none !important; */
+  /* background-color: rgba(255, 255, 255, 0.431); */
 }
 
+
+
+/* OPCIONES DE COTIZAR( MUJER - HOMBRE - COMBOS ) */
+.nav-tabs .active{
+  border-radius: 17px 17px 0 0;
+  color: black !important;
+  background-color: rgba(255, 255, 255, 0.63) !important;
+  border: none !important;
+}
+
+.nav-tabs{
+  /* background-color: white; */
+  border: none;
+  margin-bottom:-1px ;
+}
+
+
+.nav-tabs .nav-item a {
+  color: black !important;
+}
+
+.nav-tabs .nav-item > a:active {
+}
+
+.nav-tabs .nav-item:hover{
+  /* border: 1px solid  rgba(255, 255, 255, 0.63)!important; */
+  border: none !important;
+  border-bottom: none;
+  border-radius: 15px !important; 
+  color: none !important;
+  background: none;
+}
+
+
+
+/* OPCIONES DE COTIZAR *FIN( MUJER - HOMBRE - COMBOS ) */
+
+
+
 /* ====COTIZAR MUJER ===== */
+.cajaOpciones .nameCotizar {
+  /* background-color: rosybrown; */
+  width: 900px;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  /* margin: 25px 0; */
+  padding: 25px 0;
+  word-wrap: word-break;
+  /* background-color: white; */
+  
+}
+
+.nameCotizar h1{
+  font-size: 25px;
+  margin: 0;
+}
+
 .cajaMainCotizarMujer,
 .cajaMainCotizarHombre {
   display: grid;
   grid-template-columns: repeat(1, -1);
-  /* grid-template-rows: repeat(15, auto); */
   gap: 1em;
+  font-weight: 500;
+  color: var(--negro);
 }
 
 .cajaCotizarCorporal,
 .cajaCotizarCorporalHombre {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4em 1em;
 }
 
-.cajaCotizarCorporal > div,
-.cajaCotizarCorporalHombre > div {
-  background-color: coral;
-  padding: 1em;
-  border-radius: 10px;
+.cajaCotizarCorporal span,
+.cajaCotizarCorporalHombre span {
+  float:  right;
 }
+
 
 .cajaCotizarFacial,
 .cajaCotizarFacialHombre {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em 1em;
 }
 
-.cajaCotizarFacial > div,
-.cajaCotizarFacialHombre > div {
-  background-color: cornflowerblue;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 1em;
+.cajaCotizarFacial span,
+.cajaCotizarFacialHombre span {
+  float:right;
+}
+
+
+
+.cajaCotizarCorporal > div,
+.cajaCotizarCorporalHombre > div {
+  background-color: var(--celeste);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.zonasCotizarCorporal:hover,
+ .zonasCotizarFacial:hover {
+  filter: contrast(1.3);
+}
+
+
+.cajaCotizarFacial > div{
+  background-color: var(--rojo);
+  padding: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
   border-radius: 10px;
 }
+
+.cajaCotizarFacialHombre > div {
+  background-color: rgb(104, 104, 104);
+  padding: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  color: white;
+
+}
+
 
 .nombreCotizarCorporal,
 .nombreCotizarCorporalHombre {
@@ -67,21 +206,95 @@
   grid-column: 1/-1;
 }
 
+
+/* ================================================== */
+/* ================PRECIO DE COTIZACION============== */
+/* ================================================== */
 .totalCotizarCorporalFacial {
-  padding: 1em;
-  background-color: crimson;
-  border-radius: 10px;
-  color: #fff;
+  justify-self: center;
+  border: 3px solid rgb(245, 245, 119);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  padding: 10px 15px;
+  background-color: var(--amarillo);
 }
 
-.cajaSelecionada {
-  background-color: rgb(231, 205, 165) !important;
-  transform: scale(1.03);
+.totalCotizarCorporalFacialHombre {
+  justify-self: center;
+  border: 3px solid rgb(245, 245, 119);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  padding: 10px 15px;
+  background-color: var(--amarillo);
+}
+
+
+
+.totalCotizarCorporalFacial p{
+  margin: 0;
+  /* margin-left: 25px; */
+  font-size: 20px;
+}
+
+.totalCotizarCorporalFacialHombre p{
+  margin: 0;
+  /* margin-left: 25px; */
+  font-size: 20px;
+}
+
+
+.totalCotizarCorporalFacial button{
+  border:  none;
+  /* margin-left: 25px; */
+  color: white;
+  background-color:var(--negro);
+  padding: 8px 13px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.totalCotizarCorporalFacialHombre button{
+  border:  none;
+  /* margin-left: 25px; */
+  color: white;
+  background-color:var(--negro);
+  padding: 8px 13px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 12px;
+}
+/* ================================================== */
+/* ================*FIN PRECIO DE COTIZACION============== */
+/* ================================================== */
+
+
+.cajaSelecionadaCorporal {
+  /* filter: (25%); */
+  border-left: rgb(84, 182, 177) solid 9px;
+  background-color: rgb(117, 255, 248) !important;
+  /* background : linear-gradient( 90deg , rgb(111, 216, 210) , rgb(193, 243, 241)); */
+}
+
+.cajaSelecionadaFacial{
+  border-left: rgb(216, 112, 112) solid 9px;
+  background-color: rgb(231, 136, 136) !important;
+}
+
+.cajaSelecionadaFacialHombre{
+  background-color: rgb(54, 54, 54) !important;
+  border-left: rgb(39, 39, 39) solid 9px;
 }
 
 /* ====FIN COTIZAR MUJER ===== */
 
-/* COMBOS */
+/* ============================================== */
+/*============ COMBOS =========================== */
+/* ============================================== */
 
 .cajaMainCombos {
   display: grid;
@@ -89,21 +302,58 @@
   gap: 1rem;
 }
 
-.cajaMainCombos > div {
+.cajaMainCombos > form {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
   padding: 1rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  background-color: var(--celeste);
   border-radius: 1rem;
+  box-shadow: var(--sombra);
 }
 
-.cajaMainCombos > div:hover {
-  background-color: rgb(231, 205, 165);
-  transform: scale(1.01);
+/* .cajaMainCombos > form > h5 , .cajaMainCombos > form li , .cajaMainCombos > form p , .cajaMainCombos > form button {
+  background-color: yellow !important;
+} */
+
+
+.cajaMainCombos > form:hover {
+  background-color: rgb(127, 218, 213) ;
+  /* transform: scale(1.01); */
 }
 
-.cajaMainCombos > div a {
+.cajaMainCombos ul li , p {
+  color: var(--negro);
+}
+
+.cajaMainCombos form  p {
+  font-weight: 500;
+}
+
+.cajaMainCombos h5 , p{
+  text-align: center;
+}
+
+
+.cajaMainCombos form button {
   /* Todos los botones */
   /* background-color: red; */
-  color: red !important;
+  color: white !important;
+  font-weight: 500;
+  border: none;
   cursor: pointer;
+  background-color: var(--rojo);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 0;
 }
-/* FIN COMBOS */
+
+.cajaMainCombos form button:hover {
+  background-color: rgb(241, 140, 140);
+}
+
+
+/* ============================================== */
+/*============*FIN COMBOS =========================== */
+/* ============================================== */

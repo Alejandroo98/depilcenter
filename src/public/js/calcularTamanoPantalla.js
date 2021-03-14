@@ -20,6 +20,8 @@ function tamVentana() {
   return tam;
 }
 
+
+
 class ajustarPantalla {
   constructor(anchura, altura) {
     this.anchura = anchura;

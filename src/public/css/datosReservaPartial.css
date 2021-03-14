@@ -1,0 +1,110 @@
+:root {
+    --fondo: rgb(245, 224, 227);
+    --general: #e8908b;
+    --amarillo: rgb(255, 255, 166);
+    --celeste: rgb(150, 230, 226);
+    --rojo: rgb(250, 173, 173);
+    --letras: rgb(119, 119, 119);
+    --negro : rgb(56, 56, 56);
+    --sombra : 2px 2px 2px rgba(0,0,0,0.2);
+  }
+  
+.__datosReservaContendor{
+    display: none;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.76);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    animation-name: ejectoReservaFondo;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+    z-index: 200;
+}
+
+@keyframes ejectoReservaFondo {
+  from {
+    opacity: 1;
+  }
+  
+  to{
+    opacity: 0;
+  }
+}
+
+.divReservaGridCentrar{
+    display: grid;
+    position: fixed;
+    grid-template-columns: repeat(6,1fr);
+    /* padding: 100px 0; */
+    width: 70%;
+    gap: 0.5em;
+    animation-name: ejectoReserva;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+}
+
+.ocultarCajaDatosReservaFondo{
+    animation-name: ocultarReservaFondo;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+}
+@keyframes ocultarReservaFondo {
+  from {
+    /* opacity: 1; */
+    /* transform: scale(1); */
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.ocultarCajaDatosReserva{
+    animation-name: ocultarReserva;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+}
+
+@keyframes ocultarReserva {
+    0% {
+      /* opacity: 1; */
+      /* transform:translateY(10px) */
+      /* transform: scale(1); */
+      transform:translateY(200px);
+      opacity: 0;
+    }
+
+    100% {
+        /* transform: scale(-1); */
+    transform:translateY(20%);
+  }
+}
+
+
+
+@keyframes ejectoReserva {
+  0% {
+    /* opacity: 1; */
+    /* transform:translateY(10px) */
+    /* transform: scale(1); */
+    transform:translateY(20%);
+  }
+
+  100% {
+    transform:translateY(200px);
+    opacity: 0;
+      /* transform: scale(-1); */
+    }
+  
+  }

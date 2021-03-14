@@ -42,13 +42,13 @@ io.on('connection', (cliente) => {
 
     for (let i = 0; i < corporalDB.length; i++) {
       await corporalBaseDatos.push(
-        `<div id="${corporalDB[i]._id}" class="griDiv" >${corporalDB[i].nombre} <span class="a${corporalDB[i]._id}">${corporalDB[i].precioIndividual}</span></div>`
+        `<div id="${corporalDB[i]._id}" class="zonasCotizarCorporal zonasCotizarCorporalMujer" >${corporalDB[i].nombre} <span class="a${corporalDB[i]._id}">$ ${corporalDB[i].precioIndividual}</span></div>`
       );
     }
 
     for (let i = 0; i < facialDB.length; i++) {
       await facialBaseDatos.push(
-        `<div id="${facialDB[i]._id}" class="griDiv" >${facialDB[i].nombre} <span class="a${facialDB[i]._id}">${facialDB[i].precioIndividual}</span></div>`
+        `<div id="${facialDB[i]._id}" class="zonasCotizarFacial zonasCotizarCorporalMujer" >${facialDB[i].nombre} <span class="a${facialDB[i]._id}">$ ${facialDB[i].precioIndividual}</span></div>`
       );
     }
 
@@ -108,13 +108,13 @@ io.on('connection', (cliente) => {
 
     for (let i = 0; i < corporalDB.length; i++) {
       await corporalBaseDatosHombre.push(
-        `<div id="${corporalDB[i]._id}" class="griDiv" >${corporalDB[i].nombre} <span class="a${corporalDB[i]._id}">${corporalDB[i].precioIndividual}</span></div>`
+        `<div id="${corporalDB[i]._id}" class="zonasCotizarCorporal zonasCotizarCorporalHombre" >${corporalDB[i].nombre} <span class="a${corporalDB[i]._id}">$ ${corporalDB[i].precioIndividual}</span></div>`
       );
     }
 
     for (let i = 0; i < facialDB.length; i++) {
       await facialBaseDatosHombre.push(
-        `<div id="${facialDB[i]._id}" class="griDiv" >${facialDB[i].nombre} <span class="a${facialDB[i]._id}">${facialDB[i].precioIndividual}</span></div>`
+        `<div id="${facialDB[i]._id}" class="zonasCotizarFacial zonasCotizarCorporalHombre" >${facialDB[i].nombre} <span class="a${facialDB[i]._id}">$ ${facialDB[i].precioIndividual}</span></div>`
       );
     }
 
@@ -161,6 +161,7 @@ io.on('connection', (cliente) => {
 
   /* FIN FUNCIONES PARA COTIZACION HOMBRE */
 
+  /* MOSTRAR LOS COMBOS ACTUALES */
   cliente.on('cargarDatosCombosDB', async (data, callback) => {
     let combosDB = await DatosCombosDB.find({});
     let datosLi = [];
@@ -169,11 +170,13 @@ io.on('connection', (cliente) => {
         datosLi.push(`<li>${combosDB[i].zonas[a]}</li>`);
       }
       enviarDatosDOM.push(
-        `<div class="a${combosDB[i].id}" id="porDefinir"><h5>${
+        `<form class="a${combosDB[i].id}" method="POST">
+        <input  value=${ combosDB[i].id } type="hidden" name="${ combosDB[i].nombreCombo }">
+        <h5>${
           combosDB[i].nombreCombo
-        }</h5><ul>${datosLi.join('')}</ul><p>Precio: ${
+        }</h5><ul>${datosLi.join('')}</ul><p>Precio:$ ${
           combosDB[i].precio
-        }</p><a id="${combosDB[i].id}" > Agendar Cita </a></div>`
+        }</p><button type="button" id="${combosDB[i].id}" > Agendar Cita </button></form>`
       );
 
       datosLi = [];

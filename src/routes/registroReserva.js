@@ -60,8 +60,11 @@ app.post('/', async (req, res, next) => {
 });
 
 app.post('/cotizar-combos/combos', (req, res) => {
-  datos = JSON.parse(JSON.stringify(req.body));
+  datos = JSON.stringify(req.body);
+  res.render("succes")
+
   console.log(datos);
+  // console.log(datos);
   // res.send(`<h1>Alejo</h1>`);
 });
 

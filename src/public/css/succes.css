@@ -1,0 +1,19 @@
+:root {
+    --fondo: rgb(245, 224, 227);
+    --general: #e8908b;
+    --amarillo: rgb(255, 255, 166);
+    --celeste: rgb(150, 230, 226);
+    --rojo: rgb(250, 173, 173);
+    --letras: rgb(119, 119, 119);
+    --negro : rgb(56, 56, 56);
+    --sombra : 2px 2px 2px rgba(0,0,0,0.2);
+  }
+  
+
+.__loTenemosContendor{
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    justify-content:center;
+    background-color: var(--negro);
+}
