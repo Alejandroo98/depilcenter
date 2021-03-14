@@ -31,16 +31,16 @@ socket.on('imprimirTotalCotizacionHombre', (valorTotal) => {
 /* ==================FIN IMPRIMIR PRECIO FINAL DE LA COTIZACION======================== */
 
 /* =======================PINTAR NAV Y CAMBIAR DE FOTOGRAFIAS========================== */
-let etiquetaPintar = document.querySelector('.navbar');
-var URLactual = window.location;
-let URLpintar = URLactual.pathname;
+let etiquetaPintarCotizar = document.querySelector('.navbar');
+let URLactualCotizar = window.location;
+let URLpintarCotizar = URLactualCotizar.pathname;
 let imgCotizarContainer = document.querySelector(".imgCotizarContainer");
-if(URLpintar === '/cotizar-combos/mujer'){
+if(URLpintarCotizar === '/cotizar-combos/mujer'){
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/mujer_modelo_cotizar.png" alt="Modelo cotizar mujer - Depilcenter - Centro de depilacion"></img>`
-}else if(URLpintar === '/cotizar-combos/hombre' ){
+}else if(URLpintarCotizar === '/cotizar-combos/hombre' ){
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/hombre_modelo_cotizar.png" alt="Modelo cotizar hombre- Depilcenter - Centro de depilacion"></img>`
 }
-  etiquetaPintar.setAttribute("style" , "transition : none ; background : var(--rojo)")
+  etiquetaPintarCotizar.setAttribute("style" , "transition : none ; background : var(--rojo)")
 /* =======================FIN PINTAR NAV========================== */
 
 // ================COTIZAR PRECIO=================
@@ -254,6 +254,8 @@ cajaCotizarCorporal.addEventListener('click', (e) => {
 let cajaMainCombos = document.querySelector(".cajaMainCombos")
 let __datosReservaContendor = document.querySelector(".__datosReservaContendor");
 let divReservaGridCentrar = document.querySelector(".divReservaGridCentrar");
+let borraOpciones = document.querySelector(".borraOpciones");
+
 class AgendarCita{
   constructor(){
   }
@@ -289,6 +291,13 @@ __datosReservaContendor.addEventListener("click" , x => {
       let newAgendarCita = new AgendarCita()
       newAgendarCita.ocultarCajaDatos()
     }
+})
+
+borraOpciones.addEventListener("click" , x => {
+  if(x.target.id === "mostrarDatosRegistroCotizarMujer"  || x.target.id === "mostrarDatosRegistroCotizarHombre" ){
+    let newAgendarCita = new AgendarCita()
+    newAgendarCita.mostrarCajaDatos()
+  }
 })
 /* =======================*FIN MOSTRAR EL CUADRO DE REGISTRO DE DATOS PARA GENDAR CITA DESDE COTIZAR =======*/
 

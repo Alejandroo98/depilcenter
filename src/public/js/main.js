@@ -1,4 +1,4 @@
-var URLactual = window.location;
+let URLactual = window.location;
 let URLpintar = URLactual.pathname;
 let etiquetaPintar = document.querySelector('.inicio');
 let next = document.querySelector('.next');
@@ -171,7 +171,7 @@ class ValidarDatos {
 }
 
 registrarReserva.addEventListener('submit', (x) => {
-  x.preventDefault();
+  x.preventDefault(); 
   let datosReserva = {
     nombres: nombres.value,
     email: email.value,
