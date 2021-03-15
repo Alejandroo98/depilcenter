@@ -1,15 +1,18 @@
+html {
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  position: relative;
+}
+
 :root {
   --fondo: rgb(245, 224, 227);
   --general: #e8908b;
   --amarillo: rgb(255, 255, 166);
   --celeste: rgb(150, 230, 226);
   --rojo: rgb(250, 173, 173);
-}
-
-html,
-body {
-  margin: 0;
-  position: relative;
 }
 
 .logo img {
@@ -305,7 +308,6 @@ select {
 .background {
   background-image: url(../img/backgroundDos-01.svg);
   background-size: cover;
-  background-clip: padding-box;
   /* background-attachment: fixed; */
 }
 

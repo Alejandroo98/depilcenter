@@ -1,6 +1,12 @@
-body {
-  margin: 0;
+html {
+  height: 100%;
 }
+
+body{
+  min-height: 100%;
+  position: relative;
+}
+
 
 :root {
   --fondo: rgb(245, 224, 227);
@@ -11,13 +17,17 @@ body {
   --letras: rgb(119, 119, 119);
 }
 
-.footer {
+
+
+.footer{
   display: grid;
+  position: absolute;
   grid-template-columns: 100%;
   grid-template-rows: 1fr auto;
   background-color: salmon;
   justify-items: center;
   text-align: center;
+  bottom: 0;
   /* background-color: chocolate; */
 }
 

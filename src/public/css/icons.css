@@ -1,15 +1,8 @@
-html,
-body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .iconsContenedor {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 100px  0 311px 0;
   /* background-color: rgb(227, 247, 248); */
 }
 

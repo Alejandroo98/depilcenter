@@ -9,7 +9,6 @@
 }
 
 
-
 .quienes_somos_img img{
   width: 100%;
 }
@@ -17,6 +16,7 @@
 .quienes_somos_txt_contenedor {
   display: flex;
   justify-content: center;
+  padding-bottom: 211px;
   /* text-align: center; */
   /* background-color: yellow; */
 }

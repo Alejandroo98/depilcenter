@@ -5,4 +5,5 @@ if (URLpintar === '/contactos') {
   etiquetaPintar.classList.add('pintarNav');
 }
 let navbar = document.querySelector('.navbar');
-navbar.setAttribute('style', 'background-color : #e8908b');
+navbar.setAttribute("style" , "transition : none ; background : var(--celeste)")
+
