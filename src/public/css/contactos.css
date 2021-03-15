@@ -12,7 +12,7 @@ html {
     flex-direction: column;
     margin-top: 57px;
     /* background-color: var(--rojo); */
-    padding: 100px 0;
+    padding: 100px 0 409px 0;
     /* text-align: center; */
     justify-content: center;
 }

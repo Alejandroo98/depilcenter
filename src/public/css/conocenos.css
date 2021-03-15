@@ -25,7 +25,7 @@ body{
 .quienes_somos_txt_contenedor {
   display: flex;
   justify-content: center;
-  padding-bottom: 211px;
+  padding-bottom: 320px;
   /* text-align: center; */
   /* background-color: yellow; */
 }
