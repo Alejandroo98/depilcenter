@@ -18,9 +18,33 @@ body{
   --sombra : 2px 2px 2px rgba(0,0,0,0.2);
 }
 
+
+/* ================================================================================================================ */
+/* ===============ESO ES PARA CAOMBAIR DE COLRO EL NAV Y EL FOOTER EN CASO ME DECIDA POR EL BLANCO ================ */
+/* ================================================================================================================ */
+
+/* .nav-item > a {
+  color: var(--negro) !important;
+} */
+
+/* .footer{
+  background-color: white !important;
+} */
+
+/* .footer  a , p , h6 , text{
+  color: var(--negro) !important;
+} */
+
+/* ================================================================================================================ */
+/* ===============ESO ES PARA CAOMBAIR DE COLRO EL NAV Y EL FOOTER EN CASO ME DECIDA POR EL BLANCO ================ */
+/* ================================================================================================================ */
+
+
 .__cotizarContainer{
-  position: relative;
-  background-color: var(--celeste);
+  /* background-color: rgb(240, 240, 240); */
+  /* background-image: url(../img/backgroundDos-01.svg); */
+  background-size: cover;
+  /* background-color: var(--rojo); */
   display: flex;
   justify-content: center;
   margin-top: 55px;
@@ -76,7 +100,7 @@ body{
   /* border-right: 1px solid rgb(209, 209, 209);
   border-bottom: 1px solid rgb(209, 209, 209);
   border-left: 1px solid rgb(209, 209, 209); */
-  background-color: rgba(255, 255, 255, 0.63);
+  background-color: rgb(255, 255, 255);
   border-radius: 18px;
   /* border: none !important; */
   /* background-color: rgba(255, 255, 255, 0.431); */

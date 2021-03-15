@@ -35,7 +35,7 @@ body{
 }
 
 .navbarBackground {
-  background-color: var(--general);
+  background-color: salmon;
 }
 
 .nav-item a {

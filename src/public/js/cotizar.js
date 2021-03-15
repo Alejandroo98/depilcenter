@@ -35,12 +35,14 @@ let etiquetaPintarCotizar = document.querySelector('.navbar');
 let URLactualCotizar = window.location;
 let URLpintarCotizar = URLactualCotizar.pathname;
 let imgCotizarContainer = document.querySelector(".imgCotizarContainer");
+let etiquetaPintar = document.querySelector('.cotizar');
 if(URLpintarCotizar === '/cotizar-combos/mujer'){
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/mujer_modelo_cotizar.png" alt="Modelo cotizar mujer - Depilcenter - Centro de depilacion"></img>`
 }else if(URLpintarCotizar === '/cotizar-combos/hombre' ){
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/hombre_modelo_cotizar.png" alt="Modelo cotizar hombre- Depilcenter - Centro de depilacion"></img>`
 }
-  etiquetaPintarCotizar.setAttribute("style" , "transition : none ; background : var(--rojo)")
+etiquetaPintarCotizar.setAttribute("style" , "transition : none ; background : salmon")
+etiquetaPintar.classList.add('pintarNav');
 /* =======================FIN PINTAR NAV========================== */
 
 // ================COTIZAR PRECIO=================

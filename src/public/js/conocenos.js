@@ -2,7 +2,7 @@
 /* ==========================PINTAR LINEA BLANCA DEBAJO Y PINTAR NAV======================= */
 /* ======================================================================================== */
 let navbar = document.querySelector('.navbar');
-navbar.setAttribute("style" , "transition : none ; background : var(--rojo)")
+navbar.setAttribute("style" , "transition : none ; background : salmon")
 let etiquetaPintar = document.querySelector('.conocenos');
 etiquetaPintar.classList.add('pintarNav');
 /* ======================================================================================== */

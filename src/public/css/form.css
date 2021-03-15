@@ -1,0 +1,39 @@
+/* =============FORMULARIO(ESCRIBENOS)============= */
+ .formulario_quienes_somos{
+    background-color: var(--celeste);
+    text-align: center;
+  }
+  
+   .formulario_quienes_somos  input , textarea{
+    margin-top: 5px;
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+   .formulario_quienes_somos  input , textarea::placeholder{
+    font-size: 13px;
+    padding: 7px;
+  }
+  
+   .formulario_quienes_somos button{
+    border: none;
+    padding: 5px 15px ;
+    background-color: rgb(92, 189, 228);
+    border-radius: 10px;
+    font-weight: 500;
+    color: rgb(46, 45, 45);
+  }
+  
+  .escribenos_form h4{
+    color: rgb(54, 54, 54);
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .escribenos_form p{
+    font-size: 12px;
+    color: rgb(105, 103, 103);
+    margin: 0;
+  }
+  /* =============*FIN FORMULARIO(ESCRIBENOS)============= */

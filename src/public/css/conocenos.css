@@ -1,3 +1,12 @@
+html {
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  position: relative;
+}
+
 :root {
   --fondo: rgb(245, 224, 227);
   --general: #e8908b;
@@ -94,48 +103,6 @@
 
 
 /* =============*FIN TEMAS============= */
-
-
-/* =============FORMULARIO(ESCRIBENOS)============= */
-.links_quienes_somos_contenedor .formulario_quienes_somos{
-  background-color: var(--celeste);
-  text-align: center;
-}
-
-.links_quienes_somos_contenedor .formulario_quienes_somos  input , textarea{
-  margin-top: 5px;
-  border: 1px solid rgb(207, 206, 206);
-  border-radius: 10px;
-  width: 100%;
-}
-
-.links_quienes_somos_contenedor .formulario_quienes_somos  input , textarea::placeholder{
-  font-size: 13px;
-  padding: 7px;
-}
-
-.links_quienes_somos_contenedor .formulario_quienes_somos button{
-  border: none;
-  padding: 5px 15px ;
-  background-color: rgb(92, 189, 228);
-  border-radius: 10px;
-  font-weight: 500;
-  color: rgb(46, 45, 45);
-}
-
-.escribenos_form h4{
-  color: rgb(54, 54, 54);
-  margin: 0;
-  font-size: 20px;
-}
-
-.escribenos_form p{
-  font-size: 12px;
-  color: rgb(105, 103, 103);
-  margin: 0;
-}
-/* =============*FIN FORMULARIO(ESCRIBENOS)============= */
-
 
 /* =============BOTONES( AGENDAR CITA - COTIZAR  )============= */
 .links_quienes_somos_contenedor .agendarCita_quienes_somos{

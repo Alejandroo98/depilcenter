@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+  }
+  
+  body{
+    min-height: 100%;
+    position: relative;
+  }
+
+.__contactosContenedor{    
+    display: flex;
+    flex-direction: column;
+    margin-top: 57px;
+    /* background-color: var(--rojo); */
+    padding: 100px 0;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.__contactosContenedor .ciudadDireccionContactos  > div{
+    margin: 10px;
+}
+
+.ciudadDireccionContactos{
+}
+.__contactosContenedor .ciudadDireccionContactos{
+    display: flex;
+    /* background-color: black; */
+    justify-content: center;
+}
+
+.__contactosContenedor .ciudadDireccionContactos p , .__contactosContenedor .ciudadDireccionContactos label{
+    color: rgb(58, 58, 58);
+}
+.__contactosContenedor .ciudadDireccionContactos h1 , .__contactosContenedor .ciudadDireccionContactos h4 ,.__contactosContenedor .ciudadDireccionContactos p{
+    /* margin: 0; */
+    text-align: center;
+}
+
+.__contactosContenedor .ciudadDireccionContactos .numeroContactos h1 , .__contactosContenedor .ciudadDireccionContactos .numeroContactos h4 {
+    font-weight: 300;
+}
+
+.__selectInfoContactos{
+    display: flex;
+    justify-content: center;
+    /* background-color: yellowgreen; */
+    padding: 20px 0;
+}
+
+.__selectInfoContactos div:nth-child(1){
+    flex-grow: 1;
+    padding: 20px 25px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* background-color: red; */
+}
+
+.__selectInfoContactos div:nth-child(2){
+    flex-grow: 1;
+    padding: 20px 25px;
+    /* background-color: blue; */
+}
+
+
+.mapaContactos p {
+    font-size: 12px;
+    margin-top: -4px;
+    background-color: var(--celeste);
+    /* padding: 10px; */
+    border-radius:  0 0 10px 10px;
+}
+
+.__contactosContenedor .ciudadDireccionContactos .mapaContactos{
+    max-width: 300px;
+    /* background-color: red; */
+}
+
+.__contactosContenedor .ciudadDireccionContactos .mapaContactos iframe{
+    margin: 0;
+}
+
+.__contactosContenedor .ciudadDireccionContactos .mapaContactos form{
+    padding: 10px;
+}
+
