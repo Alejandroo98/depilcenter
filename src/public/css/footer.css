@@ -165,3 +165,24 @@ body{
   font-size: 14px;
   /* font-weight: 500; */
 }
+
+@media screen and (max-width : 800px ){
+
+  .centrarFooter {
+    width: 100%;
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+
+  
+   
+  .ubicacionFooter div:nth-child(2) {
+    display: none;
+  }
+
+  .ubicacionFooter {
+    grid-column: auto;
+
+  }
+  
+}

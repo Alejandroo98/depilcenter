@@ -9,10 +9,21 @@
 
 .iconsContenedor .iconsImg-info {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* background-color: white; */
-  gap: 0 15px;
-  width: 70%;
+  grid-template-columns: repeat(2 , auto);
+  /* grid-template-columns: repeat(2, minmax( min-content , 200px)); */
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+  max-width: 95%;
+}
+
+
+
+.iconsImg {
+  display: grid;
+  grid-template-columns: repeat(7 , minmax(min-content , 135px));
+  gap: 4px;
+  text-align: center;
 }
 
 .iconsImg > div {
@@ -23,19 +34,11 @@
   background-color: rgba(255, 255, 255, 0.712);
 }
 
-.iconsImg {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  /* background-color: rgb(189, 184, 184); */
-  /* grid-template-rows: 50px auto; */
-  text-align: center;
-  font-size: 13px;
-  color: rgb(98, 97, 97);
-  gap: 08px;
-}
 
 .iconsImg-info img {
-  width: 120px;
+  min-width: 15px;
+  max-width: 100px;
+  /* display: none; */
 }
 
 .iconsImg .tituloIcons {
@@ -48,6 +51,7 @@
 
 .ceraInfo {
   display: flex;
+  max-width: 230px;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
@@ -55,6 +59,7 @@
   border-radius: 10px;
   padding: 10px;
   box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
+  /* grid-column: span 1; */
 }
 
 .botonesCeraInfo a {

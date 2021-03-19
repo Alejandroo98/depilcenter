@@ -15,13 +15,17 @@ body{
   --rojo: rgb(250, 173, 173);
 }
 
+.logo {
+  /* background-color: red; */
+}
+
 .logo img {
   margin: 10px;
   position: fixed;
   top: 0;
   left: 6%;
   width: 230px;
-  z-index: 101;
+  z-index: 600;
 }
 
 
@@ -29,7 +33,7 @@ body{
   position: fixed;
   width: 100%;
   transition: all 0.5s ease-in-out;
-  z-index: 100;
+  z-index: 500;
   top: 0;
   /* background-color: rgba(253, 144, 144); */
 }
@@ -50,8 +54,9 @@ body{
 
 .cajaPrincipal {
   background-color: var(--fondo);
-  border-top: 1px solid transparent; /* Cuando le puse un margin a un de sus hijos tambien fue afectado el div padre es decir este, y para solucionar eso se pone esta linea. https://es.stackoverflow.com/questions/155171/duda-b%C3%A1sica-con-margin-padre-e-hijo-css */
+  /*border-top: 0px solid transparent; /* Cuando le puse un margin a un de sus hijos tambien fue afectado el div padre es decir este, y para solucionar eso se pone esta linea. https://es.stackoverflow.com/questions/155171/duda-b%C3%A1sica-con-margin-padre-e-hijo-css */
   background-image: url(../img/background-female.jpg);
+  background-position: center;
   background-size: cover;
   display: flex;
   background-attachment: fixed;
@@ -215,7 +220,7 @@ body{
 /* ======= SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
 
 /* ===========FORMULARIO================= */
-#registrarReserva input,
+.registrarReserva input,
 select {
   width: 100%;
   height: 50px;
@@ -225,23 +230,23 @@ select {
   font-weight: 500;
 }
 
-#registrarReserva label {
+.registrarReserva label {
   color: rgb(102, 101, 101);
 }
 
-#registrarReserva > div > label > span {
+.registrarReserva > div > label > span {
   color: rgb(238, 74, 74);
   /* background-color: red; */
 }
 
-#registrarReserva > div > p {
+.registrarReserva > div > p {
   display: flex;
   justify-content: center;
   align-content: center;
   text-align: center;
 }
 
-#registrarReserva > div > p > span {
+.registrarReserva > div > p > span {
   font-size: 20px;
 }
 
@@ -308,13 +313,12 @@ select {
 .background {
   background-image: url(../img/backgroundDos-01.svg);
   background-size: cover;
+  background-position: center;
   /* background-attachment: fixed; */
 }
 
 .reservarHBS {
-  /* display: none; */
   display: none;
-  background-image: url(../img/background-reserva-02.png);
   background-size: cover;
   justify-content: center;
 }
@@ -356,15 +360,16 @@ form {
 /* ===========FIN APAREZCA SUABE LA PARTE DE RESERVAR ============== */
 
 /* =========RESERVA GRID============== */
-#registrarReserva {
+.registrarReserva {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr ;
   grid-column: span 3;
   background-color: rgba(255, 255, 255, 0.712);
   box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
   gap: 20px;
   padding: 15px;
-  /* height: 100%; */
+  height: 100%;
 }
 
 .reserva {
@@ -377,6 +382,35 @@ form {
   /* background-color: var(--celeste); */
   border-radius: 50px;
 }
+
+/* .locales {
+  grid-area: lugar;
+}
+.serviciosSelect{
+  grid-area: servicio;
+
+}
+.hora{
+  grid-area: hora;
+
+}
+.fecha{
+  grid-area: fecha;
+
+}
+.datoNombres{
+  grid-area: nombres;
+
+}
+.datoEmail{
+  grid-area: email;
+
+}
+.datoNum{
+  grid-area: telefono;
+
+} */
+
 
 .agendarBoton {
   display: flex;
@@ -487,31 +521,4 @@ form {
   border-bottom: 2px solid white;
 }
 
-@media (max-width: 1485px) {
-  #tituloDepilPro h3 {
-    margin-left: 50px;
-  }
-}
 
-@media (max-width: 993px) {
-  .background-mujer {
-    display: none;
-  }
-
-  .reservas-caja {
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .navbar {
-    box-shadow: 5px 5px 5px rgba(5, 5, 5, 0.1);
-  }
-
-  #tituloDepilPro h3 {
-    margin-left: auto;
-    font-size: 65px;
-    line-height: 70px;
-  }
-}

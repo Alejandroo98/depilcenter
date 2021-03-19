@@ -14,6 +14,7 @@ html {
     flex-direction: column;
     left: 0;
     top: 8%;
+    z-index: 150;
 }
 
 .redesSocialesAll  div img{
@@ -69,3 +70,34 @@ html {
     background-color: rgb(58, 57, 58);
     width: 70px;
 } 
+
+@media screen and (max-width : 900px){
+    .redesSocialesAll  div img{
+        width: 23px;
+    }
+
+    .redesSocialesAll div:hover img{
+        transform: translateX(15px) scale(1.2);
+        /* margin: 5px; */
+    }
+
+    .redesSocialesAll > div{
+        padding: 7px;
+        width: 38px;
+    }
+    
+    .redesSocialesAll .img1:hover{
+        width: 50px !important;
+        /* transform:rotate(5deg); */
+    }
+    .redesSocialesAll .img2:hover{
+        width: 50px;
+    }
+    .redesSocialesAll .img3:hover{
+        width: 50px;
+    }
+    .redesSocialesAll .img4:hover{
+        width: 50px;
+    } 
+    
+}
