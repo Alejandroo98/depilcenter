@@ -166,7 +166,7 @@ body{
   /* font-weight: 500; */
 }
 
-@media screen and (max-width : 800px ){
+@media screen and (max-width : 840px ){
 
   .centrarFooter {
     width: 100%;

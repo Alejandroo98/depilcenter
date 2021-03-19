@@ -37,7 +37,7 @@
 
 .iconsImg-info img {
   min-width: 15px;
-  max-width: 100px;
+  width: 100px; 
   /* display: none; */
 }
 
@@ -45,8 +45,8 @@
   grid-column: span 7;
 }
 
-.iconsImg .tituloIcons img {
-  width: 200px;
+.iconsImg-info .iconsImg .tituloIcons img {
+  width: 210px;
 }
 
 .ceraInfo {

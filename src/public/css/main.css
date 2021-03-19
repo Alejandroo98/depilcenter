@@ -219,51 +219,7 @@ body{
 
 /* ======= SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
 
-/* ===========FORMULARIO================= */
-.registrarReserva input,
-select {
-  width: 100%;
-  height: 50px;
-  border: none;
-  border-bottom: 2px solid rgb(156, 156, 156);
-  background: none;
-  font-weight: 500;
-}
 
-.registrarReserva label {
-  color: rgb(102, 101, 101);
-}
-
-.registrarReserva > div > label > span {
-  color: rgb(238, 74, 74);
-  /* background-color: red; */
-}
-
-.registrarReserva > div > p {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
-.registrarReserva > div > p > span {
-  font-size: 20px;
-}
-
-.reserva h5 {
-  font-size: 30px;
-  margin: 0;
-}
-
-.reserva p {
-  color: var(--letras);
-}
-
-.errDatos {
-  color: rgb(246, 151, 151);
-  font-size: 13px;
-}
-/* ===========FIN FORMULARIO================= */
 
 .horariosAtenconChild {
   display: grid;
@@ -317,7 +273,17 @@ select {
   /* background-attachment: fixed; */
 }
 
+
+
+
+
+/* ===========APAREZCA SUABE LA PARTE DE RESERVAR ============== */
+
+/* ===========FIN APAREZCA SUABE LA PARTE DE RESERVAR ============== */
+
+/* =========RESERVA GRID============== */
 .reservarHBS {
+  /* display: flex; */
   display: none;
   background-size: cover;
   justify-content: center;
@@ -325,51 +291,24 @@ select {
 
 .divReservaGrid {
   display: grid;
-  width: 70%;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 100%;
+  grid-template-columns: repeat(3 , auto) ;
   gap: 0.5em;
-  /* margin: 100px 0; */
-  /* padding: 100px 0; */
-  min-width: 1060px;
-  align-self: center;
-  /* background-color: steelblue; */
+  /* background-color: red; */
   animation-name: ejectoReserva;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
+  max-width: 95%;
 }
 
-.divReservaGrid > div,
-form {
-  border-radius: 10px;
-}
-
-/* ===========APAREZCA SUABE LA PARTE DE RESERVAR ============== */
-@keyframes ejectoReserva {
-  from {
-    margin-top: 300px;
-    opacity: 0;
-  }
-
-  to {
-    margin: 100px;
-    opacity: 1;
-  }
-}
-/* ===========FIN APAREZCA SUABE LA PARTE DE RESERVAR ============== */
-
-/* =========RESERVA GRID============== */
 .registrarReserva {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto 1fr ;
-  grid-column: span 3;
+  grid-template-columns: repeat(3, minmax(min-content , 190px)); 
+  /* grid-template-rows: auto 1fr ; */
   background-color: rgba(255, 255, 255, 0.712);
   box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
   gap: 20px;
   padding: 15px;
-  height: 100%;
 }
 
 .reserva {
@@ -381,8 +320,91 @@ form {
   grid-column: span 3;
   /* background-color: var(--celeste); */
   border-radius: 50px;
+  /* grid-column: auto ; */
 }
 
+
+.datosReserva {
+  display: grid;
+  grid-template-columns: repeat(1 ,minmax(315px , 100% )) ;
+  /* grid-auto-rows: minmax(40px, auto); */
+  grid-template-rows: repeat(5, 1fr) auto;
+  /* grid-column: span 2; */
+  /* padding: 20px; */
+  gap: 10px 0;
+}
+
+
+.imgResera {
+  background-image: url(../img/background-local.png);
+  background-size: cover;
+  /* background-color: red; */
+  /* grid-column: auto ; */
+}
+
+@keyframes ejectoReserva {
+  from {
+    margin-top: 300px;
+    opacity: 0;
+  }
+
+  to {
+    margin: 100px 0 100px 0;
+    opacity: 1;
+  }
+}
+
+.divReservaGrid > div,
+form {
+  border-radius: 10px;
+}
+
+
+/* ===========FORMULARIO================= */
+.registrarReserva input,
+select {
+   width: 100%;
+  height: 50px; 
+  border: none;
+  border-bottom: 2px solid rgb(156, 156, 156);
+  background: none;
+  font-weight: 500;
+}
+
+.registrarReserva label {
+  color: rgb(102, 101, 101);
+}
+
+.registrarReserva > div > label > span {
+  color: rgb(238, 74, 74);
+  /* background-color: red; */
+}
+
+.registrarReserva > div > p {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.registrarReserva > div > p > span {
+  font-size: 20px;
+}
+
+.reserva h5 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.reserva p {
+  color: var(--letras);
+}
+
+.errDatos {
+  color: rgb(246, 151, 151);
+  font-size: 13px;
+}
+/* ===========FIN FORMULARIO================= */
 /* .locales {
   grid-area: lugar;
 }
@@ -421,15 +443,6 @@ form {
   margin: 0;
 }
 
-.datosReserva {
-  display: grid;
-  grid-template-columns: 100%;
-  /* grid-auto-rows: minmax(40px, auto); */
-  grid-template-rows: repeat(5, 1fr) auto;
-  grid-column: span 2;
-  /* padding: 20px; */
-  gap: 10px 0;
-}
 
 .datosReserva > div {
   border-radius: 10px;
@@ -477,6 +490,8 @@ form {
   background-color: rgba(255, 255, 255, 0.733);
 }
 
+
+
 .covid19Reservar h5 {
   background-color: var(--rojo);
   margin: 0;
@@ -491,10 +506,7 @@ form {
   margin: 0;
 }
 
-.imgResera {
-  background-image: url(../img/background-local.png);
-  background-size: cover;
-}
+
 
 /* ==========MEDIADAS DE SEGURIDAD================= */
 .covid19Reservar .covid19 {
@@ -505,7 +517,7 @@ form {
 
 .datosReserva .covid19Reservar .covid19 img {
   display: block;
-  width: 100%;
+  max-width: 400px;
   padding: 10px 15px;
 }
 /* ==========FIN MEDIADAS DE SEGURIDAD================= */

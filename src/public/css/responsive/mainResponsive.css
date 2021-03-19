@@ -21,6 +21,18 @@
 
 @media screen and (max-width : 1130px){
 
+  /* =========RESPONSIVE CAJA DE AGENDAR======= */
+    .divReservaGrid {
+    grid-template-columns: repeat(2 , auto) !important;
+    max-width: 95% !important;
+    /* padding: 0 10px; */
+    }
+
+  .imgResera {
+    display: none;
+  }
+  /* =========*FIN RESPONSIVE CAJA DE AGENDAR======= */
+
   .iconsContenedor .iconsImg-info {
     max-width: 99% !important;
   }
@@ -40,7 +52,36 @@
 
 } 
 
-@media screen and (max-width : 800px ){
+@media screen and ( max-width : 990px ){
+  .horariosAtenconChild{
+    grid-template-columns: 100% !important;
+  }
+
+  .horariosAtenconChild div:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .datosReserva {
+    display: grid;
+  grid-template-columns: repeat(1 ,minmax(auto , 100% )) ;
+    grid-template-rows: repeat(5, 1fr) auto;
+  }
+  
+}
+
+@media screen and (max-width : 840px ){
+
+  .registrarReserva {
+    grid-template-columns: repeat(3, minmax(min-content , 1fr)) !important; 
+  }
+  
+  .divReservaGrid {
+    grid-template-columns: 100% !important;
+    grid-template-rows: repeat(2 , min-content) !important;
+    /* width: 100%; */
+  }
+
+  
   .iconsContenedor{
     padding: 10px  0 642px 0 !important;
 }
@@ -50,48 +91,67 @@
 
 @media screen and (max-width : 600px ){
 
+    .divReservaGrid{
+      width: 100%;
+    }
+
+    .registrarReserva{
+      grid-template-columns: repeat(1, 100%) !important;
+    }
+
+    .agendarBoton {
+      grid-column: auto !important;
+    }
+
+
+    .reserva {
+      grid-column:  auto !important;
+      text-align: center;
+    }
+
+    
     .iconsImg {
-      grid-template-columns: 100% !important;
+    grid-template-columns: 100% !important;
     }
 
     .iconsImg .tituloIcons {
-      grid-column: auto !important;
+    grid-column: auto !important;
     }
-      
+
     .icon8 {
-      grid-column: auto !important;
+    grid-column: auto !important;
     }
-    
-      .cajaPrincipal {
-          width: 100%;
-      }
-      
+
+    .cajaPrincipal {
+      width: 100%;
+    }
+
     .iconsContenedor{
-        padding: 10px  0 642px 0 !important;
+    padding: 10px  0 642px 0 !important;
     }
 
     .iconsImg-info img {
-        /* display: none; */
-        /* background-color: red; */
-        padding: 8px;
-      }
+    /* display: none; */
+    /* background-color: red; */
+    padding: 8px;
+    }
 
-      .iconsImg .tituloIcons {
-        grid-column: auto;
-      }
+    .iconsImg .tituloIcons {
+    grid-column: auto;
+    }
 
-      .iconsImg > div {
-        /* background-color: turquoise; */
-        padding: 7px;
-        margin: 0;
-      }
-      
+    .iconsImg > div {
+    /* background-color: turquoise; */
+    padding: 7px;
+    margin: 0;
+    }
+
     .datosMain h1 {
-        font-size: 50px;
+    font-size: 50px;
     }
 
     .navbar {
-      background-color: var(--rojo);
+    background-color: salmon;
     } 
 
     .logo {
@@ -110,57 +170,14 @@
       left: auto;
     }
 
-    .divReservaGrid {
-      /* width: 100%; */
-      width: 100%;
-      min-width: 100%;
-      grid-template-columns: 100%;
-      grid-template-rows: min-content min-content 100px;
-      /* min-width: 100% ; */
-      /* background-color: red; */
-    }
 
-    .divReservaGrid > div , .divReservaGrid > form{
-      width: auto;
-      margin : 0;
-    }
 
     .reserva h5 {
-      font-size: 30px;
-      margin: 0;
+    font-size: 30px;
+    margin: 0;
     }
 
-    .registrarReserva {
-      display: block;
-      grid-column: auto;
-    }
-    
-    .datosReserva{
-      /* grid-template-rows: repeat(5, 1fr) auto; */
-      grid-column: auto;
-    }
-    
-    
-    .horariosReserva {
-      grid-row: span 2;
-    }
 
-    .ubicacionReserva{
-      grid-row: span 2;
-    }
-
-    .covid19Reserva{
-      grid-row: span 1;
-    }
-
-    .reservarHBS{
-      padding: 10px;
-    }
-    
-    .imgResera{
-      background-position: center;
-    }
-    
     @keyframes ejectoReserva {
       from {
         margin-top: 100px;
