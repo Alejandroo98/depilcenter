@@ -41,10 +41,8 @@ body{
 
 
 .__cotizarContainer{
-  /* background-color: rgb(240, 240, 240); */
-  /* background-image: url(../img/backgroundDos-01.svg); */
   background-size: cover;
-  /* background-color: var(--rojo); */
+  /* background-color: var(--celeste); */
   display: flex;
   justify-content: center;
   margin-top: 55px;
@@ -61,10 +59,7 @@ body{
 }
 
 .imgCotizarContainer  img{
-  /* object-fit: contain; */
   height: 100%;
-  /* background-color: yellow; */
-  /* max-width: 252px; */
 }
 
 
@@ -75,6 +70,7 @@ body{
   max-width: 900px;
   border-radius: 15px;
   /* width: 900px; */
+  /* max-width: 95%; */
 }
 
 .borraOpciones {
@@ -95,15 +91,14 @@ body{
 }
 
 .tab-content {
-  box-sizing: content-box;
+  /* box-sizing: content-box; */
   padding:30px;
   /* border-right: 1px solid rgb(209, 209, 209);
   border-bottom: 1px solid rgb(209, 209, 209);
   border-left: 1px solid rgb(209, 209, 209); */
-  background-color: rgb(255, 255, 255);
   border-radius: 18px;
   /* border: none !important; */
-  /* background-color: rgba(255, 255, 255, 0.431); */
+  background-color: white ;
 }
 
 
@@ -112,7 +107,7 @@ body{
 .nav-tabs .active{
   border-radius: 17px 17px 0 0;
   color: black !important;
-  background-color: rgba(255, 255, 255, 0.63) !important;
+  background-color: white !important;
   border: none !important;
 }
 
@@ -166,9 +161,10 @@ body{
 .cajaMainCotizarMujer,
 .cajaMainCotizarHombre {
   display: grid;
-  grid-template-columns: repeat(1, -1);
-  gap: 1em;
-  font-weight: 500;
+  justify-content: center;
+  grid-template-columns: 100%;
+  gap: 10px;
+  /* font-weight: 500; */
   color: var(--negro);
 }
 
@@ -189,7 +185,7 @@ body{
 .cajaCotizarFacialHombre {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5em 1em;
+  gap: 0.4em 1em;
 }
 
 .cajaCotizarFacial span,
@@ -342,7 +338,7 @@ body{
   justify-content:space-between;
   padding: 1rem;
   /* border: 1px solid black; */
-  background-color: var(--celeste);
+  /* background-color: var(--celeste); */
   border-radius: 1rem;
   box-shadow: var(--sombra);
 }

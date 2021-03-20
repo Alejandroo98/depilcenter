@@ -1,0 +1,121 @@
+@media screen and (max-width : 1230px ){
+     
+}
+
+
+@media screen and (max-width : 1130px){
+
+
+} 
+
+@media screen and ( max-width : 990px ){
+ 
+}
+
+@media screen and (max-width : 840px ){
+
+}
+
+
+
+@media screen and (max-width : 600px ){
+    .__cotizarContainer{
+        background-color: var(--celeste);
+        margin-top: 55px;
+        padding: 20px  0 652px 0;
+      }
+
+      .imgCotizarContainer{
+          display: none;
+      }
+   
+      .__cotizarContainer > section{
+        margin: 0;
+        /* background-color: rgb(224, 111, 111); */
+      } 
+
+      
+      .cajaOpciones .nameCotizar{
+          width: 100%;
+          font-size: 15px;
+          padding: 0 50px;
+      }
+
+      .cajaOpciones .nameCotizar h1{
+          font-size: 20px;
+      }
+
+
+      .cajaOpciones .nameCotizar p{
+        font-size: 14px;
+        color: rgb(93, 92, 92);
+    }
+
+      
+
+      .nav-tabs .nav-item a {
+          font-size: 13px;
+        /* background-color: red; */
+      }
+
+      .nav {
+          /* background-color: blue; */
+          display: grid;
+          grid-template-columns: repeat(3 , 1fr);
+          justify-items: center;
+      }
+
+      .nav-item {
+          margin: 0;
+          /* background-color: red; */
+      }
+      
+      
+      .cajaOpciones {
+          width: 100%;
+      }
+
+      .tab-content{
+          padding: 10px;
+      }
+
+      .cajaMainCotizarMujer,
+      .cajaMainCotizarHombre {
+          background: none;
+      }
+
+     .cajaCotizarCorporal,
+     .cajaCotizarCorporalHombre {
+        grid-template-columns: 100%;
+      } 
+
+      .cajaCotizarFacial,
+      .cajaCotizarFacialHombre {
+          grid-template-columns: 100%;
+      }
+
+      .nombreCotizarCorporal,
+      .nombreCotizarCorporalHombre {
+        grid-column: auto;
+      }
+
+      .totalCotizarCorporalFacial,
+      .totalCotizarCorporalFacialHombre {
+        width: 100%;
+      }
+      /* =========================== */
+      /* ==========COMBOS=========== */
+
+      .cajaMainCombos{
+          grid-template-columns: 1fr 1fr;
+          gap: 0.5rem;
+      }
+
+      .cajaMainCombos > form {
+          background-color: var(--celeste);
+      }
+      
+      /* ==========*FIN COMBOS=========== */
+      /* =========================== */
+      
+}
