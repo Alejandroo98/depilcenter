@@ -32,6 +32,7 @@ body{
   bottom: 0;
   /* background-color: chocolate; */
   padding: 25px 0;
+  width: 100%;
 }
 
 .centrarFooter {

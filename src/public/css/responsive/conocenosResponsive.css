@@ -1,0 +1,85 @@
+@media screen and (max-width : 1230px ){
+  
+}
+
+
+@media screen and (max-width : 1130px){
+
+ 
+
+} 
+
+@media screen and ( max-width : 990px ){
+ 
+}
+
+@media screen and (max-width : 840px ){
+
+    
+}
+
+
+
+@media screen and (max-width : 600px ){
+    .quienes_somos_txt_contenedor {
+        padding-bottom: 650px;
+    }
+
+    .quienes_somos_txt_centrar{
+        grid-template-columns: 100%;
+        gap: 15px;
+        max-width: 100%;
+        padding: 0;
+        margin : 0 0;
+        max-width: 97%;
+        /* background-color: red; */
+      }
+
+      .quienes_somos_txt{
+        grid-column: auto;
+        text-align: center;
+        /* background-color: red; */
+        padding: 30px 0;
+      }
+
+    .quienes_somos_img img{
+        height: 135px;
+    }
+
+    .temas_quienes_somos{
+        display: none !important;
+
+    }
+
+    .links_quienes_somos_contenedor .agendarCita_quienes_somos{
+        flex-direction: row;
+        font-size: 12px;
+        /* flex-wrap: nowrap ; */
+    }
+
+    .links_quienes_somos_contenedor .agendarCita_quienes_somos a{
+        padding: 5px 0;
+        margin : 3px;
+        background-color: skyblue;
+        color: white;
+    }
+
+    .links_quienes_somos_contenedor .agendarCita_quienes_somos a:nth-child(1){
+        background-color:rgb(253, 122, 122);
+    }
+
+    .quienes_somos_txt  div{
+        /* background-color: yellow; */
+        padding: 0 10px;
+        margin: 0 0;
+      }
+
+      .links_quienes_somos_contenedor {
+        grid-template-columns: minmax( min-content , 100%);
+          padding: 7px;
+      }
+
+
+      
+    
+}

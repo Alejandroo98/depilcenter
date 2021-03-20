@@ -17,9 +17,20 @@ body{
   --negro : rgb(56, 56, 56);
 }
 
+.quienes_somos_img {
+  width: 100%;
+  margin-top: 56px;
+  /* max-height: 500px; */
+  /* height: 100px; */
+  background-color: red;
+}
+
 
 .quienes_somos_img img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .quienes_somos_txt_contenedor {
@@ -32,24 +43,30 @@ body{
 
 .quienes_somos_txt_centrar{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 15px;
-  max-width: 60%;
-  /* background-color: rgb(238, 99, 99); */
-  padding: 15px;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(2,auto);
+  gap: 10px;
+  /* padding: 15px; */
   margin : 40px 0;
+  justify-content: center;
+  max-width: 95%;
 }
+
+
 
 /* ===================TEXTO QUIENES SOMOS ============ */
 .quienes_somos_txt{
-  grid-column: span 3;
+  min-width: 340px;
+  max-width: 900px;
+  /* grid-column: span 3; */
+  
   /* background-color: chocolate; */
 }
 
 .quienes_somos_txt  div{
   /* background-color: yellow; */
   padding: 30px;
-  margin: 15px 0;
+  /* margin: 15px 0; */
 }
 
 /* ===================*FIN TEXTO QUIENES SOMOS ============ */
@@ -61,15 +78,22 @@ body{
 /* ======================================================== */
 
 .links_quienes_somos_contenedor {
-  padding: 10px;
-  display: flex;
-  flex-direction: column ;
+  /* padding: 10px; */
+  display: grid;
+  grid-template-columns: minmax( 260px , 300px);
+  grid-template-rows: repeat(3 , min-content);
+  
+  /* min-width: 300px;
+  max-width: 400px; */
+  /* display: flex;
+  flex-direction: column ; */
 }
 
 .links_quienes_somos_contenedor > div , form {
   margin-bottom: 10px;
   padding: 12px;
   border-radius: 10px;
+  box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* =============TEMAS============= */
@@ -106,19 +130,21 @@ body{
 
 /* =============BOTONES( AGENDAR CITA - COTIZAR  )============= */
 .links_quienes_somos_contenedor .agendarCita_quienes_somos{
+  display: grid;
+  grid-template-columns: repeat( 3 , 1fr);
   background-color: var(--amarillo);
-  display: flex;
   align-items: center;
-  flex-direction: column;
+  /* text-align: center; */
+  font-size: 13px;
+  gap: 4px;
   text-align: center;
 }
 
+
 .links_quienes_somos_contenedor .agendarCita_quienes_somos a{
-  margin: 6px 0;
-  width: 150px;
-  display: block;
-  border-radius: 10px;
-  padding: 5px 10px;
+  /* width: 150px; */
+  border-radius: 15px;
+  padding: 5px 6px;
   background-color: white;
   font-weight: 500;
   text-decoration: none;
