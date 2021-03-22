@@ -1,9 +1,11 @@
 html {
   height: 100%;
+  width: 100%;
 }
 
 body{
   min-height: 100%;
+  min-width: 100%;
   position: relative;
 }
 
@@ -17,11 +19,12 @@ body{
     --negro : rgb(56, 56, 56);
     --sombra : 2px 2px 2px rgba(0,0,0,0.2);
   }
-  
-.__datosReservaContendor{
+
+  .__datosReservaContendor{
     display: none;
     justify-content: center;
-    position: absolute;
+    position:fixed;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.76);
     top: 0;
     bottom: 0;
@@ -37,39 +40,26 @@ body{
 
 @keyframes ejectoReservaFondo {
   from {
+    /* transform: translateY(15px); */
     opacity: 1;
   }
-  
+
   to{
     opacity: 0;
   }
 }
 
-.divReservaGridCentrar{
-    display: grid;
-    position: fixed;
-    grid-template-columns: repeat(6,1fr);
-    /* padding: 100px 0; */
-    width: 70%;
-    gap: 0.5em;
-    animation-name: ejectoReserva;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-direction: reverse;
-}
 
 .ocultarCajaDatosReservaFondo{
     animation-name: ocultarReservaFondo;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
-    animation-direction: reverse;
 }
+
+
 @keyframes ocultarReservaFondo {
   from {
-    /* opacity: 1; */
-    /* transform: scale(1); */
     opacity: 0;
   }
 
@@ -77,43 +67,32 @@ body{
     opacity: 1;
   }
 }
+
+
 .ocultarCajaDatosReserva{
     animation-name: ocultarReserva;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
-    animation-direction: reverse;
+    /* animation-direction: reverse; */
 }
 
-@keyframes ocultarReserva {
-    0% {
-      /* opacity: 1; */
-      /* transform:translateY(10px) */
-      /* transform: scale(1); */
-      transform:translateY(200px);
-      opacity: 0;
-    }
-
-    100% {
-        /* transform: scale(-1); */
-    transform:translateY(20%);
-  }
-}
 
 
 
 @keyframes ejectoReserva {
   0% {
-    /* opacity: 1; */
-    /* transform:translateY(10px) */
-    /* transform: scale(1); */
-    transform:translateY(20%);
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 50px;
+    /* transform:translateY(5%); */
   }
 
   100% {
-    transform:translateY(200px);
-    opacity: 0;
-      /* transform: scale(-1); */
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0;
+    /* transform:translateY(15%); */
     }
-  
+
   }

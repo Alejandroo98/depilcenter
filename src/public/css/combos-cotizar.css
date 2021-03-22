@@ -46,31 +46,37 @@ body{
   display: flex;
   justify-content: center;
   margin-top: 55px;
-  padding: 14px  0 323px 0;
+  padding: 0 25px 423px 25px;
+  background-color: var(--celeste);
 }
 
 .__cotizarContainer > section{
-  margin: 15px;
+  /* margin: 0 5% 0 5%; */
   /* background-color: rgb(224, 111, 111); */
 } 
 
 .imgCotizarContainer{
+  display: flex;
+  align-items: flex-end; 
+  padding: 20px;
   /* background-color: rgb(56, 56, 56); */
 }
 
 .imgCotizarContainer  img{
-  height: 100%;
+  height: 800px;
+  /* background-color: red; */
+  /* max-height: 800px; */
 }
 
 
 .cajaOpciones {
-  display: flex;
-  flex-direction: column;
-  /* background-color: rgba(255, 255, 255, 0.705); */
-  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(1 , minmax(min-content , 900px));
   border-radius: 15px;
-  /* width: 900px; */
+  /* background-color: red; */
+  gap: 25px;
   /* max-width: 95%; */
+  /* background-color: rgb(104, 104, 104); */
 }
 
 .borraOpciones {
@@ -91,8 +97,7 @@ body{
 }
 
 .tab-content {
-  /* box-sizing: content-box; */
-  padding:30px;
+  padding:12px;
   /* border-right: 1px solid rgb(209, 209, 209);
   border-bottom: 1px solid rgb(209, 209, 209);
   border-left: 1px solid rgb(209, 209, 209); */
@@ -143,7 +148,9 @@ body{
 /* ====COTIZAR MUJER ===== */
 .cajaOpciones .nameCotizar {
   /* background-color: rosybrown; */
-  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   border-radius: 15px 15px 0 0;
   /* margin: 25px 0; */
@@ -156,6 +163,10 @@ body{
 .nameCotizar h1{
   font-size: 25px;
   margin: 0;
+}
+
+.nameCotizar p{
+  margin : 0;
 }
 
 .cajaMainCotizarMujer,
@@ -172,7 +183,7 @@ body{
 .cajaCotizarCorporalHombre {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.4em 1em;
+  gap: 0.4em 0.5em;
 }
 
 .cajaCotizarCorporal span,
@@ -185,7 +196,7 @@ body{
 .cajaCotizarFacialHombre {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.4em 1em;
+  gap: 0.4em 0.5em;
 }
 
 .cajaCotizarFacial span,
@@ -328,8 +339,9 @@ body{
 
 .cajaMainCombos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax( min-content , 1fr) );
   gap: 1rem;
+  /* background-color: rebeccapurple; */
 }
 
 .cajaMainCombos > form {
@@ -337,10 +349,9 @@ body{
   flex-direction: column;
   justify-content:space-between;
   padding: 1rem;
-  /* border: 1px solid black; */
-  /* background-color: var(--celeste); */
   border-radius: 1rem;
   box-shadow: var(--sombra);
+  background-color: var(--amarillo);
 }
 
 /* .cajaMainCombos > form > h5 , .cajaMainCombos > form li , .cajaMainCombos > form p , .cajaMainCombos > form button {
@@ -349,7 +360,7 @@ body{
 
 
 .cajaMainCombos > form:hover {
-  background-color: rgb(127, 218, 213) ;
+  background-color: rgb(248, 248, 135) ;
   /* transform: scale(1.01); */
 }
 

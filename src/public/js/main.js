@@ -181,16 +181,15 @@ registrarReserva.addEventListener('submit', (x) => {
 
   validarDatos = new ValidarDatos(datosReserva);
   validarDatos.validarDatos();
-
   validarDatos.validarFecha();
 });
 
-back.addEventListener('click', () => {
-  let backDatos = new Reserva();
-  backDatos.backDeslizarRserva();
-});
+// back.addEventListener('click', () => {
+//   let backDatos = new Reserva();
+//   backDatos.backDeslizarRserva();
+// });
 
-next.addEventListener('click', () => {
-  let newReserva = new Reserva();
-  newReserva.deslizarDatosReserva();
-});
+// next.addEventListener('click', () => {
+//   let newReserva = new Reserva();
+//   newReserva.deslizarDatosReserva();
+// });

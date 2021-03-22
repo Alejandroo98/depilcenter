@@ -4,26 +4,89 @@
 
 
 @media screen and (max-width : 1130px){
-
+    .imgCotizarContainer {
+        display: none;
+    }
 
 } 
 
 @media screen and ( max-width : 990px ){
- 
+    .imgCotizarContainer {
+        display: none;
+    }
 }
 
 @media screen and (max-width : 840px ){
 
+    
+    .__datosReservaContendor{
+        position: absolute;
+        align-items: start  !important;
+        padding-top: 20px;
+    }
+    
+    .__cotizarContainer{
+        padding: 0 0 652px 0 !important;
+    }
+
+    .cajaOpciones{
+        width: 100%;
+    }
+
+    /* ===Nombre cotizar == */
+    .cajaOpciones .nameCotizar {
+        /* width: 200px; */
+    }
+
+
+    /* === MUJER === */
+    .imgCotizarContainer {
+        display: none;
+    }
+
+    .__cotizarContainer > section{
+        margin: 0;
+      } 
+
+    .tab-content {
+        padding: 10px;
+    }
+
+    .cajaCotizarCorporal,
+    .cajaCotizarCorporalHombre {
+       grid-template-columns: 1fr 1fr;
+       gap: 0.4em 0.5em;
+     } 
+
+     .cajaCotizarFacial,
+     .cajaCotizarFacialHombre {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.4em 0.5em;
+     }
+
+    
+    /* ===COMBOS==== */
+    
+    .cajaMainCombos{
+        gap: 1rem;
+    }
+
+    .cajaMainCombos > form {
+        /* background-color: blue; */
+    } 
 }
 
 
 
 @media screen and (max-width : 600px ){
-    .__cotizarContainer{
+    
+    .__cotizarContainer {
         background-color: var(--celeste);
         margin-top: 55px;
         padding: 20px  0 652px 0;
       }
+
+      
 
       .imgCotizarContainer{
           display: none;
@@ -117,5 +180,23 @@
       
       /* ==========*FIN COMBOS=========== */
       /* =========================== */
+
+      /* ====== .__datosReservaContendor esta clase este en datiosReservaPartial.css ====*/ 
+      .__datosReservaContendor{
+          position: absolute;
+          align-items: start  !important;
+      }
       
 }
+
+
+@media screen and (max-width : 300px ){
+    .cajaMainCombos{
+        grid-template-columns: 100%;
+    }
+
+    .tab-content{
+        margin-bottom: 20px;
+    }
+}
+

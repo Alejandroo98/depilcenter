@@ -292,6 +292,7 @@ body{
 .divReservaGrid {
   display: grid;
   grid-template-columns: repeat(3 , auto) ;
+  /* grid-template-rows: repeat(1 , minmax(auto , min-content)); */
   gap: 0.5em;
   /* background-color: red; */
   animation-name: ejectoReserva;
@@ -299,6 +300,7 @@ body{
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   max-width: 95%;
+  
 }
 
 .registrarReserva {

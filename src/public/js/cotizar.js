@@ -35,14 +35,14 @@ let etiquetaPintarCotizar = document.querySelector('.navbar');
 let URLactualCotizar = window.location;
 let URLpintarCotizar = URLactualCotizar.pathname;
 let imgCotizarContainer = document.querySelector(".imgCotizarContainer");
-let etiquetaPintar = document.querySelector('.cotizar');
+let etiquetaPintarCotizarDos = document.querySelector('.cotizar');
 if(URLpintarCotizar === '/cotizar-combos/mujer'){
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/mujer_modelo_cotizar.png" alt="Modelo cotizar mujer - Depilcenter - Centro de depilacion"></img>`
 }else if(URLpintarCotizar === '/cotizar-combos/hombre' ){
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/hombre_modelo_cotizar.png" alt="Modelo cotizar hombre- Depilcenter - Centro de depilacion"></img>`
 }
 etiquetaPintarCotizar.setAttribute("style" , "transition : none ; background : salmon")
-etiquetaPintar.classList.add('pintarNav');
+etiquetaPintarCotizarDos.classList.add('pintarNav');
 /* =======================FIN PINTAR NAV========================== */
 
 // ================COTIZAR PRECIO=================
@@ -255,24 +255,38 @@ cajaCotizarCorporal.addEventListener('click', (e) => {
 /* =======================MOSTRAR EL CUADRO DE REGISTRO DE DATOS PARA GENDAR CITA DESDE COTIZAR =========*/
 let cajaMainCombos = document.querySelector(".cajaMainCombos")
 let __datosReservaContendor = document.querySelector(".__datosReservaContendor");
-let divReservaGridCentrar = document.querySelector(".divReservaGridCentrar");
 let borraOpciones = document.querySelector(".borraOpciones");
 
 class AgendarCita{
   constructor(){
+    this.body = document.getElementsByTagName("body")
+  }
+
+  tamanioPantalla = () => {
+    let ancho = window.innerWidth
+    let largo = window.innerHeight
+
+    return {
+      ancho,
+      largo
+    }
+    
   }
 
   mostrarCajaDatos = () => {
 
     __datosReservaContendor.classList.remove("ocultarCajaDatosReservaFondo")
-    divReservaGridCentrar.classList.remove("ocultarCajaDatosReserva")
     __datosReservaContendor.style.display = "flex"
+    console.log();
+    if(this.tamanioPantalla().ancho <= 840 ){
+      window.scrollTo(0,0)
+      console.log("dentro");
+    }
   }
 
   ocultarCajaDatos = () => {
 
     __datosReservaContendor.classList.add("ocultarCajaDatosReservaFondo")
-    divReservaGridCentrar.classList.add("ocultarCajaDatosReserva")
     setTimeout(() => {
       __datosReservaContendor.style.display = "none"
     },800)
