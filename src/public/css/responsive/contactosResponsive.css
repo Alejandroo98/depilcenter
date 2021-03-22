@@ -1,0 +1,53 @@
+
+
+@media screen and (max-width : 1230px ){
+  
+}
+
+
+@media screen and (max-width : 1130px){
+
+ 
+
+} 
+
+@media screen and ( max-width : 990px ){
+ 
+}
+
+/* @media screen and (max-width : 840px ){
+
+    .__contactosContenedor{
+        padding: 0 0 633px 0;
+    }
+} */
+
+
+
+@media screen and (max-width : 840px ){
+   
+    .__contactosContenedor{
+        /* background-color: rebeccapurple; */
+        padding: 0 0 690px 0;
+    }
+
+    .__contactosContenedor .ciudadDireccionContactos{
+        flex-direction: column;
+    }
+    .__childCiudadDireccionContactos{
+        max-width: 100%;
+    }
+    
+    .__contactosContenedor .ciudadDireccionContactos .mapaContactos{
+        max-width: 100%;
+    }
+    .__selectInfoContactos > div{
+        padding: 10px !important;
+    }
+
+    .__childCiudadDireccionContactos{
+        padding: 50px 0;
+        /* background-color: rebeccapurple; */
+    }
+    
+}
