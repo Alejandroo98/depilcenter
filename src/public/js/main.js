@@ -8,6 +8,7 @@ let email = document.getElementById('email');
 let numeroCelular = document.getElementById('numeroCelular');
 let fecha = document.getElementById('fecha');
 let hora = document.getElementById('hora');
+let __contenedorMetodoDepilacion = document.getElementById("__contenedorMetodoDepilacion");
 
 if (URLpintar === '/') {
   etiquetaPintar.classList.add('pintarNav');
@@ -183,6 +184,14 @@ registrarReserva.addEventListener('submit', (x) => {
   validarDatos.validarDatos();
   validarDatos.validarFecha();
 });
+
+window.onblur = function(){  //Esta funcion se ejecuta cuando se cambia de pestaña en el navegador
+  console.log("taaaaaal");
+}
+
+
+
+
 
 // back.addEventListener('click', () => {
 //   let backDatos = new Reserva();

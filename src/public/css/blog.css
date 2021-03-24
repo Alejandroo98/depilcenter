@@ -1,10 +1,9 @@
 
-
 .__blogContenedor{
     /* background-color: var(--rojo); */
     display: flex;
     justify-content: center;
-    margin-top: 57px;
+    margin-top: 56px;
     padding-bottom: 309px;
     font-family: 'Nunito', sans-serif;
     background-color: rgb(205, 240, 236);
@@ -16,8 +15,7 @@
 }
 
 .__blogInfoContendro{
-    width: 50%;
-    /* min-width: 651px; */
+    max-width: 951px;
     /* background-color: var(--rojo); */
     padding: 10px 0;
 }
@@ -49,5 +47,5 @@
     width: 100%;
     object-fit: cover;
     height: 100%;
-    
+    object-position: center;
 }

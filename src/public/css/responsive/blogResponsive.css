@@ -1,0 +1,44 @@
+
+
+@media screen and (max-width : 1230px ){
+  
+}
+
+
+@media screen and (max-width : 1130px){
+
+ 
+
+} 
+
+@media screen and ( max-width : 990px ){
+ 
+}
+
+/* @media screen and (max-width : 840px ){
+
+    .__contactosContenedor{
+        padding: 0 0 633px 0;
+    }
+} */
+
+
+
+@media screen and (max-width : 840px ){
+   
+    .__blogContenedor{ 
+        flex-direction: column;
+        padding-bottom: 633px;
+    }
+    
+    .__blogInfoContendro{
+        width: 100%;
+        padding: 0;
+    }
+
+    .__blogInfoContendro > div {
+        margin: 10px;
+        padding: 12px;
+    }
+
+}
