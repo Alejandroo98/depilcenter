@@ -41,6 +41,9 @@ body{
 
 
 .__cotizarContainer{
+  background-image: url(../img/backgroundDos-01.svg);
+  background-size: cover;
+  background-position: center;  
   background-size: cover;
   /* background-color: var(--celeste); */
   display: flex;
@@ -103,7 +106,7 @@ body{
   border-left: 1px solid rgb(209, 209, 209); */
   border-radius: 18px;
   /* border: none !important; */
-  background-color: white ;
+  background-color: rgba(255, 255, 255, 0.479) ;
 }
 
 
