@@ -26,7 +26,6 @@ class ajustarPantalla {
   constructor(anchura, altura) {
     this.anchura = anchura;
     this.altura = altura;
-    this.ajustarAltura = 8;
     this.ajustarPantalla();
   }
 
@@ -46,33 +45,46 @@ let activarClasss = new ajustarPantalla(tamVentana()[0], tamVentana()[1]);
 class ajustarPantallaReserva {
   constructor(anchura, altura) {
     this.cajaReserva = document.querySelector('.reservarHBS');
-    this.click = document.getElementById('click');
     this.altura = altura;
     this.anchura = anchura;
   }
-
+  
   tamDiv() {
-    let tamPantalla = `${this.altura}`;
-    return tamPantalla;
+    return {
+      anchura : this.anchura,
+      altura : this.altura
+    };
+  }
+  
+  ajustarSegundaPAntallaRserva(){
+    this.cajaReserva.style.height = this.tamDiv().altura + 'px';
   }
 
-  scroll() {
-    this.cajaReserva.style.display = 'flex';
-    let scroll = this.tamDiv() / 2;
-    let scrollEnd = scroll / 2;
-    setTimeout((x) => {
+    scroll() {
+      this.ajustarSegundaPAntallaRserva()
+      this.cajaReserva.style.display = 'flex';
+      let bajar = this.tamDiv().altura + (this.tamDiv().altura / 3)  ;
       window.scroll({
-        top: scroll + scrollEnd,
-        behavior: 'smooth',
-      });
-    }, 20);
+        top : bajar,
+        behavior: 'smooth'
+      })
   }
+  
+
 }
 
-let data = false;
+// let data = false;
+
+window.addEventListener('resize', () => {
+  let activarClass = new ajustarPantallaReserva(
+    tamVentana()[0],
+    tamVentana()[1]
+  );
+  activarClass.ajustarSegundaPAntallaRserva();
+});
 
 document.querySelector('.agendarCita').addEventListener('click', () => {
-  data = true;
+
   let activarClassReserva = new ajustarPantallaReserva(
     tamVentana()[0],
     tamVentana()[1]
@@ -80,13 +92,21 @@ document.querySelector('.agendarCita').addEventListener('click', () => {
   activarClassReserva.scroll();
 });
 
-window.addEventListener('resize', () => {
-  let activarClass = new ajustarPantallaReserva(
-    tamVentana()[0],
-    tamVentana()[1]
-  );
-  activarClass.tamDiv();
-});
+let activarClass = new ajustarPantallaReserva(
+  tamVentana()[0],
+  tamVentana()[1]
+);
+activarClass.ajustarSegundaPAntallaRserva();
+
+// window.addEventListener('resize', () => {
+//   let activarClass = new ajustarPantallaReserva(
+//     tamVentana()[0],
+//     tamVentana()[1]
+//   );
+//   activarClass.tamDiv();
+// });
+
+
 
 window.onscroll = function () {
   let navbar = document.querySelector('.navbar');
@@ -99,3 +119,23 @@ window.onscroll = function () {
 };
 
 /*FIN CONTROL DE SCROLL PARA PINTAR EL NAV */
+
+/* ============= CAMBIAR FONDO DE CUMPLAÑEROS DEL MES ============== */
+let ajusarBackgroundCumpleanieros = ( ancho ) => {
+  if( ancho > 840 ){
+    imgCumpleanios.setAttribute("src" , "../img/background-cumpleanios_tre.svg")
+  }else if( ancho < 840 && ancho > 600){
+    imgCumpleanios.setAttribute("src" , "../img/background-cumpleanierosMedium.svg")
+  }else if( ancho < 600 ){
+    imgCumpleanios.setAttribute("src" , "../img/background-cumpleanierosSmoll.svg")
+  }
+}
+
+let imgCumpleanios = document.getElementById("imgCumpleanios");
+window.addEventListener('resize', () => {
+  ajusarBackgroundCumpleanieros( tamVentana()[0] )
+});
+
+ajusarBackgroundCumpleanieros( tamVentana()[0] )
+
+/* =============*FIN CAMBIAR FONDO DE CUMPLAÑEROS DEL MES ============== */

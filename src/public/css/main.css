@@ -240,7 +240,7 @@ body{
 }
 
 .horariosAtenconChild div:nth-child(3) {
-  grid-column: span 2;
+  grid-column: span 2 !important;
 }
 
 .agendarBoton > button {
@@ -279,29 +279,32 @@ body{
 .reservarHBS {
   /* display: flex; */
   display: none;
+  background-color: rgb(246, 246, 246);
   background-size: cover;
   justify-content: center;
+  padding: 30px 0;
+  align-items: center;
 }
 
 .divReservaGrid {
   display: grid;
   grid-template-columns: repeat(3 , auto) ;
-  /* grid-template-rows: repeat(1 , minmax(auto , min-content)); */
   gap: 0.5em;
-  /* background-color: red; */
   animation-name: ejectoReserva;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   max-width: 95%;
-  
+  /* height: 480px; */
+  /* align-items: center; */
 }
 
 .registrarReserva {
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content , 190px)); 
   /* grid-template-rows: auto 1fr ; */
-  background-color: rgba(255, 255, 255, 0.712);
+  /* background-color: rgba(255, 255, 255, 0.712); */
+  background-color: rgb(203, 243, 255) ;
   box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.3);
   gap: 20px;
   padding: 15px;
@@ -508,18 +511,48 @@ select {
 /* =========================================================================== */
 
 .__contendorBeneficiosDepilacionCera {
+  display: grid;
+  grid-template-columns: repeat( 2 , minmax( min-content , auto ) );
+  padding: 180px 40px;
+  justify-items: center;
+  gap : 2rem;
+}
 
+._quienesSomosIndex{
+  display: flex;
+  justify-self: start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px ;
+  background-color: white;
+  order: 1; 
+  border-radius: 15px;
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.__contendorBeneficiosDepilacionCeraChild {
   display: grid;
   justify-content: center;
   justify-items: center;
-  grid-template-columns: repeat( 4 , minmax( min-content , 300px ) );
-  /* grid-template-rows: repeat(3, minmax( min-content , 200px )); */
-  gap: 8px;
-  padding: 100px 0;
+  grid-template-columns: repeat( 4 , minmax( min-content , 250px ) );
+  /* grid-column: span 4; */
+  justify-self: end;
+  gap: 4px;
+  /* padding: 100px 0; */
   text-align: center;
+  /* background-color: rgb(238, 74, 74); */
 }
 
-.__contendorBeneficiosDepilacionCera div:last-child{
+.__contendorBeneficiosDepilacionCeraChild p {
+  color: rgb(87, 87, 87);
+  font-size: 14px;
+  margin: 0;
+}
+
+.__contendorBeneficiosDepilacionCeraChild div:last-child{
   grid-column: span 4;
   background-color: rgb(246, 201, 201);
   max-width: 800px;
@@ -534,38 +567,26 @@ select {
   color: rgb(49, 49, 49);
 }
 
-.__contendorBeneficiosDepilacionCera > div{
+.__contendorBeneficiosDepilacionCeraChild > div{
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  padding: 10px;
-  justify-content: space-around;
-  /* border-right: 2px solid rgb(204, 204, 204); */
+  padding: 5px;
+  margin: 15px 0;
+  /* background-color: rgb(102, 101, 101); */
+}
+
+.__contendorBeneficiosDepilacionCeraChild div:first-child{
+  grid-column: span 4;
+  height: auto;
+  margin: 0;
 }
 
 .__contendorBeneficiosDepilacionCera img {
   max-width: 100px;
+  padding: 5px;
   /* float: right; */
   /* background-color: rebeccapurple; */
-}
-
-
-.__contendorBeneficiosDepilacionCera > div p{
-  margin: 0;
-  padding: 10px 5px;
-  color: rgb(98, 98, 98);
-  /* margin: 10px; */
-  /* background-color: rebeccapurple; */
-  /* background-color: red; */
-}
-
-
-.__contendorBeneficiosDepilacionCera div:first-child{
-  /* background-color: rebeccapurple; */
-  grid-column: span 4;
-  height: auto;
-  margin: 0;
 }
 
 
@@ -620,22 +641,44 @@ select {
 /* ==================CUMPLEAÑEROS============= */
 .__cumpleaniosContainer{
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-image: url(../img/background-cumpleanios_tres_Mesa\ de\ trabajo\ 1.svg);
+  /* background-image: url(../img/background-cumpleanios_tres_Mesa\ de\ trabajo\ 1.svg); */
   background-color: var(--rojo);
   /* background-color: var(--celeste); */
   background-repeat: no-repeat;
   padding: 25px 0;
-  background-size: contain;
+  /* background-size:auto;
+  background-attachment:local; */
+  background-size: cover;
 }
 
-.__cumpleaniosContainer h6{
+
+.imgeCumpleanios {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  top: 0;
+}
+
+.imgeCumpleanios img{
+  margin: 0;
+}
+._datosCumpleanios {
+  z-index: 3;
+  /* background-color: #f58882; */
+  margin: 0 10px;
+  color: rgb(54, 54, 54);
+}
+
+
+._datosCumpleanios h6{
   margin: 0;
 }
 
-.__cumpleaniosContainer  a{ 
+._datosCumpleanios  a{ 
   text-decoration: none;
   background-color: var(--amarillo);
   color: rgb(54, 54, 54);
@@ -644,17 +687,17 @@ select {
   font-size: 12px;
 }
 
-.__cumpleaniosContainer  a:hover{
+._datosCumpleanios  a:hover{
   text-decoration:underline;
  }
 
 
-.__cumpleaniosContainer div:nth-child(1) h5{
+._datosCumpleanios h5{
   font-size: 30px;
   /* margin: 0; */
   font-family: 'Kaushan Script', cursive;
 }
-.__cumpleaniosContainer div:nth-child(1) h6{
+._datosCumpleanios h6{
   margin: 0;
 }
 
@@ -676,6 +719,7 @@ select {
 
 .__cumpleaniosContainerChild{
   display: flex;
+  z-index: 1;
   /* background-color:red; */
   overflow: auto;
   /* justify-content: space-evenly; */
@@ -726,8 +770,8 @@ select {
 
 .__ubicacionIndexContainer {
   /* text-align: center; */
-  /* background-color: blue; */
-  padding: 50px;
+  background-color: rgb(245, 245, 245);
+  padding: 100px 50px;
 }
 
 .__ubicacionIndexContainer p{
@@ -782,6 +826,44 @@ select {
   height: 200px;
   border-radius: 200px;
   width: 300px;
+}
+
+._imgLocalIndex {
+  display: flex;
+  justify-content: center;
+  max-width: 700px ;
+  /* max-width: 100%; */
+  overflow-x: auto;
+  /* background-color: red; */
+}
+
+._imgLocalIndex > div{
+   margin: 2px;
+}
+
+/* ._imgLocalIndex > div{ */
+
+  ._imgLocalIndex::-webkit-scrollbar{
+  -webkit-appearance: none;
+} 
+
+._imgLocalIndex::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+._imgLocalIndex::-webkit-scrollbar-thumb{
+  background-color: var(--rojo);
+  border-radius: 10px;
+}
+
+
+
+._imgLocalIndex::-webkit-scrollbar-button {
+  display: none;
+} 
+
+._imgLocalIndex::-webkit-scrollbar-thumb:active {
+  background-color: rgb(255, 147, 147);
 }
 
 

@@ -53,7 +53,9 @@
 } 
 
 @media screen and ( max-width : 990px ){
-  .horariosAtenconChild{
+  
+  
+    horariosAtenconChild{
     grid-template-columns: 100% !important;
   }
 
@@ -63,13 +65,54 @@
 
   .datosReserva {
     display: grid;
-  grid-template-columns: repeat(1 ,minmax(auto , 100% )) ;
+    grid-template-columns: repeat(1 ,minmax(auto , 100% )) ;
     grid-template-rows: repeat(5, 1fr) auto;
   }
+
+  /* ================Beneficios de la depilacion con cera ============ */
+
+  .__contendorBeneficiosDepilacionCera{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat( 2 , minmax( min-content , auto ) );
+    gap : 5px;
+    padding: 180px 15px;
+  }
+
+  ._quienesSomosIndex {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* ================*Fin Beneficios de la depilacion con cera ============ */
+  .nameOpiones {
+    /* background-color: white; */
+    width: auto;
+    /* padding: 15px; */
+  }
+
+  #carouselExampleSlidesOnly{
+    padding: 80px 10px;
+  }
+
+  .carousel-inner {
+    height: auto;
+    /* border-radius: 50px; */
+  }
+  
   
 }
 
 @media screen and (max-width : 840px ){
+
+    .reservarHBS{
+      height: auto !important;
+      /* padding: 0; */
+    }
+
+  .__contendorBeneficiosDepilacionCera {
+    padding: 30px 10px !important;
+  }
+
 
   .registrarReserva {
     grid-template-columns: repeat(3, minmax(min-content , 1fr)) !important; 
@@ -84,7 +127,48 @@
   
   .iconsContenedor{
     padding: 10px  0 642px 0 !important;
+  }
+
+  #carouselExampleSlidesOnly{
+    margin-bottom: 320px;
+  }
+
+  .nameOpiones {
+    /* background-color: white; */
+    width: auto;
+    /* padding: 15px; */
+  }
+
+  ._ubicacionIndexContainerChild{
+    flex-direction: column;
+  }
+
+  .__ubicacionIndexContainer {
+    background-color: rgb(245, 245, 245);
+    padding: 50px 10px;
+  }
+  
+
+  ._imgLocalIndex {
+    max-width: 100%;
+  }
+
+  ._quienesSomosIndex{
+    padding: 10px;
+  }
+  
 }
+
+
+@media screen and (max-width : 782px ){
+  ._datosCumpleanios{
+    text-align: center;
+  }
+  ._datosCumpleanios a {
+    display: block;
+    max-width: 105px;
+    margin: 10px auto 3px auto;
+  }
 }
 
 
@@ -95,6 +179,7 @@
       width: 100%;
     }
 
+    
     .registrarReserva{
       grid-template-columns: repeat(1, 100%) !important;
     }
@@ -135,6 +220,10 @@
     /* background-color: red; */
     padding: 8px;
     }
+
+
+
+
 
     .iconsImg .tituloIcons {
     grid-column: auto;
@@ -177,6 +266,72 @@
     margin: 0;
     }
 
+     /* ================Beneficios de la depilacion con cera ============ */
+    .background {
+      background-color: rgb(245, 245, 245);
+    }
+     
+     
+     .__contendorBeneficiosDepilacionCera {
+      padding: 100px 10px 20px 10px;
+    }
+
+    ._quienesSomosIndex{
+        order: 0;
+    }
+
+
+    .__contendorBeneficiosDepilacionCeraChild{
+      grid-template-columns: repeat( 1 , minmax( 100% , 100% ) ) !important;
+    } 
+
+    .__contendorBeneficiosDepilacionCeraChild div:last-child{
+      grid-column: auto;
+    }
+
+    .__contendorBeneficiosDepilacionCeraChild div:first-child{
+      grid-column: auto;
+    }
+
+    .__contendorBeneficiosDepilacionCeraChild > div{
+      background-color:rgb(220, 254, 255);
+      border-radius: 15px;
+      margin: 0 ;
+      width: 100%;
+      box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1);
+  /* background-color: rgb(102, 101, 101); */
+    }
+    
+    /* ================*Fin Beneficios de la depilacion con cera ============ */
+    
+    /*=================== locales index ============================== */
+
+    ._ubicacionIndexContainerChild{
+      flex-direction: column;
+    }
+
+    /*===================*fin locales index ============================== */
+
+    /* =============== opiniones ========== */
+    #carouselExampleSlidesOnly{
+      margin-bottom: 320px;
+    }
+
+    .nameOpiones {
+      width: auto;
+      text-align: center;
+    }
+
+    /* =============== *fin opiniones ========== */
+
+
+    ._datosCumpleanios h6 {
+      font-size: 12px;
+    }
+    
+    ._datosCumpleanios a {
+      font-size: 11px;
+    }
 
     @keyframes ejectoReserva {
       from {
@@ -192,3 +347,13 @@
 
     
 }
+
+
+@media screen and (max-width : 600px ){
+
+  .__contendorBeneficiosDepilacionCeraChild {
+    width: 100%;
+  }
+  
+}
+
