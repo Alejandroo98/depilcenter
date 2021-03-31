@@ -139,3 +139,31 @@ window.addEventListener('resize', () => {
 ajusarBackgroundCumpleanieros( tamVentana()[0] )
 
 /* =============*FIN CAMBIAR FONDO DE CUMPLAÑEROS DEL MES ============== */
+
+/* ========ROTAS IMAGENES DE EMOJIS ============= */
+
+let emojisImg = document.getElementById("emojisImg");
+
+class Emojis{
+
+  tiempo = () => {
+    setTimeout(() => {
+      this.rotarImg()
+    },8000)
+    
+  }
+
+   rotarImg = () => {
+     let num = Math.floor(Math.random() * 6)
+    emojisImg.setAttribute("src" , `../img/emojis/emojis-${num}.svg`)
+
+    this.tiempo()
+}
+}
+
+
+let rotar = new Emojis()
+rotar.tiempo()
+
+
+/* ========ROTAS IMAGENES DE EMOJIS ============= */
