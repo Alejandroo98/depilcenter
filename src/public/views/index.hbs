@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../css/navbar.css  ">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght;" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght" rel="stylesheet">
@@ -32,12 +33,12 @@
   <header>
     {{!-- ERRORES --}}
     {{#if error}}
-  <div class="ajustarAlert">
-      <div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <strong>{{error.errOne}}</strong>&nbsp{{error.errTwo}}.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-  </div>
+      <div class="ajustarAlert">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>{{error.errOne}}</strong>&nbsp{{error.errTwo}}.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>
+      </div>
     {{/if}}
   </header>
 

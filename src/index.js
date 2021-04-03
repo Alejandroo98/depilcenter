@@ -39,8 +39,8 @@ app.set('view engine', 'hbs');
 app.use(
   session({
     secret: 'estaEsUnaClaveDePrueba',
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
   })
 );
 
@@ -50,9 +50,13 @@ app.use(flash());
 
 app.use((req, res, next) => {
   app.locals.error = req.flash('error')[0];
-  app.locals.cotizar = req.flash('cotizar')[0];
+  //Para poder enviar mensajes por flash al renderizar una pagina lo hacemos como esta en elarchivo registroReserva, lo tenemos que hacer directamente desde ahi, no hay otra manera.
   next();
 });
+
+
+  // console.log(app.locals.exitoreserva = req.flash('exitoreserva'));
+ 
 
 //Routs
 app.use(require('./routes/registroReserva'));

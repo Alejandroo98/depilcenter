@@ -16,19 +16,23 @@ app.post('/', async (req, res, next) => {
     datos.nombres === '' ||
     datos.email === '' ||
     datos.numeroCelular === ''
-  ) {
+  )
+   {
     let error = {
       errOne: 'LLena todos los campos',
       errTwo: 'e intentalo de nuevo',
     };
     req.flash('error', error);
     return res.redirect('/');
-  } else {
+  } 
+  else 
+  {
     let horaActual = new Date();
     let guardarHora = `${horaActual.getHours()}:${horaActual.getMinutes()}`;
     let guardarFecha = `${horaActual.getDate()}-${
       horaActual.getMonth() + 1
     }-${horaActual.getUTCFullYear()}`;
+
     let dateDB = `${guardarFecha} / ${guardarHora}`;
 
     datosReservaDB = new datosReserva({
@@ -49,14 +53,21 @@ app.post('/', async (req, res, next) => {
         fecha: req.body.fecha,
         fechaRegistro: dateDB,
       });
-
+      // console.log(datosCliente);
       reserva.save();
     });
-
-    res.send('DATOS GUARDADOS');
+  }
+  let datosCliente = {
+    nombre :  req.body.nombres,
+    local : req.body.locales,
+    hora: req.body.hora,
+    fecha: req.body.fecha,
   }
 
-  next();
+  /* == ¡WARNING!=> ASI ES COMO ENVIAMOS MENSAJES A UN RENDER, TENEMOS QUE HACERLO DIRECTAMENTE, NO PODEMOS CREAR VARIABLES GLOBALES COMO LO HABIAMOS HECHO ANTERIORMENTE DESDE EL ARCHIVO DEL SERVIDOR=== */
+   req.flash('exitoreserva' , datosCliente)
+   res.render("succes" , { message : req.flash('exitoreserva')[0] });
+  
 });
 
 app.post('/cotizar-combos/combos', (req, res) => {
