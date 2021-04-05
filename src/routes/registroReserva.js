@@ -5,35 +5,27 @@ const bodyParser = require('body-parser');
 const Reserva = require('../models/reserva');
 const datosReserva = require('../models/datosReserva');
 const { verificarDatos } = require('../middleware/comprovar');
-const passport = require('passport');
 const Recaptcha = require("express-recaptcha").RecaptchaV2;
 let recaptcha = new Recaptcha ("6LebnZwaAAAAAIfkMp96C9c5u0o4ZG0_jaILV45_" , "6LebnZwaAAAAANTQZkgqtYgi5myr3dxceR9P2gUo" )
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 
 app.set('views', path.resolve(__dirname, '../public/views'));
 
-app.post('/', recaptcha.middleware.verify ,async (req, res, next) => {
+app.post('/', recaptcha.middleware.verify ,async (req, res , next) => {
   let datos = req.body;
-  console.log(datos);
-  if (
-    datos.nombres === '' ||
-    datos.email === '' ||
-    datos.numeroCelular === ''
-  )
-   {
-    let error = {
-      errOne: 'LLena todos los campos',
-      errTwo: 'e intentalo de nuevo',
-    };
-    req.flash('error', error);
-    return res.redirect('/');
-  } 
-  // else if( req.body['g-recaptcha-response'] === '' ){
-    else if( req.recaptcha.error ){
+  
+    // let error = {
+    //   errOne: 'LLena todos los campos',
+    //   errTwo: 'e intentalo de nuevo',
+    // };
+    // req.flash('error', error);
+    // return res.redirect('/');
+
+   if( req.recaptcha.error ){
     req.flash("recaptcha" , "Por favor marca la recaptcha" )
     return res.redirect('/');
-  }
+   }
   else{
     let horaActual = new Date();
     let guardarHora = `${horaActual.getHours()}:${horaActual.getMinutes()}`;
@@ -48,6 +40,8 @@ app.post('/', recaptcha.middleware.verify ,async (req, res, next) => {
       email: req.body.email,
       numeroTelefono: req.body.numeroCelular,
       fechaRegistro: dateDB,
+      fechaCumpleanios : req.body.fechaCumpleanios,
+      suscrito : req.body.suscripcion
     });
 
     await datosReservaDB.save();
@@ -64,7 +58,9 @@ app.post('/', recaptcha.middleware.verify ,async (req, res, next) => {
       // console.log(datosCliente);
       reserva.save();
     });
+    
   }
+
   let datosCliente = {
     nombre :  req.body.nombres,
     local : req.body.locales,
@@ -75,10 +71,11 @@ app.post('/', recaptcha.middleware.verify ,async (req, res, next) => {
   }
 
   /* == ¡WARNING!=> ASI ES COMO ENVIAMOS MENSAJES A UN RENDER, TENEMOS QUE HACERLO DIRECTAMENTE, NO PODEMOS CREAR VARIABLES GLOBALES COMO LO HABIAMOS HECHO ANTERIORMENTE DESDE EL ARCHIVO DEL SERVIDOR=== */
-   req.flash('exitoreserva' , datosCliente)
+   req.flash('exitoreserva' , datosCliente )
    res.render("succes" , { message : req.flash('exitoreserva')[0] });
-  
 });
+
+
 
 app.post('/cotizar-combos/combos', (req, res) => {
   datos = JSON.stringify(req.body);

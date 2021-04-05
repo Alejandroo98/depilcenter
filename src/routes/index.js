@@ -21,17 +21,21 @@ module.exports = function (url) {
     urlCut === 'cotizar-combos/mujer' ||
     urlCut === 'cotizar-combos/combos'
   ) {
-    return router.get(url, (req, res, next) => {
+  return router.get(url, (req, res) => {
       res.render('cotizar-combos');
     });
   }
 
   if (comrpovarRuta) {
-    return router.get(url, (req, res, next) => {
+  return router.get(url, (req, res) => {
       res.render(urlCut);
     });
+  }else{
+  return  router.get(url, (req, res) => {
+     res.redirect('/');
+   });
   }
-  return router.get(url, (req, res, next) => {
-    res.redirect('/');
-  });
+
+  
 };
+
