@@ -27,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="body" >
   
@@ -40,6 +41,16 @@
            </div>
       </div>
     {{/if}}
+
+    {{#if recaptcha}}
+      <div class="ajustarAlert">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>{{recaptcha}}</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>
+      </div>
+    {{/if}}
+
   </header>
 
 

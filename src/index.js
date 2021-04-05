@@ -50,6 +50,7 @@ app.use(flash());
 
 app.use((req, res, next) => {
   app.locals.error = req.flash('error')[0];
+  res.locals.recaptcha = req.flash("recaptcha")[0];
   //Para poder enviar mensajes por flash al renderizar una pagina lo hacemos como esta en elarchivo registroReserva, lo tenemos que hacer directamente desde ahi, no hay otra manera.
   next();
 });

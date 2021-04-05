@@ -8,14 +8,14 @@
     <div class="locales">
         <label class="labelLocales" for="locales">Lugar<span> *</span></label> 
             <select name="locales">
-                <option value="condado" selected>Quito/Condado</option>
+                <option value="Quito/Condado" selected>Quito/Condado</option>
             </select>
     </div>
 
     <div class="serviciosSelect">
         <label for="serviciosSelect">Servicio<span> *</span></label> 
             <select name="servicios">
-                <option value="depilacion" selected>Depilacion con cera</option>
+                <option value="Depilacion con cera" selected>Depilacion con cera</option>
             </select>
     </div>
 
@@ -51,9 +51,31 @@
         <p class="errDatos errNumero"></p>
     </div>
 
-    <div class="agendarBoton">
-        <button  type="submit">Agendar&nbsp<span class="material-icons">date_range</span></button>
+    <div class="datoFechaCumple">
+        <label for="fechaCumpleaios">Fecha Cumpleaños</label>
+        <input type="date" name="fechaCumpleanios" autocomplete="off" >
+        <p class="errDatos errFechaCumpleanios"></p>
     </div>
+
+    <div class="agendarBoton">
+        <div class="g-recaptcha" data-sitekey="6LebnZwaAAAAAIfkMp96C9c5u0o4ZG0_jaILV45_">
+        </div>
+
+        <div class="agendarBotonChildOne">
+            <input id="terminos" type="checkbox" name="Condiciones" checked>
+            <label for="terminos">Acetar terminos y condiciones</label> 
+        </div>
+        
+
+        <div class="agendarBotonTwo">
+            <br/>
+            <button  type="submit">Agendar&nbsp </button>
+            {{!-- <span class="material-icons">date_range</span> --}}
+            
+        </div>
+    </div>
+           
+    
            
 </form>
 

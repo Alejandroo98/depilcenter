@@ -212,22 +212,24 @@ body{
   grid-column: span 2 !important;
 }
 
-.agendarBoton > button {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 25px;
-  background-color: var(--celeste);
-  color: rgb(75, 75, 75);
-  font-weight: 500;
-  max-height: 40px;
+.agendarBoton {
+  text-align: center;
+  margin: auto;
+  grid-column: span 3;
 }
 
-.agendarBoton span {
-  padding: 0;
-  margin: -3px;
+.agendarBoton button {
+  border: none;
+  margin: 0;
+  padding: 14px 24px;
+  background-color: var(--rojo);
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.agendarBotonTwo span{
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .background {
@@ -345,7 +347,7 @@ form {
 
 
 /* ===========FORMULARIO================= */
-.registrarReserva input,
+.hora input, .fecha input , .datoNombres input , .datoEmail input , .datoNum input , .datoFechaCumple input ,
 select {
    width: 100%;
   height: 50px; 
@@ -391,14 +393,7 @@ select {
 /* ===========FIN FORMULARIO================= */
 
 
-.agendarBoton {
-  display: flex;
-  grid-column: span 3;
-  /* background-color: brown; */
-  justify-content: center;
-  align-content: center;
-  margin: 0;
-}
+
 
 
 .datosReserva > div {

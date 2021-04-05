@@ -26,23 +26,40 @@
 
     <main class="__datosReservaContenedor">
         <section class="_datosReservaChild">
-
+            {{#if  message}}
             <div class="_videoReserva">
                 <img src="../img/reserva.gif" alt="Imagenes de chica joven feliz">
             </div>
             
             <div class="_brillarasMasSol">
-                <div>
+                <div class="centrarBrillaras">
                     <h1>Brillaras mas que el sol ☀️</h1>
                     <h4>Gracias por preferirnos</h4>
                 </div>
                 <div class="_datosDeReserva">
+                    <div>
                     <h6>Datos de la reserva:</h6>
-                    <p>Nombre : Gloria Alicia</p>
-                    <p>Fecha : Gloria Alicia</p>
-                    <p>Hora : 15:00 </p>
+                        <p><h6>Nombre   : </h6> {{message.nombre}}</p>
+                        <p><h6>Fecha :</h6>    {{message.fecha}}</p>
+                        <p><h6>Hora : </h6>  {{message.hora}}</p>
+                        <p><h6>Ubicacion :</h6> {{message.local}}</p>
+                        <p><h6>Servicio :</h6> {{message.servicio}}</p>
+                        <p><h6>Telefono :</h6> {{message.telefono}}</p>
+                    </div>
                 </div>
             </div>
+            {{else}}
+             <div class="_videoReserva">
+                <img src="../img/reserva.gif" alt="Imagenes de chica joven feliz">
+            </div>
+            
+            <div class="_brillarasMasSol">
+                <div>
+                    <h2>Oos, a ocurrido un error, por favor <br> intentalo mas tarde</h2>
+                </div>
+            </div>
+            {{/if}}
+            
         </section>
 
         <section class="_linksReserva">
