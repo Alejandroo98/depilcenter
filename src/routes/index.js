@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router(); //Aqui definimos las rutas de nuestro servidor
 const app = express();
+const path = require('path');
+app.set('views', path.resolve(__dirname, '../public/views'));
 
-module.exports = function (url) {
+app.use( function( req , res , next ) {
   const routes = [
     '/',
     '/cotizar-combos/hombre',
@@ -13,29 +15,31 @@ module.exports = function (url) {
     '/contactos',
   ];
 
-  let comrpovarRuta = routes.includes(url);
-  let urlCut = url.substr(1, url.length - 1);
-
-  if (
-    urlCut === 'cotizar-combos/hombre' ||
-    urlCut === 'cotizar-combos/mujer' ||
-    urlCut === 'cotizar-combos/combos'
-  ) {
-  return router.get(url, (req, res) => {
-      res.render('cotizar-combos');
+  let comrpovarRuta = routes.includes(req.url);
+  if (!comrpovarRuta) {
+    
+    app.get( req.url , ( req , res ) => {
+      res.redirect('/');
     });
-  }
-
-  if (comrpovarRuta) {
-  return router.get(url, (req, res) => {
-      res.render(urlCut);
-    });
+    
   }else{
-  return  router.get(url, (req, res) => {
-     res.redirect('/');
-   });
+
+    app.use(require("./main"))
+    app.use(require("./contacto"))
+    app.use(require("./cotizar"))
+    app.use(require("./conocenos"))
+    
+    //A esta ruta no le cree un archivo independiente como los de arriba por que no desde blog no se envia ningun formulario
+    app.get("/blog" , ( req , res ) => {
+      res.render("blog")
+    })
+
   }
 
-  
-};
+  next()
 
+});
+
+
+
+module.exports = app;

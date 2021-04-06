@@ -60,11 +60,12 @@ app.use((req, res, next) => {
  
 
 //Routs
-app.use(require('./routes/registroReserva'));
-app.use(function (req, res, next) {
-  app.use(require('./routes/index')(req.url));
-  next();
-});
+// app.use(require('./routes/main'));
+app.use(require("./routes/index"))
+// app.use(function (req, res, next) {
+//   app.use(require('./routes/index')(req.url));
+//   next();
+// });
 
 //DB
 

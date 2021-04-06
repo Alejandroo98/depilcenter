@@ -1,20 +1,29 @@
+// const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 const path = require('path');
-const bodyParser = require('body-parser');
+
 const Reserva = require('../models/reserva');
 const datosReserva = require('../models/datosReserva');
+
 const { verificarDatos } = require('../middleware/comprovar');
+
 const Recaptcha = require("express-recaptcha").RecaptchaV2;
 let recaptcha = new Recaptcha ("6LebnZwaAAAAAIfkMp96C9c5u0o4ZG0_jaILV45_" , "6LebnZwaAAAAANTQZkgqtYgi5myr3dxceR9P2gUo" )
 
 app.use(express.urlencoded({ extended: false }));
-
 app.set('views', path.resolve(__dirname, '../public/views'));
+
+app.get("/" , ( req , res ) => {
+  console.log(req.url);
+  res.render("index");
+});
 
 app.post('/', recaptcha.middleware.verify ,async (req, res , next) => {
   let datos = req.body;
-  
+
+  return console.log(req.url);
+
     // let error = {
     //   errOne: 'LLena todos los campos',
     //   errTwo: 'e intentalo de nuevo',
@@ -41,7 +50,7 @@ app.post('/', recaptcha.middleware.verify ,async (req, res , next) => {
       numeroTelefono: req.body.numeroCelular,
       fechaRegistro: dateDB,
       fechaCumpleanios : req.body.fechaCumpleanios,
-      suscrito : req.body.suscripcion
+      suscrito : true
     });
 
     await datosReservaDB.save();
@@ -77,13 +86,13 @@ app.post('/', recaptcha.middleware.verify ,async (req, res , next) => {
 
 
 
-app.post('/cotizar-combos/combos', (req, res) => {
-  datos = JSON.stringify(req.body);
-  res.render("succes")
+// app.post('/cotizar-combos/combos', (req, res) => {
+//   datos = JSON.stringify(req.body);
+//   res.render("succes")
 
-  console.log(datos);
-  // console.log(datos);
-  // res.send(`<h1>Alejo</h1>`);
-});
+//   console.log(datos);
+//   // console.log(datos);
+//   // res.send(`<h1>Alejo</h1>`);
+// });
 
 module.exports = app;
