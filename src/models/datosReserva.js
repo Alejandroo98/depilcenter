@@ -24,7 +24,8 @@ let datosReservaSchema = new Schema({
 
   suscrito : {
     type : Boolean,
-    required : true
+    required : false,
+    default : false
   },
 
   fechaRegistro: {

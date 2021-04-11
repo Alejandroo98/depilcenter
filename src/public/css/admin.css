@@ -1,0 +1,104 @@
+html {
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-color: rgb(236, 236, 236);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ajustarAlert {
+    display: flex;
+    justify-content: center;
+ }
+  
+  .alert-danger {
+    position: fixed;
+    top: 58px;
+  }
+
+  .alert-success {
+    position: fixed;
+    top: 58px;
+  }
+
+
+.__regitrarClienteForm {
+    display: flex;
+    justify-content: center;
+    margin: 100px 7px ; 
+}
+
+.__regitrarClienteForm form{
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.__regitrarClienteForm form > div{ 
+    margin-top: 25px;
+}
+
+
+.__regitrarClienteForm form input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid salmon;
+}
+
+.__regitrarClienteForm form label{
+    font-size: 12px;
+    color: rgb(87, 87, 87);
+}
+
+.__regitrarClienteForm form input::placeholder{
+    font-weight: 500;
+}
+
+.__regitrarClienteForm button {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    background-color: salmon;
+    border-radius: 10px;
+}
+
+.__regitrarClienteForm h3{
+    text-align: center;
+    color : salmon;
+}
+
+
+
+/* =================DATOS CLIENTES ========== */
+.__clientesReservadosContainer{
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax( 250px , 1fr ) );
+    margin:auto;
+    max-width: 90%;
+    text-align: center;
+    /* background-color: red; */
+    gap: 10px;
+}
+
+.__clientesReservadosContainer > div{ 
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 1px 1px 3px rgba(0 , 0, 0, 0.3) ;
+ }
+
+
+@media screen and ( max-width : 600px ) {
+    .__clientesReservadosContainer { 
+        max-width: 100%;
+        margin: 0 7px;
+    }
+    
+}
+
+
+
+

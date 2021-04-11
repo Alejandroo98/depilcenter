@@ -11,6 +11,8 @@ const { verificarDatos } = require('../middleware/comprovar');
 const Recaptcha = require("express-recaptcha").RecaptchaV2;
 let recaptcha = new Recaptcha ("6LebnZwaAAAAAIfkMp96C9c5u0o4ZG0_jaILV45_" , "6LebnZwaAAAAANTQZkgqtYgi5myr3dxceR9P2gUo" )
 
+const { validarReserva } = require("../middleware/comprovar")
+
 app.use(express.urlencoded({ extended: false }));
 app.set('views', path.resolve(__dirname, '../public/views'));
 
@@ -19,38 +21,25 @@ app.get("/" , ( req , res ) => {
   res.render("index");
 });
 
-app.post('/', recaptcha.middleware.verify ,async (req, res , next) => {
-  let datos = req.body;
+app.post('/', [recaptcha.middleware.verify , validarReserva ], async (req, res , next) => {
+    let datos = req.body;
 
-  return console.log(req.url);
-
-    // let error = {
-    //   errOne: 'LLena todos los campos',
-    //   errTwo: 'e intentalo de nuevo',
-    // };
-    // req.flash('error', error);
-    // return res.redirect('/');
-
-   if( req.recaptcha.error ){
-    req.flash("recaptcha" , "Por favor marca la recaptcha" )
-    return res.redirect('/');
-   }
-  else{
     let horaActual = new Date();
     let guardarHora = `${horaActual.getHours()}:${horaActual.getMinutes()}`;
-    let guardarFecha = `${horaActual.getDate()}-${
-      horaActual.getMonth() + 1
-    }-${horaActual.getUTCFullYear()}`;
+    let guardarFecha = `${horaActual.getDate()}-${ horaActual.getMonth() + 1 }-${horaActual.getUTCFullYear()}`;
+    let dateDB = `${guardarHora} / ${guardarFecha}`;
 
-    let dateDB = `${guardarFecha} / ${guardarHora}`;
-
+    
+    let onOff;
+    datos.suscripcion === "on" ? onOff = true : onOff = false;
+    
     datosReservaDB = new datosReserva({
       nombres: req.body.nombres,
       email: req.body.email,
       numeroTelefono: req.body.numeroCelular,
       fechaRegistro: dateDB,
       fechaCumpleanios : req.body.fechaCumpleanios,
-      suscrito : true
+      suscrito : onOff
     });
 
     await datosReservaDB.save();
@@ -67,8 +56,6 @@ app.post('/', recaptcha.middleware.verify ,async (req, res , next) => {
       // console.log(datosCliente);
       reserva.save();
     });
-    
-  }
 
   let datosCliente = {
     nombre :  req.body.nombres,
