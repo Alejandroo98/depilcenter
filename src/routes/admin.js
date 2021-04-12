@@ -49,7 +49,7 @@ app.post("/crearregistrotest" , async ( req , res ) => {
     
     
     
-    res.redirect("/depiladmin00/crearregistrotest")
+    res.redirect("/depiladmin00/crearregistrotest?token=clave156")
 });
 
 
