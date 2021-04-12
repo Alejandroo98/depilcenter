@@ -4,7 +4,7 @@ const engine = require('ejs-mate');
 const path = require('path'); //Sirve para unir directorios o escribir una ruta y que sea multiplataforma
 const hbs = require('hbs');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
@@ -21,13 +21,13 @@ require('./passport/passport-auth');
 require('./config/config');
 
 //Inicialicacion
-require('./data-base');
+// require('./data-base');
 // app.set('port', process.env.PORT || 3000);
 
 //body-parser
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 // parse application/json
-app.use(bodyParser.json());
+app.use(express.json());
 
 //Configurarciones
 app.use(express.static(path.resolve(__dirname, './public')));
@@ -62,14 +62,19 @@ app.use((req, res, next) => {
  
 
 //Routs
-// app.use(require('./routes/main'));
 app.use(require("./routes/index"))
-// app.use(function (req, res, next) {
-//   app.use(require('./routes/index')(req.url));
-//   next();
-// });
 
 //DB
+mongoose.connect(
+  process.env.URLDB,
+  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
+  (err, res) => {
+    if (err) throw err;
+    console.log('Data base is alive in port ', process.env.URLDB);
+  }
+);
+
+
 
 //Empezando el servidor
 server.listen(process.env.PORT, () => {

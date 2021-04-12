@@ -13,7 +13,7 @@ app.use( function( req , res , next ) {
     '/blog',
     '/conocenos',
     '/contactos',
-    '/depiladmin00/crearregistrotest'
+    '/depiladmin00/crearregistrotest',
   ];
 
   let comrpovarRuta = routes.includes(req.url);

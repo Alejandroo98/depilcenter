@@ -8,16 +8,19 @@ const datosReserva = require("../models/datosReserva");
 app.set("views" , path.resolve( __dirname , "../routes-privates" )  )
 
 app.get("/crearregistrotest" , async ( req , res ) => {
-
-    let datos = await DatosReserva.find({}).sort({ _id : -1 })
-    // .exec(( err , datos ) => {
-    //      datosDB =  datos;
-    // })
-    res.render("admin" , {datos} )
-})
+    //depiladmin00/crearregistrotest?token=clave156
+    let token = req.query.token;
+    if( token === "clave156" ){
+        let datos = await DatosReserva.find({}).sort({ _id : -1 })
+        res.render("admin" , {datos} )
+    }else {
+        res.redirect("/")
+    }
+});
 
 app.post("/crearregistrotest" , async ( req , res ) => {
 
+    
     let horaActual = new Date();
     let guardarHora = `${horaActual.getHours()}:${horaActual.getMinutes()}`;
     let guardarFecha = `${horaActual.getDate()}-${ horaActual.getMonth() + 1 }-${horaActual.getUTCFullYear()}`;
