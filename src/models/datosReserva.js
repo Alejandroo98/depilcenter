@@ -9,12 +9,14 @@ let datosReservaSchema = new Schema({
 
   email: {
     type: String,
-    required: [true, 'El email es necesario'],
+    // required: [true, 'El email es necesario'],
+    required : false
   },
 
   numeroTelefono: {
     type: String,
-    required: [true, 'EL numero telefonico es necesario'],
+    // required: [true, 'EL numero telefonico es necesario'],
+    required : false
   },
 
   fechaCumpleanios: {

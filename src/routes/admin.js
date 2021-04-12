@@ -26,6 +26,7 @@ app.post("/crearregistrotest" , async ( req , res ) => {
     let guardarFecha = `${horaActual.getDate()}-${ horaActual.getMonth() + 1 }-${horaActual.getUTCFullYear()}`;
     let dateDB = `${guardarHora} / ${guardarFecha}`;
 
+    console.log(dateDB);
     
     const { nombres , email , phone , fechaCumpleanios  } = req.body;
 
