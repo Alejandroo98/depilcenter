@@ -59,7 +59,7 @@
                 </div>
                 <div>
                     <label for="fechaCumpleanios">Fecha Cumpleaños</label>
-                    <input type="text" id="fechaCumpleanios" name="fechaCumpleanios" autocomplete="off" placeholder="Ej. 2021-04-16" >
+                    <input type="date" id="fechaCumpleanios" name="fechaCumpleanios" autocomplete="off" placeholder="Ej. 2021-04-16" >
                 </div>
                 <div>
                     <button type="submit" >Registrar</button>
@@ -89,7 +89,7 @@
                  <p>Cumple: {{ fechaCumpleanios }}</p>
              </div>
              <div>
-                 <p>Fecha Registro: {{ fechaRegistro }}</p>
+                 <p>Fecha Registro: {{timeago fechaRegistro}}</p>
              </div>
          </div>
 

@@ -26,7 +26,6 @@ app.post("/crearregistrotest" , async ( req , res ) => {
     let guardarFecha = `${horaActual.getDate()}-${ horaActual.getMonth() + 1 }-${horaActual.getUTCFullYear()}`;
     let dateDB = `${guardarHora} / ${guardarFecha}`;
 
-    console.log(dateDB);
     
     const { nombres , email , phone , fechaCumpleanios  } = req.body;
 
@@ -37,7 +36,7 @@ app.post("/crearregistrotest" , async ( req , res ) => {
         email : email,
         numeroTelefono : phone ,
         fechaCumpleanios : fechaCumpleanios,
-        fechaRegistro : dateDB,
+        fechaRegistro : fecha,
         suscrito : false
     })
 
@@ -47,8 +46,6 @@ app.post("/crearregistrotest" , async ( req , res ) => {
     .catch( x => {
         req.flash( "registroError" , "Ocurrio un error intentalo de nuevo Glorita" );
     })
-    
-    
     
     res.redirect("/depiladmin00/crearregistrotest?token=clave156")
 });

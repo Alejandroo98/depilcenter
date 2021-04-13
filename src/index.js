@@ -1,6 +1,5 @@
 //Codigo del servidor
 const express = require('express');
-const engine = require('ejs-mate');
 const path = require('path'); //Sirve para unir directorios o escribir una ruta y que sea multiplataforma
 const hbs = require('hbs');
 const mongoose = require('mongoose');
@@ -12,6 +11,11 @@ const app = express(); //Ejecuto express y lo gardo en una constante
 const http = require('http');
 const server = http.createServer(app);
 const socketIo = require('socket.io');
+const exphbs = require("express-handlebars");
+const { format } = require("timeago.js");
+const { timeago } = require('./lib/handlebars');
+
+
 
 module.exports.io = socketIo(server);
 require('./socket/socket_servidor');
@@ -21,8 +25,8 @@ require('./passport/passport-auth');
 require('./config/config');
 
 //Inicialicacion
-// require('./data-base');
-// app.set('port', process.env.PORT || 3000);
+
+
 
 //body-parser
 app.use(express.urlencoded({ extended: false }));
@@ -31,10 +35,10 @@ app.use(express.json());
 
 //Configurarciones
 app.use(express.static(path.resolve(__dirname, './public')));
-hbs.registerPartials(__dirname + '/partials');
-app.set('views', path.resolve(__dirname, 'public/views'));
+hbs.registerPartials(__dirname + '/partials'); 
+hbs.registerHelper( 'timeago' , require( "./lib/handlebars" ).timeago)
 app.set('view engine', 'hbs');
-// app.engine('css', engine); //Aqui lo creamos
+app.set('views', path.resolve(__dirname, 'public/views'));
 
 app.use(
   session({
