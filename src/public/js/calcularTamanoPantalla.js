@@ -166,4 +166,5 @@ let rotar = new Emojis()
 rotar.tiempo()
 
 
+module.exports = tamVentana
 /* ========ROTAS IMAGENES DE EMOJIS ============= */

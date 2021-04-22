@@ -14,6 +14,7 @@ app.use( function( req , res , next ) {
     '/conocenos',
     '/contactos',
     '/depiladmin00/crearregistrotest',
+    '/admin/login'
   ];
 
   let comrpovarRuta = routes.includes(req.url);
@@ -30,10 +31,12 @@ app.use( function( req , res , next ) {
     app.use(require("./cotizar"))
     app.use(require("./conocenos"))
     app.use( "/depiladmin00" , require("./admin"))
+    app.use( "/admin" , require("./login"))
     //A esta ruta no le cree un archivo independiente como los de arriba por que no desde blog no se envia ningun formulario
     app.get("/blog" , ( req , res ) => {
       res.render("blog")
-    })
+    });
+    
 
   }
 
