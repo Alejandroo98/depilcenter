@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="../css/login.css">
 </head>
@@ -13,19 +15,31 @@
 
     <header class="__containerMainLogin">
         <section class="_centrarLogin">
-            <div>
-                <h1>Login Admin</h1>
+            <div class="contentLogo">
+                <img src="../img/logo_rosa.png" alt="Logo">
             </div>
-            <div>
-                <label for="correId">Email: </label>
-                <input type="email"  name="email" id="correoId" >
+            <div class="contentInput">
+                <div>
+                    <h2>WELCOME</h2>
+                    <p>Login Admin</p>
+                </div>
+                <form method="POST" class="form">
+                    <div>
+                        <input type="email"  name="email" id="correoId" placeholder="Email">
+                    </div>
+                    <div>
+                        <input type="text" name="password" id="passwordId" placeholder="Contraseña" >
+                    </div>
+                    <div align="center">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
             </div>
+        </section>
+        
+        <section class="__imgLoginContainer">
             <div>
-                <label for="passwordId">Contraseña: </label>
-                <input type="text" name="password" id="passwordId">
-            </div>
-            <div align="center">
-                <button type="submit">Login</button>
+                <img src="../img/login//background_login-01.png" alt="">
             </div>
         </section>
     </header>
