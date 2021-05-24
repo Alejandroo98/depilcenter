@@ -8,7 +8,7 @@ let email = document.getElementById('email');
 let numeroCelular = document.getElementById('numeroCelular');
 let fecha = document.getElementById('fecha');
 let hora = document.getElementById('hora');
-let __contenedorMetodoDepilacion = document.getElementById("__contenedorMetodoDepilacion");
+let __contenedorMetodoDepilacion = document.getElementById('__contenedorMetodoDepilacion');
 
 if (URLpintar === '/') {
   etiquetaPintar.classList.add('pintarNav');
@@ -53,12 +53,7 @@ class ValidarDatos {
     let numeroOk = this.validarNumero();
     let fechaOk = this.validarFecha();
 
-    if (
-      nombreOk.err === false &&
-      emailOk.err === false &&
-      numeroOk.err === false &&
-      fechaOk.err == false
-    ) {
+    if (nombreOk.err === false && emailOk.err === false && numeroOk.err === false && fechaOk.err == false) {
       this.enviarForm();
     } else {
       if (nombreOk.err === true) {
@@ -116,9 +111,7 @@ class ValidarDatos {
   };
 
   validarEmail = () => {
-    let emailOk = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(
-      this.email
-    );
+    let emailOk = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(this.email);
 
     if (this.email == '') {
       return {
@@ -172,7 +165,7 @@ class ValidarDatos {
 }
 
 registrarReserva.addEventListener('submit', (x) => {
-  x.preventDefault(); 
+  x.preventDefault();
   let datosReserva = {
     nombres: nombres.value,
     email: email.value,
@@ -185,13 +178,34 @@ registrarReserva.addEventListener('submit', (x) => {
   validarDatos.validarFecha();
 });
 
-window.onblur = function(){  //Esta funcion se ejecuta cuando se cambia de pestaña en el navegador
-  console.log("taaaaaal");
-}
+window.onblur = function () {
+  //Esta funcion se ejecuta cuando se cambia de pestaña en el navegador
+  console.log('taaaaaal');
+};
 
+/* ================= SCROLL ORIZONAL EN SERIVICIOS =====================*/
+const __serviciosContainerCenter = document.querySelector('.__serviciosContainerCenter');
+const backButton = document.querySelector('.back-back');
+const forwardButton = document.querySelector('.back-forward');
 
+backButton.addEventListener('click', (x) => {
+  let test = __serviciosContainerCenter.scrollLeft;
+  test -= 300;
+  __serviciosContainerCenter.scroll({
+    left: test,
+    behavior: 'smooth',
+  });
+});
 
-
+forwardButton.addEventListener('click', (x) => {
+  let test = __serviciosContainerCenter.scrollLeft;
+  test += 300;
+  __serviciosContainerCenter.scroll({
+    left: test,
+    behavior: 'smooth',
+  });
+});
+/* ================= *FIN SCROLL ORIZONAL EN SERIVICIOS =====================*/
 
 // back.addEventListener('click', () => {
 //   let backDatos = new Reserva();
