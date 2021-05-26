@@ -21,7 +21,6 @@ app.get("/crearregistrotest", async (req, res) => {
   let token = req.query.token;
   // if (token === "clave156") {
   let datos = await DatosReserva.find({}).sort({ _id: -1 });
-  console.log(datos);
   res.render("admin", { datos });
   // } else {
   //   res.redirect("/");

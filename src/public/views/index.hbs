@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+    <script src="../libs/jquery.js"></script>
    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,6 +30,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    {{!-- datePicker --}}
+    <script src="../libs/datePicker/js/bootstrap-datepicker.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../libs//datePicker/css/bootstrap-datepicker.css">
+    {{!-- datePicker --}}
+    
     
 </head>
 <body class="body" >
@@ -93,84 +99,21 @@
         
         <div class="_datosCumpleanios">
           <h5>¡Happy birthday!</h5>
-          <h6>POR TU CUMPLEAÑOS RESCIBE EL 25% DE DESCUENTO EN TODOS NUESTROS COMBOS <a href="#">AGENDAR CITA</a> </h6>
-          <p>Cumpleañeros de Marzo</p>
+          <h6>POR TU CUMPLEAÑOS RECIBE EL 25% DE DESCUENTO EN DEPILACIÓN CON CERA DURANTE TODO EL MES <a id="agendarCumpleaniero">AGENDAR CITA</a> </h6>
+          <p id="mesCumpleanios"></p>
+          {{!-- <p id="mesCumpleanios">Cumpleañeros de Marzo</p> --}}
         </div>
 
         
         <div class="__cumpleaniosContainerChild">
-          <div>
+          {{!-- <div>
             <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
             <p>Alejo Alava</p>
             <p>15-15-2021</p>
-          </div>
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
+          </div> --}}
 
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
 
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
-
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
           
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
-
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
-
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
-          
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
-
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
-
-          <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
-
-
-           <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div>
-        
         </div>
         
       
@@ -233,9 +176,9 @@
                 <div class="cardServicio">
 
                   <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
+                    <img src="../img/servicios/servicio_waxing.png" alt="Depilacion con cera">
                       <div class="nameOff">
-                        <div >
+                        <div class="celesteServicioH6">
                           <h6>50% OFF</h6>
                         </div>       
                         <div >
@@ -252,12 +195,12 @@
 
                   </div>
 
-                  <div class="botonesServicios">
+                  <div class="botonesServicios celesteServicio">
                     <div>
-                      <button>Cotizar</button>
+                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
                     </div>
                     <div>
-                      <button>Agendar Cita</button>
+                      <a class="agendarButtonCelesteCotizar" id="agendarDepilacionCera" >Agendar Cita</a>
                     </div>
                   </div>
 
@@ -266,13 +209,13 @@
                 <div class="cardServicio">
 
                   <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
+                    <img src="../img/servicios/servicio_lasaer.png" alt="Depilacion con cera">
                       <div class="nameOff">
-                        <div >
-                          <h6>50% OFF</h6>
+                        <div class="amarilloServicioH6">
+                          <h6>SERVICIO SABADO Y DOMINGO</h6>
                         </div>       
                         <div >
-                          <h3>Depilaciòn con cera</h3>
+                          <h3>Depilaciòn laser</h3>
                         </div>   
                       </div>
                   </div>
@@ -285,12 +228,12 @@
 
                   </div>
 
-                  <div class="botonesServicios">
+                  <div class="botonesServicios amarilloServicio">
                     <div>
-                      <button>Cotizar</button>
+                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
                     </div>
                     <div>
-                      <button>Agendar Cita</button>
+                      <a class="agendarButtonAmarilloCotizar" id="agendarDepilacionLaser">Agendar Cita</a>
                     </div>
                   </div>
 
@@ -298,13 +241,13 @@
                 <div class="cardServicio">
 
                   <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
+                    <img src="../img/servicios/servicio_limpiezas_faciales.png" alt="Depilacion con cera">
                       <div class="nameOff">
-                        <div >
-                          <h6>50% OFF</h6>
+                        <div class="rojoServicioH6">
+                          <h6>SERVICIO SABADO Y DOMINGO</h6>
                         </div>       
                         <div >
-                          <h3>Depilaciòn con cera</h3>
+                          <h3>Limpiezas faciales</h3>
                         </div>   
                       </div>
                   </div>
@@ -317,12 +260,12 @@
 
                   </div>
 
-                  <div class="botonesServicios">
+                  <div class="botonesServicios rojoServicio">
                     <div>
-                      <button>Cotizar</button>
+                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
                     </div>
                     <div>
-                      <button>Agendar Cita</button>
+                      <a class="agendarButtonRojoCotizar" id="agendarFacial">Agendar Cita</a>
                     </div>
                   </div>
 
@@ -330,13 +273,13 @@
                 <div class="cardServicio">
 
                   <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
+                    <img src="../img/servicios/servicio_masajes.png" alt="Depilacion con cera">
                       <div class="nameOff">
-                        <div >
-                          <h6>50% OFF</h6>
+                        <div class="celesteServicioH6">
+                          <h6>SERVICIO SABADO Y DOMINGO</h6>
                         </div>       
                         <div >
-                          <h3>Depilaciòn con cera</h3>
+                          <h3>Masajes relajantes</h3>
                         </div>   
                       </div>
                   </div>
@@ -349,12 +292,12 @@
 
                   </div>
 
-                  <div class="botonesServicios">
+                  <div class="botonesServicios celesteServicio">
                     <div>
-                      <button>Cotizar</button>
+                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
                     </div>
                     <div>
-                      <button>Agendar Cita</button>
+                      <a class="agendarButtonCelesteCotizar" id="agendarMasajes">Agendar Cita</a>
                     </div>
                   </div>
 
@@ -362,13 +305,13 @@
                 <div class="cardServicio">
 
                   <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
+                    <img src="../img/servicios/servicio_acne.png" alt="Depilacion con cera">
                       <div class="nameOff">
-                        <div >
-                          <h6>50% OFF</h6>
+                        <div class="amarilloServicioH6">
+                          <h6>SERVICIO SABADO Y DOMINGO</h6>
                         </div>       
                         <div >
-                          <h3>Depilaciòn con cera</h3>
+                          <h3>Tratamiento de acne</h3>
                         </div>   
                       </div>
                   </div>
@@ -381,12 +324,12 @@
 
                   </div>
 
-                  <div class="botonesServicios">
+                  <div class="botonesServicios amarilloServicio">
                     <div>
-                      <button>Cotizar</button>
+                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
                     </div>
                     <div>
-                      <button>Agendar Cita</button>
+                      <a class="agendarButtonAmarilloCotizar" id="agendarAcne">Agendar Cita</a>
                     </div>
                   </div>
 
@@ -394,13 +337,13 @@
                 <div class="cardServicio">
 
                   <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
+                    <img src="../img/servicios/servicio_gluteos.png" alt="Depilacion con cera">
                       <div class="nameOff">
-                        <div >
-                          <h6>50% OFF</h6>
+                        <div class="rojoServicioH6" >
+                          <h6>SERVICIO SABADO Y DOMINGO</h6>
                         </div>       
                         <div >
-                          <h3>Depilaciòn con cera</h3>
+                          <h3>Gluteos</h3>
                         </div>   
                       </div>
                   </div>
@@ -413,112 +356,17 @@
 
                   </div>
 
-                  <div class="botonesServicios">
+                  <div class="botonesServicios rojoServicio">
                     <div>
-                      <button>Cotizar</button>
+                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
                     </div>
                     <div>
-                      <button>Agendar Cita</button>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="cardServicio">
-
-                  <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div >
-                          <h6>50% OFF</h6>
-                        </div>       
-                        <div >
-                          <h3>Depilaciòn con cera</h3>
-                        </div>   
-                      </div>
-                  </div>
-
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
-
-                  </div>
-
-                  <div class="botonesServicios">
-                    <div>
-                      <button>Cotizar</button>
-                    </div>
-                    <div>
-                      <button>Agendar Cita</button>
+                      <a class="agendarButtonRojoCotizar" id="agendarGluteos">Agendar Cita</a>
                     </div>
                   </div>
 
                 </div>
-                <div class="cardServicio">
-
-                  <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div >
-                          <h6>50% OFF</h6>
-                        </div>       
-                        <div >
-                          <h3>Depilaciòn con cera</h3>
-                        </div>   
-                      </div>
-                  </div>
-
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
-
-                  </div>
-
-                  <div class="botonesServicios">
-                    <div>
-                      <button>Cotizar</button>
-                    </div>
-                    <div>
-                      <button>Agendar Cita</button>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="cardServicio">
-
-                  <div class="imgServicio">
-                    <img src="../img/servicio_waxing.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div >
-                          <h6>50% OFF</h6>
-                        </div>       
-                        <div >
-                          <h3>Depilaciòn con cera</h3>
-                        </div>   
-                      </div>
-                  </div>
-
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
-
-                  </div>
-
-                  <div class="botonesServicios">
-                    <div>
-                      <button>Cotizar</button>
-                    </div>
-                    <div>
-                      <button>Agendar Cita</button>
-                    </div>
-                  </div>
-
-                </div>
+               
 
               </div>
                 

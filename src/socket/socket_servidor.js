@@ -1,3 +1,4 @@
+const { datosCumpleanieros } = require('../clases/cumpleanieros');
 const { io } = require('../index');
 
 io.on('connection', (cliente) => {
@@ -19,14 +20,22 @@ io.on('connection', (cliente) => {
   imprimirCotizarMujer = new CotizarMujer(guardarMayor, sumaTotalFacial);
   /* ===============FIN DATOS IMPORTANTES COTIZAR MUJER================= */
 
+  /* ======================= CUMPLEANIEROS ======================= */
+  datosCumpleanieros().then((x) => {
+    let timeToday = new Date();
+    let cumpleMes = x.filter((persona) => {
+      let monthToday = timeToday.getMonth() + 1;
+      return persona.fechaCumpleanios.split('-')[1] == monthToday;
+    });
+    cliente.emit('imprimirCumpleañeros', cumpleMes);
+  });
+  /* ======================= *FIN CUMPLEANIEROS ======================= */
+
   /* ===============DATOS IMPORTANTES COTIZAR HOMBRE================= */
 
   /* EXPORTAR CLASE HOMBRE*/
   const { CotizarHombre } = require('../clases/cotizar_hombre');
-  imprimirCotizarHombre = new CotizarHombre(
-    guardarMayorHombre,
-    sumaTotalFacialHombre
-  );
+  imprimirCotizarHombre = new CotizarHombre(guardarMayorHombre, sumaTotalFacialHombre);
 
   /* ===============FIN DATOS IMPORTANTES COTIZAR HOMBRE================= */
 
@@ -171,10 +180,8 @@ io.on('connection', (cliente) => {
       }
       enviarDatosDOM.push(
         `<form class="a${combosDB[i].id}" method="POST">
-        <input  value=${ combosDB[i].id } type="hidden" name="${ combosDB[i].nombreCombo }">
-        <h5>${
-          combosDB[i].nombreCombo
-        }</h5><ul>${datosLi.join('')}</ul><p>Precio:$ ${
+        <input  value=${combosDB[i].id} type="hidden" name="${combosDB[i].nombreCombo}">
+        <h5>${combosDB[i].nombreCombo}</h5><ul>${datosLi.join('')}</ul><p>Precio:$ ${
           combosDB[i].precio
         }</p><button type="button" id="${combosDB[i].id}" > Agendar Cita </button></form>`
       );

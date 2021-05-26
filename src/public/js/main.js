@@ -1,3 +1,4 @@
+let socket = io();
 let URLactual = window.location;
 let URLpintar = URLactual.pathname;
 let etiquetaPintar = document.querySelector('.inicio');
@@ -9,6 +10,131 @@ let numeroCelular = document.getElementById('numeroCelular');
 let fecha = document.getElementById('fecha');
 let hora = document.getElementById('hora');
 let __contenedorMetodoDepilacion = document.getElementById('__contenedorMetodoDepilacion');
+let __cumpleaniosContainerChild = document.querySelector('.__cumpleaniosContainerChild');
+let mesCumpleanios = document.querySelector('#mesCumpleanios');
+
+/* ================== CALENDAR RESERVA =================== */
+$.fn.datepicker.dates['es'] = {
+  days: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+  daysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+  daysMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+  months: [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
+  ],
+  monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+  today: 'Hoy',
+  monthsTitle: 'Meses',
+  clear: 'Borrar',
+  weekStart: 1,
+  format: 'dd/mm/yyyy',
+};
+
+$('.date-datapicker').datepicker({
+  language: 'es',
+  format: 'dd-mm-yyyy',
+  todayHighlight: true,
+  startDate: 'format',
+  todayBtn: false,
+  autoclose: true,
+  toggleActive: true,
+});
+
+$('.date-datapicker-cumpleanios').datepicker({
+  language: 'es',
+  format: 'dd-mm-yyyy',
+  autoclose: true,
+});
+
+//Valor de input segun el dia en que nos encontremos
+let dateInput = new Date();
+let monthIput = dateInput.getMonth() + 1;
+let dateCero;
+if (monthIput < 10) {
+  dateCero = 0;
+} else {
+  dateCero = '';
+}
+
+let fullDate = `${dateInput.getDate()}-${dateCero}${monthIput}-${dateInput.getFullYear()} `;
+let form_control_date = document.querySelector('.form-control-date');
+
+form_control_date.value = fullDate;
+
+/* ================== *FIN CALENDAR RESERVA =================== */
+
+/* =========== MES DE CUMPLEAÑEROS ========= */
+
+let mesCuple = new Date();
+let imprimirMes;
+switch (mesCuple.getMonth() + 1) {
+  case 0:
+    imprimirMes = 'Enero';
+    break;
+  case 1:
+    imprimirMes = 'Febrero';
+    break;
+  case 2:
+    imprimirMes = 'Marzo';
+    break;
+  case 3:
+    imprimirMes = 'Abril';
+    break;
+  case 4:
+    imprimirMes = 'Mayo';
+    break;
+  case 5:
+    imprimirMes = 'Junio';
+    break;
+  case 6:
+    imprimirMes = 'Julio';
+    break;
+  case 7:
+    imprimirMes = 'Agosto';
+    break;
+  case 8:
+    imprimirMes = 'Septiembre';
+    break;
+  case 9:
+    imprimirMes = 'Octubre';
+    break;
+  case 10:
+    imprimirMes = 'Noviembre';
+    break;
+  case 11:
+    imprimirMes = 'Diciembre';
+    break;
+}
+
+mesCumpleanios.innerHTML = `Cumpleañeros de ${imprimirMes}`;
+
+/* =========== *FIN MES DE CUMPLEAÑEROS ========= */
+
+/* ======IMPRIMIR CUMPLAÑOS====== */
+socket.on('imprimirCumpleañeros', (cumpleanieros) => {
+  for (let i = 0; i < cumpleanieros.length; i++) {
+    __cumpleaniosContainerChild.innerHTML += `
+    <div>
+            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
+            <p>${cumpleanieros[i].nombres}</p>
+            <p>${cumpleanieros[i].fechaCumpleanios}</p>
+    </div>
+    `;
+  }
+
+  console.log(cumpleanieros);
+});
+/* ======*FIN IMPRIMIR CUMPLAÑOS====== */
 
 if (URLpintar === '/') {
   etiquetaPintar.classList.add('pintarNav');
@@ -180,7 +306,6 @@ registrarReserva.addEventListener('submit', (x) => {
 
 window.onblur = function () {
   //Esta funcion se ejecuta cuando se cambia de pestaña en el navegador
-  console.log('taaaaaal');
 };
 
 /* ================= SCROLL ORIZONAL EN SERIVICIOS =====================*/
@@ -207,12 +332,4 @@ forwardButton.addEventListener('click', (x) => {
 });
 /* ================= *FIN SCROLL ORIZONAL EN SERIVICIOS =====================*/
 
-// back.addEventListener('click', () => {
-//   let backDatos = new Reserva();
-//   backDatos.backDeslizarRserva();
-// });
 
-// next.addEventListener('click', () => {
-//   let newReserva = new Reserva();
-//   newReserva.deslizarDatosReserva();
-// });

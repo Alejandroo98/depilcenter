@@ -1,3 +1,4 @@
+let agendarCumpleaniero = document.querySelector('#agendarCumpleaniero');
 function tamVentana() {
   var tam = [0, 0];
   if (typeof window.innerWidth != 'undefined') {
@@ -66,9 +67,49 @@ class ajustarPantallaReserva {
     //   behavior: 'smooth',
     // });
   }
+
+  remoteSelected() {
+    let serviciosActive = document.querySelector('#serviciosActive');
+    let $serviciosActive = serviciosActive.getElementsByTagName('option');
+    for (let i = 0; i < $serviciosActive.length; i++) {
+      document.getElementById($serviciosActive[i].id).removeAttribute('selected');
+      console.log($serviciosActive[i].id);
+    }
+  }
+
+  agendarCita(servicio) {
+    this.remoteSelected();
+    let $servicio = document.getElementById(servicio);
+    if (!servicio) {
+      return undefined;
+    } else if (
+      servicio === 'agendarDepilacionCera' ||
+      servicio === 'agendarDepilacionLaser' ||
+      servicio === 'agendarFacial' ||
+      servicio === 'agendarMasajes' ||
+      servicio === 'agendarAcne' ||
+      servicio === 'agendarGluteos'
+    ) {
+      $servicio.setAttribute('selected', '');
+      this.scroll();
+    }
+  }
 }
 
-// let data = false;
+/* =============== SELECCION UN SERVICIO ========================== */
+const __serviciosContainerCenterDos = document.querySelector('.__serviciosContainerCenter');
+
+__serviciosContainerCenterDos.addEventListener('click', (e) => {
+  let activarClass = new ajustarPantallaReserva();
+  activarClass.agendarCita(e.target.id);
+});
+
+/* =============== *FIN SELECCION UN SERVICIO ========================== */
+
+agendarCumpleaniero.addEventListener('click', (e) => {
+  let activarClass = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
+  activarClass.scroll();
+});
 
 window.addEventListener('resize', () => {
   let activarClass = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
