@@ -124,15 +124,13 @@ mesCumpleanios.innerHTML = `Cumpleañeros de ${imprimirMes}`;
 socket.on('imprimirCumpleañeros', (cumpleanieros) => {
   for (let i = 0; i < cumpleanieros.length; i++) {
     __cumpleaniosContainerChild.innerHTML += `
-    <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>${cumpleanieros[i].nombres}</p>
+    <div >
+            <img src="../img/happy-icon-01.png" width="80" alt="">
+            <p><b> ${cumpleanieros[i].nombres} peres gonzales agualongo</b></p>
             <p>${cumpleanieros[i].fechaCumpleanios}</p>
     </div>
     `;
   }
-
-  console.log(cumpleanieros);
 });
 /* ======*FIN IMPRIMIR CUMPLAÑOS====== */
 
@@ -331,5 +329,3 @@ forwardButton.addEventListener('click', (x) => {
   });
 });
 /* ================= *FIN SCROLL ORIZONAL EN SERIVICIOS =====================*/
-
-

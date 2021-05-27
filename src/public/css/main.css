@@ -231,11 +231,6 @@ body {
   border-radius: 10px;
 }
 
-.agendarBotonTwo span {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
 .background {
   padding-bottom: 310px;
 }
@@ -275,6 +270,7 @@ body {
 
 .registrarReserva {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(7, minmax(min-content, 190px));
   gap: 5px 18px;
 }
@@ -358,9 +354,28 @@ select {
   width: 100%;
   height: 50px;
   border: none;
-  border-bottom: 2px solid rgb(156, 156, 156);
   background: none;
   font-weight: 500;
+  border-bottom: 2px solid rgb(156, 156, 156);
+}
+
+.infoReserva {
+  display: block;
+  position: absolute;
+  color: white;
+}
+
+.infoReserva input {
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(12, 180, 209);
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  font-size: 14px;
+  padding: 5px 0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }
 
 .registrarReserva label {
@@ -827,22 +842,26 @@ select {
   display: flex;
   justify-content: center;
   z-index: 1;
-  /* background-color:red; */
   overflow: auto;
-  /* justify-content: space-evenly; */
-  padding: 25px 0;
+  padding: 10px 0;
   max-width: 98%;
 }
 
+.__cumpleaniosContainerChild > div > p {
+  margin: 0;
+}
+
 .__cumpleaniosContainerChild > div {
-  /* display: none; */
+  line-height: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
-  padding: 10px;
+  padding: 10px 10px;
   border-radius: 15px;
   box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
   margin: 0 5px;
-  max-width: 100px;
-  /* background-color: rebeccapurple; */
+  max-width: 115px;
 }
 
 .__cumpleaniosContainerChild::-webkit-scrollbar {
@@ -974,14 +993,14 @@ select {
 }
 
 .backgroundImg {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
-  background-color: aquamarine;
   height: 600px;
   background-position: center;
   background-image: url(../img/quienesSomosBack.png);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position-y: 13%;
 }
 

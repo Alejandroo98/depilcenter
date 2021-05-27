@@ -43,6 +43,12 @@ class ajustarPantallaReserva {
     this.cajaReserva = document.querySelector('.reservarHBS');
     this.altura = altura;
     this.anchura = anchura;
+    this.d_cera = '50% DE DESCUENTO';
+    this.d_laser = 'ULTIMA SESION GRATIS';
+    this.l_faciales = 'DOS PERSONAS POR $35';
+    this.m_relajantes = 'DOS PERSONAS POR $40';
+    this.t_acne = 'EVALUACION GRATIS';
+    this.gluteos = 'EVALUACION GRATIS';
   }
 
   tamDiv() {
@@ -58,6 +64,7 @@ class ajustarPantallaReserva {
   }
 
   scroll() {
+    this.imprimirInfoExtraReserva();
     this.cajaReserva.style.display = 'flex';
     this.cajaReserva.scrollIntoView({ block: 'center', behavior: 'smooth' });
     // this.ajustarSegundaPAntallaRserva();
@@ -68,7 +75,7 @@ class ajustarPantallaReserva {
     // });
   }
 
-  remoteSelected() {
+  removeSelected() {
     let serviciosActive = document.querySelector('#serviciosActive');
     let $serviciosActive = serviciosActive.getElementsByTagName('option');
     for (let i = 0; i < $serviciosActive.length; i++) {
@@ -78,36 +85,100 @@ class ajustarPantallaReserva {
   }
 
   agendarCita(servicio) {
-    this.remoteSelected();
+    this.removeSelected();
     let $servicio = document.getElementById(servicio);
     if (!servicio) {
       return undefined;
-    } else if (
-      servicio === 'agendarDepilacionCera' ||
-      servicio === 'agendarDepilacionLaser' ||
-      servicio === 'agendarFacial' ||
-      servicio === 'agendarMasajes' ||
-      servicio === 'agendarAcne' ||
-      servicio === 'agendarGluteos'
-    ) {
+    } else if (servicio === 'agendarDepilacionCera') {
       $servicio.setAttribute('selected', '');
+      this.guardarInfoLocalStorage(this.d_cera);
+      this.scroll();
+    } else if (servicio === 'agendarDepilacionLaser') {
+      $servicio.setAttribute('selected', '');
+      this.guardarInfoLocalStorage(this.d_laser);
+      this.scroll();
+    } else if (servicio === 'agendarFacial') {
+      $servicio.setAttribute('selected', '');
+      this.guardarInfoLocalStorage('DOS PERSONAS POR $35');
+      this.scroll();
+    } else if (servicio === 'agendarMasajes') {
+      $servicio.setAttribute('selected', '');
+      this.guardarInfoLocalStorage(this.m_relajantes);
+      this.scroll();
+    } else if (servicio === 'agendarAcne') {
+      $servicio.setAttribute('selected', '');
+      this.guardarInfoLocalStorage(this.t_acne);
+      this.scroll();
+    } else if (servicio === 'agendarGluteos') {
+      $servicio.setAttribute('selected', '');
+      this.guardarInfoLocalStorage(this.gluteos);
       this.scroll();
     }
+  }
+
+  imprimirInfoExtraReserva() {
+    let $infoReserva = document.querySelector('#infoReserva');
+    let InfoReserva = document.querySelector('.infoReserva');
+    let infoReservaLocalSession = sessionStorage.getItem('infoReserva');
+    if (infoReservaLocalSession === null) {
+      InfoReserva.style.display = 'none';
+      $infoReserva.value = `Sin descuento`;
+      return;
+    }
+    InfoReserva.style.display = 'block';
+    $infoReserva.value = `${infoReservaLocalSession}`;
+  }
+
+  changeSelectServicio(id_service) {
+    if (id_service === 'd_cera') {
+      this.guardarInfoLocalStorage(this.d_cera);
+      this.imprimirInfoExtraReserva();
+    } else if (id_service === 'd_laser') {
+      this.guardarInfoLocalStorage(this.d_laser);
+      this.imprimirInfoExtraReserva();
+    } else if (id_service === 'l_facial') {
+      this.guardarInfoLocalStorage(this.l_faciales);
+      this.imprimirInfoExtraReserva();
+    } else if (id_service === 'm_relajantes') {
+      this.guardarInfoLocalStorage(this.m_relajantes);
+      this.imprimirInfoExtraReserva();
+    } else if (id_service === 't_acne') {
+      this.guardarInfoLocalStorage(this.t_acne);
+      this.imprimirInfoExtraReserva();
+    } else if (id_service === 'gluteos') {
+      this.guardarInfoLocalStorage(this.gluteos);
+      this.imprimirInfoExtraReserva();
+    }
+  }
+
+  guardarInfoLocalStorage(info) {
+    sessionStorage.setItem('infoReserva', info);
+  }
+  eliminarInfoLocalStorage() {
+    sessionStorage.removeItem('infoReserva');
   }
 }
 
 /* =============== SELECCION UN SERVICIO ========================== */
 const __serviciosContainerCenterDos = document.querySelector('.__serviciosContainerCenter');
-
+const serviciosActive = document.querySelector('#serviciosActive');
 __serviciosContainerCenterDos.addEventListener('click', (e) => {
   let activarClass = new ajustarPantallaReserva();
   activarClass.agendarCita(e.target.id);
 });
 
+serviciosActive.addEventListener('change', (e) => {
+  let activarClass = new ajustarPantallaReserva();
+  activarClass.changeSelectServicio(serviciosActive.value);
+});
+
+//sin info extra al presonar el boton de agendar cita principal
+
 /* =============== *FIN SELECCION UN SERVICIO ========================== */
 
 agendarCumpleaniero.addEventListener('click', (e) => {
-  let activarClass = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
+  let activarClass = new ajustarPantallaReserva();
+  activarClass.guardarInfoLocalStorage('25% DE DESCUENTO');
   activarClass.scroll();
 });
 
@@ -118,12 +189,14 @@ window.addEventListener('resize', () => {
 
 document.querySelector('.agendarCita').addEventListener('click', () => {
   let activarClassReserva = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
+  activarClassReserva.guardarInfoLocalStorage('50% DE DESCUENTO');
+  // activarClassReserva.eliminarInfoLocalStorage();
   activarClassReserva.scroll();
 });
 
 let activarClass = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
 activarClass.ajustarSegundaPAntallaRserva();
-
+activarClass.changeSelectServicio(serviciosActive.value);
 // window.addEventListener('resize', () => {
 //   let activarClass = new ajustarPantallaReserva(
 //     tamVentana()[0],
@@ -186,5 +259,5 @@ class Emojis {
 let rotar = new Emojis();
 rotar.tiempo();
 
-module.exports = tamVentana;
+// module.exports = tamVentana;
 /* ========ROTAS IMAGENES DE EMOJIS ============= */

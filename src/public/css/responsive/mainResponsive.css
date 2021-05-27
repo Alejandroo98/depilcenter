@@ -1,32 +1,48 @@
-@media screen and (max-width : 1230px ){
-    .iconsContenedor .iconsImg-info {
-        grid-template-columns: 100% !important;
-        padding: 0 10px;
-      }
+@media screen and (max-width: 1230px) {
+  .iconsContenedor .iconsImg-info {
+    grid-template-columns: 100% !important;
+    padding: 0 10px;
+  }
 
-    
-    .iconsImg {
-      display: grid;
-      grid-template-columns: repeat(7 , minmax(min-content , 1fr)) !important;
-      gap: 4px;
-      text-align: center;
-    }
-    
+  .iconsImg {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(min-content, 1fr)) !important;
+    gap: 4px;
+    text-align: center;
+  }
 
-    .ceraInfo {
-      max-width: 100% !important;
-    }
+  .ceraInfo {
+    max-width: 100% !important;
+  }
 }
 
-
-@media screen and (max-width : 1130px){
-
+@media screen and (max-width: 1130px) {
   /* =========RESPONSIVE CAJA DE AGENDAR======= */
-    .divReservaGrid {
-    grid-template-columns: repeat(2 , auto) !important;
-    max-width: 95% !important;
-    /* padding: 0 10px; */
-    }
+
+  .divReservaGrid {
+    width: 100%;
+    /* background-color: rosybrown; */
+  }
+
+  .registrarReserva {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reserva {
+    grid-column: span 2;
+  }
+  .agendarWhatsapp {
+    grid-column: span 2;
+  }
+
+  .terminosButton {
+    grid-column: span 2;
+  }
+
+  .infoReserva {
+    top: 0;
+    left: 0;
+  }
 
   .imgResera {
     display: none;
@@ -36,7 +52,6 @@
   .iconsContenedor .iconsImg-info {
     max-width: 99% !important;
   }
-  
 
   .iconsImg {
     grid-template-columns: 1fr 1fr 1fr !important;
@@ -45,17 +60,14 @@
   .iconsImg .tituloIcons {
     grid-column: span 3 !important;
   }
-  
+
   .icon8 {
-    grid-column: span 3 ;
+    grid-column: span 3;
   }
+}
 
-} 
-
-@media screen and ( max-width : 990px ){
-  
-  
-    horariosAtenconChild{
+@media screen and (max-width: 990px) {
+  horariosAtenconChild {
     grid-template-columns: 100% !important;
   }
 
@@ -65,16 +77,16 @@
 
   .datosReserva {
     display: grid;
-    grid-template-columns: repeat(1 ,minmax(auto , 100% )) ;
+    grid-template-columns: repeat(1, minmax(auto, 100%));
     grid-template-rows: repeat(5, 1fr) auto;
   }
 
   /* ================Beneficios de la depilacion con cera ============ */
 
-  .__contendorBeneficiosDepilacionCera{
+  .__contendorBeneficiosDepilacionCera {
     grid-template-columns: 100%;
-    grid-template-rows: repeat( 2 , minmax( min-content , auto ) );
-    gap : 5px;
+    grid-template-rows: repeat(2, minmax(min-content, auto));
+    gap: 5px;
     padding: 180px 15px;
   }
 
@@ -90,7 +102,7 @@
     /* padding: 15px; */
   }
 
-  #carouselExampleSlidesOnly{
+  #carouselExampleSlidesOnly {
     padding: 80px 10px;
   }
 
@@ -98,38 +110,51 @@
     height: auto;
     /* border-radius: 50px; */
   }
-  
-  
 }
 
-@media screen and (max-width : 840px ){
+@media screen and (max-width: 840px) {
+  .__quienesSomosImg {
+    margin-top: 10spx;
+  }
 
-    .reservarHBS{
-      height: auto !important;
-      /* padding: 0; */
-    }
+  .backgroundImg {
+    padding: 0;
+    margin: 0;
+    background-color: rosybrown;
+    height: 400px;
+  }
+
+  .backgroundImg > div {
+    text-align: center;
+    margin: 15px;
+    padding: 24px;
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.644);
+    color: black;
+  }
+
+  .helpClass {
+    display: none;
+  }
+
+  .colorBackgroundImg {
+  }
+
+  .reservarHBS {
+    height: auto !important;
+    /* padding: 0; */
+  }
 
   .__contendorBeneficiosDepilacionCera {
     padding: 30px 10px !important;
   }
 
-
-  .registrarReserva {
-    grid-template-columns: repeat(3, minmax(min-content , 1fr)) !important; 
-  }
-  
-  .divReservaGrid {
-    grid-template-columns: 100% !important;
-    grid-template-rows: repeat(2 , min-content) !important;
-    /* width: 100%; */
+  .iconsContenedor {
+    padding: 10px 0 642px 0 !important;
   }
 
-  
-  .iconsContenedor{
-    padding: 10px  0 642px 0 !important;
-  }
-
-  #carouselExampleSlidesOnly{
+  #carouselExampleSlidesOnly {
     margin-bottom: 320px;
   }
 
@@ -139,7 +164,7 @@
     /* padding: 15px; */
   }
 
-  ._ubicacionIndexContainerChild{
+  ._ubicacionIndexContainerChild {
     flex-direction: column;
   }
 
@@ -147,21 +172,18 @@
     background-color: rgb(245, 245, 245);
     padding: 50px 10px;
   }
-  
 
   ._imgLocalIndex {
     max-width: 100%;
   }
 
-  ._quienesSomosIndex{
+  ._quienesSomosIndex {
     padding: 10px;
   }
-  
 }
 
-
-@media screen and (max-width : 782px ){
-  ._datosCumpleanios{
+@media screen and (max-width: 782px) {
+  ._datosCumpleanios {
     text-align: center;
   }
   ._datosCumpleanios a {
@@ -171,189 +193,209 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  /* SEVICIOS */
+  .__serviciosContainer {
+    margin: 10px;
+  }
 
+  .__serviciosContainerCenter {
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin: 0;
+    overflow: visible;
+  }
 
-@media screen and (max-width : 600px ){
+  .__serviciosContainerCenter > div {
+    max-width: 100%;
+    min-width: auto;
+    margin: 8px 0;
+    box-shadow: -0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
 
-    .divReservaGrid{
-      width: 100%;
-    }
+  .back-back {
+    display: none;
+  }
 
-    
-    .registrarReserva{
-      grid-template-columns: repeat(1, 100%) !important;
-    }
+  .back-forward {
+    display: none;
+  }
+  /* *FIN SEVICIOS */
 
-    .agendarBoton {
-      grid-column: auto !important;
-    }
+  .registrarReserva {
+    grid-template-columns: 1fr;
+  }
 
+  .reserva {
+    grid-column: auto;
+  }
+  .agendarWhatsapp {
+    grid-column: auto;
+  }
 
-    .reserva {
-      grid-column:  auto !important;
-      text-align: center;
-    }
+  .terminosButton {
+    grid-column: auto;
+  }
 
-    
-    .iconsImg {
+  .infoReserva {
+    display: flex;
+    top: -30px;
+    text-align: center;
+  }
+
+  .registrarReserva {
+    grid-template-columns: repeat(1, 100%) !important;
+  }
+
+  .agendarBoton {
+    grid-column: auto !important;
+  }
+
+  .reserva {
+    grid-column: auto !important;
+    text-align: center;
+  }
+
+  .iconsImg {
     grid-template-columns: 100% !important;
-    }
+  }
 
-    .iconsImg .tituloIcons {
+  .iconsImg .tituloIcons {
     grid-column: auto !important;
-    }
+  }
 
-    .icon8 {
+  .icon8 {
     grid-column: auto !important;
-    }
+  }
 
-    .cajaPrincipal {
-      width: 100%;
-    }
+  .cajaPrincipal {
+    width: 100%;
+  }
 
-    .iconsContenedor{
-    padding: 10px  0 642px 0 !important;
-    }
+  .iconsContenedor {
+    padding: 10px 0 642px 0 !important;
+  }
 
-    .iconsImg-info img {
+  .iconsImg-info img {
     /* display: none; */
     /* background-color: red; */
     padding: 8px;
-    }
+  }
 
-
-
-
-
-    .iconsImg .tituloIcons {
+  .iconsImg .tituloIcons {
     grid-column: auto;
-    }
+  }
 
-    .iconsImg > div {
+  .iconsImg > div {
     /* background-color: turquoise; */
     padding: 7px;
     margin: 0;
-    }
+  }
 
-    .datosMain h1 {
+  .datosMain h1 {
     font-size: 50px;
-    }
+  }
 
-    .navbar {
+  .navbar {
     background-color: salmon;
-    } 
+  }
 
-    .logo {
-      display: flex;
-      justify-content: center;
-      z-index: 600;
-    }
+  .logo {
+    display: flex;
+    justify-content: center;
+    z-index: 600;
+  }
 
+  .logo img {
+    margin: 0;
+    position: fixed;
+    padding: 6px;
+    z-index: 600;
+    width: 200px;
+    left: auto;
+  }
 
-    .logo img {
-      margin: 0;
-      position: fixed;
-      padding: 6px;
-      z-index: 600;
-      width: 200px;
-      left: auto;
-    }
-
-
-
-    .reserva h5 {
+  .reserva h5 {
     font-size: 30px;
     margin: 0;
+  }
+
+  /* ================Beneficios de la depilacion con cera ============ */
+
+  .__contendorBeneficiosDepilacionCera {
+    padding: 100px 10px 20px 10px;
+  }
+
+  ._quienesSomosIndex {
+    order: 0;
+  }
+
+  .__contendorBeneficiosDepilacionCeraChild {
+    grid-template-columns: repeat(1, minmax(100%, 100%)) !important;
+  }
+
+  .__contendorBeneficiosDepilacionCeraChild div:last-child {
+    grid-column: auto;
+  }
+
+  .__contendorBeneficiosDepilacionCeraChild div:first-child {
+    grid-column: auto;
+  }
+
+  .__contendorBeneficiosDepilacionCeraChild > div {
+    background-color: rgb(220, 254, 255);
+    border-radius: 15px;
+    margin: 0;
+    width: 100%;
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* background-color: rgb(102, 101, 101); */
+  }
+
+  /* ================*Fin Beneficios de la depilacion con cera ============ */
+
+  /*=================== locales index ============================== */
+
+  ._ubicacionIndexContainerChild {
+    flex-direction: column;
+  }
+
+  /*===================*fin locales index ============================== */
+
+  /* =============== opiniones ========== */
+  #carouselExampleSlidesOnly {
+    margin-bottom: 320px;
+  }
+
+  .nameOpiones {
+    width: auto;
+    text-align: center;
+  }
+
+  /* =============== *fin opiniones ========== */
+
+  ._datosCumpleanios h6 {
+    font-size: 12px;
+  }
+
+  ._datosCumpleanios a {
+    font-size: 11px;
+  }
+
+  @keyframes ejectoReserva {
+    from {
+      margin-top: 100px;
+      opacity: 0;
     }
 
-     /* ================Beneficios de la depilacion con cera ============ */
-    .background {
-      background-color: rgb(245, 245, 245);
+    to {
+      margin: 10px;
+      opacity: 1;
     }
-     
-     
-     .__contendorBeneficiosDepilacionCera {
-      padding: 100px 10px 20px 10px;
-    }
-
-    ._quienesSomosIndex{
-        order: 0;
-    }
-
-
-    .__contendorBeneficiosDepilacionCeraChild{
-      grid-template-columns: repeat( 1 , minmax( 100% , 100% ) ) !important;
-    } 
-
-    .__contendorBeneficiosDepilacionCeraChild div:last-child{
-      grid-column: auto;
-    }
-
-    .__contendorBeneficiosDepilacionCeraChild div:first-child{
-      grid-column: auto;
-    }
-
-    .__contendorBeneficiosDepilacionCeraChild > div{
-      background-color:rgb(220, 254, 255);
-      border-radius: 15px;
-      margin: 0 ;
-      width: 100%;
-      box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1);
-  /* background-color: rgb(102, 101, 101); */
-    }
-    
-    /* ================*Fin Beneficios de la depilacion con cera ============ */
-    
-    /*=================== locales index ============================== */
-
-    ._ubicacionIndexContainerChild{
-      flex-direction: column;
-    }
-
-    /*===================*fin locales index ============================== */
-
-    /* =============== opiniones ========== */
-    #carouselExampleSlidesOnly{
-      margin-bottom: 320px;
-    }
-
-    .nameOpiones {
-      width: auto;
-      text-align: center;
-    }
-
-    /* =============== *fin opiniones ========== */
-
-
-    ._datosCumpleanios h6 {
-      font-size: 12px;
-    }
-    
-    ._datosCumpleanios a {
-      font-size: 11px;
-    }
-
-    @keyframes ejectoReserva {
-      from {
-        margin-top: 100px;
-        opacity: 0;
-      }
-    
-      to {
-        margin: 10px;
-        opacity: 1;
-      }
-    }
-
-    
+  }
 }
 
-
-@media screen and (max-width : 600px ){
-
+@media screen and (max-width: 600px) {
   .__contendorBeneficiosDepilacionCeraChild {
     width: 100%;
   }
-  
 }
-
