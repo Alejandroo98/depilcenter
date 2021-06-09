@@ -7,27 +7,21 @@ let datosReservaSchema = new Schema({
     required: [true, 'Los nombres son necesarios'],
   },
 
-  email: {
-    type: String,
-    // required: [true, 'El email es necesario'],
-    required : false
-  },
-
-  numeroTelefono: {
+  celular: {
     type: String,
     // required: [true, 'EL numero telefonico es necesario'],
-    required : false
+    required: false,
   },
 
   fechaCumpleanios: {
     type: String,
-    required : false
+    required: false,
   },
 
-  suscrito : {
-    type : Boolean,
-    required : false,
-    default : false
+  suscrito: {
+    type: Boolean,
+    required: false,
+    default: false,
   },
 
   fechaRegistro: {

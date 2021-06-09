@@ -5,7 +5,6 @@ let etiquetaPintar = document.querySelector('.inicio');
 let next = document.querySelector('.next');
 let back = document.querySelector('.back');
 let nombres = document.getElementById('nombres');
-let email = document.getElementById('email');
 let numeroCelular = document.getElementById('numeroCelular');
 let fecha = document.getElementById('fecha');
 let hora = document.getElementById('hora');
@@ -18,20 +17,7 @@ $.fn.datepicker.dates['es'] = {
   days: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
   daysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
   daysMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
-  months: [
-    'Enero',
-    'Febrero',
-    'Marzo',
-    'Abril',
-    'Mayo',
-    'Junio',
-    'Julio',
-    'Agosto',
-    'Septiembre',
-    'Octubre',
-    'Noviembre',
-    'Diciembre',
-  ],
+  months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
   monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
   today: 'Hoy',
   monthsTitle: 'Meses',
@@ -48,6 +34,7 @@ $('.date-datapicker').datepicker({
   todayBtn: false,
   autoclose: true,
   toggleActive: true,
+  keyboardNavigation: false,
 });
 
 $('.date-datapicker-cumpleanios').datepicker({
@@ -60,13 +47,17 @@ $('.date-datapicker-cumpleanios').datepicker({
 let dateInput = new Date();
 let monthIput = dateInput.getMonth() + 1;
 let dateCero;
-if (monthIput < 10) {
+let dayCero;
+if (monthIput < 10 || dayCero < 10) {
   dateCero = 0;
+  dayCero = 0;
 } else {
   dateCero = '';
+  dayCero = '';
 }
 
-let fullDate = `${dateInput.getDate()}-${dateCero}${monthIput}-${dateInput.getFullYear()} `;
+let fullDate = `${dayCero}${dateInput.getDate()}-${dateCero}${monthIput}-${dateInput.getFullYear()} `;
+console.log(fullDate);
 let form_control_date = document.querySelector('.form-control-date');
 
 form_control_date.value = fullDate;
@@ -77,7 +68,7 @@ form_control_date.value = fullDate;
 
 let mesCuple = new Date();
 let imprimirMes;
-switch (mesCuple.getMonth() + 1) {
+switch (mesCuple.getMonth()) {
   case 0:
     imprimirMes = 'Enero';
     break;
@@ -126,7 +117,7 @@ socket.on('imprimirCumpleañeros', (cumpleanieros) => {
     __cumpleaniosContainerChild.innerHTML += `
     <div >
             <img src="../img/happy-icon-01.png" width="80" alt="">
-            <p><b> ${cumpleanieros[i].nombres} peres gonzales agualongo</b></p>
+            <p><b> ${cumpleanieros[i].nombres}</b></p>
             <p>${cumpleanieros[i].fechaCumpleanios}</p>
     </div>
     `;
@@ -184,11 +175,6 @@ class ValidarDatos {
         this.errNombres.innerHTML = `<span class="material-icons errIcon">error_outline</span>${nombreOk.msg}`;
       } else {
         this.errNombres.innerHTML = ``;
-      }
-      if (emailOk.err === true) {
-        this.errEmail.innerHTML = `<span class="material-icons errIcon">error_outline</span>${emailOk.msg}`;
-      } else {
-        this.errEmail.innerHTML = ``;
       }
       if (numeroOk.err === true) {
         this.errNumero.innerHTML = `<span class="material-icons errIcon">error_outline</span>${numeroOk.msg}`;
@@ -288,19 +274,17 @@ class ValidarDatos {
   };
 }
 
-registrarReserva.addEventListener('submit', (x) => {
-  x.preventDefault();
-  let datosReserva = {
-    nombres: nombres.value,
-    email: email.value,
-    telefono: numeroCelular.value,
-    fecha: fecha.value,
-  };
-
-  validarDatos = new ValidarDatos(datosReserva);
-  validarDatos.validarDatos();
-  validarDatos.validarFecha();
-});
+// registrarReserva.addEventListener('submit', (x) => {
+//   // x.preventDefault();
+//   // let datosReserva = {
+//   //   nombres: nombres.value,
+//   //   telefono: numeroCelular.value,
+//   //   fecha: fecha.value,
+//   // };
+//   // validarDatos = new ValidarDatos(datosReserva);
+//   // validarDatos.validarDatos();
+//   // validarDatos.validarFecha();
+// });
 
 window.onblur = function () {
   //Esta funcion se ejecuta cuando se cambia de pestaña en el navegador
