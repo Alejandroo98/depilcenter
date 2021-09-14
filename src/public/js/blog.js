@@ -3,6 +3,3 @@ navbar.setAttribute('style', 'background-color : #e8908b');
 var URLactual = window.location;
 let URLpintar = URLactual.pathname;
 let etiquetaPintar = document.querySelector('.blog');
-if (URLpintar === '/blog') {
-  etiquetaPintar.classList.add('pintarNav');
-}

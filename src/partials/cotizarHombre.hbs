@@ -1,47 +1,39 @@
-<div class="cajaMainCotizarHombre">
+<div class="cajaMainCotizar">
+    {{> selectHombreMujer }}
 
-    
-    <div class="cajaCotizarCorporalHombre">
-            <div class="nombreCotizarCorporalHombre"><h5>Corporal</h5></div>
-        {{!-- 
-            <div id="id1" data-precio="10" > Piernas </div>
-            <div id="id3"  data-precio="10" >Piernas</div>
-            <div id="id4"  data-precio="10" >Piernas</div>
-            <div id="id5"  data-precio="10" >Piernas</div>
-            <div id="id6"  data-precio="10" >Piernas</div>
-            <div id="id7"  data-precio="10" >Piernas</div>
-            <div id="id8"  data-precio="10" >Piernas</div>
-            <div id="id9"  data-precio="10" >Piernas</div>
-            <div id="id10" data-precio="10" >Piernas</div>
-            <div id="id11" data-precio="10" >Piernas</div>
-            <div id="id12" data-precio="10" >Piernas</div>
-            <div id="id13" data-precio="10" >Piernas</div> --}}
+    <div class="boxZonasCorporal">
+        <div class="nombreZonas">
+            <h5>Corporal</h5>
+        </div>
+        {{#each corporal}}
+        <div id="{{ id }}" class="{{ color }}">
+            {{ nombre }}
+            <span>$ {{precioIndividual}}</span>
+        </div>
+        {{/each}}
     </div>
 
 
-    
-    <div class="cajaCotizarFacialHombre">
-            <div class="nombreCotizarFacialHombre"><h5>Facial</h5></div>
-     {{!-- 
-            <div id="id1" data-precio="10" > Piernas </div>
-            <div id="id3"  data-precio="10" >Piernas</div>
-            <div id="id4"  data-precio="10" >Piernas</div>
-            <div id="id5"  data-precio="10" >Piernas</div>
-            <div id="id6"  data-precio="10" >Piernas</div>
-            <div id="id7"  data-precio="10" >Piernas</div>
-            <div id="id8"  data-precio="10" >Piernas</div>
-            <div id="id9"  data-precio="10" >Piernas</div>
-            <div id="id10" data-precio="10" >Piernas</div>
-            <div id="id11" data-precio="10" >Piernas</div>
-            <div id="id12" data-precio="10" >Piernas</div>
-            <div id="id13" data-precio="10" >Piernas</div> --}}
+
+    <div class="boxCotizarFacial">
+        <div class="nombreZonas">
+            <h5>Facial</h5>
+        </div>
+        {{#each facial}}
+        <div id="{{ id }}" class="{{ color }}">
+            {{ nombre }}
+            <span>$ {{precioIndividual}}</span>
+        </div>
+        {{/each}}
     </div>
 
-    
-    <div class="totalCotizarCorporalFacialHombre">
-        <p class="imprimirValorTotalCotizarCorporalFacialHombre">Total : 0</p>
-        <button class="btnCotizarMujer" id="mostrarDatosRegistroCotizarHombre">Agendar Cita</button>
+
+    <div class="boxValorTotal">
+        <div class="boxBorder">
+            <p>Valor total : 0</p>
+            <button id="mostrarDatosRegistroCotizarHombre">Agendar Cita</button>
+        </div>
     </div>
 
-    
+
 </div>

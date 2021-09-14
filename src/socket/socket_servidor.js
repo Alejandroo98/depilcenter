@@ -39,9 +39,7 @@ io.on('connection', (cliente) => {
 
   /* ===============FIN DATOS IMPORTANTES COTIZAR HOMBRE================= */
 
-  console.log('usuario nuevo conectado');
   cliente.on('traerDatosMujerCotizar', async (data, callback) => {
-    // console.log(imprimirCotizarMujer.buscarDatos());
     let datos = await imprimirCotizarMujer.buscarDatos();
     datosDB.push(datos);
     // console.log(datos.facialDB);

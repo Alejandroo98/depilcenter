@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "startt" : "nodemon src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -28,5 +28,8 @@
     "serve-static": "^1.14.1",
     "socket.io": "^3.1.0",
     "timeago.js": "^4.0.2"
+  },
+  "nodemonConfig": {
+    "ext": "js,json,hbs"
   }
 }

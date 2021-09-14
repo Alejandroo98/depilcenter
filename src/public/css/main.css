@@ -357,6 +357,7 @@ select {
   background: none;
   font-weight: 500;
   border-bottom: 2px solid rgb(156, 156, 156);
+  outline: none;
 }
 
 .infoReserva {

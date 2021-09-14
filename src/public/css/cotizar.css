@@ -1,0 +1,239 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+:root {
+  --fondo: rgb(245, 224, 227);
+  --general: #e8908b;
+  --amarillo: rgb(255, 255, 166);
+  --celeste: rgb(150, 230, 226);
+  --rojo: rgb(250, 173, 173);
+  --letras: rgb(119, 119, 119);
+  --negro: rgb(56, 56, 56);
+  --sombra: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.__cotizarContainer {
+  background-image: url(../img/backgroundDos-01.svg);
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  /* background-color: var(--celeste); */
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+  padding: 0 25px 423px 25px;
+  background-color: var(--celeste);
+}
+
+.imgCotizarContainer {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.imgCotizarContainer img {
+  height: 800px;
+}
+
+.cajaOpciones {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(min-content, 900px));
+  border-radius: 15px;
+  gap: 25px;
+}
+
+.borraOpciones {
+  animation-name: mostrarMujer;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes mostrarMujer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-content {
+  padding: 12px;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.479);
+}
+
+/* OPCIONES DE COTIZAR( MUJER - HOMBRE  ) */
+
+.nav-tabs a {
+  outline: none;
+  color: rgb(32, 32, 32);
+}
+
+.nav .nav-link {
+  margin: 0 12px;
+}
+
+.nav-tabs .active {
+  border-radius: 17px 17px 0 0;
+  color: black !important;
+  background-color: white !important;
+  border: none !important;
+}
+
+.nav-tabs .nav-link {
+  border-radius: 17px 17px 0 0;
+  background: rgba(255, 255, 255, 0.37);
+}
+
+/* OPCIONES DE COTIZAR *FIN( MUJER - HOMBRE  ) */
+
+/* ====COTIZAR MUJER ===== */
+.cajaOpciones .nameCotizar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  padding: 25px 0;
+  word-wrap: word-break;
+}
+
+.nameCotizar h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.nameCotizar p {
+  margin: 0;
+}
+
+.cajaMainCotizar {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 100%;
+  gap: 10px;
+  /* font-weight: 500; */
+  color: var(--negro);
+}
+
+.boxCotizarFacial {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4em 0.5em;
+}
+
+.boxCotizarFacial span {
+  float: right;
+}
+
+.boxZonasCorporal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4em 0.5em;
+}
+
+.boxZonasCorporal span {
+  float: right;
+}
+
+.boxZonasCorporal > div {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.boxCotizarFacial > div {
+  padding: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.boxCotizarFacial > div {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.rojo {
+  background-color: rgb(247, 176, 176);
+}
+
+.negro {
+  background-color: rgb(102, 102, 102);
+  color: white;
+}
+
+.celeste {
+  background-color: var(--celeste);
+}
+
+.nombreZonas {
+  background-color: var(--amarillo);
+  grid-column: 1/-1;
+}
+
+/* ================================================== */
+/* ================ CAJA DE VALOR TOTAL ============== */
+/* ================================================== */
+
+.boxValorTotal {
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 10px 15px;
+  background-color: var(--amarillo);
+}
+
+.boxBorder {
+  display: inline-block;
+  border-radius: 25px;
+  padding-left: 20px;
+  border: 3px solid var(--negro);
+}
+
+.boxValorTotal p {
+  display: inline;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.boxValorTotal button {
+  border: none;
+  color: white;
+  background-color: var(--negro);
+  padding: 8px 13px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+/* ================================================== */
+/* ================ *FIN  CAJA DE VALOR TOTAL ============== */
+/* ================================================== */
+
+/* =========================================================================== */
+/* ============= AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */
+/* =========================================================================== */
+.zonaSeleccionada {
+  border-left: #ffffff solid 9px;
+  border-right: #ffffff solid 9px;
+  font-weight: bold;
+}
+
+.zonaSeleccionadaHombre {
+  background-color: red !important;
+}
+/* =========================================================================== */
+/* ============= *FIN AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */
+/* =========================================================================== */

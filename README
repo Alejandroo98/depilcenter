@@ -1,4 +1,0 @@
-#PASOS PARA INCLUIR UN RECAPTCHA EN UN FORMULARIO
-1. En este link creas las secret key la session key
-2. instalar -> npm i express-recaptcha
-3. Todo esta aqui -> https://www.npmjs.com/package/express-recaptcha   (Siguiendo este link es como lo hice)

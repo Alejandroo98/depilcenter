@@ -1,566 +1,607 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-    <script src="../libs/jquery.js"></script>
-   <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
-    <title>DepilCenter</title>
-    <link rel="icon" href="../img/quito.png">
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/responsive/mainResponsive.css">
-    <link rel="stylesheet" href="../css/footer.css" />
-    <link rel="stylesheet" href="../css/redesSociales.css">
-    <link rel="stylesheet" href="../css/icons.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="../css/navbar.css  ">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght;" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    {{!-- datePicker --}}
-    <script src="../libs/datePicker/js/bootstrap-datepicker.js" charset="UTF-8"></script>
-    <link rel="stylesheet" href="../libs//datePicker/css/bootstrap-datepicker.css">
-    {{!-- datePicker --}}
-    
-    
+  <script src="../libs/jquery.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <title>DepilCenter</title>
+  <link rel="icon" href="../img/quito.png">
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/responsive/mainResponsive.css">
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/redesSociales.css">
+  <link rel="stylesheet" href="../css/icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="../css/navbar.css  ">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght;" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  {{!-- datePicker --}}
+  <script src="../libs/datePicker/js/bootstrap-datepicker.js" charset="UTF-8"></script>
+  <link rel="stylesheet" href="../libs//datePicker/css/bootstrap-datepicker.css">
+  {{!-- datePicker --}}
+
+
 </head>
-<body class="body" >
-  
+
+<body class="body">
+
   <header>
     {{!-- ERRORES --}}
     {{#if error}}
-      <div class="ajustarAlert">
-          <div class="alert alert-danger alert-dismissible fade show" role="alert">
-              <strong>{{error.errOne}}</strong>&nbsp{{error.errTwo}}.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-           </div>
+    <div class="ajustarAlert">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{error.errOne}}</strong>&nbsp{{error.errTwo}}.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
+    </div>
     {{/if}}
 
     {{#if recaptcha}}
-      <div class="ajustarAlert">
-          <div class="alert alert-danger alert-dismissible fade show" role="alert">
-              <strong>{{recaptcha}}</strong>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-           </div>
+    <div class="ajustarAlert">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{recaptcha}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
+    </div>
     {{/if}}
 
   </header>
 
 
   <div class="logo">
-    <img src="../img/Depilcenter-logo.svg"  alt="Logo - Depilcenter - Centro de depilacion">
+    <img src="../img/Depilcenter-logo.svg" alt="Logo - Depilcenter - Centro de depilacion">
   </div>
-    {{> navbar }}
-    {{> redesSociales }}
+  {{> navbar }}
+  {{> redesSociales }}
 
 
   <main>
 
-        <section class="cajaPrincipal">
+    <section class="cajaPrincipal">
 
-                    <div class="reservas-caja">
-                        <div class="datosMain">
-                          <h1>Centro de depilación.</h1>
-                          <h2>Por que que lo bueno #NoTieneQueSerCaro.</h2>
-                        </div>
-                        <div class="linkAgendar" >
-                          <a class="agendarCita">AGENDAR CITA</a>
-                          <a class="conocenos" >CONÓCENOS</a>
-                        </div>
-                    </div>
-                    
-                      {{!-- <span class="material-icons">
-                        keyboard_arrow_down
-                      </span> --}}
-        </section>
-        
-    </main>
-
-      <section class="__cumpleaniosContainer">
-
-        <div class="imgeCumpleanios">
-          <img id="imgCumpleanios" src="../img/background-cumpleanios_tre.svg" alt="">
+      <div class="reservas-caja">
+        <div class="datosMain">
+          <h1>Centro de depilación.</h1>
+          <h2>Por que que lo bueno #NoTieneQueSerCaro.</h2>
         </div>
-        
-        <div class="_datosCumpleanios">
-          <h5>¡Happy birthday!</h5>
-          <h6>POR TU CUMPLEAÑOS RECIBE EL 25% DE DESCUENTO EN •DEPILACIÓN CON CERA• DURANTE TODO EL MES <a id="agendarCumpleaniero">AGENDAR CITA</a> </h6>
-          <p id="mesCumpleanios"></p>
-          {{!-- <p id="mesCumpleanios">Cumpleañeros de Marzo</p> --}}
+        <div class="linkAgendar">
+          <a class="agendarCita">AGENDAR CITA</a>
+          <a class="conocenos">CONÓCENOS</a>
+        </div>
+      </div>
+
+      {{!-- <span class="material-icons">
+        keyboard_arrow_down
+      </span> --}}
+    </section>
+
+  </main>
+
+  <section class="__cumpleaniosContainer">
+
+    <div class="imgeCumpleanios">
+      <img id="imgCumpleanios" src="../img/background-cumpleanios_tre.svg" alt="">
+    </div>
+
+    <div class="_datosCumpleanios">
+      <h5>¡Happy birthday!</h5>
+      <h6>POR TU CUMPLEAÑOS RECIBE EL 25% DE DESCUENTO EN •DEPILACIÓN CON CERA• DURANTE TODO EL MES <a
+          id="agendarCumpleaniero">AGENDAR CITA</a> </h6>
+      <p id="mesCumpleanios"></p>
+      {{!-- <p id="mesCumpleanios">Cumpleañeros de Marzo</p> --}}
+    </div>
+
+
+    <div class="__cumpleaniosContainerChild">
+      {{!-- <div>
+        <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
+        <p>Alejo Alava</p>
+        <p>15-15-2021</p>
+      </div> --}}
+
+
+
+    </div>
+    <span style="color: rgb(83, 83, 83); font-size :13px;">No olvides llevar tu cedula contigo cuando nos visites</span>
+
+
+
+  </section>
+
+  <section class="reservarHBS" id="reservarHBS">
+    <div class="__imgEmojisContenedor" class="rotarEmoji">
+      <img id="emojisImg" src="../img/emojis/emojis-1.svg" alt="taall">
+    </div>
+    <div class="divReservaGrid">
+
+      {{> reservar }}
+
+      {{!-- {{> informacionReserva}} --}}
+
+    </div>
+
+  </section>
+
+
+  <section class="__quienesSomosImg">
+    <div class="backgroundImg">
+      <div class="colorBackgroundImg">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus placeat voluptatem optio perferendis
+          debitis sint ad possimus! Excepturi, architecto. Asperiores quidem consequatur enim dolor porro nemo
+          cupiditate vel dolorem quod.</p>
+      </div>
+      <div class="helpClass"></div>
+    </div>
+    {{!-- <img src="../img/quienesSomosBack.png" alt=""> --}}
+  </section>
+
+
+
+
+  <section class="background">
+
+
+
+
+    <section class="__serviciosContainer">
+
+      <div style="margin: 0 0 13px 0; text-align:center; font-family: 'Pacifico', cursive">
+        <h3 style="margin: 0;">••••••••• Servicios •••••••••</h3>
+      </div>
+
+      {{!-- arrogs back - fowar --}}
+      <div class="back-back">
+        <span class="material-icons">arrow_forward_ios</span>
+      </div>
+      <div class="back-forward">
+        <span class="material-icons">arrow_forward_ios</span>
+      </div>
+      {{!-- arrogs back - fowar --}}
+
+
+      <div class="__serviciosContainerCenter">
+
+
+
+        <div class="cardServicio">
+
+          <div class="imgServicio">
+            <img src="../img/servicios/servicio_waxing.png" alt="Depilacion con cera">
+            <div class="nameOff">
+              <div class="celesteServicioH6">
+                <h6>50% OFF</h6>
+              </div>
+              <div>
+                <h3>Depilaciòn con cera</h3>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="datosCardContainer">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
+              ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam
+              hic aliquam error.
+            </p>
+
+          </div>
+
+          <div class="botonesServicios celesteServicio">
+            <div>
+              <a class="cotizarButtonCelesteCotizar">Cotizar</a>
+            </div>
+            <div>
+              <a class="agendarButtonCelesteCotizar" id="agendarDepilacionCera">Agendar Cita</a>
+            </div>
+          </div>
+
         </div>
 
-        
-        <div class="__cumpleaniosContainerChild">
-          {{!-- <div>
-            <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-            <p>Alejo Alava</p>
-            <p>15-15-2021</p>
-          </div> --}}
+        <div class="cardServicio">
+
+          <div class="imgServicio">
+            <img src="../img/servicios/servicio_lasaer.png" alt="Depilacion con cera">
+            <div class="nameOff">
+              <div class="amarilloServicioH6">
+                <h6>SERVICIO SABADO Y DOMINGO</h6>
+              </div>
+              <div>
+                <h3>Depilaciòn laser</h3>
+              </div>
+            </div>
+          </div>
 
 
-          
+          <div class="datosCardContainer">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
+              ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam
+              hic aliquam error.
+            </p>
+
+          </div>
+
+          <div class="botonesServicios amarilloServicio">
+            <div>
+              <a class="cotizarButtonCelesteCotizar">Cotizar</a>
+            </div>
+            <div>
+              <a class="agendarButtonAmarilloCotizar" id="agendarDepilacionLaser">Agendar Cita</a>
+            </div>
+          </div>
+
         </div>
-          <span style="color: rgb(83, 83, 83); font-size :13px;">No olvides llevar tu cedula contigo cuando nos visites</span > 
-        
-      
-        
-      </section>
+        <div class="cardServicio">
 
-      <section  class="reservarHBS" id="reservarHBS">
-              <div class="__imgEmojisContenedor" class="rotarEmoji">
-                <img id="emojisImg"  src="../img/emojis/emojis-1.svg" alt="taall">
+          <div class="imgServicio">
+            <img src="../img/servicios/servicio_limpiezas_faciales.png" alt="Depilacion con cera">
+            <div class="nameOff">
+              <div class="rojoServicioH6">
+                <h6>SERVICIO SABADO Y DOMINGO</h6>
               </div>
-              <div class="divReservaGrid">
-
-                {{>  reservar }}
-
-                {{!-- {{> informacionReserva}} --}}
-
+              <div>
+                <h3>Limpiezas faciales</h3>
               </div>
+            </div>
+          </div>
 
-       </section>
-      
 
-       <section class="__quienesSomosImg">
-              <div class="backgroundImg">
-                <div class="colorBackgroundImg">
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus placeat voluptatem optio perferendis debitis sint ad possimus! Excepturi, architecto. Asperiores quidem consequatur enim dolor porro nemo cupiditate vel dolorem quod.</p>
-                </div>
-                <div class="helpClass"></div>
+          <div class="datosCardContainer">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
+              ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam
+              hic aliquam error.
+            </p>
+
+          </div>
+
+          <div class="botonesServicios rojoServicio">
+            <div>
+              <a class="cotizarButtonCelesteCotizar">Cotizar</a>
+            </div>
+            <div>
+              <a class="agendarButtonRojoCotizar" id="agendarFacial">Agendar Cita</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="cardServicio">
+
+          <div class="imgServicio">
+            <img src="../img/servicios/servicio_masajes.png" alt="Depilacion con cera">
+            <div class="nameOff">
+              <div class="celesteServicioH6">
+                <h6>SERVICIO SABADO Y DOMINGO</h6>
               </div>
-              {{!-- <img src="../img/quienesSomosBack.png" alt=""> --}}
-        </section>
-            
-      
-      
-    
-      <section class="background">
-
-            
-            
-            
-            <section class="__serviciosContainer">
-
-              <div style="margin: 0 0 13px 0; text-align:center; font-family: 'Pacifico', cursive">
-                <h3 style="margin: 0;">••••••••• Servicios •••••••••</h3>
+              <div>
+                <h3>Masajes relajantes</h3>
               </div>
+            </div>
+          </div>
 
-              {{!-- arrogs back - fowar --}}
-              <div class="back-back">
-                <span class="material-icons">arrow_forward_ios</span>
+
+          <div class="datosCardContainer">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
+              ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam
+              hic aliquam error.
+            </p>
+
+          </div>
+
+          <div class="botonesServicios celesteServicio">
+            <div>
+              <a class="cotizarButtonCelesteCotizar">Cotizar</a>
+            </div>
+            <div>
+              <a class="agendarButtonCelesteCotizar" id="agendarMasajes">Agendar Cita</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="cardServicio">
+
+          <div class="imgServicio">
+            <img src="../img/servicios/servicio_acne.png" alt="Depilacion con cera">
+            <div class="nameOff">
+              <div class="amarilloServicioH6">
+                <h6>SERVICIO SABADO Y DOMINGO</h6>
               </div>
-              <div class="back-forward">
-                <span class="material-icons">arrow_forward_ios</span>
+              <div>
+                <h3>Tratamiento de acne</h3>
               </div>
-              {{!-- arrogs back - fowar --}}
+            </div>
+          </div>
 
-              
-              <div class="__serviciosContainerCenter">
 
-               
-                
-                <div class="cardServicio">
+          <div class="datosCardContainer">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
+              ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam
+              hic aliquam error.
+            </p>
 
-                  <div class="imgServicio">
-                    <img src="../img/servicios/servicio_waxing.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div class="celesteServicioH6">
-                          <h6>50% OFF</h6>
-                        </div>       
-                        <div >
-                          <h3>Depilaciòn con cera</h3>
-                        </div>   
-                      </div>
-                  </div>
+          </div>
 
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
+          <div class="botonesServicios amarilloServicio">
+            <div>
+              <a class="cotizarButtonCelesteCotizar">Cotizar</a>
+            </div>
+            <div>
+              <a class="agendarButtonAmarilloCotizar" id="agendarAcne">Agendar Cita</a>
+            </div>
+          </div>
 
-                  </div>
+        </div>
+        <div class="cardServicio">
 
-                  <div class="botonesServicios celesteServicio">
-                    <div>
-                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-                    </div>
-                    <div>
-                      <a class="agendarButtonCelesteCotizar" id="agendarDepilacionCera" >Agendar Cita</a>
-                    </div>
-                  </div>
-
-                </div>
-                
-                <div class="cardServicio">
-
-                  <div class="imgServicio">
-                    <img src="../img/servicios/servicio_lasaer.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div class="amarilloServicioH6">
-                          <h6>SERVICIO SABADO Y DOMINGO</h6>
-                        </div>       
-                        <div >
-                          <h3>Depilaciòn laser</h3>
-                        </div>   
-                      </div>
-                  </div>
-
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
-
-                  </div>
-
-                  <div class="botonesServicios amarilloServicio">
-                    <div>
-                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-                    </div>
-                    <div>
-                      <a class="agendarButtonAmarilloCotizar" id="agendarDepilacionLaser">Agendar Cita</a>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="cardServicio">
-
-                  <div class="imgServicio">
-                    <img src="../img/servicios/servicio_limpiezas_faciales.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div class="rojoServicioH6">
-                          <h6>SERVICIO SABADO Y DOMINGO</h6>
-                        </div>       
-                        <div >
-                          <h3>Limpiezas faciales</h3>
-                        </div>   
-                      </div>
-                  </div>
-
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
-
-                  </div>
-
-                  <div class="botonesServicios rojoServicio">
-                    <div>
-                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-                    </div>
-                    <div>
-                      <a class="agendarButtonRojoCotizar" id="agendarFacial">Agendar Cita</a>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="cardServicio">
-
-                  <div class="imgServicio">
-                    <img src="../img/servicios/servicio_masajes.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div class="celesteServicioH6">
-                          <h6>SERVICIO SABADO Y DOMINGO</h6>
-                        </div>       
-                        <div >
-                          <h3>Masajes relajantes</h3>
-                        </div>   
-                      </div>
-                  </div>
-
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
-
-                  </div>
-
-                  <div class="botonesServicios celesteServicio">
-                    <div>
-                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-                    </div>
-                    <div>
-                      <a class="agendarButtonCelesteCotizar" id="agendarMasajes">Agendar Cita</a>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="cardServicio">
-
-                  <div class="imgServicio">
-                    <img src="../img/servicios/servicio_acne.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div class="amarilloServicioH6">
-                          <h6>SERVICIO SABADO Y DOMINGO</h6>
-                        </div>       
-                        <div >
-                          <h3>Tratamiento de acne</h3>
-                        </div>   
-                      </div>
-                  </div>
-
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
-
-                  </div>
-
-                  <div class="botonesServicios amarilloServicio">
-                    <div>
-                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-                    </div>
-                    <div>
-                      <a class="agendarButtonAmarilloCotizar" id="agendarAcne">Agendar Cita</a>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="cardServicio">
-
-                  <div class="imgServicio">
-                    <img src="../img/servicios/servicio_gluteos.png" alt="Depilacion con cera">
-                      <div class="nameOff">
-                        <div class="rojoServicioH6" >
-                          <h6>SERVICIO SABADO Y DOMINGO</h6>
-                        </div>       
-                        <div >
-                          <h3>Gluteos</h3>
-                        </div>   
-                      </div>
-                  </div>
-
-                            
-                  <div class="datosCardContainer">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam hic aliquam error.
-                    </p>
-
-                  </div>
-
-                  <div class="botonesServicios rojoServicio">
-                    <div>
-                      <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-                    </div>
-                    <div>
-                      <a class="agendarButtonRojoCotizar" id="agendarGluteos">Agendar Cita</a>
-                    </div>
-                  </div>
-
-                </div>
-               
-
+          <div class="imgServicio">
+            <img src="../img/servicios/servicio_gluteos.png" alt="Depilacion con cera">
+            <div class="nameOff">
+              <div class="rojoServicioH6">
+                <h6>SERVICIO SABADO Y DOMINGO</h6>
               </div>
-                
-              
-            </section>
-            
-
-           
-
-            <section class="__ubicacionIndexContainer">
-
-              <div class="_ubicacionIndexContainerLocales">
-                <div>
-                  <h5>Locales</h5>
-                </div>
-                <select name="ubicacionLocales" id="">
-                  <option value="quito" selected>Quito</option>
-                </select>
+              <div>
+                <h3>Gluteos</h3>
               </div>
-              
-              <div class="_ubicacionIndexContainerChild">
-                
-                <div>
-                    <div class="ubicacionIndexUbicacion">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec" width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div>
-                      <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito. <br> Horario : 09:00 - 18:00</p>
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="ubicacionIndexUbicacion">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec" width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div>
-                      <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito. <br> Horario : 09:00 - 18:00</p>
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="ubicacionIndexUbicacion">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec" width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div>
-                      <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito. <br> Horario : 09:00 - 18:00</p>
-                    </div>
-                </div>
-                
-              </div>
-
-              <div class="_imgLocalIndex">
-                <div>
-                  <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-                </div>
-                <div>
-                  <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-                </div>
-                <div>
-                  <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-                </div>
-                <div>
-                  <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-                </div>
-                <div>
-                  <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-                </div>
-                <div>
-                  <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-                </div>
-                <div>
-                  <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-                </div>
-                <div>
-                  <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-                </div>
-              </div>
-
-            </section>
+            </div>
+          </div>
 
 
-            <section>
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                  <div class="nameOpiones">
-                    <h5>OPINIONES</h5>
-                  </div>
-                  <div class="carousel-inner">
+          <div class="datosCardContainer">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
+              ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat quisquam
+              hic aliquam error.
+            </p>
 
-                    <div class="carousel-item active" data-bs-interval="3000">
-                      
-                       <p>La atención es bastante amable, hacen un muy bien trabajo y en poco tiempo. Me encanta! 💚💚💚</p>
+          </div>
 
-                    </div>
-                    
-                    <div class="carousel-item" data-bs-interval="5000">
+          <div class="botonesServicios rojoServicio">
+            <div>
+              <a class="cotizarButtonCelesteCotizar">Cotizar</a>
+            </div>
+            <div>
+              <a class="agendarButtonRojoCotizar" id="agendarGluteos">Agendar Cita</a>
+            </div>
+          </div>
 
-                        <p>Fui ganadora de un concurso y la atención fue excelente, muy profesional. El concurso fue para una depilación gratis. Completamente real. 🥰🥰🥰 El proceso fue rápido, amigable, y muy efectivo. Muy recomendado. 💜</p>
-                      
-                    </div>
-                    
-                    <div class="carousel-item" data-bs-interval="5000">
+        </div>
 
-                        <p>el lugar muy bonito !Excelente servicio! muy amables y delicados al momento de trabajar .</p>
-                      
-                    </div>
-                    
-                  </div>
-                </div>
-            </section>
 
-            {{!-- <section class="iconsContenedor">
+      </div>
+
+
+    </section>
 
 
 
-              <div class="iconsImg-info" >
 
-                <div class="iconsImg">
-                      <div class="tituloIcons">
-                          <img src="../img/depilacion-con-cera-09.png" alt="" >
-                      </div>
+    <section class="__ubicacionIndexContainer">
 
-                      <div class="icon1">
-                        <img src="../img/icons/icons-depilation-01.png " alt="Depilacion, paso uno">
-                        <h6>Paso 1</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                      </div>
+      <div class="_ubicacionIndexContainerLocales">
+        <div>
+          <h5>Locales</h5>
+        </div>
+        <select name="ubicacionLocales" id="">
+          <option value="quito" selected>Quito</option>
+        </select>
+      </div>
 
-                      <div class="icon3">
-                        <img src="../img/icons/icons-depilation-03.png" alt="Depilacion, paso tres">
-                        <h6>Paso 2</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                      </div>
+      <div class="_ubicacionIndexContainerChild">
 
-                      <div class="icon4">
-                        <img src="../img/icons/icons-depilation-04.png" alt="Depilacion, paso cuatro">
-                        <h6>Paso 3</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                      </div>
+        <div>
+          <div class="ubicacionIndexUbicacion">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
+              width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div>
+            <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito. <br>
+              Horario : 09:00 - 18:00</p>
+          </div>
+        </div>
 
-                      <div class="icon5">
-                        <img src="../img/icons/icons-depilation-05.png" alt="Depilacion, paso cinco">
-                        <h6>Paso 4</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                      </div>
+        <div>
+          <div class="ubicacionIndexUbicacion">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
+              width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div>
+            <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito. <br>
+              Horario : 09:00 - 18:00</p>
+          </div>
+        </div>
 
-                      <div class="icon6">
-                        <img src="../img/icons/icons-depilation-06.png" alt="Depilacion, paso seis">
-                        <h6>Paso 5</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                      </div>
+        <div>
+          <div class="ubicacionIndexUbicacion">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
+              width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div>
+            <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito. <br>
+              Horario : 09:00 - 18:00</p>
+          </div>
+        </div>
 
-                      <div class="icon7">
-                        <img src="../img/icons/icons-depilation-07.png" alt="Depilacion, paso siete">
-                        <h6>Paso 5</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                      </div>
+      </div>
 
-                      <div class="icon8">
-                        <img src="../img/icons/icons-depilation-08.png" alt="Depilacion, paso ocho">
-                        <h6>Paso 6</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi voluptatum ducimus magnam.</p>
-                      </div>
-                </div>
+      <div class="_imgLocalIndex">
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+      </div>
+
+    </section>
 
 
-                <div class="ceraInfo">
-                  <div class="infoCeraInfo">
-                    <h6>Cera</h6>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit mollitia sit, in commodi nulla, porro recusandae placeat hic aspernatur officia, pariatur possimus natus veritatis iure accusantium facere velit laudantium!</p>
-                  </div>
-                  <div class="botonesCeraInfo">
-                    <a href="/conocenos" class="pedro">Conócenos</a>
-                    <a href="/cotizar-combos/mujer">Cotizar</a>
-                    <a href="/conocenos">Productos</a>
-                  </div>
-                </div>
+    <section>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="nameOpiones">
+          <h5>OPINIONES</h5>
+        </div>
+        <div class="carousel-inner">
 
-              </div>
+          <div class="carousel-item active" data-bs-interval="3000">
 
-            </section> --}}
-            
-      </section>
+            <p>La atención es bastante amable, hacen un muy bien trabajo y en poco tiempo. Me encanta! 💚💚💚</p>
+
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+
+            <p>Fui ganadora de un concurso y la atención fue excelente, muy profesional. El concurso fue para una
+              depilación gratis. Completamente real. 🥰🥰🥰 El proceso fue rápido, amigable, y muy efectivo. Muy
+              recomendado. 💜</p>
+
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+
+            <p>el lugar muy bonito !Excelente servicio! muy amables y delicados al momento de trabajar .</p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {{!-- <section class="iconsContenedor">
 
 
-       {{> footer }}
 
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"
-      ></script>
-      <script src="socket.io/socket.io.js"></script>
-      <script src="../js/main.js"></script>
-      <script src="../js/calcularTamanoPantalla.js"></script>
+      <div class="iconsImg-info">
+
+        <div class="iconsImg">
+          <div class="tituloIcons">
+            <img src="../img/depilacion-con-cera-09.png" alt="">
+          </div>
+
+          <div class="icon1">
+            <img src="../img/icons/icons-depilation-01.png " alt="Depilacion, paso uno">
+            <h6>Paso 1</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
+              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
+              voluptatum ducimus magnam.</p>
+          </div>
+
+          <div class="icon3">
+            <img src="../img/icons/icons-depilation-03.png" alt="Depilacion, paso tres">
+            <h6>Paso 2</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
+              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
+              voluptatum ducimus magnam.</p>
+          </div>
+
+          <div class="icon4">
+            <img src="../img/icons/icons-depilation-04.png" alt="Depilacion, paso cuatro">
+            <h6>Paso 3</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
+              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
+              voluptatum ducimus magnam.</p>
+          </div>
+
+          <div class="icon5">
+            <img src="../img/icons/icons-depilation-05.png" alt="Depilacion, paso cinco">
+            <h6>Paso 4</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
+              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
+              voluptatum ducimus magnam.</p>
+          </div>
+
+          <div class="icon6">
+            <img src="../img/icons/icons-depilation-06.png" alt="Depilacion, paso seis">
+            <h6>Paso 5</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
+              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
+              voluptatum ducimus magnam.</p>
+          </div>
+
+          <div class="icon7">
+            <img src="../img/icons/icons-depilation-07.png" alt="Depilacion, paso siete">
+            <h6>Paso 5</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
+              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
+              voluptatum ducimus magnam.</p>
+          </div>
+
+          <div class="icon8">
+            <img src="../img/icons/icons-depilation-08.png" alt="Depilacion, paso ocho">
+            <h6>Paso 6</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
+              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
+              voluptatum ducimus magnam.</p>
+          </div>
+        </div>
+
+
+        <div class="ceraInfo">
+          <div class="infoCeraInfo">
+            <h6>Cera</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit mollitia sit, in commodi nulla,
+              porro recusandae placeat hic aspernatur officia, pariatur possimus natus veritatis iure accusantium facere
+              velit laudantium!</p>
+          </div>
+          <div class="botonesCeraInfo">
+            <a href="/conocenos" class="pedro">Conócenos</a>
+            <a href="/cotizar-combos/mujer">Cotizar</a>
+            <a href="/conocenos">Productos</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section> --}}
+
+  </section>
+
+
+  {{> footer }}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/calcularTamanoPantalla.js"></script>
+  <script src="../js/borderBottonNav.js"></script>
+
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 let socket = io();
 let URLactual = window.location;
 let URLpintar = URLactual.pathname;
-let etiquetaPintar = document.querySelector('.inicio');
+
 let next = document.querySelector('.next');
 let back = document.querySelector('.back');
 let nombres = document.getElementById('nombres');
@@ -17,7 +17,20 @@ $.fn.datepicker.dates['es'] = {
   days: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
   daysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
   daysMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
-  months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+  months: [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
+  ],
   monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
   today: 'Hoy',
   monthsTitle: 'Meses',
@@ -125,10 +138,6 @@ socket.on('imprimirCumpleañeros', (cumpleanieros) => {
 });
 /* ======*FIN IMPRIMIR CUMPLAÑOS====== */
 
-if (URLpintar === '/') {
-  etiquetaPintar.classList.add('pintarNav');
-}
-
 class Reserva {
   constructor() {
     this.cajaDatos = document.querySelector('.cajaMainDatos');
@@ -168,7 +177,12 @@ class ValidarDatos {
     let numeroOk = this.validarNumero();
     let fechaOk = this.validarFecha();
 
-    if (nombreOk.err === false && emailOk.err === false && numeroOk.err === false && fechaOk.err == false) {
+    if (
+      nombreOk.err === false &&
+      emailOk.err === false &&
+      numeroOk.err === false &&
+      fechaOk.err == false
+    ) {
       this.enviarForm();
     } else {
       if (nombreOk.err === true) {
@@ -273,18 +287,6 @@ class ValidarDatos {
     };
   };
 }
-
-// registrarReserva.addEventListener('submit', (x) => {
-//   // x.preventDefault();
-//   // let datosReserva = {
-//   //   nombres: nombres.value,
-//   //   telefono: numeroCelular.value,
-//   //   fecha: fecha.value,
-//   // };
-//   // validarDatos = new ValidarDatos(datosReserva);
-//   // validarDatos.validarDatos();
-//   // validarDatos.validarFecha();
-// });
 
 window.onblur = function () {
   //Esta funcion se ejecuta cuando se cambia de pestaña en el navegador
