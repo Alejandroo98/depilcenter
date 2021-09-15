@@ -25,6 +25,35 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
   res.render('cotizar', { corporal, facial });
 });
 
+router.post('/getPreciosCombos', (req, res) => {
+  const { id, path, query } = req.body;
+  let zonas = [];
+
+  if (path.split('/')[2] == 'depilacion-cera') {
+    if (query == 'mujer') {
+      zonas = getDepilacionCera('mujer').filter((zona) => {
+        return zona.id != id;
+      });
+    } else if (query == 'hombre') {
+      zonas = getDepilacionCera('hombre').filter((zona) => {
+        return zona.id != id;
+      });
+    }
+  } else if (path.split('/')[2] == 'depilacion-definitiva') {
+    if (query == 'mujer') {
+      zonas = getDepilacionDefinitiva('mujer').filter((zona) => {
+        return zona.id != id;
+      });
+    } else if (query == 'hombre') {
+      zonas = getDepilacionDefinitiva('hombre').filter((zona) => {
+        return zona.id != id;
+      });
+    }
+  }
+
+  res.json({ zonas });
+});
+
 router.get('/cotizar/depilacion-definitiva', (req, res) => {
   let zonas = [];
 

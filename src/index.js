@@ -1,19 +1,14 @@
 //Codigo del servidor
 const express = require('express');
-const path = require('path'); //Sirve para unir directorios o escribir una ruta y que sea multiplataforma
+const path = require('path');
+const app = express();
 const hbs = require('hbs');
 const mongoose = require('mongoose');
-// const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
-const passport = require('passport');
-const app = express(); //Ejecuto express y lo gardo en una constante
 const http = require('http');
 const server = http.createServer(app);
 const socketIo = require('socket.io');
-const exphbs = require('express-handlebars');
-const { format } = require('timeago.js');
-const { timeago } = require('./lib/handlebars');
 
 module.exports.io = socketIo(server);
 require('./socket/socket_servidor');

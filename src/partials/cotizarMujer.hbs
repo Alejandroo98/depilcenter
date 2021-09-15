@@ -11,7 +11,7 @@
         {{#each corporal}}
         <div id="{{ id }}" class="{{ color }}">
             {{ nombre }}
-            <span class="">$ {{precioIndividual}}</span>
+            <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
         </div>
         {{/each}}
 
@@ -28,16 +28,16 @@
         {{#each facial}}
         <div id="{{ id }}" class="{{ color }}">
             {{ nombre }}
-            <span class="">$ {{precioIndividual}}</span>
+            <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
         </div>
         {{/each}}
 
     </div>
 
 
-    <div class="boxValorTotal">
+    <div class=" boxValorTotal">
         <div class="boxBorder">
-            <p class="">Valor total : $0</p>
+            <p id="valorTotalZonas">Valor total : $0</p>
             <button id="mostrarDatosRegistroCotizarMujer">Agendar Cita</button>
         </div>
     </div>

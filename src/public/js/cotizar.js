@@ -1,9 +1,8 @@
-// let socket = io();
-
-/* =======================PINTAR NAV Y CAMBIAR DE FOTOGRAFIAS========================== */
 const etiquetaPintarCotizar = document.querySelector('.navbar');
 const URLpintarCotizar = window.location.pathname;
 const imgCotizarContainer = document.querySelector('.imgCotizarContainer');
+
+import CotizarConfig from './cotizarConfig.js';
 
 etiquetaPintarCotizar.setAttribute('style', 'transition : none ; background : salmon');
 
@@ -12,15 +11,16 @@ if (URLpintarCotizar === '/cotizar-combos/mujer') {
 } else if (URLpintarCotizar === '/cotizar-combos/hombre') {
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/hombre_modelo_cotizar.png" alt="Modelo cotizar hombre- Depilcenter - Centro de depilacion"></img>`;
 }
-/* ======================= *FIN PINTAR NAV========================== */
 
 /*  ================  PINTAR O DESPINTAR ZONA SELECCIONADA ======== */
 const cajaMainCotizar = document.querySelector('#nav-tabContent');
+const cotizarConfig = new CotizarConfig();
 
 cajaMainCotizar.addEventListener('click', ({ target: { id } }) => {
   if (id != '') {
     if (id.split('_')[0] == 'C' || id.split('_')[0] == 'F') {
       document.getElementById(id).classList.toggle('zonaSeleccionada');
+      cotizarConfig.comprovarZonaExiste(id);
     }
   }
 });
@@ -28,8 +28,6 @@ cajaMainCotizar.addEventListener('click', ({ target: { id } }) => {
 /*  ================  *FIN PINTAR O DESPINTAR ZONA SELECCIONADA ======== */
 
 /* =======================MOSTRAR EL CUADRO DE REGISTRO DE DATOS PARA GENDAR CITA DESDE COTIZAR =========*/
-
-let cajaMainCombos = document.querySelector('.cajaMainCombos');
 let __datosReservaContendor = document.querySelector('.__datosReservaContendor');
 let borraOpciones = document.querySelector('.borraOpciones');
 
