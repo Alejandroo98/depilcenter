@@ -1,38 +1,34 @@
+import d_cera from '../DB/depilacion-cera.js';
+import d_definitiva from '../DB/depilacion-definitiva.js';
+
 class cotizarConfig {
   constructor() {
+    this.zonasSeleccionadas = [];
     this.zonas = [];
     this.valorTotalZonas = document.getElementById('valorTotalZonas');
   }
 
   comprovarZonaExiste = (id) => {
-    const existe = this.zonas.find((zona) => {
+    const existe = this.zonasSeleccionadas.find((zona) => {
       return zona.id == id;
     });
 
     if (existe) {
-      try {
-        this.eliminarZona(id);
-        const { id: idPecioMasAlto } = this.valorMasAlto();
-        this.numeroDeZonas(idPecioMasAlto);
-      } catch (error) {
-        this.numeroDeZonas('');
-      }
-      this.getZonasSeleccionadas();
+      this.eliminarZona(id);
+      this.numeroDeZonas();
     } else {
       this.agregarZona(id);
-      const { id: idPecioMasAlto } = this.valorMasAlto();
-      this.numeroDeZonas(idPecioMasAlto);
-      this.getPrecioZonas(idPecioMasAlto, 'precioCombo');
-      this.getZonasSeleccionadas();
+      this.numeroDeZonas();
     }
   };
 
   valorMasAlto = () => {
     let precioMasALtoArray = [];
-    const precioMasAlto = this.zonas.filter((zona) => {
-      precioMasALtoArray = [...precioMasALtoArray, zona.precio];
+
+    const precioMasAlto = this.zonasSeleccionadas.filter((zona) => {
+      precioMasALtoArray = [...precioMasALtoArray, zona.precioIndividual];
       const precioAlto = Math.max(...precioMasALtoArray);
-      return zona.precio == precioAlto;
+      return zona.precioIndividual == precioAlto;
     });
 
     const zonaValorMasALto = precioMasAlto[precioMasAlto.length - 1];
@@ -46,64 +42,122 @@ class cotizarConfig {
     return { path, query };
   };
 
-  getPrecioZonas = async (id, precioTxt) => {
-    const { path, query } = this.getPath();
-    const zonas = await fetch('/getPreciosCombos', {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify({ id, path, query }),
-    });
+  numeroDeZonas = () => {
+    let id = '';
 
-    this.cambiarPreciosCombo(zonas.json(), precioTxt);
+    try {
+      const valorMasAlto = this.valorMasAlto();
+      id = valorMasAlto.id;
+    } catch (error) {
+      id = '';
+    }
+
+    this.getZonas('');
+    this.cambiarPreciosCombo('precioIndividual');
+    if (this.zonasSeleccionadas.length < 1) {
+      this.getZonas(id);
+      this.cambiarPreciosCombo('precioIndividual');
+    }
+
+    if (this.zonasSeleccionadas.length > 0) {
+      this.getZonas(id);
+      this.cambiarPreciosCombo('precioCombo');
+    }
   };
 
-  cambiarPreciosCombo = async (zonasDB, precioTxt) => {
-    const { zonas } = await zonasDB;
-    zonas.forEach((zona) => {
+  getZonas = (id) => {
+    const { path, query } = this.getPath();
+
+    if (path.split('/')[2] == 'depilacion-cera') {
+      if (query == 'mujer') {
+        this.zonas = this.getDepilacionCera('mujer').filter((zona) => {
+          return zona.id != id;
+        });
+      } else if (query == 'hombre') {
+        this.zonas = this.getDepilacionCera('hombre').filter((zona) => {
+          return zona.id != id;
+        });
+      }
+    } else if (path.split('/')[2] == 'depilacion-definitiva') {
+      if (query == 'mujer') {
+        this.zonas = this.getDepilacionDefinitiva('mujer').filter((zona) => {
+          return zona.id != id;
+        });
+      } else if (query == 'hombre') {
+        this.zonas = this.getDepilacionDefinitiva('hombre').filter((zona) => {
+          return zona.id != id;
+        });
+      }
+    }
+
+    return this.zonas;
+  };
+
+  cambiarPreciosCombo = async (precioTxt) => {
+    this.zonas.forEach((zona) => {
       document.getElementById(`precio_${zona.id}`).innerHTML = `$ ${zona[precioTxt]}`;
     });
+
+    try {
+      const { id, precioIndividual } = this.valorMasAlto();
+      document.getElementById(`precio_${id}`).innerHTML = `$ ${precioIndividual}`;
+    } catch (error) {
+      console.log('');
+    }
 
     this.sumarZonas();
   };
 
-  numeroDeZonas = (id) => {
-    this.getPrecioZonas('', 'precioIndividual');
-    if (this.zonas.length == 1) {
-      this.getPrecioZonas(id, 'precioCombo');
-    } else if (this.zonas.length < 1) {
-      this.getPrecioZonas('', 'precioIndividual');
+  getDepilacionCera = (genero) => {
+    if (genero == 'mujer') {
+      return d_cera[0].mujer;
+    } else if (genero == 'hombre') {
+      return d_cera[0].hombre;
+    }
+  };
+
+  getDepilacionDefinitiva = (genero) => {
+    if (genero == 'mujer') {
+      return d_definitiva[0].mujer;
+    } else if (genero == 'hombre') {
+      return d_definitiva[0].hombre;
     }
   };
 
   agregarZona(id) {
-    const precio = this.getValueSpan(id);
-    this.zonas = [...this.zonas, { id, precio }];
+    const zonas = this.getZonas('');
+
+    const precioFilter = zonas.find((zona) => {
+      return zona.id == id;
+    });
+
+    this.zonasSeleccionadas = [...this.zonasSeleccionadas, { ...precioFilter }];
   }
 
   eliminarZona(id) {
-    this.zonas = this.zonas.filter((zona) => {
+    this.zonasSeleccionadas = this.zonasSeleccionadas.filter((zona) => {
       return zona.id != id;
     });
   }
 
-  getValueSpan(id) {
-    const zonaBox = document.getElementById(id);
-    const precio = zonaBox.getElementsByTagName('span')[0].textContent.split(' ')[1];
-    return precio;
-  }
-
-  getZonasSeleccionadas() {
-    console.log(this.zonas);
-  }
-
   sumarZonas() {
-    let cero = 0;
+    try {
+      const { id, precioIndividual } = this.valorMasAlto();
 
-    this.zonas.forEach((zona) => {
-      cero += Number(zona.precio);
-    });
+      let cero = 0;
 
-    this.valorTotalZonas.innerHTML = `Valor total: $${cero}`;
+      this.zonasSeleccionadas.forEach((zona) => {
+        if (zona.id != id) {
+          cero += Number(zona.precioCombo);
+        }
+      });
+
+      const valorTotal = cero + Number(precioIndividual);
+
+      this.valorTotalZonas.innerHTML = `Valor total: $ ${valorTotal}`;
+    } catch (error) {
+      this.valorTotalZonas.innerHTML = `Valor total: $ 0`;
+    }
   }
 }
 

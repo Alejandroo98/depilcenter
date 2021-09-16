@@ -3,6 +3,8 @@ const URLpintarCotizar = window.location.pathname;
 const imgCotizarContainer = document.querySelector('.imgCotizarContainer');
 
 import CotizarConfig from './cotizarConfig.js';
+// import d_cera from '../DB/depilacion-cera.js';
+// import d_definitiva from '../DB/depilacion-definitiva.js';
 
 etiquetaPintarCotizar.setAttribute('style', 'transition : none ; background : salmon');
 
@@ -21,6 +23,8 @@ cajaMainCotizar.addEventListener('click', ({ target: { id } }) => {
     if (id.split('_')[0] == 'C' || id.split('_')[0] == 'F') {
       document.getElementById(id).classList.toggle('zonaSeleccionada');
       cotizarConfig.comprovarZonaExiste(id);
+      // console.log(d_cera[0]);
+      // console.log(d_definitiva);
     }
   }
 });
