@@ -8,7 +8,7 @@ import CotizarConfig from './cotizarConfig.js';
 
 etiquetaPintarCotizar.setAttribute('style', 'transition : none ; background : salmon');
 
-if (URLpintarCotizar === '/cotizar-combos/mujer') {
+if (URLpintarCotizar === '/cotizar/depilacion-cera') {
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/mujer_modelo_cotizar.png" alt="Modelo cotizar mujer - Depilcenter - Centro de depilacion"></img>`;
 } else if (URLpintarCotizar === '/cotizar-combos/hombre') {
   imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/hombre_modelo_cotizar.png" alt="Modelo cotizar hombre- Depilcenter - Centro de depilacion"></img>`;

@@ -1,11 +1,17 @@
 const { Router } = require('express');
 const router = Router();
-const { getDepilacionCera, getDepilacionDefinitiva } = require('../helpers/getDataZonas');
+const {
+  getDepilacionCera,
+  getDepilacionDefinitiva,
+  getOtrosServicios,
+} = require('../helpers/getDataZonas');
 const { comprovarQueryGenero } = require('../middleware/queryGenero');
 
 router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
   let zonas = [];
 
+  const otrosServicios = getOtrosServicios();
+  console.log(otrosServicios);
   const { genero } = req.query;
 
   if (genero == 'mujer') {
@@ -22,7 +28,30 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
     return zona.tipo == 'facial';
   });
 
-  res.render('cotizar', { corporal, facial });
+  res.render('cotizar', { corporal, facial, otrosServicios });
+});
+
+router.get('/cotizar/depilacion-definitiva', (req, res) => {
+  let zonas = [];
+  const otrosServicios = getOtrosServicios();
+
+  const { genero } = req.query;
+
+  if (genero == 'mujer') {
+    zonas = getDepilacionDefinitiva('mujer');
+  } else if (genero == 'hombre') {
+    zonas = getDepilacionDefinitiva('hombre');
+  }
+
+  const corporal = zonas.filter((zona) => {
+    return zona.tipo == 'corporal';
+  });
+
+  const facial = zonas.filter((zona) => {
+    return zona.tipo == 'facial';
+  });
+
+  res.render('cotizar', { corporal, facial, otrosServicios });
 });
 
 router.post('/getPreciosCombos', (req, res) => {
@@ -52,28 +81,6 @@ router.post('/getPreciosCombos', (req, res) => {
   }
 
   res.json({ zonas });
-});
-
-router.get('/cotizar/depilacion-definitiva', (req, res) => {
-  let zonas = [];
-
-  const { genero } = req.query;
-
-  if (genero == 'mujer') {
-    zonas = getDepilacionDefinitiva('mujer');
-  } else if (genero == 'hombre') {
-    zonas = getDepilacionDefinitiva('hombre');
-  }
-
-  const corporal = zonas.filter((zona) => {
-    return zona.tipo == 'corporal';
-  });
-
-  const facial = zonas.filter((zona) => {
-    return zona.tipo == 'facial';
-  });
-
-  res.render('cotizar', { corporal, facial });
 });
 
 module.exports = router;

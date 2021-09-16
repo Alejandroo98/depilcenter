@@ -43,12 +43,15 @@ body {
 
 .cajaOpciones {
   display: grid;
-  grid-template-columns: repeat(1, minmax(min-content, 900px));
+  grid-template-columns: repeat(1, minmax(min-content, 1000px));
   border-radius: 15px;
   gap: 25px;
 }
 
 .borraOpciones {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 15px;
   animation-name: mostrarMujer;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -162,6 +165,21 @@ body {
   border-radius: 10px;
   padding: 10px;
 }
+
+.boxOtrosServicios > div {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.4em;
+}
+
+.boxOtrosServicios span {
+  float: right;
+}
+
+/* .blanco {
+  background-color: var(--celeste);
+} */
 
 .rojo {
   background-color: rgb(247, 176, 176);

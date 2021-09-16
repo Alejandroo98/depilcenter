@@ -50,29 +50,64 @@
 
       <div class="borraOpciones">
 
-        <nav>
-          <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-link " id="nav-home-tab" data-bs-target="#nav-home" type="button" role="tab"
-              aria-controls="nav-home" href="/cotizar/depilacion-cera?genero=mujer">Depilacion con
-              cera</a>
-            <a class="nav-link" id="nav-profile-tab" data-bs-target="#nav-profile" type="button" role="tab"
-              aria-controls="nav-profile" href="/cotizar/depilacion-definitiva?genero=mujer">Depilacion definitiva</a>
+        <div>
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-link " id="nav-home-tab" data-bs-target="#nav-home" type="button" role="tab"
+                aria-controls="nav-home" href="/cotizar/depilacion-cera?genero=mujer">Depilacion con
+                cera</a>
+              <a class="nav-link" id="nav-profile-tab" data-bs-target="#nav-profile" type="button" role="tab"
+                aria-controls="nav-profile" href="/cotizar/depilacion-definitiva?genero=mujer">Depilacion definitiva</a>
 
-          </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            {{> cotizarMujer }}
-          </div>
-          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            {{> cotizarHombre }}
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              {{> cotizarDepilacionCera }}
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+              {{> cotizarDepilacionDefinitiva }}
+            </div>
           </div>
         </div>
 
+        <div class="otrosServiciosBox">
+
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Otros servicios</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+              <div class="boxOtrosServicios">
+                {{#each otrosServicios}}
+                <div id="{{ id }}" class="{{ color }}">
+                  {{ nombre }}
+                  <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
+                </div>
+                {{/each}}
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+        </div>
 
       </div>
 
+
+
     </section>
+
+
+
 
   </main>
 
