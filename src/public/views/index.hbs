@@ -37,57 +37,46 @@
 
 <body class="body">
 
-  <header>
-    {{!-- ERRORES --}}
-    {{#if error}}
-    <div class="ajustarAlert">
-      <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>{{error.errOne}}</strong>&nbsp{{error.errTwo}}.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
+  {{#if error}}
+  <div class="ajustarAlert">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>{{error.errOne}}</strong>&nbsp{{error.errTwo}}.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    {{/if}}
-
-    {{#if recaptcha}}
-    <div class="ajustarAlert">
-      <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>{{recaptcha}}</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    </div>
-    {{/if}}
-
-  </header>
-
-
-  <div class="logo">
-    <img src="../img/Depilcenter-logo.svg" alt="Logo - Depilcenter - Centro de depilacion">
   </div>
-  {{> navbar }}
+  {{/if}}
+
+  {{#if recaptcha}}
+  <div class="ajustarAlert">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>{{recaptcha}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+  {{/if}}
+
+
   {{> redesSociales }}
 
+  {{!-- <div class="mainNavContact">hoooola mundo</div> --}}
+  {{> navbar }}
 
-  <main>
-
-    <section class="cajaPrincipal">
-
-      <div class="reservas-caja">
-        <div class="datosMain">
-          <h1>Centro de depilación.</h1>
-          <h2>Por que que lo bueno #NoTieneQueSerCaro.</h2>
+  <header>
+    <main>
+      <section class="cajaPrincipal">
+        <div class="reservas-caja">
+          <div class="datosMain">
+            <h1>Centro de depilación.</h1>
+            <h2>Por que que lo bueno #NoTieneQueSerCaro.</h2>
+          </div>
+          <div class="linkAgendar">
+            <a class="agendarCita">AGENDAR CITA</a>
+            <a class="conocenos">CONÓCENOS</a>
+          </div>
         </div>
-        <div class="linkAgendar">
-          <a class="agendarCita">AGENDAR CITA</a>
-          <a class="conocenos">CONÓCENOS</a>
-        </div>
-      </div>
-
-      {{!-- <span class="material-icons">
-        keyboard_arrow_down
-      </span> --}}
-    </section>
-
-  </main>
+      </section>
+    </main>
+  </header>
 
   <section class="__cumpleaniosContainer">
 
@@ -127,8 +116,6 @@
     <div class="divReservaGrid">
 
       {{> reservar }}
-
-      {{!-- {{> informacionReserva}} --}}
 
     </div>
 
@@ -502,92 +489,6 @@
       </div>
     </section>
 
-    {{!-- <section class="iconsContenedor">
-
-
-
-      <div class="iconsImg-info">
-
-        <div class="iconsImg">
-          <div class="tituloIcons">
-            <img src="../img/depilacion-con-cera-09.png" alt="">
-          </div>
-
-          <div class="icon1">
-            <img src="../img/icons/icons-depilation-01.png " alt="Depilacion, paso uno">
-            <h6>Paso 1</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
-              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
-              voluptatum ducimus magnam.</p>
-          </div>
-
-          <div class="icon3">
-            <img src="../img/icons/icons-depilation-03.png" alt="Depilacion, paso tres">
-            <h6>Paso 2</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
-              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
-              voluptatum ducimus magnam.</p>
-          </div>
-
-          <div class="icon4">
-            <img src="../img/icons/icons-depilation-04.png" alt="Depilacion, paso cuatro">
-            <h6>Paso 3</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
-              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
-              voluptatum ducimus magnam.</p>
-          </div>
-
-          <div class="icon5">
-            <img src="../img/icons/icons-depilation-05.png" alt="Depilacion, paso cinco">
-            <h6>Paso 4</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
-              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
-              voluptatum ducimus magnam.</p>
-          </div>
-
-          <div class="icon6">
-            <img src="../img/icons/icons-depilation-06.png" alt="Depilacion, paso seis">
-            <h6>Paso 5</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
-              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
-              voluptatum ducimus magnam.</p>
-          </div>
-
-          <div class="icon7">
-            <img src="../img/icons/icons-depilation-07.png" alt="Depilacion, paso siete">
-            <h6>Paso 5</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
-              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
-              voluptatum ducimus magnam.</p>
-          </div>
-
-          <div class="icon8">
-            <img src="../img/icons/icons-depilation-08.png" alt="Depilacion, paso ocho">
-            <h6>Paso 6</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sunt provident assumenda beatae id
-              officiis similique impedit itaque eum eius temporibus neque corrupti molestiae, labore atque, modi
-              voluptatum ducimus magnam.</p>
-          </div>
-        </div>
-
-
-        <div class="ceraInfo">
-          <div class="infoCeraInfo">
-            <h6>Cera</h6>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit mollitia sit, in commodi nulla,
-              porro recusandae placeat hic aspernatur officia, pariatur possimus natus veritatis iure accusantium facere
-              velit laudantium!</p>
-          </div>
-          <div class="botonesCeraInfo">
-            <a href="/conocenos" class="pedro">Conócenos</a>
-            <a href="/cotizar-combos/mujer">Cotizar</a>
-            <a href="/conocenos">Productos</a>
-          </div>
-        </div>
-
-      </div>
-
-    </section> --}}
 
   </section>
 

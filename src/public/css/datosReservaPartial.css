@@ -3,96 +3,27 @@ html {
   width: 100%;
 }
 
-body{
+body {
   min-height: 100%;
   min-width: 100%;
   position: relative;
 }
 
 :root {
-    --fondo: rgb(245, 224, 227);
-    --general: #e8908b;
-    --amarillo: rgb(255, 255, 166);
-    --celeste: rgb(150, 230, 226);
-    --rojo: rgb(250, 173, 173);
-    --letras: rgb(119, 119, 119);
-    --negro : rgb(56, 56, 56);
-    --sombra : 2px 2px 2px rgba(0,0,0,0.2);
-  }
-
-  .__datosReservaContendor{
-    display: none;
-    justify-content: center;
-    position:fixed;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.76);
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    animation-name: ejectoReservaFondo;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-direction: reverse;
-    z-index: 200;
+  --fondo: rgb(245, 224, 227);
+  --general: #e8908b;
+  --amarillo: rgb(255, 255, 166);
+  --celeste: rgb(150, 230, 226);
+  --rojo: rgb(250, 173, 173);
+  --letras: rgb(119, 119, 119);
+  --negro: rgb(56, 56, 56);
+  --sombra: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes ejectoReservaFondo {
-  from {
-    /* transform: translateY(15px); */
-    opacity: 1;
-  }
-
-  to{
-    opacity: 0;
-  }
+.agendarCita {
+  display: none;
+  justify-content: center;
+  margin-top: 58px;
+  padding: 25px 0;
+  margin-bottom: -55px;
 }
-
-
-.ocultarCajaDatosReservaFondo{
-    animation-name: ocultarReservaFondo;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-}
-
-
-@keyframes ocultarReservaFondo {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-
-.ocultarCajaDatosReserva{
-    animation-name: ocultarReserva;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    /* animation-direction: reverse; */
-}
-
-
-
-
-@keyframes ejectoReserva {
-  0% {
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 50px;
-    /* transform:translateY(5%); */
-  }
-
-  100% {
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 0;
-    /* transform:translateY(15%); */
-    }
-
-  }

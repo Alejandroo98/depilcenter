@@ -1,11 +1,47 @@
-import d_cera from '../DB/depilacion-cera.js';
-import d_definitiva from '../DB/depilacion-definitiva.js';
+import d_cera from '../../DB/depilacion-cera.js';
+import d_definitiva from '../../DB/depilacion-definitiva.js';
 
 class cotizarConfig {
   constructor() {
     this.zonasSeleccionadas = [];
+    this.zonasSeleccionadasOS = [];
     this.zonas = [];
     this.valorTotalZonas = document.getElementById('valorTotalZonas');
+  }
+
+  pinarDespintar = (id) => {
+    document.getElementById(id).classList.toggle('zonaSeleccionada');
+  };
+
+  comprovarZonaExisteOS = (id) => {
+    const existe = this.zonasSeleccionadasOS.find((zona) => {
+      return zona.id == id;
+    });
+
+    if (existe) {
+      this.eliminarZonaOS(id);
+    } else {
+      this.agregarZonaOS(id);
+    }
+
+    this.sumarZonas();
+  };
+
+  agregarZonaOS = (id) => {
+    const precioIndividual = this.getValueSpan(id);
+    this.zonasSeleccionadasOS = [...this.zonasSeleccionadasOS, { id, precioIndividual }];
+  };
+
+  eliminarZonaOS = (id) => {
+    this.zonasSeleccionadasOS = this.zonasSeleccionadasOS.filter((zona) => {
+      return zona.id != id;
+    });
+  };
+
+  getValueSpan(id) {
+    const zonaBox = document.getElementById(id);
+    const precio = zonaBox.getElementsByTagName('span')[0].textContent.split(' ')[1];
+    return precio;
   }
 
   comprovarZonaExiste = (id) => {
@@ -101,9 +137,7 @@ class cotizarConfig {
     try {
       const { id, precioIndividual } = this.valorMasAlto();
       document.getElementById(`precio_${id}`).innerHTML = `$ ${precioIndividual}`;
-    } catch (error) {
-      console.log('');
-    }
+    } catch (error) {}
 
     this.sumarZonas();
   };
@@ -141,23 +175,32 @@ class cotizarConfig {
   }
 
   sumarZonas() {
+    let ceroOS = 0;
+    let cero = 0;
+    let id = '';
+    let precioIndividual = 0;
+
     try {
-      const { id, precioIndividual } = this.valorMasAlto();
-
-      let cero = 0;
-
-      this.zonasSeleccionadas.forEach((zona) => {
-        if (zona.id != id) {
-          cero += Number(zona.precioCombo);
-        }
-      });
-
-      const valorTotal = cero + Number(precioIndividual);
-
-      this.valorTotalZonas.innerHTML = `Valor total: $ ${valorTotal}`;
+      const valorMasAlto = this.valorMasAlto();
+      id = valorMasAlto.id;
+      precioIndividual = valorMasAlto.precioIndividual;
     } catch (error) {
-      this.valorTotalZonas.innerHTML = `Valor total: $ 0`;
+      id = '';
+      precioIndividual = 0;
     }
+
+    this.zonasSeleccionadasOS.forEach((zona) => {
+      ceroOS += Number(zona.precioIndividual);
+    });
+
+    this.zonasSeleccionadas.forEach((zona) => {
+      if (zona.id != id) {
+        cero += Number(zona.precioCombo);
+      }
+    });
+
+    const valorTotal = cero + Number(precioIndividual) + Number(ceroOS);
+    this.valorTotalZonas.innerHTML = `Valor total: $ ${valorTotal}`;
   }
 }
 

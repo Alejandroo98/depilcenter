@@ -1,32 +1,33 @@
 .logo img {
-    margin: 10px;
-    position: fixed;
-    top: 0;
-    left: 6%;
-    width: 230px;
-    z-index: 600;
-  }
-  
-  
-  .navbar {
-    position: fixed;
-    width: 100%;
-    transition: all 0.5s ease-in-out;
-    z-index: 500;
-    top: 0;
-    /* background-color: rgba(253, 144, 144); */
-  }
-  
-  .navbarBackground {
-    background-color: salmon;
-  }
-  
-  .nav-item a {
-    color: white !important;
-    font-weight: 500;
-  }
-  
-  .nav-item {
-    margin: 0 20px 0 20px;
-    color: white;
-  }
+  margin: 10px;
+  position: fixed;
+  top: 0;
+  left: 6%;
+  width: 230px;
+  z-index: 600;
+}
+
+.navbar {
+  position: sticky;
+  transition: all 0.5s ease-in-out;
+  /* background-color: rgb(255, 255, 255); */
+  z-index: 500;
+  top: 0;
+  margin-bottom: -59px;
+  /* height: 140px; */
+}
+
+.nav-item a {
+  font-weight: 500;
+}
+
+.nav-item {
+  margin: 0 20px 0 20px;
+  color: white;
+}
+
+/* ========================== */
+.mainNavContact {
+  background-color: var(--general);
+  height: 50px;
+}

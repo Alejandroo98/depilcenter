@@ -23,11 +23,11 @@ body {
   background-size: cover;
   background-position: center;
   background-size: cover;
-  /* background-color: var(--celeste); */
   display: flex;
   justify-content: center;
   margin-top: 55px;
-  padding: 0 25px 423px 25px;
+  position: relative;
+  /* padding: 0 25px 423px 25px; */
   background-color: var(--celeste);
 }
 
@@ -43,7 +43,7 @@ body {
 
 .cajaOpciones {
   display: grid;
-  grid-template-columns: repeat(1, minmax(min-content, 1000px));
+  grid-template-columns: repeat(1, minmax(min-content, 1060px));
   border-radius: 15px;
   gap: 25px;
 }
@@ -167,19 +167,23 @@ body {
 }
 
 .boxOtrosServicios > div {
-  padding: 10px;
+  padding: 12px 10px;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 0.4em;
+  position: relative;
 }
 
 .boxOtrosServicios span {
   float: right;
 }
 
-/* .blanco {
-  background-color: var(--celeste);
-} */
+.boxOtrosServicios i {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  font-size: 12px;
+}
 
 .rojo {
   background-color: rgb(247, 176, 176);
@@ -247,10 +251,6 @@ body {
   border-left: #ffffff solid 9px;
   border-right: #ffffff solid 9px;
   font-weight: bold;
-}
-
-.zonaSeleccionadaHombre {
-  background-color: red !important;
 }
 /* =========================================================================== */
 /* ============= *FIN AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */

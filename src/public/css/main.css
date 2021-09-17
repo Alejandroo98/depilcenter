@@ -23,8 +23,6 @@ body {
 }
 
 .cajaPrincipal {
-  background-color: var(--fondo);
-  /*border-top: 0px solid transparent; /* Cuando le puse un margin a un de sus hijos tambien fue afectado el div padre es decir este, y para solucionar eso se pone esta linea. https://es.stackoverflow.com/questions/155171/duda-b%C3%A1sica-con-margin-padre-e-hijo-css */
   background-image: url(../img/background-female.jpg);
   background-position: center;
   background-size: cover;
@@ -34,7 +32,6 @@ body {
   align-items: center;
   font-family: 'Montserrat', sans-serif;
   animation-name: fondo;
-  /* animation-delay: 5s; */
   animation-iteration-count: infinite;
   animation-duration: 16s;
 }
@@ -265,7 +262,6 @@ body {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   max-width: 95%;
-  /* background-color: burlywood; */
 }
 
 .registrarReserva {

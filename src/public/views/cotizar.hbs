@@ -17,22 +17,18 @@
   <link rel="stylesheet" href="../css/responsive/mainResponsive.css">
   <link rel="stylesheet" href="../css/navbar.css">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
-  <section class="__datosReservaContendor" id="cerrarContainerDatos">
-    <div class="divReservaGrid">
-      {{> reservar}}
-      {{> informacionReserva }}
-      <div class="imgResera">
-      </div>
-    </div>
+  {{> redesSociales }}
+  {{> navbar }}
+
+  <section class="agendarCita animate__animated animate__fadeIn">
+    {{> reservar }}
   </section>
 
-  {{> redesSociales }}
-
-  {{> navbar }}
 
 
 
@@ -86,30 +82,20 @@
                 {{#each otrosServicios}}
                 <div id="{{ id }}" class="{{ color }}">
                   {{ nombre }}
+                  <i>{{ msg }}</i>
                   <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
                 </div>
                 {{/each}}
               </div>
-
             </div>
-
           </div>
-
-
-
-
         </div>
-
       </div>
-
-
-
     </section>
-
-
-
-
   </main>
+
+
+
 
   {{> footer}}
 

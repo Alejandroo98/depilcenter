@@ -2,35 +2,28 @@ html {
   height: 100%;
 }
 
-body{
+body {
   min-height: 100%;
   position: relative;
 }
 
-
 :root {
   --fondo: rgb(245, 224, 227);
-  --general: #e8908b;
+  --general: #f37e78;
   --amarillo: rgb(255, 255, 166);
   --celeste: rgb(150, 230, 226);
   --rojo: rgb(250, 173, 173);
   --letras: rgb(119, 119, 119);
 }
 
-
-
-.footer{
+.footer {
   display: flex;
+  position: relative;
   flex-direction: column;
-  position: absolute;
   align-items: center;
-  /* grid-template-columns: 100%; */
-  /* grid-template-rows: 1fr auto; */
-  background-color: salmon;
-  /* justify-items: center; */
+  background-color: var(--general);
   text-align: center;
   bottom: 0;
-  /* background-color: chocolate; */
   padding: 25px 0;
   width: 100%;
 }
@@ -45,7 +38,7 @@ body{
   /* background-color: crimson; */
 }
 
-.centrarFooter b{
+.centrarFooter b {
   /* background-color: red; */
   display: inline-block;
   padding: 10px;
@@ -53,20 +46,19 @@ body{
   color: white;
 }
 
-.centrarFooter p{
+.centrarFooter p {
   /* background-color: blue; */
   font-size: 14px;
 }
 
-.centrarFooter a{
+.centrarFooter a {
   font-size: 14px;
   margin: 3px 0;
 }
 
-.centrarFooter a:hover{
+.centrarFooter a:hover {
   text-decoration: underline;
 }
-  
 
 .centrarFooter > div {
   padding: 10px;
@@ -84,11 +76,11 @@ body{
   /* font-weight: 500; */
 }
 
-.horariosAtencionFooter{
+.horariosAtencionFooter {
   grid-column: span 1;
 }
 
-.horariosAtencionFooter p{
+.horariosAtencionFooter p {
   color: white;
 }
 
@@ -104,14 +96,12 @@ body{
   color: white;
 }
 
-.ubicacionFooter img{
+.ubicacionFooter img {
   width: 18px;
   margin-right: 5px;
 }
 
-
-
-.ubicacionFooter p{
+.ubicacionFooter p {
   color: white;
 }
 
@@ -136,7 +126,7 @@ body{
   /* background-color: blue; */
 }
 
-.atencionFooter{
+.atencionFooter {
   grid-column: span 3;
 }
 
@@ -152,7 +142,6 @@ body{
   grid-column: span 3;
 }
 
-
 .webDesign {
   display: inline-block;
   /* background-color: black; */
@@ -167,23 +156,18 @@ body{
   /* font-weight: 500; */
 }
 
-@media screen and (max-width : 840px ){
-
+@media screen and (max-width: 840px) {
   .centrarFooter {
     width: 100%;
     grid-template-columns: 100%;
     justify-items: center;
   }
 
-  
-   
   .ubicacionFooter div:nth-child(2) {
     display: none;
   }
 
   .ubicacionFooter {
     grid-column: auto;
-
   }
-  
 }

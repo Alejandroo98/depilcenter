@@ -58,21 +58,10 @@ class ajustarPantallaReserva {
     };
   }
 
-  ajustarSegundaPAntallaRserva() {
-    // this.cajaReserva.style.height = this.tamDiv().altura + 'px';
-    // this.cajaReserva.scrollIntoView({ block: 'center' });
-  }
-
   scroll() {
     this.imprimirInfoExtraReserva();
     this.cajaReserva.style.display = 'flex';
     this.cajaReserva.scrollIntoView({ block: 'center', behavior: 'smooth' });
-    // this.ajustarSegundaPAntallaRserva();
-    // let bajar = this.tamDiv().altura + this.tamDiv().altura / 3;
-    // window.scroll({
-    //   top: bajar,
-    //   behavior: 'smooth',
-    // });
   }
 
   removeSelected() {
@@ -176,6 +165,12 @@ serviciosActive.addEventListener('change', (e) => {
 
 /* =============== *FIN SELECCION UN SERVICIO ========================== */
 
+document.querySelector('.agendarCita').addEventListener('click', () => {
+  let activarClassReserva = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
+  activarClassReserva.guardarInfoLocalStorage('50% DE DESCUENTO');
+  activarClassReserva.scroll();
+});
+
 agendarCumpleaniero.addEventListener('click', (e) => {
   let activarClass = new ajustarPantallaReserva();
   activarClass.guardarInfoLocalStorage('25% DE DESCUENTO');
@@ -185,13 +180,6 @@ agendarCumpleaniero.addEventListener('click', (e) => {
 window.addEventListener('resize', () => {
   let activarClass = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
   activarClass.ajustarSegundaPAntallaRserva();
-});
-
-document.querySelector('.agendarCita').addEventListener('click', () => {
-  let activarClassReserva = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
-  activarClassReserva.guardarInfoLocalStorage('50% DE DESCUENTO');
-  // activarClassReserva.eliminarInfoLocalStorage();
-  activarClassReserva.scroll();
 });
 
 let activarClass = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
