@@ -4,33 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <script src="../libs/jquery.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DepilCenter</title>
-  <link rel="icon" href="../img/quito.png">
+  <script src="../libs/jquery.js"></script>
+
+  {{!-- getbotstrap --}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
   <meta name="description" content="" />
+
+  {{!-- css --}}
+  <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/responsive/mainResponsive.css">
   <link rel="stylesheet" href="../css/footer.css" />
   <link rel="stylesheet" href="../css/redesSociales.css">
-  <link rel="stylesheet" href="../css/icons.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="../css/navbar.css  ">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght;" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/carousel.css">
+
   {{!-- datePicker --}}
   <script src="../libs/datePicker/js/bootstrap-datepicker.js" charset="UTF-8"></script>
   <link rel="stylesheet" href="../libs//datePicker/css/bootstrap-datepicker.css">
-  {{!-- datePicker --}}
+
+  {{!-- google icons --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  {{!-- google fonts --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500&display=swap" rel="stylesheet">
+
+  {{!-- SEMANTIC UI --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 
 </head>
@@ -56,71 +68,45 @@
   {{/if}}
 
 
-  {{> redesSociales }}
 
-  {{!-- <div class="mainNavContact">hoooola mundo</div> --}}
+  {{> navContacts }}
   {{> navbar }}
 
   <header>
-    <main>
-      <section class="cajaPrincipal">
-        <div class="reservas-caja">
-          <div class="datosMain">
-            <h1>Centro de depilación.</h1>
-            <h2>Por que que lo bueno #NoTieneQueSerCaro.</h2>
-          </div>
-          <div class="linkAgendar">
-            <a class="agendarCita">AGENDAR CITA</a>
-            <a class="conocenos">CONÓCENOS</a>
-          </div>
-        </div>
-      </section>
-    </main>
+    <section class="cajaPrincipal">
+      {{> carousel }}
+    </section>
   </header>
 
   <section class="__cumpleaniosContainer">
-
     <div class="imgeCumpleanios">
       <img id="imgCumpleanios" src="../img/background-cumpleanios_tre.svg" alt="">
     </div>
 
     <div class="_datosCumpleanios">
       <h5>¡Happy birthday!</h5>
-      <h6>POR TU CUMPLEAÑOS RECIBE EL 25% DE DESCUENTO EN •DEPILACIÓN CON CERA• DURANTE TODO EL MES <a
-          id="agendarCumpleaniero">AGENDAR CITA</a> </h6>
+      <h6>POR TU CUMPLEAÑOS RECIBE EL 25% DE DESCUENTO EN •DEPILACIÓN CON CERA• DURANTE TODO EL MES <a>AGENDAR CITA</a>
+      </h6>
       <p id="mesCumpleanios"></p>
-      {{!-- <p id="mesCumpleanios">Cumpleañeros de Marzo</p> --}}
     </div>
-
 
     <div class="__cumpleaniosContainerChild">
-      {{!-- <div>
-        <img src="../img/icons/icons-depilation-01.png" width="80" alt="">
-        <p>Alejo Alava</p>
-        <p>15-15-2021</p>
-      </div> --}}
-
-
-
     </div>
+
     <span style="color: rgb(83, 83, 83); font-size :13px;">No olvides llevar tu cedula contigo cuando nos visites</span>
-
-
-
   </section>
 
-  <section class="reservarHBS" id="reservarHBS">
-    <div class="__imgEmojisContenedor" class="rotarEmoji">
+  <section class="cajaDatos-caja" id="reservarHBS">
+    {{!-- <div class="__imgEmojisContenedor" class="rotarEmoji">
       <img id="emojisImg" src="../img/emojis/emojis-1.svg" alt="taall">
-    </div>
+    </div> --}}
+
     <div class="divReservaGrid">
 
       {{> reservar }}
 
     </div>
-
   </section>
-
 
   <section class="__quienesSomosImg">
     <div class="backgroundImg">
@@ -131,17 +117,9 @@
       </div>
       <div class="helpClass"></div>
     </div>
-    {{!-- <img src="../img/quienesSomosBack.png" alt=""> --}}
   </section>
 
-
-
-
   <section class="background">
-
-
-
-
     <section class="__serviciosContainer">
 
       <div style="margin: 0 0 13px 0; text-align:center; font-family: 'Pacifico', cursive">
@@ -159,9 +137,6 @@
 
 
       <div class="__serviciosContainerCenter">
-
-
-
         <div class="cardServicio">
 
           <div class="imgServicio">

@@ -27,12 +27,12 @@ class ajustarPantalla {
 
   ajustarPantalla() {
     var cajaContendor = document.querySelector('.cajaPrincipal');
-    cajaContendor.style.height = this.altura + 'px';
+    // cajaContendor.style.height = this.altura - 45 + 'px';
   }
 }
 
 window.addEventListener('resize', () => {
-  let activarClasss = new ajustarPantalla(tamVentana()[0], tamVentana()[1]);
+  new ajustarPantalla(tamVentana()[0], tamVentana()[1]);
 });
 
 let activarClasss = new ajustarPantalla(tamVentana()[0], tamVentana()[1]);
@@ -161,49 +161,20 @@ serviciosActive.addEventListener('change', (e) => {
   activarClass.changeSelectServicio(serviciosActive.value);
 });
 
-//sin info extra al presonar el boton de agendar cita principal
+/* =============== *SELECCION UN SERVICIO ========================== */
 
-/* =============== *FIN SELECCION UN SERVICIO ========================== */
-
-document.querySelector('.agendarCita').addEventListener('click', () => {
-  let activarClassReserva = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
-  activarClassReserva.guardarInfoLocalStorage('50% DE DESCUENTO');
-  activarClassReserva.scroll();
-});
-
-agendarCumpleaniero.addEventListener('click', (e) => {
-  let activarClass = new ajustarPantallaReserva();
-  activarClass.guardarInfoLocalStorage('25% DE DESCUENTO');
-  activarClass.scroll();
-});
-
-window.addEventListener('resize', () => {
-  let activarClass = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
-  activarClass.ajustarSegundaPAntallaRserva();
-});
-
-let activarClass = new ajustarPantallaReserva(tamVentana()[0], tamVentana()[1]);
-activarClass.ajustarSegundaPAntallaRserva();
-activarClass.changeSelectServicio(serviciosActive.value);
-// window.addEventListener('resize', () => {
-//   let activarClass = new ajustarPantallaReserva(
-//     tamVentana()[0],
-//     tamVentana()[1]
-//   );
-//   activarClass.tamDiv();
-// });
-
+/* ========= SCROLL ========== */
 window.onscroll = function () {
-  let navbar = document.querySelector('.navbar');
-  let vertical = window.scrollY;
-  if (vertical > 380) {
-    navbar.classList.add('navbarBackground');
+  const navbar = document.querySelector('.navbar');
+  const vertical = window.scrollY;
+  if (vertical > 0) {
+    navbar.classList.add('navbarBoxShadow');
   } else {
-    navbar.classList.remove('navbarBackground');
+    navbar.classList.remove('navbarBoxShadow');
   }
 };
 
-/*FIN CONTROL DE SCROLL PARA PINTAR EL NAV */
+/* ========= *SCROLL ========== */
 
 /* ============= CAMBIAR FONDO DE CUMPLAÑEROS DEL MES ============== */
 let ajusarBackgroundCumpleanieros = (ancho) => {
@@ -222,11 +193,9 @@ window.addEventListener('resize', () => {
 });
 
 ajusarBackgroundCumpleanieros(tamVentana()[0]);
-
 /* =============*FIN CAMBIAR FONDO DE CUMPLAÑEROS DEL MES ============== */
 
 /* ========ROTAS IMAGENES DE EMOJIS ============= */
-
 let emojisImg = document.getElementById('emojisImg');
 
 class Emojis {
@@ -246,6 +215,4 @@ class Emojis {
 
 let rotar = new Emojis();
 rotar.tiempo();
-
-// module.exports = tamVentana;
 /* ========ROTAS IMAGENES DE EMOJIS ============= */

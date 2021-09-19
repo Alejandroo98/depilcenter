@@ -10,14 +10,36 @@
 .navbar {
   position: sticky;
   transition: all 0.5s ease-in-out;
-  /* background-color: rgb(255, 255, 255); */
+  background-color: var(--general);
   z-index: 500;
   top: 0;
-  margin-bottom: -59px;
-  /* height: 140px; */
+  height: 140px;
+  font-size: 15px;
+  overflow: hidden;
+  /* margin-bottom: -140px; */
+}
+
+.container-navbar {
+  z-index: 500;
+}
+
+.navBarCirulos {
+  z-index: 100;
+  opacity: 0.9;
+  position: absolute;
+  right: 0px;
+}
+
+.navBarCirulos img {
+}
+
+.navbarBoxShadow {
+  border-bottom: 3px solid var(--rojoSuave);
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .nav-item a {
+  color: white !important;
   font-weight: 500;
 }
 
@@ -26,8 +48,35 @@
   color: white;
 }
 
-/* ========================== */
+/* ================ NAV CONTACTS ========== */
+.__mainNavContact {
+  background-color: var(--rojoSuave);
+  height: 45px;
+}
+
 .mainNavContact {
-  background-color: var(--general);
-  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.datosContacto {
+  display: flex;
+}
+
+.datosContacto > div {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.datosContacto span {
+  color: white;
+  margin-right: 5px;
+}
+
+.datosContacto p {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: white;
 }

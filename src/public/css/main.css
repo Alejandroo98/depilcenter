@@ -4,18 +4,19 @@ html {
 
 body {
   min-height: 100%;
+  font-family: 'Raleway', sans-serif;
   position: relative;
 }
 
 :root {
-  --fondo: rgb(245, 224, 227);
+  --fondo: #f5e0e3;
   --general: #e8908b;
-  --amarillo: rgb(255, 255, 166);
-  --celeste: rgb(150, 230, 226);
-  --rojo: rgb(250, 173, 173);
-  --amarilloText: rgb(246, 227, 48);
-  --celesteText: rgb(61, 219, 211);
-  --rojoText: salmon;
+  --amarillo: #ffffa6;
+  --celeste: #96e6e2;
+  --rojoSuave: #ffb7b7;
+  --amarilloText: #f6e330;
+  --celesteText: #3ddbd3;
+  --rojoText: #fa8072;
 }
 
 #agendarCumpleaniero {
@@ -23,140 +24,18 @@ body {
 }
 
 .cajaPrincipal {
-  background-image: url(../img/background-female.jpg);
+  background-image: url(../img/backgroundIndex.png);
   background-position: center;
   background-size: cover;
-  display: flex;
   background-attachment: fixed;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  animation-name: fondo;
-  animation-iteration-count: infinite;
-  animation-duration: 16s;
+  height: 630px;
 }
 
-@keyframes fondo {
-  0% {
-    background-image: url(../img/background-female.jpg);
-  }
-
-  25% {
-    background-image: url(../img/background-female.jpg);
-  }
-
-  50% {
-    background-image: url(../img/bacgrkound-male.jpg);
-  }
-
-  75% {
-    background-image: url(../img/bacgrkound-male.jpg);
-  }
-
-  100% {
-    background-image: url(../img/background-female.jpg);
-  }
-}
-
-/* BOTONES DE AGENDAR Y CONOCENOS E INFO */
-.datosMain {
+.cajaDatos-caja {
   display: flex;
+  padding: 30px 0;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
-
-.datosMain h1 {
-  color: rgb(255, 255, 255);
-  font-size: 80px;
-  text-align: center;
-  line-height: 70px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.datosMain h2 {
-  /* color: rgb(80, 78, 78); */
-  color: white;
-  font-size: 15px;
-  text-align: center;
-  margin-top: 15px;
-  font-weight: 500;
-}
-
-.reservas-caja {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 58px;
-}
-
-.linkAgendar a {
-  display: inline-flex;
-  width: 160px;
-  height: 42px;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.linkAgendar a:nth-child(1) {
-  background: #f58882;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.linkAgendar a:hover:nth-child(1) {
-  background: #db7a74;
-  cursor: pointer;
-}
-
-.linkAgendar a:nth-child(2) {
-  border: 3px solid #72c1b7;
-  color: #72c1b7;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.linkAgendar a:hover:nth-child(2) {
-  border: 3px solid #61b9ad;
-  color: #61b9ad;
-  cursor: pointer;
-}
-
-/* ICONO DE FLECHA */
-.cajaPrincipal span {
-  position: absolute;
-  font-size: 80px;
-  color: rgb(255, 255, 255);
-  bottom: 0;
-  margin: 15px;
-  animation-name: iconoMain;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
-
-@keyframes iconoMain {
-  0% {
-    margin: 20px;
-  }
-
-  50% {
-    margin-bottom: 0;
-  }
-
-  100% {
-    margin-bottom: 20px;
-  }
-}
-
-/* FIN BOTONES DE AGENDAR Y CONOCENOS */
 
 .cajaDatos-caja p {
   margin-top: 10px;
@@ -236,15 +115,6 @@ body {
 
 /* ===========APAREZCA SUABE LA PARTE DE RESERVAR ============== */
 /* =========RESERVA GRID============== */
-.reservarHBS {
-  /* display: flex; */
-  display: none;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  margin-top: 10px;
-  padding: 20px 0;
-}
 
 .__imgEmojisContenedor {
   position: absolute;
