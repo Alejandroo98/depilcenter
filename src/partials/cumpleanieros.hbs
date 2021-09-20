@@ -1,0 +1,82 @@
+<section class="__cumpleaniosContainer">
+    <div class="imgeCumpleanios">
+        <img id="imgCumpleanios" src="../img/background-cumpleanios_tre.svg" alt="">
+    </div>
+
+    <div class="_datosCumpleanios">
+
+        <h5>
+            ¡HAPPY BIRTHDAY!
+            <i class="heart icon"></i>
+        </h5>
+        <h6>POR TU CUMPLEAÑOS RECIBE EL 40% DE DESCUENTO EN TODOS NUESTROS SERVICIOS
+            <a class="mini ui grey button">
+                AGENDAR CITA &nbsp
+                <i class="calendar outline icon"></i>
+            </a>
+        </h6>
+        {{!-- <p id="mesCumpleanios">Cumpleanieros de septiembre</p> --}}
+        <p>
+            Cumpleañeros de septiembre
+        <div class="popup-cumpleanios"
+            data-html="Estos datos fueron registrados por nuestros clientes  por medio de nuestro app web y de forma presencial en uno de nuestros locales"
+            data-position="top left" style="display:inline">
+            <i class="question circle icon"></i>
+        </div>
+        </p>
+    </div>
+
+    <script>
+        $('.popup-cumpleanios ')
+            .popup({
+                on: 'hover'
+            });
+
+    </script>
+
+
+    <div class="cumpleanios-container-card">
+        {{#each cumpleanieros}}
+
+        <div class="card-cumpleanios">
+            <div class="card-content-img">
+                <img class="left floated" src="{{ img }}">
+            </div>
+
+            <div class="card-content-cumpleanios">
+                <div class="card-content-name">
+                    <h4>{{ nombres }}</h4>
+                    <i class="phone icon"></i>
+                    <span class="text-secondary">
+                        XXXXXX
+                    </span>
+                    <b>{{ timeago numeroTelefono}}</b>
+                </div>
+
+                <hr>
+
+                <div class="text-secondary card-content-date">
+                    <span class="right floated">
+                        {{ fechaCumpleanios }}
+                    </span>
+                    <span>
+                        <i class="birthday cake icon"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+    <span style="color: rgb(83, 83, 83); font-size :13px;">
+        Unicamente por el dia de tu cumpleaños redibe el 40% de descuento en todos nestros servicios.
+        <br>
+        <b>
+            No olvides llevar tu cedula contigo cuando nos visites
+        </b>
+    </span>
+
+
+
+
+</section>

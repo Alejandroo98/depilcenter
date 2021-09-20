@@ -3,15 +3,14 @@ const app = express();
 const path = require('path');
 const { guardarDatosReserva, guardarDatosUsuario } = require('../helpers/guardarReserva');
 const promoServicios = require('../DB/promos-servicios.json');
+const { datosCumpleanieros } = require('../helpers/getCumpleanieros');
 
-// const Reserva = require('../models/reserva');
-// const DatosReserva = require('../models/datosReserva');
-
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: false }));
 app.set('views', path.resolve(__dirname, '../public/views'));
 
-app.get('/', (req, res) => {
-  res.render('index', { promoServicios });
+app.get('/', async (req, res) => {
+  const cumpleanieros = await datosCumpleanieros();
+  res.render('index', { promoServicios, cumpleanieros });
 });
 
 app.post('/', async (req, res, next) => {

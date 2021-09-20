@@ -26,7 +26,7 @@ app.use(express.json());
 //Configurarciones
 app.use(express.static(path.resolve(__dirname, './public'), {}));
 hbs.registerPartials(__dirname + '/partials');
-hbs.registerHelper('timeago', require('./lib/handlebars').timeago);
+// hbs.registerHelper('timeago', require('./lib/handlebars').timeago);
 app.set('view engine', 'hbs');
 app.set('views', path.resolve(__dirname, 'public/views'));
 

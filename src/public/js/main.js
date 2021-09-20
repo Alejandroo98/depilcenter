@@ -120,22 +120,22 @@ switch (mesCuple.getMonth()) {
     break;
 }
 
-mesCumpleanios.innerHTML = `Cumpleañeros de ${imprimirMes}`;
+// mesCumpleanios.innerHTML = `Cumpleañeros de ${imprimirMes}`;
 
 /* =========== *FIN MES DE CUMPLEAÑEROS ========= */
 
 /* ======IMPRIMIR CUMPLAÑOS====== */
-socket.on('imprimirCumpleañeros', (cumpleanieros) => {
-  for (let i = 0; i < cumpleanieros.length; i++) {
-    __cumpleaniosContainerChild.innerHTML += `
-    <div >
-            <img src="../img/happy-icon-01.png" width="80" alt="">
-            <p><b> ${cumpleanieros[i].nombres}</b></p>
-            <p>${cumpleanieros[i].fechaCumpleanios}</p>
-    </div>
-    `;
-  }
-});
+// socket.on('imprimirCumpleañeros', (cumpleanieros) => {
+//   for (let i = 0; i < cumpleanieros.length; i++) {
+//     __cumpleaniosContainerChild.innerHTML += `
+//     <div >
+//             <img src="../img/happy-icon-01.png" width="80" alt="">
+//             <p><b> ${cumpleanieros[i].nombres}</b></p>
+//             <p>${cumpleanieros[i].fechaCumpleanios}</p>
+//     </div>
+//     `;
+//   }
+// });
 /* ======*FIN IMPRIMIR CUMPLAÑOS====== */
 
 class Reserva {

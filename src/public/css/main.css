@@ -1,11 +1,11 @@
 html {
   height: 100%;
+  height: 100vh;
 }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
   font-family: 'Raleway', sans-serif;
-  position: relative;
 }
 
 :root {
@@ -634,129 +634,7 @@ select {
 
 /* ===============*FIN OPINIONES================= */
 
-/* ==================CUMPLEAÑEROS============= */
-.__cumpleaniosContainer {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: var(--rojo);
-  background-repeat: no-repeat;
-  padding: 25px 0;
-  background-size: cover;
-  margin-top: 10px;
-}
-
-.imgeCumpleanios {
-  position: absolute;
-  width: 100%;
-  z-index: 0;
-  top: 0;
-}
-
-.imgeCumpleanios img {
-  margin: 0;
-}
-._datosCumpleanios {
-  z-index: 3;
-  /* background-color: #f58882; */
-  margin: 0 10px;
-  color: rgb(54, 54, 54);
-}
-
-._datosCumpleanios h6 {
-  margin: 0;
-}
-
-._datosCumpleanios a {
-  text-decoration: none;
-  background-color: var(--amarillo);
-  color: rgb(54, 54, 54);
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 12px;
-}
-
-._datosCumpleanios a:hover {
-  text-decoration: underline;
-}
-
-._datosCumpleanios h5 {
-  font-size: 30px;
-  /* margin: 0; */
-  font-family: 'Kaushan Script', cursive;
-}
-._datosCumpleanios h6 {
-  margin: 0;
-}
-
-.__cumpleaniosContainer p {
-  margin: 0;
-  color: rgb(59, 59, 59);
-  font-size: 12px;
-  background-color: white;
-  display: inline;
-  padding: 2px 5px;
-  border-radius: 6px;
-}
-
-.__cumpleaniosContainer div:last-child h5 {
-  margin: 0;
-}
-
-.__cumpleaniosContainerChild {
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-  overflow: auto;
-  padding: 10px 0;
-  max-width: 98%;
-}
-
-.__cumpleaniosContainerChild > div > p {
-  margin: 0;
-}
-
-.__cumpleaniosContainerChild > div {
-  line-height: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  padding: 10px 10px;
-  border-radius: 15px;
-  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
-  margin: 0 5px;
-  max-width: 115px;
-}
-
-.__cumpleaniosContainerChild::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-
-.__cumpleaniosContainerChild::-webkit-scrollbar:horizontal {
-  height: 6px;
-}
-
-.__cumpleaniosContainerChild::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 10px;
-}
-
-.__cumpleaniosContainerChild::-webkit-scrollbar-button {
-  display: none;
-  /* color: black;
-  background-color: black; */
-}
-
-.__cumpleaniosContainerChild::-webkit-scrollbar-thumb:active {
-  background-color: rgb(255, 147, 147);
-}
-/* ==================*FIN CUMPLEAÑEROS============= */
-
 /* =========================UBICACION===================== */
-
 .__ubicacionIndexContainer {
   /* text-align: center; */
   background-color: rgb(245, 245, 245);
