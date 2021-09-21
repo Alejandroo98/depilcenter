@@ -176,23 +176,23 @@ window.onscroll = function () {
 
 // /* ========= *SCROLL ========== */
 
-// /* ============= CAMBIAR FONDO DE CUMPLAÑEROS DEL MES ============== */
-// let ajusarBackgroundCumpleanieros = (ancho) => {
-//   if (ancho > 840) {
-//     imgCumpleanios.setAttribute('src', '../img/background-cumpleanios_tre.svg');
-//   } else if (ancho < 840 && ancho > 600) {
-//     imgCumpleanios.setAttribute('src', '../img/background-cumpleanierosMedium.svg');
-//   } else if (ancho < 600) {
-//     imgCumpleanios.setAttribute('src', '../img/background-cumpleanierosSmoll.svg');
-//   }
-// };
+/* ============= CAMBIAR FONDO DE CUMPLAÑEROS DEL MES ============== */
+let ajusarBackgroundCumpleanieros = (ancho) => {
+  if (ancho > 840) {
+    imgCumpleanios.setAttribute('src', '../img/cumple/large.svg');
+  } else if (ancho < 840 && ancho > 600) {
+    imgCumpleanios.setAttribute('src', '../img/cumple/medium.svg');
+  } else if (ancho < 600) {
+    imgCumpleanios.setAttribute('src', '../img/cumple/smoll.svg');
+  }
+};
 
-// let imgCumpleanios = document.getElementById('imgCumpleanios');
-// window.addEventListener('resize', () => {
-//   ajusarBackgroundCumpleanieros(tamVentana()[0]);
-// });
+let imgCumpleanios = document.getElementById('imgCumpleanios');
+window.addEventListener('resize', () => {
+  ajusarBackgroundCumpleanieros(tamVentana()[0]);
+});
 
-// ajusarBackgroundCumpleanieros(tamVentana()[0]);
+ajusarBackgroundCumpleanieros(tamVentana()[0]);
 // /* =============*FIN CAMBIAR FONDO DE CUMPLAÑEROS DEL MES ============== */
 
 // /* ========ROTAS IMAGENES DE EMOJIS ============= */

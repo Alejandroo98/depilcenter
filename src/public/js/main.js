@@ -1,16 +1,14 @@
 let socket = io();
-let URLactual = window.location;
-let URLpintar = URLactual.pathname;
-
-let next = document.querySelector('.next');
-let back = document.querySelector('.back');
-let nombres = document.getElementById('nombres');
-let numeroCelular = document.getElementById('numeroCelular');
-let fecha = document.getElementById('fecha');
-let hora = document.getElementById('hora');
-let __contenedorMetodoDepilacion = document.getElementById('__contenedorMetodoDepilacion');
-let __cumpleaniosContainerChild = document.querySelector('.__cumpleaniosContainerChild');
-let mesCumpleanios = document.querySelector('#mesCumpleanios');
+const URLactual = window.location;
+const URLpintar = URLactual.pathname;
+const next = document.querySelector('.next');
+const back = document.querySelector('.back');
+const nombres = document.getElementById('nombres');
+const numeroCelular = document.getElementById('numeroCelular');
+const fecha = document.getElementById('fecha');
+const hora = document.getElementById('hora');
+const __contenedorMetodoDepilacion = document.getElementById('__contenedorMetodoDepilacion');
+const mesCumpleanios = document.querySelector('#mesCumpleanios');
 
 /* ================== CALENDAR RESERVA =================== */
 $.fn.datepicker.dates['es'] = {
@@ -70,9 +68,7 @@ if (monthIput < 10 || dayCero < 10) {
 }
 
 let fullDate = `${dayCero}${dateInput.getDate()}-${dateCero}${monthIput}-${dateInput.getFullYear()} `;
-console.log(fullDate);
 let form_control_date = document.querySelector('.form-control-date');
-
 form_control_date.value = fullDate;
 
 /* ================== *FIN CALENDAR RESERVA =================== */
@@ -120,22 +116,6 @@ switch (mesCuple.getMonth()) {
     break;
 }
 
-// mesCumpleanios.innerHTML = `Cumpleañeros de ${imprimirMes}`;
-
-/* =========== *FIN MES DE CUMPLEAÑEROS ========= */
-
-/* ======IMPRIMIR CUMPLAÑOS====== */
-// socket.on('imprimirCumpleañeros', (cumpleanieros) => {
-//   for (let i = 0; i < cumpleanieros.length; i++) {
-//     __cumpleaniosContainerChild.innerHTML += `
-//     <div >
-//             <img src="../img/happy-icon-01.png" width="80" alt="">
-//             <p><b> ${cumpleanieros[i].nombres}</b></p>
-//             <p>${cumpleanieros[i].fechaCumpleanios}</p>
-//     </div>
-//     `;
-//   }
-// });
 /* ======*FIN IMPRIMIR CUMPLAÑOS====== */
 
 class Reserva {
