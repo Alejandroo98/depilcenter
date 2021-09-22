@@ -17,18 +17,14 @@ let datosReservaSchema = new Schema({
     required: false,
   },
 
-  email: {
-    type: String,
-  },
-
   suscrito: {
-    type: Boolean,
+    type: String,
     required: false,
     default: false,
   },
 
   fechaRegistro: {
-    type: Date,
+    type: String,
     required: [true, 'La fecha de registro es importante'],
   },
 
@@ -37,4 +33,4 @@ let datosReservaSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('datosReserva', datosReservaSchema);
+module.exports = mongoose.model('datosReservas', datosReservaSchema);

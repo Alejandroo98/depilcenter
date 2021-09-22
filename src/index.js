@@ -17,17 +17,15 @@ mongoose.set('useCreateIndex', true);
 require('./passport/passport-auth');
 require('./config/config');
 
-//Inicialicacion
-
-//body-parser
-app.use(express.urlencoded({ extended: false }));
 // parse application/json
-app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
 
 //Configurarciones
 app.use(express.static(path.resolve(__dirname, './public')));
 hbs.registerPartials(__dirname + '/partials');
-hbs.registerHelper('timeago', require('./lib/handlebars').timeago);
+hbs.registerHelper(require('./lib/handlebars'));
+
 app.set('view engine', 'hbs');
 app.set('views', path.resolve(__dirname, 'public/views'));
 

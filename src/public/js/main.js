@@ -56,18 +56,25 @@ $('.date-datapicker-cumpleanios').datepicker({
 
 //Valor de input segun el dia en que nos encontremos
 let dateInput = new Date();
-let monthIput = dateInput.getMonth() + 1;
-let dateCero;
-let dayCero;
-if (monthIput < 10 || dayCero < 10) {
-  dateCero = 0;
+const month = dateInput.getMonth() + 1;
+const day = dateInput.getDate();
+const year = dateInput.getFullYear();
+let dayCero = '';
+let monthCero = '';
+
+if (month < 10) {
+  monthCero = 0;
+} else {
+  monthCero = '';
+}
+
+if (day < 10) {
   dayCero = 0;
 } else {
-  dateCero = '';
   dayCero = '';
 }
 
-let fullDate = `${dayCero}${dateInput.getDate()}-${dateCero}${monthIput}-${dateInput.getFullYear()} `;
+let fullDate = `${dayCero}${day}-${monthCero}${month}-${year} `;
 let form_control_date = document.querySelector('.form-control-date');
 form_control_date.value = fullDate;
 

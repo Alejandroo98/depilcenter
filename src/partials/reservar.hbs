@@ -1,101 +1,130 @@
-<form class='registrarReserva' id='registrarReserva' method='POST'>
+<section class="box-reserva-partial">
 
-  <div class='infoReserva'>
-    <input type='text' id='infoReserva' name='infoReserva' disabled />
+  <div class="__imgEmojisContenedor" class="rotarEmoji">
+    <img id="emojisImg" src="../img/emojis/emojis-1.svg" alt="taall">
   </div>
 
-  <div class='reserva'>
-    <h5>¿DONDE Y CUANDO?</h5>
-    <p>Horarios de antención: 9:00 AM - 6:00 PM</p>
+  <div class="divReservaGrid">
+    <form class='registrarReserva' id='registrarReserva' method='POST'>
+
+      <div class='infoReserva'>
+        <p id="msg-client-reserva">50% DE DESCUENTO</p>
+        <input type='text' id='infoReserva' name='infoReserva' hidden />
+      </div>
+
+      <div class='reserva'>
+        <h5>¿DONDE Y CUANDO?</h5>
+        <p>Horarios de antención: 9:00 AM - 6:00 PM</p>
+      </div>
+
+      <a class='agendarWhatsapp' href='https://n9.cl/7ag1c' target='_blank'>
+        <div>
+          <h6>Agendar por Whatsapp</h6>
+          <img src='../img/social/wtspp.png' alt='' />
+        </div>
+      </a>
+
+      <div class='locales'>
+        <label class='labelLocales' for='local'>Lugar<span> *</span></label>
+        <select name='locales'>
+          <option value='Quito/Condado' selected>Quito/Condado</option>
+        </select>
+      </div>
+
+      <div class='serviciosSelect'>
+        <label for='serviciosSelect'>Servicio<span> *</span></label>
+        <select name='servicio' id='serviciosActive'>
+          <option id='agendarDepilacionCera' value='d_cera'>Depilacion con cera</option>
+          <option id='agendarDepilacionLaser' value='d_laser'>Depilacion laser</option>
+          <option id='agendarFacial' value='l_facial'>Limpiezas faciales</option>
+          <option id='agendarMasajes' value='m_relajantes'>Masajes relajantes</option>
+          <option id='agendarAcne' value='t_acne'>Tratamiento para acne</option>
+          <option id='agendarGluteos' value='gluteos'>Gluteos</option>
+        </select>
+      </div>
+
+      <div class='hora'>
+        <label for='hora'>Hora<span> *</span></label>
+        <select name='hora'>
+          <option value='09:00 AM'>09:00 AM</option>
+          <option value='10:00 AM'>10:00 AM</option>
+          <option value='11:00 AM'>11:00 AM</option>
+          <option value='12:00 AM'>12:00 AM</option>
+          <option value='01:00 PM'>01:00 PM</option>
+          <option value='02:00 PM'>02:00 PM</option>
+          <option value='03:00 PM'>03:00 PM</option>
+          <option value='04:00 PM'>04:00 PM</option>
+          <option value='05:00 PM'>05:00 PM</option>
+          <option value='06:00 PM'>06:00 PM</option>
+        </select>
+        {{! <input id='hora' type='time' name='hora' min='07:59' value='08:00' /> }}
+      </div>
+
+      <div class='fecha'>
+        <label for='fecha'>Fecha<span> *</span></label>
+        <div class='input-group date date-datapicker'>
+          <input type='text' class='form-control form-control-date' value='null' name='fecha' /><span
+            class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
+        </div>
+
+        <p class='errDatos errFecha'></p>
+      </div>
+
+      <div class='datoNombres'>
+        <label for='nombres'>Nombres<span> *</span></label>
+        <input id='nombres' type='text' name='nombres' autocomplete='off' placeholder='Un nombre y un apellido' />
+        {{! <p class="errDatos errNombres"><span class="material-icons errIcon">error_outline</span>Ingresa un nombre
+          valido</p> }}
+        <p class='errDatos errNombres'></p>
+      </div>
+
+      <div class='datoNum'>
+        <label for='numeroTelefono'>Telefono<span> *</span></label>
+        <input id='numeroCelular' type='text' name='numeroTelefono' autocomplete='off' placeholder='Ejm. 0991234567' />
+        {{! <p class="errDatos errNumero">Ingresa un numero valido<span
+            class="material-icons errIcon">error_outline</span></p> }}
+        <p class='errDatos errNumero'></p>
+      </div>
+
+      <div class='datoFechaCumple'>
+        <label for='fechaCumpleaios'>Fecha Cumpleaños
+          <div class="popup-birthday"
+            data-html="<b>Este campoo es opcional</b>, solo llenalo si deseas obtener un descuento especial en tu dia de cumpleaños, esta informacion aparecera en nuestra app web."
+            data-position="top left" style="display:inline">
+            <i class="question circle icon"></i>
+          </div>
+        </label>
+        <div class='input-group date date-datapicker-cumpleanios'>
+          <input type='text' class='form-control form-control-date-cumpleanios' name='fechaCumpleanios'
+            placeholder='dd-mm-yyyy' /><span class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
+        </div>
+        <p class='errDatos errFechaCumpleanios'></p>
+      </div>
+
+      <div class='terminosButton'>
+        <div>
+          <input id='terminos' type='checkbox' name='suscrito' checked />
+          <label for='terminos'>Aceptar terminos y condiciones</label>
+        </div>
+
+        <div class='btn-agendar-cita'>
+          <button type='submit'>
+            AGENDAR CITA
+            <i class="calendar outline icon"></i>
+          </button>
+
+
+        </div>
+      </div>
+
+    </form>
   </div>
 
-  <a class='agendarWhatsapp' href='https://n9.cl/7ag1c' target='_blank'>
-    <div>
-      <h6>Agendar por Whatsapp</h6>
-      <img src='../img/social/wtspp.png' alt='' />
-    </div>
-  </a>
+  <script>
+    $('.popup-birthday')
+      .popup({
+        on: 'hover'
+      });
+  </script>
 
-  <div class='locales'>
-    <label class='labelLocales' for='locales'>Lugar<span> *</span></label>
-    <select name='locales'>
-      <option value='Quito/Condado' selected>Quito/Condado</option>
-    </select>
-  </div>
-
-  <div class='serviciosSelect'>
-    <label for='serviciosSelect'>Servicio<span> *</span></label>
-    <select name='servicios' id='serviciosActive'>
-      <option id='agendarDepilacionCera' value='d_cera'>Depilacion con cera</option>
-      <option id='agendarDepilacionLaser' value='d_laser'>Depilacion laser</option>
-      <option id='agendarFacial' value='l_facial'>Limpiezas faciales</option>
-      <option id='agendarMasajes' value='m_relajantes'>Masajes relajantes</option>
-      <option id='agendarAcne' value='t_acne'>Tratamiento para acne</option>
-      <option id='agendarGluteos' value='gluteos'>Gluteos</option>
-    </select>
-  </div>
-
-  <div class='hora'>
-    <label for='hora'>Hora<span> *</span></label>
-    <select name='hora'>
-      <option value='09:00 AM'>09:00 AM</option>
-      <option value='10:00 AM'>10:00 AM</option>
-      <option value='11:00 AM'>11:00 AM</option>
-      <option value='12:00 AM'>12:00 AM</option>
-      <option value='01:00 PM'>01:00 PM</option>
-      <option value='02:00 PM'>02:00 PM</option>
-      <option value='03:00 PM'>03:00 PM</option>
-      <option value='04:00 PM'>04:00 PM</option>
-      <option value='05:00 PM'>05:00 PM</option>
-      <option value='06:00 PM'>06:00 PM</option>
-    </select>
-    {{! <input id='hora' type='time' name='hora' min='07:59' value='08:00' /> }}
-  </div>
-
-  <div class='fecha'>
-    <label for='fecha'>Fecha<span> *</span></label>
-    <div class='input-group date date-datapicker'>
-      <input type='text' class='form-control form-control-date' value='null' name='fecha' /><span class='input-group-addon'><i
-          class='glyphicon glyphicon-th'
-        ></i></span>
-    </div>
-
-    <p class='errDatos errFecha'></p>
-  </div>
-
-  <div class='datoNombres'>
-    <label for='nombres'>Nombres<span> *</span></label>
-    <input id='nombres' type='text' name='nombres' autocomplete='off' placeholder='Un nombre y un apellido' />
-    {{! <p class="errDatos errNombres"><span class="material-icons errIcon">error_outline</span>Ingresa un nombre valido</p> }}
-    <p class='errDatos errNombres'></p>
-  </div>
-
-  <div class='datoNum'>
-    <label for='numeroTelefono'>Telefono<span> *</span></label>
-    <input id='numeroCelular' type='text' name='numeroCelular' autocomplete='off' placeholder='Ejm. 0991234567' />
-    {{! <p class="errDatos errNumero">Ingresa un numero valido<span class="material-icons errIcon">error_outline</span></p> }}
-    <p class='errDatos errNumero'></p>
-  </div>
-
-  <div class='datoFechaCumple'>
-    <label for='fechaCumpleaios'>Fecha Cumpleaños</label>
-    <div class='input-group date date-datapicker-cumpleanios'>
-      <input type='text' class='form-control form-control-date-cumpleanios' name='cumpleanios' placeholder='dd-mm-yyyy' /><span
-        class='input-group-addon'
-      ><i class='glyphicon glyphicon-th'></i></span>
-    </div>
-    <p class='errDatos errFechaCumpleanios'></p>
-  </div>
-
-  <div class='terminosButton'>
-    <div class='agendarBotonChildOne'>
-      <input id='terminos' type='checkbox' name='suscripcion' checked />
-      <label for='terminos'>Aceptar terminos y condiciones</label>
-    </div>
-
-    <div class='agendarBotonTwo'>
-      <button type='submit'>Agendar Cita&nbsp </button>
-    </div>
-  </div>
-
-</form>
+</section>

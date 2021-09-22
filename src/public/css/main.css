@@ -19,10 +19,6 @@ body {
   --rojoText: #fa8072;
 }
 
-#agendarCumpleaniero {
-  cursor: pointer;
-}
-
 .cajaPrincipal {
   background-image: url(../img/backgroundIndex.png);
   background-position: center;
@@ -31,272 +27,25 @@ body {
   height: 630px;
 }
 
-.cajaDatos-caja {
-  display: flex;
-  padding: 30px 0;
-  justify-content: center;
-}
-
-.cajaDatos-caja p {
-  margin-top: 10px;
-  margin-bottom: 35px;
-  color: #a0004d;
-}
-
-.cajaDatos-caja img {
-  width: 200px;
-}
-
-.cajaDatos-caja span {
-  font-size: 21px;
-  font-weight: 600;
-  font-family: 'Poiret One', cursive;
-}
-
-.ajustarAlert {
-  display: flex;
-  justify-content: center;
-}
-
-.alert-danger {
-  position: absolute;
-  top: 58px;
-}
-
-/* ======= SECCION DE RESERVA - FOOTER - INFROMACION ==============*/
-
-.horariosAtenconChild {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 8px;
-  gap: 8px;
-}
-
-.horariosAtenconChild > div {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
-}
-
-.horariosReserva .horariosAtenconChild > div > h6,
-.horariosReserva .horariosAtenconChild > div > p {
-  margin: 0;
-}
-.datosReserva .horariosAtenconChild p {
-  background: none;
-}
-
-.horariosAtenconChild div:nth-child(3) {
-  grid-column: span 2 !important;
-}
-
-.agendarBoton {
-  text-align: center;
-  margin: auto;
-  grid-column: span 3;
-}
-
-.agendarBoton button {
-  border: none;
-  margin: 0;
-  padding: 14px 24px;
-  background-color: var(--rojo);
-  font-weight: 500;
-  border-radius: 10px;
-}
-
-.background {
-  padding-bottom: 310px;
-}
-
-/* ===========FIN APAREZCA SUABE LA PARTE DE RESERVAR ============== */
-
-/* ===========APAREZCA SUABE LA PARTE DE RESERVAR ============== */
-/* =========RESERVA GRID============== */
-
-.__imgEmojisContenedor {
-  position: absolute;
-  bottom: -100px;
-  left: -100px;
-}
-
-.__imgEmojisContenedor img {
-  width: 400px;
-}
-
-.divReservaGrid {
-  animation-name: ejectoReserva;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
-  max-width: 95%;
-}
-
-.registrarReserva {
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(7, minmax(min-content, 190px));
-  gap: 5px 18px;
-}
-
-.reserva {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  grid-column: span 7;
-}
-
-.reserva p {
-  margin: 0;
-}
-
-.agendarWhatsapp {
-  text-decoration: none;
+#agendarCumpleaniero {
   cursor: pointer;
-  padding: 5px 15px 7px 15px;
-  border-radius: 10px;
-  color: white;
-  justify-self: center;
-  grid-column: span 7;
-  background-color: rgb(6, 158, 6);
-}
-.agendarWhatsapp:hover {
-  background-color: rgb(6, 131, 6);
-  color: white;
-}
-
-.agendarWhatsapp img {
-  width: 20px;
-  margin: 0;
-}
-
-.agendarWhatsapp h6 {
-  display: inline-block;
-  font-size: 13px;
-  margin: 0;
-}
-
-.datosReserva {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(315px, 100%));
-  grid-template-rows: repeat(5, 1fr) auto;
-  gap: 10px 0;
-}
-
-.imgResera {
-  background-image: url(../img/background-local.png);
-  background-size: cover;
-}
-
-@keyframes ejectoReserva {
-  from {
-    margin-top: 0;
-    opacity: 0;
-  }
-
-  to {
-    /* margin: 100px 0 100px 0; */
-    opacity: 1;
-  }
-}
-
-.divReservaGrid > div,
-form {
-  border-radius: 10px;
-}
-
-/* ===========FORMULARIO================= */
-.hora input,
-.fecha input,
-.datoNombres input,
-.datoEmail input,
-.datoNum input,
-.datoFechaCumple input,
-select {
-  width: 100%;
-  height: 50px;
-  border: none;
-  background: none;
-  font-weight: 500;
-  border-bottom: 2px solid rgb(156, 156, 156);
-  outline: none;
 }
 
 .infoReserva {
   display: block;
   position: absolute;
-  color: white;
 }
 
-.infoReserva input {
-  border: none;
-  border-radius: 25px;
-  background-color: rgb(12, 180, 209);
-  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
+.infoReserva p {
+  display: block;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   margin: 0;
-  font-size: 14px;
-  padding: 5px 0;
-  color: white;
-  text-align: center;
-  font-weight: bold;
+  text-align: left !important;
+  padding: 5px 10px;
+  max-width: 200px;
 }
-
-.registrarReserva label {
-  color: rgb(102, 101, 101);
-}
-
-.registrarReserva > div > label > span {
-  color: rgb(238, 74, 74);
-  /* background-color: red; */
-}
-
-.registrarReserva > div > p {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
-.registrarReserva > div > p > span {
-  font-size: 20px;
-}
-
-.reserva h5 {
-  font-size: 20px;
-  margin: 0;
-}
-
-.reserva p {
-  color: var(--letras);
-}
-
-.errDatos {
-  color: rgb(246, 151, 151);
-  font-size: 13px;
-}
-
-.terminosButton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-column: span 7;
-}
-
-.terminosButton button {
-  margin-top: 10px;
-  background-color: salmon;
-  padding: 5px 15px;
-  border-radius: 5px;
-  border: none;
-  color: white;
-  font-size: 18px;
-}
-
-/* ===========FIN FORMULARIO================= */
 
 .datosReserva > div {
   border-radius: 10px;

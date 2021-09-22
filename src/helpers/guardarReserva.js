@@ -1,46 +1,31 @@
-const reserva = require('../models/reserva');
+const DatosUsuario = require('../models/datosReserva');
 const DatosReserva = require('../models/reserva');
-const DatosUsuario = require('../models/reserva');
 
 const guardarDB = {};
 
-guardarDB.guardarDatosUsuario = async ({ nombres, celular, fechaRegistro, fechaCumpleanios, suscrito }) => {
-  const usuario = new DatosUsuario({
-    nombres,
-    celular,
-    fechaRegistro,
-    fechaCumpleanios,
-    suscrito,
-  });
-
-  usuario.save((err, user) => {
-    if (err) {
-      return { ok: false };
+guardarDB.guardarDatosUsuario = async ({ numeroTelefono, ...rest }) => {
+  const user = await DatosUsuario.findOne({ numeroTelefono });
+  try {
+    if (!user) {
+      const nuevoRegistro = new DatosUsuario({ numeroTelefono, ...rest });
+      await nuevoRegistro.save();
     }
-
-    return { ok: true, user };
-  });
+    return true;
+  } catch (error) {
+    return false;
+  }
 };
 
-guardarDB.guardarDatosReserva = async ({ celular, lugar, servicio, hora, fecha }) => {
-  const { _id: idUser } = await DatosReserva.findOne({ celular });
-
-  const reserva = new Reserva({
-    idUser,
-    lugar,
-    servicio,
-    hora,
-    fecha,
-    fechaCumpleanios,
-  });
-
-  reserva.save((err, user) => {
-    if (err) {
-      return { ok: false };
-    }
-
-    return { ok: true, user };
-  });
+guardarDB.guardarDatosReserva = async ({ numeroTelefono, ...rest }) => {
+  try {
+    const { _id: idUser } = await DatosUsuario({ numeroTelefono });
+    const reserva = new DatosReserva({ ...rest, idUser });
+    reserva.save();
+    return true;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
 };
 
 module.exports = guardarDB;

@@ -1,0 +1,200 @@
+.box-reserva-partial {
+  display: flex;
+  position: relative;
+  background-color: rgb(255, 231, 231);
+  /* background: rgb(254, 204, 204);
+  background: linear-gradient(186deg, rgba(254, 204, 204, 1) 0%, rgba(254, 230, 230, 1) 100%); */
+  border-top: 4px solid #ffc5c5;
+  border-bottom: 4px solid #ffc5c5;
+  padding: 15px 0;
+  justify-content: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  overflow: hidden;
+}
+
+.ajustarAlert {
+  display: flex;
+  justify-content: center;
+}
+
+.alert-danger {
+  position: absolute;
+  top: 58px;
+}
+
+/* ========= RESERVA GRID ============== */
+
+.__imgEmojisContenedor {
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+}
+
+.__imgEmojisContenedor img {
+  width: 300px;
+}
+
+.divReservaGrid {
+  animation-name: ejectoReserva;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  max-width: 95%;
+}
+
+.registrarReserva {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(7, minmax(min-content, 190px));
+  gap: 5px 18px;
+}
+
+.reserva {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  grid-column: span 7;
+}
+
+.reserva p {
+  margin: 0;
+}
+
+.agendarWhatsapp {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 3px 12px 4px 12px;
+  border-radius: 4px;
+  color: white;
+  justify-self: center;
+  grid-column: span 7;
+  background-color: rgb(6, 158, 6);
+  margin: 5px 0;
+}
+
+.agendarWhatsapp:hover {
+  background-color: rgb(6, 131, 6);
+}
+
+.agendarWhatsapp img {
+  width: 17px;
+  margin: 0;
+}
+
+.agendarWhatsapp h6 {
+  display: inline-block;
+  font-size: 11px;
+  margin: 0;
+}
+
+.datosReserva {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(315px, 100%));
+  grid-template-rows: repeat(5, 1fr) auto;
+  gap: 10px 0;
+}
+
+.imgResera {
+  background-image: url(../img/background-local.png);
+  background-size: cover;
+}
+
+.terminosButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: span 7;
+  margin: 5px 0 0 0;
+}
+
+.terminosButton > div {
+  margin: 5px 0;
+}
+
+.terminosButton button {
+  background-color: #f37e78;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 8px 15px 7px 15px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.hora input,
+.fecha input,
+.datoNombres input,
+.datoEmail input,
+.datoNum input,
+.datoFechaCumple input,
+select {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: none;
+  font-weight: 500;
+  border-bottom: 2px solid rgb(156, 156, 156);
+  outline: none;
+}
+
+.datoFechaCumple input:focus,
+.fecha input:focus {
+  background: none;
+  border: none !important;
+  outline: none !important;
+}
+
+.registrarReserva label {
+  color: rgb(102, 101, 101);
+}
+
+.registrarReserva > div > label > span {
+  color: rgb(238, 74, 74);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.registrarReserva > div > p {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.registrarReserva > div > p > span {
+  font-size: 20px;
+}
+
+.reserva h5 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.reserva p {
+  color: var(--letras);
+}
+
+.errDatos {
+  color: rgb(246, 151, 151);
+  font-size: 13px;
+}
+
+@keyframes ejectoReserva {
+  from {
+    margin-top: 0;
+    opacity: 0;
+  }
+
+  to {
+    /* margin: 100px 0 100px 0; */
+    opacity: 1;
+  }
+}
+
+.divReservaGrid > div,
+form {
+  border-radius: 10px;
+}
+
+/* =========== FORMULARIO ================= */

@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 const datosReserva = require('./datosReserva');
+const Schema = mongoose.Schema;
 
 let reservaSchema = new Schema({
-  local: {
+  reservaData: {
+    type: Object,
+  },
+
+  locales: {
     type: String,
     required: [true, 'El local es necesario'],
   },
@@ -28,10 +32,14 @@ let reservaSchema = new Schema({
     required: [true, 'La fecha de registro es importante'],
   },
 
+  infoReserva: {
+    type: String,
+  },
+
   idUser: {
     type: Schema.Types.ObjectId,
     ref: datosReserva,
   },
 });
 
-module.exports = mongoose.model('Reserva', reservaSchema);
+module.exports = mongoose.model('reservas', reservaSchema);
