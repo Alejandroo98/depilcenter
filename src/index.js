@@ -42,7 +42,7 @@ app.use(flash());
 // app.use(passport.session());
 
 app.use((req, res, next) => {
-  app.locals.error = req.flash('error')[0];
+  res.locals.error = req.flash('error')[0];
   res.locals.recaptcha = req.flash('recaptcha')[0];
   res.locals.registroError = req.flash('registroError');
   res.locals.registroOk = req.flash('registroOk');

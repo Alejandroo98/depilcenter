@@ -2,8 +2,6 @@
   display: flex;
   position: relative;
   background-color: rgb(255, 231, 231);
-  /* background: rgb(254, 204, 204);
-  background: linear-gradient(186deg, rgba(254, 204, 204, 1) 0%, rgba(254, 230, 230, 1) 100%); */
   border-top: 4px solid #ffc5c5;
   border-bottom: 4px solid #ffc5c5;
   padding: 15px 0;
@@ -20,9 +18,16 @@
 .alert-danger {
   position: absolute;
   top: 58px;
+  margin: 0 !important  ;
 }
 
 /* ========= RESERVA GRID ============== */
+.negative-message {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
+  border: none !important;
+  grid-column: span 7;
+  text-align: center;
+}
 
 .__imgEmojisContenedor {
   position: absolute;

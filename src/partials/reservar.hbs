@@ -5,6 +5,17 @@
   </div>
 
   <div class="divReservaGrid">
+    {{#if error}}
+    <div class="ui negative message negative-message">
+      <div class="header">
+        <p>
+          {{ error.msg }}
+          <i class="eye icon"></i>
+        </p>
+      </div>
+    </div>
+    {{/if}}
+
     <form class='registrarReserva' id='registrarReserva' method='POST'>
 
       <div class='infoReserva'>
@@ -24,6 +35,8 @@
         </div>
       </a>
 
+
+
       <div class='locales'>
         <label class='labelLocales' for='local'>Lugar<span> *</span></label>
         <select name='locales'>
@@ -34,28 +47,30 @@
       <div class='serviciosSelect'>
         <label for='serviciosSelect'>Servicio<span> *</span></label>
         <select name='servicio' id='serviciosActive'>
-          <option id='agendarDepilacionCera' value='d_cera'>Depilacion con cera</option>
-          <option id='agendarDepilacionLaser' value='d_laser'>Depilacion laser</option>
-          <option id='agendarFacial' value='l_facial'>Limpiezas faciales</option>
-          <option id='agendarMasajes' value='m_relajantes'>Masajes relajantes</option>
-          <option id='agendarAcne' value='t_acne'>Tratamiento para acne</option>
-          <option id='agendarGluteos' value='gluteos'>Gluteos</option>
+          <option id="d_cera" value='d_cera'>Depilacion con cera</option>
+          <option id="d_laser" value='d_laser'>Depilacion laser</option>
+          <option id="l_facial" value='l_facial'>Limpiezas faciales</option>
+          <option id="m_relajantes" value='m_relajantes'>Masajes relajantes</option>
+          <option id="t_acne" value='t_acne'>Tratamiento para acne</option>
+          <option id="gluteos" value='gluteos'>Gluteos</option>
         </select>
       </div>
+
+
 
       <div class='hora'>
         <label for='hora'>Hora<span> *</span></label>
         <select name='hora'>
-          <option value='09:00 AM'>09:00 AM</option>
-          <option value='10:00 AM'>10:00 AM</option>
-          <option value='11:00 AM'>11:00 AM</option>
-          <option value='12:00 AM'>12:00 AM</option>
-          <option value='01:00 PM'>01:00 PM</option>
-          <option value='02:00 PM'>02:00 PM</option>
-          <option value='03:00 PM'>03:00 PM</option>
-          <option value='04:00 PM'>04:00 PM</option>
-          <option value='05:00 PM'>05:00 PM</option>
-          <option value='06:00 PM'>06:00 PM</option>
+          <option id="09:00_AM" value='09:00_AM'>09:00 AM</option>
+          <option id="10:00_AM" value='10:00_AM'>10:00 AM</option>
+          <option id="11:00_AM" value='11:00_AM'>11:00 AM</option>
+          <option id="12:00_AM" value='12:00_AM'>12:00 AM</option>
+          <option id="01:00_PM" value='01:00_PM'>01:00 PM</option>
+          <option id="02:00_PM" value='02:00_PM'>02:00 PM</option>
+          <option id="03:00_PM" value='03:00_PM'>03:00 PM</option>
+          <option id="04:00_PM" value='04:00_PM'>04:00 PM</option>
+          <option id="05:00_PM" value='05:00_PM'>05:00 PM</option>
+          <option id="06:00_PM" value='06:00_PM'>06:00 PM</option>
         </select>
         {{! <input id='hora' type='time' name='hora' min='07:59' value='08:00' /> }}
       </div>
@@ -63,7 +78,7 @@
       <div class='fecha'>
         <label for='fecha'>Fecha<span> *</span></label>
         <div class='input-group date date-datapicker'>
-          <input type='text' class='form-control form-control-date' value='null' name='fecha' /><span
+          <input type='text' class='form-control form-control-date' value="{{ error.fecha }}" name='fecha' /><span
             class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
         </div>
 
@@ -72,7 +87,8 @@
 
       <div class='datoNombres'>
         <label for='nombres'>Nombres<span> *</span></label>
-        <input id='nombres' type='text' name='nombres' autocomplete='off' placeholder='Un nombre y un apellido' />
+        <input value="{{ error.nombres }}" id='nombres' type='text' name='nombres' autocomplete='off'
+          placeholder='Un nombre y un apellido' />
         {{! <p class="errDatos errNombres"><span class="material-icons errIcon">error_outline</span>Ingresa un nombre
           valido</p> }}
         <p class='errDatos errNombres'></p>
@@ -80,7 +96,8 @@
 
       <div class='datoNum'>
         <label for='numeroTelefono'>Telefono<span> *</span></label>
-        <input id='numeroCelular' type='text' name='numeroTelefono' autocomplete='off' placeholder='Ejm. 0991234567' />
+        <input value="{{ error.numeroTelefono }}" id='numeroCelular' type='text' name='numeroTelefono'
+          autocomplete='off' placeholder='Ejm. 0991234567' />
         {{! <p class="errDatos errNumero">Ingresa un numero valido<span
             class="material-icons errIcon">error_outline</span></p> }}
         <p class='errDatos errNumero'></p>
@@ -89,17 +106,20 @@
       <div class='datoFechaCumple'>
         <label for='fechaCumpleaios'>Fecha Cumpleaños
           <div class="popup-birthday"
-            data-html="<b>Este campoo es opcional</b>, solo llenalo si deseas obtener un descuento especial en tu dia de cumpleaños, esta informacion aparecera en nuestra app web."
+            data-html="<b>Este campoo es opcional, llenalo solo la primera vez</b>, solo llenalo si deseas obtener un descuento especial en tu dia de cumpleaños, esta informacion aparecera en nuestra app web."
             data-position="top left" style="display:inline">
             <i class="question circle icon"></i>
           </div>
         </label>
         <div class='input-group date date-datapicker-cumpleanios'>
-          <input type='text' class='form-control form-control-date-cumpleanios' name='fechaCumpleanios'
-            placeholder='dd-mm-yyyy' /><span class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
+          <input value="{{ error.fechaCumpleanios }}" type='text' class='form-control form-control-date-cumpleanios'
+            value="{{ error.fechaCumpleanios }}" name='fechaCumpleanios' placeholder='dd-mm-yyyy' /><span
+            class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
         </div>
         <p class='errDatos errFechaCumpleanios'></p>
       </div>
+
+
 
       <div class='terminosButton'>
         <div>

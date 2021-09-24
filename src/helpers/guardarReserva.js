@@ -12,7 +12,8 @@ guardarDB.guardarDatosUsuario = async ({ numeroTelefono, ...rest }) => {
     }
     return true;
   } catch (error) {
-    return false;
+    console.log(error);
+    throw new Error('Error interno, intenta mas tarde');
   }
 };
 
@@ -24,7 +25,7 @@ guardarDB.guardarDatosReserva = async ({ numeroTelefono, ...rest }) => {
     return true;
   } catch (error) {
     console.log(error);
-    return false;
+    throw new Error('Error interno, intenta mas tarde');
   }
 };
 

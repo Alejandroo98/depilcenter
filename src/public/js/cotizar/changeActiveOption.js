@@ -2,8 +2,8 @@ const changeActiveOption = () => {
   const url = location.pathname;
 
   const urlParams = new URLSearchParams(window.location.search);
-  const selectHombreMujer = document.querySelector('.depilacion_cera_select');
   const myParam = urlParams.get('genero');
+  const selectHombreMujer = document.querySelector('.depilacion_cera_select');
 
   const activeOption = (id) => {
     document.getElementById(id).setAttribute('selected', '');

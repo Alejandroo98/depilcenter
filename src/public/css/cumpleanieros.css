@@ -63,7 +63,7 @@
   margin: 0;
 }
 
-.cumpleanios-container-card {
+.cumpleanios-container-cards {
   display: flex;
   z-index: 4;
   justify-content: space-between;
@@ -80,6 +80,7 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   /* background-color: rgb(255, 235, 235); */
   background-color: white;
+  width: 230px;
 }
 
 .card-content-cumpleanios {
@@ -88,6 +89,7 @@
   justify-content: space-evenly;
   min-width: 130px;
   width: min-content;
+  width: 100%;
 }
 
 .card-content-cumpleanios b {
