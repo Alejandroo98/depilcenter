@@ -19,7 +19,7 @@
     <form class='registrarReserva' id='registrarReserva' method='POST'>
 
       <div class='infoReserva'>
-        <p id="msg-client-reserva">50% DE DESCUENTO</p>
+        <span id="msg-client-reserva"></span>
         <input type='text' id='infoReserva' name='infoReserva' hidden />
       </div>
 
@@ -47,12 +47,9 @@
       <div class='serviciosSelect'>
         <label for='serviciosSelect'>Servicio<span> *</span></label>
         <select name='servicio' id='serviciosActive'>
-          <option id="d_cera" value='d_cera'>Depilacion con cera</option>
-          <option id="d_laser" value='d_laser'>Depilacion laser</option>
-          <option id="l_facial" value='l_facial'>Limpiezas faciales</option>
-          <option id="m_relajantes" value='m_relajantes'>Masajes relajantes</option>
-          <option id="t_acne" value='t_acne'>Tratamiento para acne</option>
-          <option id="gluteos" value='gluteos'>Gluteos</option>
+          {{#each servicios}}
+          <option id="{{ id }}" data-desc="{{ data_desc }}" value='{{ id }}'>{{ name }} </option>
+          {{/each}}
         </select>
       </div>
 

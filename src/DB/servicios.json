@@ -1,0 +1,158 @@
+[
+  {
+    "id": "d_cera",
+    "name": "Depilación con cera",
+    "indicaciones": "Esta son las indicaciones de d_cera",
+    "header": true,
+    "title": "DEPILACIÓN CON CERA",
+    "subTitle": "tibia",
+    "porcentaje": "%40",
+    "porcentajeTxt": "DE DESCUENTO",
+    "bar": "Aplica en todos los combos",
+    "img": "../img/header/mujer3.png",
+    "active": "active",
+    "alt": "Descuento promocion en depilacion con cera tibia",
+    "agendarUrl": "#",
+    "cotizarUrl": "#",
+    "otroServicio": false,
+    "data_desc": "40% DESCUENTO",
+    "selectForm": true
+  },
+  {
+    "id": "d_laser",
+    "name": "Depilación laser",
+    "indicaciones": "Esta son las indicaciones de d_laser",
+    "header": true,
+    "title": "DEPILACIÓN",
+    "subTitle": "definitiva",
+    "porcentaje": "DOS",
+    "porcentajeTxt": "SESIONES GRATIS",
+    "bar": "Tiempo limitado",
+    "img": "../img/header/mujer5.png",
+    "active": "",
+    "alt": "Descuento promocion en depilacion definitiva",
+    "agendarUrl": "#",
+    "cotizarUrl": "#",
+    "otroServicio": false,
+    "data_desc": "2 SESIONES GRATIS",
+    "selectForm": true
+  },
+  {
+    "id": "b_axilas",
+    "name": "Blanqueamiento de axilas",
+    "title": "BLANQUEMIENTO DE",
+    "subTitle": "axilas",
+    "porcentaje": "%15",
+    "porcentajeTxt": "DE DESCUENTO",
+    "bar": "4 SESIONES",
+    "img": "../img/header/mujer2.png",
+    "active": "",
+    "alt": "Descuento promocion blanqueamiento de axilas",
+    "agendarUrl": "#",
+    "cotizarUrl": "#",
+    "header": true,
+    "otroServicio": true,
+    "data_desc": "%15 DESCUENTO",
+    "selectForm": true,
+    "cotizarData": {
+      "id": "T_BA3",
+      "nombre": "Blanqueamiento de axilas",
+      "precioIndividual": "60",
+      "color": "rojo",
+      "msg": "• 4 sesiones"
+    }
+  },
+  {
+    "id": "l_facial",
+    "name": "Limpiezas faciales",
+    "indicaciones": "Esta son las indicaciones de l_facial",
+    "header": true,
+    "title": "LIMPIEZA FACIAL",
+    "subTitle": "profunda",
+    "porcentaje": "DOS",
+    "porcentajeTxt": "SESIONES GRATIS",
+    "bar": "Tiempo limitado",
+    "img": "../img/header/mujer4.png",
+    "active": "",
+    "alt": "Descuento promocion en limpiezas faciales",
+    "agendarUrl": "#",
+    "cotizarUrl": "#",
+    "otroServicio": true,
+    "data_desc": "2X1",
+    "selectForm": true,
+    "cotizarData": {
+      "id": "T_LF1",
+      "nombre": "Limpieza facial",
+      "precioIndividual": "25",
+      "color": "rojo",
+      "msg": "• Dos personas por $35"
+    }
+  },
+
+  {
+    "id": "d_hombre",
+    "name": "Depilacion masculina",
+    "title": "DEPILACIÓN HOMBRE",
+    "subTitle": "definitiva",
+    "porcentaje": "DOS",
+    "porcentajeTxt": "",
+    "bar": "SESIONES GRATIS",
+    "img": "../img/header/hombre1.png",
+    "active": "",
+    "alt": "Descuento promocion en depilacion con cera tibia masculina",
+    "header": true,
+    "agendarUrl": "#",
+    "cotizarUrl": "#",
+    "data_desc": "2 SESIONES GRATIS",
+    "selectForm": false,
+    "otroServicio": false
+  },
+  {
+    "id": "m_relajantes",
+    "name": "Masajes relajantes",
+    "indicaciones": "Esta son las indicaciones de m_relajantes",
+    "header": false,
+    "otroServicio": true,
+    "selectForm": true,
+    "cotizarData": {
+      "id": "T_MA4",
+      "nombre": "Masajes",
+      "precioIndividual": "25",
+      "color": "rojo",
+      "msg": ""
+    },
+    "data_desc": "2X1"
+  },
+  {
+    "id": "t_acne",
+    "name": "Tratemiento para acné",
+    "indicaciones": "Esta son las indicaciones de t_acne",
+    "header": false,
+    "otroServicio": true,
+    "data_desc": "",
+    "selectForm": true,
+    "cotizarData": {
+      "id": "T_TA5",
+      "nombre": "Tratamiento para a acné",
+      "precioIndividual": "80",
+      "color": "rojo",
+      "msg": "• 10 sesiones"
+    }
+  },
+  {
+    "id": "l_gluteos",
+    "name": "Gluteos",
+    "indicaciones": "Esta son las indicaciones de l_gluteos",
+    "header": false,
+    "otroServicio": true,
+    "data_desc": "",
+    "selectForm": true,
+    "cotizarData": {
+      "id": "T_LG2",
+      "nombre": "Levantamiento de gluteos",
+      "precioIndividual": "100",
+      "color": "rojo",
+      "msg": "• 10 sesiones"
+    }
+  }
+]

@@ -80,10 +80,10 @@
 
               <div class="boxOtrosServicios">
                 {{#each otrosServicios}}
-                <div id="{{ id }}" class="{{ color }}">
-                  {{ nombre }}
-                  <i>{{ msg }}</i>
-                  <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
+                <div id="{{ cotizarData.id }}" class="{{ cotizarData.color }}">
+                  {{ cotizarData.nombre }}
+                  <i>{{ cotizarData.msg }}</i>
+                  <span id="precio_{{ cotizarData.id }}">$ {{cotizarData.precioIndividual}}</span>
                 </div>
                 {{/each}}
               </div>

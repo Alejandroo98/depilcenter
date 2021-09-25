@@ -1,17 +1,16 @@
 const { Router } = require('express');
+const { filterServicios } = require('../helpers/filtros');
 const router = Router();
-const {
-  getDepilacionCera,
-  getDepilacionDefinitiva,
-  getOtrosServicios,
-} = require('../helpers/getDataZonas');
+const { getDepilacionCera, getDepilacionDefinitiva } = require('../helpers/getDataZonas');
 const { comprovarQueryGenero } = require('../middleware/queryGenero');
 
 router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
   let zonas = [];
 
-  const otrosServicios = getOtrosServicios();
+  const otrosServicios = filterServicios('otroServicio', true);
+
   console.log(otrosServicios);
+
   const { genero } = req.query;
 
   if (genero == 'mujer') {

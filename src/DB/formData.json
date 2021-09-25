@@ -1,13 +1,5 @@
 [
   {
-    "serviciosSelect": [
-      { "id": "d_cera", "name": "Depilación con cera" },
-      { "id": "d_laser", "name": "Depilación laser" },
-      { "id": "l_facial", "name": "Limpiezas faciales" },
-      { "id": "m_relajantes", "name": "Masajes relajantes" },
-      { "id": "t_acne", "name": "Tratemiento para acné" },
-      { "id": "gluteos", "name": "Gluteos" }
-    ],
     "horaSelect": [
       { "id": "09:00_AM", "name": "09:00 AM" },
       { "id": "10:00_AM", "name": "10:00 AM" },

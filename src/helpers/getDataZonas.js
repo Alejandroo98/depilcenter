@@ -1,6 +1,5 @@
 const depilacionCera = require('../DB/depilacion-cera.json');
 const depilacionDefinitiva = require('../DB/depilacion-definitiva.json');
-const otrosServicios = require('../DB/otros-servicios.json');
 
 const getDepilacionCera = (genero) => {
   if (genero == 'mujer') {
@@ -18,8 +17,4 @@ const getDepilacionDefinitiva = (genero) => {
   }
 };
 
-const getOtrosServicios = () => {
-  return otrosServicios;
-};
-
-module.exports = { getDepilacionCera, getDepilacionDefinitiva, getOtrosServicios };
+module.exports = { getDepilacionCera, getDepilacionDefinitiva };

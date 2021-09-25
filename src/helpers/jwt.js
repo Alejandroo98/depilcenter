@@ -1,9 +1,11 @@
 const jwt = require('jsonwebtoken');
-const servicios = require('../DB/formData.json');
+const selectHora = require('../DB/formData.json');
+const servicios = require('../DB/servicios.json');
 
 const changeValuesServicios = (idServicio, idHora) => {
-  const { serviciosSelect, horaSelect } = servicios[0];
-  const { name: nameServicio } = serviciosSelect.find((servicio) => {
+  const { horaSelect } = selectHora[0];
+
+  const { name: nameServicio, indicaciones } = servicios.find((servicio) => {
     return servicio.id == idServicio;
   });
 
@@ -11,15 +13,20 @@ const changeValuesServicios = (idServicio, idHora) => {
     return hora.id == idHora;
   });
 
-  return { nameServicio, nameHora };
+  console.log(nameServicio, nameHora, indicaciones);
+  return { nameServicio, nameHora, indicaciones };
 };
 
 const generarJWT = (reservaData) => {
-  const { nameServicio, nameHora } = changeValuesServicios(reservaData.servicio, reservaData.hora);
+  const { nameServicio, nameHora, indicaciones } = changeValuesServicios(
+    reservaData.servicio,
+    reservaData.hora
+  );
 
   return new Promise((resolve, reject) => {
     reservaData.servicio = nameServicio;
     reservaData.hora = nameHora;
+    reservaData.indicaciones = indicaciones;
 
     const payload = { reservaData };
 
@@ -27,7 +34,7 @@ const generarJWT = (reservaData) => {
       payload,
       'TOKE_SECRET_KEY',
       {
-        expiresIn: '5m',
+        expiresIn: '5h',
       },
       (err, token) => {
         if (err) {

@@ -1,247 +1,75 @@
 :root {
-    --fondo: rgb(245, 224, 227);
-    --general: #e8908b;
-    --amarillo: rgb(255, 255, 166);
-    --celeste: rgb(150, 230, 226);
-    --rojo: rgb(250, 173, 173);
-    --letras: rgb(119, 119, 119);
-    --negro : rgb(56, 56, 56);
-    --sombra : 2px 2px 2px rgba(0,0,0,0.2);
-  }
-
-  body{
-    background-color: var(--fondo) !important;
-  }
-
-  .__datosReservaContenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    /* text-align: center; */
-    padding: 25px 5px;
-  }
-
-  .__datosReservaContenedor h1 ,.__datosReservaContenedor p{
-    margin: 0;
-  }
-
-  .__datosReservaContenedor h1 {
-    font-family: 'Courgette', cursive;
-    color: salmon;
-  }
-
-  .__datosReservaContenedor h4{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-  }
-
-
-  ._datosReservaChild{
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(2 , minmax( min-content , auto ));
-    /* text-align: center; */
-    /* padding: 30px; */
-    border-radius: 1em;
-    box-shadow: var(--sombra);
-    gap: 4px;
-    overflow: hidden;
-  }
-
-  ._videoReserva {
-    width: 250px;
-    /* background-color: red; */
-  }
-
-  ._videoReserva img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .centrarBrillaras{
-    text-align: center;
-  }
-
-  ._brillarasMasSol{
-    /* background-color: red; */
-    padding: 25px;
-  }
-
-  ._datosDeReserva {
-    display: flex;
-    text-align: start;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 25px;
-    background-color: rgb(240, 240, 240);
-    /* display: inline-block; */
-    border-radius: 5px;
-  }
-
-  ._datosDeReserva h6 {
-    display: inline;
-  }
-
-
-  ._linksReserva a{
-    display: inline-block;
-    border-radius: 15px;
-    text-decoration: none;
-    color: white;
-    background-color: salmon;  
-    padding: 5px 10px;
-    font-weight: 500;
-    margin: 15px 1px;
-  }
-
-  ._linksReserva a:hover{
-    background-color: rgb(246, 142, 142);
-    color: white;
-    text-decoration: underline;
-  }
-
-
-  /* ========================================= */
-  /* ================PRODUCTOS================ */
-  /* ========================================= */
-
-  .__productosTipsContenedor {
-    /* background-color: red; */
-    display: flex;
-    justify-content: center;
-    padding: 10px 10px 360px 10px;
-  }
-  
-
-  ._productosTipsContenedorChild {
-    display: grid;
-    grid-template-columns: repeat(3 , minmax( min-content , 400px ) );
-    gap: 15px;
-    padding: 0 5px;
-  }
-
-  ._productosTipsContenedorChild > div{
-    display: flex;
-    position: relative;
-    /* background-color: rgb(119, 119, 119); */
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--sombra);
-  }
-
-  .spanIcon{
-    display: flex;
-    position: absolute;
-    background-color: var(--rojo);
-    color: white;
-    right: 0;
-    bottom: 0;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 50%;
-  }
-  
-  .spanIcon span{
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-
-  
-  .tituloReservaTips{
-    /* background-color: rgba(0,0,0,0.2); */
-    padding: 10px;
-  }
-    
-
-  .imgReservaProductos{
-    max-width: 150px;
-  }
-
-  .imgReservaProductos img{
-    width: 100%;
-    height: 100%;
-  }
-
-
-  /* ============================================== */
-  /* =================RESPONSIVE=================== */
-  /* ============================================== */
-
-  
-
-@media screen and (max-width : 1230px ){
-  
+  --fondo: rgb(245, 224, 227);
 }
 
-
-@media screen and (max-width : 1065px){
-
-  ._productosTipsContenedorChild{
-    grid-template-columns: repeat(2 , minmax( min-content , 1fr )) ;
-  }
-
-  .spanDos {
-    grid-column: span 2;
-  }
-  
-
-} 
-
-@media screen and ( max-width : 990px ){
- 
+.container-card-reserve {
+  background-color: var(--fondo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
 }
 
-
-
-@media screen and (max-width : 840px ){
-  .__productosTipsContenedor {
-    justify-content: center;
-    padding: 10px 0 660px 0;
-  }
-
+.container-card-reserve img {
+  width: 70px !important;
+  position: absolute !important;
+  border-radius: 5px;
+}
+.title-header-card {
+  padding: 20px 0;
+  /* background-color: aqua; */
 }
 
-@media screen and (max-width : 600px ){
-  ._datosReservaChild{
-    width: 100%;
-    grid-template-columns: 100%;
-  }
+.header,
+.meta {
+  text-align: center;
+}
 
-  .spanDos {
-    grid-column: auto;
-  }
- 
-  ._productosTipsContenedorChild > div{
-    max-width: 100%;
-  }
+.ui-card-reserva .card {
+  min-width: 800px;
+}
 
+.description-reserva table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.description-reserva table td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(212, 212, 212);
+  padding: 5px;
+}
+.content i {
+  margin: 0 1px !important;
+}
 
-  ._productosTipsContenedorChild{
-    padding: 10px;
-    grid-template-columns: repeat(1 , minmax( min-content , auto )) ;
-  }
+.recomendaciones-content {
+  /* background-color: rgb(233, 233, 233); */
+  border: 1px solid rgb(179, 179, 179);
+  text-align: justify;
+  padding: 8px;
+  margin: 5px 0 5px 0;
+  border-radius: 5px;
+}
+.txt-cancelarReagendar {
+  background-color: rgb(255, 238, 238);
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 0 0 5px 0;
+}
+.recomendaciones-content a {
+  color: rgb(145, 145, 145) !important;
+}
 
-  ._brillarasMasSol{
-    padding: 0;
-  }
+.recomendaciones-content a:hover {
+  color: rgb(88, 88, 88) !important;
+}
 
-  ._videoReserva {
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 15px auto;
-    /* width: 100%; */
-  }
-
-  ._datosDeReserva{
-    margin: 15px;
-  }
-
-  ._datosReservaChild{
-    gap: 0;
-  }
-  
+.txt-puntualidad {
+  background-color: rgb(233, 233, 233);
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 0 0 5px 0;
 }
