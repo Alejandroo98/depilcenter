@@ -53,26 +53,43 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <b>Nombres: </b> {{reservaData.nombres}} <br>
+                                        <b>Nombres: </b> {{reservaData.nombres}}
                                     </td>
                                     <td>
-                                        <b>Telefono: </b> {{reservaData.numeroTelefono}} <br>
+                                        <b>Telefono: </b> {{reservaData.numeroTelefono}}
                                     </td>
                                     <td>
-                                        <b>Local: </b> {{reservaData.locales}} <br>
+                                        <b>Local: </b> {{reservaData.locales}}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <b>Servicio:</b> {{reservaData.servicio}} <br>
+                                        <b>Servicio:</b> {{reservaData.servicio}}
                                     </td>
                                     <td>
-                                        <b>Fecha</b> {{reservaData.fecha}} <br>
+                                        <b>Fecha</b> {{reservaData.fecha}}
                                     </td>
                                     <td>
-                                        <b>Hora: </b> {{reservaData.hora}} <br>
+                                        <b>Hora: </b> {{reservaData.hora}}
                                     </td>
                                 </tr>
+                                {{#if reservaData.infoReserva}}
+                                <tr>
+                                    <td colspan="3">
+                                        <b>Promocion:</b> {{ reservaData.infoReserva }}
+                                    </td>
+                                </tr>
+                                {{/if}}
+                                {{#if reservaData.zonas }}
+                                <tr>
+                                    <td colspan="2" cellspacing="1">
+                                        <b>Zonas:</b> {{ reservaData.zonas }}
+                                    </td>
+                                    <td colspan="1" bgcolor="#f1f0f0">
+                                        <b>Valor total:</b> {{ reservaData.valorTotal }}
+                                    </td>
+                                </tr>
+                                {{/if}}
                             </tbody>
                         </table>
                     </div>

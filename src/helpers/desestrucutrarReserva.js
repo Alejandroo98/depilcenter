@@ -2,15 +2,11 @@ const { getHour, getDate } = require('./getTime');
 const { imgRandom } = require('./imgRandom');
 
 const desestrucutrarReserva = ({
-  infoReserva,
-  locales,
-  servicio,
-  hora,
-  fecha,
   nombres,
   numeroTelefono,
   fechaCumpleanios,
   suscrito,
+  ...rest
 }) => {
   const fechaRegistro = `${getDate()} | ${getHour()}`;
   const img = imgRandom();
@@ -20,13 +16,9 @@ const desestrucutrarReserva = ({
     datosReserva: { nombres, numeroTelefono, fechaCumpleanios, suscrito, fechaRegistro, img },
     reserva: {
       numeroTelefono,
-      locales,
-      servicio,
-      hora,
-      fecha,
-      fechaRegistro,
-      infoReserva,
       reservaData,
+      fechaRegistro,
+      ...rest,
     },
   };
 };

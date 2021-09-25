@@ -1,4 +1,5 @@
 const { check } = require('express-validator');
+const serviciosJson = require('../DB/servicios.json');
 
 const haveNumber = (nombres) => {
   let numeros = '0123456789';
@@ -31,7 +32,13 @@ const horarios = [
   '06:00_PM',
 ];
 
-const servicios = ['d_cera', 'd_laser', 'l_facial', 'm_relajantes', 't_acne', 'gluteos'];
+const serviciosObject = () => {
+  let servicios = [];
+  serviciosJson.forEach((servicio) => {
+    servicios = [...servicios, servicio.id];
+  });
+  return servicios;
+};
 
 const validaciones = [
   check('nombres')
@@ -57,9 +64,9 @@ const validaciones = [
     .custom(correctNumber)
     .withMessage('Ingresa un numero de telfono valido'),
   check('locales', 'Servicio no encontrado, intenta de nuevo').not().isEmpty(),
-  check('servicio', 'Ingresa un nombre eh intenta de nuevo').not().isEmpty().isIn(servicios),
+  check('servicio', 'Ingresa un servicio valido.').not().isEmpty().isIn(serviciosObject()),
   check('hora', 'Hora no encontrada, intenta de nuevo').not().isEmpty().isIn(horarios),
-  check('fecha', 'Ingresa un nombre eh intenta de nuevo').not().isEmpty(),
+  check('fecha', 'Ingresa un fecha eh intenta de nuevo').not().isEmpty(),
 ];
 
 module.exports = { validaciones };

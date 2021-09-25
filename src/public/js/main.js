@@ -16,18 +16,24 @@ carousel_inner.addEventListener('click', ({ target }) => {
   }
 });
 
+const btn_event_agendar = document.querySelector('#btn-event-agendar');
+btn_event_agendar.addEventListener('click', ({ target }) => {
+  printDataDesc(target.dataset.desc);
+});
+
 const serviciosActive = document.getElementById('serviciosActive');
 serviciosActive.addEventListener('change', ({ target }) => {
   const data_set = document.getElementById(target.value);
   printDataDesc(data_set.dataset.desc);
 });
-
 /* ==== *DATA_DESC ===== */
 
-/* ======== SELECCIONAR SERVICIOS POR MEDIO DE QUERY ============ */
+/* ======== SELECCIONAR SERVICIOS Y HORA POR MEDIO DE QUERY ============ */
 try {
   const { errors, servicio, hora } = getQueryUrl();
+
   if (errors) {
+    console.log('aqui');
     scrollReserva();
   }
 

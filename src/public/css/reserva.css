@@ -1,5 +1,6 @@
 .box-reserva-partial {
-  display: flex;
+  /* display: flex; */
+  display: none;
   position: relative;
   background-color: rgb(255, 231, 231);
   border-top: 4px solid #ffc5c5;

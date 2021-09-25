@@ -36,6 +36,14 @@ let reservaSchema = new Schema({
     type: String,
   },
 
+  zonas: {
+    type: String,
+  },
+
+  valorTotal: {
+    type: String,
+  },
+
   idUser: {
     type: Schema.Types.ObjectId,
     ref: datosReserva,

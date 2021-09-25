@@ -13,7 +13,6 @@ const changeValuesServicios = (idServicio, idHora) => {
     return hora.id == idHora;
   });
 
-  console.log(nameServicio, nameHora, indicaciones);
   return { nameServicio, nameHora, indicaciones };
 };
 
