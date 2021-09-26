@@ -1,7 +1,7 @@
 import { getMonth } from './getMesDia.js';
 import './srollServicios.js';
 import './printDateReserve.js';
-import { getQueryUrl, printDataDesc, scrollReserva } from './helpers.js';
+import { getQueryUrl, printDataDesc, printSelectDataDesc, scrollReserva } from './helpers.js';
 
 /* =========== MES IMPRIMIR ( CUMPLEAÑIEROS ) ========= */
 const mesActual = getMonth();
@@ -12,20 +12,26 @@ document.getElementById('mesCumpleanios').innerHTML = `Cumpleañeros de ${mesAct
 const carousel_inner = document.querySelector('.carousel-inner');
 carousel_inner.addEventListener('click', ({ target }) => {
   if (target.dataset.desc) {
-    printDataDesc(target.dataset.desc);
+    const values = { id: target.dataset.id, value: target.dataset.desc };
+    printDataDesc(values);
   }
 });
 
 const btn_event_agendar = document.querySelector('#btn-event-agendar');
 btn_event_agendar.addEventListener('click', ({ target }) => {
-  printDataDesc(target.dataset.desc);
+  const values = { id: '', value: target.dataset.desc };
+  printDataDesc(values);
 });
 
 const serviciosActive = document.getElementById('serviciosActive');
 serviciosActive.addEventListener('change', ({ target }) => {
   const data_set = document.getElementById(target.value);
-  printDataDesc(data_set.dataset.desc);
+  const values = { id: data_set.id, value: data_set.dataset.desc };
+  printDataDesc(values);
 });
+
+printSelectDataDesc();
+
 /* ==== *DATA_DESC ===== */
 
 /* ======== SELECCIONAR SERVICIOS Y HORA POR MEDIO DE QUERY ============ */
@@ -33,7 +39,6 @@ try {
   const { errors, servicio, hora } = getQueryUrl();
 
   if (errors) {
-    console.log('aqui');
     scrollReserva();
   }
 

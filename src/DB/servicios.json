@@ -40,6 +40,7 @@
   {
     "id": "b_axilas",
     "name": "Blanqueamiento de axilas",
+    "indicaciones": "Esta son las indicaciones de b_axilas",
     "title": "BLANQUEMIENTO DE",
     "subTitle": "axilas",
     "porcentaje": "%15",
@@ -91,6 +92,7 @@
 
   {
     "id": "d_hombre",
+    "indicaciones": "Esta son las indicaciones de d_hombre",
     "name": "Depilacion masculina",
     "title": "DEPILACIÓN HOMBRE",
     "subTitle": "definitiva",
@@ -104,7 +106,7 @@
     "agendarUrl": "#",
     "cotizarUrl": "#",
     "data_desc": "2 SESIONES GRATIS",
-    "selectForm": false,
+    "selectForm": true,
     "otroServicio": false
   },
   {

@@ -10,7 +10,31 @@ const getQueryUrl = () => {
 const printDataDesc = (value) => {
   scrollReserva();
   guardarLocalStorage('data_desc', value);
+  selectedServicios(value.id);
   printSelectDataDesc();
+};
+
+const removeSelectedChild = () => {
+  const childOptionServicios = document.querySelectorAll('#serviciosActive > option');
+
+  for (const option of childOptionServicios) {
+    try {
+      document.getElementById(option.id).removeAttribute('selected', '');
+    } catch (error) {
+      console.log('');
+    }
+  }
+};
+
+const selectedServicios = (id) => {
+  removeSelectedChild();
+
+  try {
+    const addSelected = document.getElementById(id);
+    addSelected.setAttribute('selected', '');
+  } catch (error) {
+    console.log('');
+  }
 };
 
 const scrollReserva = () => {
@@ -20,18 +44,24 @@ const scrollReserva = () => {
 };
 
 const guardarLocalStorage = (key, value) => {
-  localStorage.setItem(key, value);
+  const valueJSON = JSON.stringify(value);
+  localStorage.setItem(key, valueJSON);
 };
 
 const removeLocalStorage = (key) => {
   localStorage.removeItem(key);
 };
 
+const getLocalStorageValue = (key) => {
+  const value = JSON.parse(localStorage.getItem(key));
+  return value;
+};
+
 const printSelectDataDesc = () => {
   try {
     const msg_client_reserva = document.getElementById('msg-client-reserva');
     const infoReserva = document.getElementById('infoReserva');
-    const value = localStorage.getItem('data_desc');
+    const { value } = getLocalStorageValue('data_desc');
     if (value) {
       msg_client_reserva.innerHTML = `<p>${value}</p>`;
       infoReserva.value = value;
@@ -40,7 +70,7 @@ const printSelectDataDesc = () => {
       infoReserva.value = '';
     }
   } catch (error) {
-    console.log(error);
+    console.log('');
   }
 };
 
