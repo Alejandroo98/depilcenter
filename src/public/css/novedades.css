@@ -1,0 +1,89 @@
+.novedades-container-main {
+  display: flex;
+  /* background-color: #ffb7b7; */
+
+  justify-content: center;
+  color: rgb(71, 71, 71);
+  padding: 25px 0;
+  background-image: url('/img/background-novedades.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title-cards {
+  color: white;
+  padding: 0 0 20px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+.ui-card {
+  position: relative;
+  width: 350px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 14px;
+  margin: 6px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  overflow: hidden;
+}
+
+.circle-promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -15px;
+  font-size: 18px;
+  right: -15px;
+  font-weight: bold;
+  background-color: #f37e78;
+  color: white;
+  border-radius: 60px;
+  width: 100px;
+  height: 100px;
+}
+
+.card-meta {
+  color: rgb(136, 136, 136);
+}
+
+.content-card {
+  /* background-color: aqua; */
+}
+
+.card-header {
+}
+
+.card-description {
+  padding: 10px 0;
+}
+
+.btn-container {
+  display: flex;
+  text-align: center;
+}
+
+.btn-container a {
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: #f37e78;
+  flex-grow: 1;
+  margin: 0 3px;
+}
+.btn-container a:hover {
+  background-color: #f38b86;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-container a:last-child {
+  background-color: #666565;
+}
+
+.btn-container a:last-child:hover {
+  background-color: #707070;
+  color: #fff;
+  text-decoration: none;
+}

@@ -477,39 +477,3 @@ body {
 }
 
 /* =========================*FIN UBICACION===================== */
-
-/* ======================================================== */
-/* =================== Quienes somos IMG=================== */
-/* ======================================================== */
-
-.__quienesSomosImg {
-  margin-top: 10px;
-}
-
-.backgroundImg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 600px;
-  background-position: center;
-  background-image: url(../img/quienesSomosBack.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 13%;
-}
-
-.backgroundImg > div {
-  margin: 70px;
-  padding: 30px;
-  width: 450px;
-  height: 300px;
-}
-.colorBackgroundImg {
-  color: rgb(71, 71, 71);
-  background-color: rgba(255, 255, 255, 0.897);
-  border-radius: 50px 50px 0 50px;
-}
-
-/* ======================================================== */
-/* =================== *Fin quienes somos IMG=================== */
-/* ======================================================== */
