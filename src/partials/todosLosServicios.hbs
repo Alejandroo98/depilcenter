@@ -1,0 +1,50 @@
+<div class="container-color-servicios">
+    <div class="container todosLosServicios-container">
+        <hr>
+        <hr>
+        <hr>
+        <div class="title-serivicios">
+            <p>
+                SERVICIOS
+                <i class="table icon"></i>
+            </p>
+        </div>
+
+        {{!-- items --}}
+        {{#each servicios}}
+        <div class="content-card-servicios ">
+            <div class="card-img">
+            </div>
+            <div class="card-content">
+                <div class="card-title">
+                    <div class="title-card-child">
+                        <p>{{ name }}</p>
+                        <div class="img-title">
+                            <img src="{{ imgIcon }}" alt="{{ alt }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="cotainer-content-card">
+                    <div class="card-desc">
+                        <div>
+                            <i>{{ data_desc }}</i>
+                        </div>
+                        <p>
+                            {{ desc }}
+                        </p>
+                    </div>
+                    <div class="card-btn">
+                        <a data-id="{{ id }}" data-desc="{{ data_desc }}">Agendar</a>
+                        <a href="{{ cotizarUrl }}">Cotizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+
+
+
+    </div>
+</div>
+</div>

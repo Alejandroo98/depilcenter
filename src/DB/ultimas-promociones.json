@@ -1,0 +1,53 @@
+[
+  {
+    "id": "d_laser",
+    "circleName": "NUEVO",
+    "title": "AXILAS 2X1",
+    "subtitle": "Deilación definitiva",
+    "nroSesiones": "8",
+    "precio": {
+      "normal": "$320",
+      "promo": "$160"
+    },
+    "btn": {
+      "agendar": "#",
+      "masInfo": "#"
+    },
+    "desc": "Tratamiento completo de depilacion definitiva de axilas, unicamente los dias sabados.",
+    "data_desc": "AXILAS 2X1"
+  },
+  {
+    "id": "d_laser",
+    "circleName": "NUEVO",
+    "title": "ROSTRO COMPLETO",
+    "subtitle": "Deilación definitiva",
+    "nroSesiones": "8",
+    "precio": {
+      "normal": "$320",
+      "promo": "$160"
+    },
+    "btn": {
+      "agendar": "#",
+      "masInfo": "#"
+    },
+    "desc": "El rostro tiene mas de una zona, pero en esta promocion la consideraremos como una sola.",
+    "data_desc": "ROSTRO COMPLETO"
+  },
+  {
+    "id": "d_laser",
+    "circleName": "NUEVO",
+    "title": "TERCER ZONA GRATIS",
+    "subtitle": "Deilación definitiva",
+    "nroSesiones": "8",
+    "precio": {
+      "normal": "$480",
+      "promo": "$320"
+    },
+    "btn": {
+      "agendar": "#",
+      "masInfo": "#"
+    },
+    "desc": "Elige dos zonas y el tratamiento completo de la tercera te la obsequiamos",
+    "data_desc": "3ER ZONA GRATIS   "
+  }
+]

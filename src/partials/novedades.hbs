@@ -3,56 +3,37 @@
 
         <div class="ui cards items-cards">
 
+            {{#each ultimasPromociones}}
             <div class="ui-card">
                 <div class="circle-promo">
-                    <p>NUEVO</p>
+                    <p>{{ circleName }}</p>
                 </div>
                 <div class="content-card">
                     <div class="card-header-ui">
-                        <h4>AXILAS 2X1 ( Sábados )</h4>
+                        <h4>{{ title }}</h4>
                     </div>
                     <div class="card-meta">
-                        Depilación definitiva
+                        {{ subtitle }}
                     </div>
                     <div class="card-description">
                         <p>
-                            • Precio normal: $320 <br>
-                            • Nro sesiones: $8 <br>
-                            • Promo: $160
+                            • Nro sesiones: {{ nroSesiones }} <br>
+                            • Precio normal: {{ precio.normal }} <br>
+                            • Promo: {{ precio.promo }}
                         </p>
                     </div>
                 </div>
-                <div class="btn-container">
-                    <a href="#">Agendar</a>
-                    <a href="#">Mas info</a>
-                </div>
-            </div>
-
-            <div class="ui-card">
-                <div class="circle-promo">
-                    <p>NUEVO</p>
-                </div>
-                <div class="content-card">
-                    <div class="card-header-ui">
-                        <h4>ROSTRO COMPLETO</h4>
-                    </div>
-                    <div class="card-meta">
-                        Depilación definitiva
-                    </div>
-                    <div class="card-description">
-                        <p>
-                            • Precio normal: $320 <br>
-                            • Nro sesiones: $8 <br>
-                            • Promo: $160
-                        </p>
-                    </div>
+                <div class="desc_cards">
+                    <p>
+                        {{ desc }}
+                    </p>
                 </div>
                 <div class="btn-container">
-                    <a href="#">Agendar</a>
-                    <a href="#">Mas info</a>
+                    <a data-id="{{ id }}" data-desc="{{ data_desc }}">Agendar</a>
+                    <a href="{{ btn.masInfo }}">Mas info</a>
                 </div>
             </div>
-
+            {{/each}}
 
         </div>
 

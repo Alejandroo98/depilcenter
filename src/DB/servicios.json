@@ -1,6 +1,8 @@
 [
   {
     "id": "d_cera",
+    "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
     "name": "Depilación con cera",
     "indicaciones": "Esta son las indicaciones de d_cera",
     "header": true,
@@ -20,7 +22,9 @@
   },
   {
     "id": "d_laser",
-    "name": "Depilación laser",
+    "imgIcon": "https://i.ibb.co/XC4sC33/d-laser.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "name": "Depilación definitiva",
     "indicaciones": "Esta son las indicaciones de d_laser",
     "header": true,
     "title": "DEPILACIÓN",
@@ -39,6 +43,8 @@
   },
   {
     "id": "b_axilas",
+    "imgIcon": "https://i.ibb.co/9hJ4CzC/b-axilas.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
     "name": "Blanqueamiento de axilas",
     "indicaciones": "Esta son las indicaciones de b_axilas",
     "title": "BLANQUEMIENTO DE",
@@ -57,6 +63,8 @@
     "selectForm": true,
     "cotizarData": {
       "id": "T_BA3",
+      "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Blanqueamiento de axilas",
       "precioIndividual": "60",
       "color": "rojo",
@@ -65,6 +73,8 @@
   },
   {
     "id": "l_facial",
+    "imgIcon": "https://i.ibb.co/khYFYWj/t-acne.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
     "name": "Limpiezas faciales",
     "indicaciones": "Esta son las indicaciones de l_facial",
     "header": true,
@@ -83,6 +93,8 @@
     "selectForm": true,
     "cotizarData": {
       "id": "T_LF1",
+      "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Limpieza facial",
       "precioIndividual": "25",
       "color": "rojo",
@@ -92,6 +104,8 @@
 
   {
     "id": "d_hombre",
+    "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
     "indicaciones": "Esta son las indicaciones de d_hombre",
     "name": "Depilacion masculina",
     "title": "DEPILACIÓN HOMBRE",
@@ -111,6 +125,8 @@
   },
   {
     "id": "m_relajantes",
+    "imgIcon": "https://i.ibb.co/NmwXVJ0/m-relajantes.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
     "name": "Masajes relajantes",
     "indicaciones": "Esta son las indicaciones de m_relajantes",
     "header": false,
@@ -118,6 +134,8 @@
     "selectForm": true,
     "cotizarData": {
       "id": "T_MA4",
+      "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Masajes",
       "precioIndividual": "25",
       "color": "rojo",
@@ -127,6 +145,8 @@
   },
   {
     "id": "t_acne",
+    "imgIcon": "https://i.ibb.co/khYFYWj/t-acne.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
     "name": "Tratemiento para acné",
     "indicaciones": "Esta son las indicaciones de t_acne",
     "header": false,
@@ -135,6 +155,8 @@
     "selectForm": true,
     "cotizarData": {
       "id": "T_TA5",
+      "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Tratamiento para a acné",
       "precioIndividual": "80",
       "color": "rojo",
@@ -143,7 +165,9 @@
   },
   {
     "id": "l_gluteos",
-    "name": "Gluteos",
+    "imgIcon": "https://i.ibb.co/L1M1VVS/l-gluteos.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "name": "Levantamiento de gluteos",
     "indicaciones": "Esta son las indicaciones de l_gluteos",
     "header": false,
     "otroServicio": true,
@@ -151,6 +175,8 @@
     "selectForm": true,
     "cotizarData": {
       "id": "T_LG2",
+      "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Levantamiento de gluteos",
       "precioIndividual": "100",
       "color": "rojo",

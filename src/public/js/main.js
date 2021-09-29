@@ -1,5 +1,4 @@
 import { getMonth } from './getMesDia.js';
-import './srollServicios.js';
 import './printDateReserve.js';
 import { getQueryUrl, printDataDesc, printSelectDataDesc, scrollReserva } from './helpers.js';
 
@@ -9,6 +8,8 @@ document.getElementById('mesCumpleanios').innerHTML = `Cumpleañeros de ${mesAct
 /* =========== *MES IMPRIMIR ( CUMPLEAÑIEROS ) ========= */
 
 /* ==== DATA_DESC ===== */
+printSelectDataDesc();
+
 const carousel_inner = document.querySelector('.carousel-inner');
 carousel_inner.addEventListener('click', ({ target }) => {
   if (target.dataset.desc) {
@@ -30,7 +31,23 @@ serviciosActive.addEventListener('change', ({ target }) => {
   printDataDesc(values);
 });
 
-printSelectDataDesc();
+//Novedades
+const items_cards = document.querySelector('.items-cards');
+items_cards.addEventListener('click', ({ target }) => {
+  if (target.dataset.id) {
+    const values = { id: target.dataset.id, value: target.dataset.desc };
+    printDataDesc(values);
+  }
+});
+
+//Servicios
+const todosLosServicios_container = document.querySelector('.todosLosServicios-container');
+todosLosServicios_container.addEventListener('click', ({ target }) => {
+  if (target.dataset.id) {
+    const values = { id: target.dataset.id, value: target.dataset.desc };
+    printDataDesc(values);
+  }
+});
 
 /* ==== *DATA_DESC ===== */
 

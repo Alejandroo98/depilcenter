@@ -9,6 +9,7 @@ const { handleErrors } = require('../middleware/handleErrors');
 const { generarJWT } = require('../helpers/jwt');
 const { validarJWT } = require('../middleware/validarJWT');
 const { filterServicios } = require('../helpers/filtros');
+const ultimasPromociones = require('../DB/ultimas-promociones.json');
 
 app.set('views', path.resolve(__dirname, '../public/views'));
 
@@ -17,7 +18,7 @@ app.get('/', async (req, res) => {
   const servicios = filterServicios('selectForm', true);
 
   const cumpleanieros = await datosCumpleanieros();
-  res.render('index', { promoServicios, cumpleanieros, servicios });
+  res.render('index', { promoServicios, cumpleanieros, servicios, ultimasPromociones });
 });
 
 app.get('/success', validarJWT, (req, res) => {

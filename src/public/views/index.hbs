@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="../css/cumpleanieros.css">
   <link rel="stylesheet" href="../css/reserva.css">
   <link rel="stylesheet" href="../css/novedades.css">
+  <link rel="stylesheet" href="../css/todosLosServicios.css">
 
 
   {{!-- datePicker --}}
@@ -95,365 +96,130 @@
 
     {{> novedades }}
 
-    <section class="background">
-      <section class="__serviciosContainer">
+    {{> todosLosServicios }}
 
-        <div style="margin: 0 0 13px 0; text-align:center; font-family: 'Pacifico', cursive">
-          <h3 style="margin: 0;">••••••••• Servicios •••••••••</h3>
+
+
+
+    <section class="__ubicacionIndexContainer">
+
+      <div class="_ubicacionIndexContainerLocales">
+        <div>
+          <h5>Locales</h5>
         </div>
+        <select name="ubicacionLocales" id="">
+          <option value="quito" selected>Quito</option>
+        </select>
+      </div>
 
-        {{!-- arrogs back - fowar --}}
-        <div class="back-back">
-          <span class="material-icons">arrow_forward_ios</span>
-        </div>
-        <div class="back-forward">
-          <span class="material-icons">arrow_forward_ios</span>
-        </div>
-        {{!-- arrogs back - fowar --}}
+      <div class="_ubicacionIndexContainerChild">
 
-
-        <div class="__serviciosContainerCenter">
-          <div class="cardServicio">
-
-            <div class="imgServicio">
-              <img src="../img/servicios/servicio_waxing.png" alt="Depilacion con cera">
-              <div class="nameOff">
-                <div class="celesteServicioH6">
-                  <h6>50% OFF</h6>
-                </div>
-                <div>
-                  <h3>Depilaciòn con cera</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="datosCardContainer">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
-                ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat
-                quisquam
-                hic aliquam error.
-              </p>
-
-            </div>
-
-            <div class="botonesServicios celesteServicio">
-              <div>
-                <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-              </div>
-              <div>
-                <a class="agendarButtonCelesteCotizar" id="agendarDepilacionCera">Agendar Cita</a>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="cardServicio">
-
-            <div class="imgServicio">
-              <img src="../img/servicios/servicio_lasaer.png" alt="Depilacion con cera">
-              <div class="nameOff">
-                <div class="amarilloServicioH6">
-                  <h6>SERVICIO SABADO Y DOMINGO</h6>
-                </div>
-                <div>
-                  <h3>Depilaciòn laser</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="datosCardContainer">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
-                ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat
-                quisquam
-                hic aliquam error.
-              </p>
-
-            </div>
-
-            <div class="botonesServicios amarilloServicio">
-              <div>
-                <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-              </div>
-              <div>
-                <a class="agendarButtonAmarilloCotizar" id="agendarDepilacionLaser">Agendar Cita</a>
-              </div>
-            </div>
-
-          </div>
-          <div class="cardServicio">
-
-            <div class="imgServicio">
-              <img src="../img/servicios/servicio_limpiezas_faciales.png" alt="Depilacion con cera">
-              <div class="nameOff">
-                <div class="rojoServicioH6">
-                  <h6>SERVICIO SABADO Y DOMINGO</h6>
-                </div>
-                <div>
-                  <h3>Limpiezas faciales</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="datosCardContainer">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
-                ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat
-                quisquam
-                hic aliquam error.
-              </p>
-
-            </div>
-
-            <div class="botonesServicios rojoServicio">
-              <div>
-                <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-              </div>
-              <div>
-                <a class="agendarButtonRojoCotizar" id="agendarFacial">Agendar Cita</a>
-              </div>
-            </div>
-
-          </div>
-          <div class="cardServicio">
-
-            <div class="imgServicio">
-              <img src="../img/servicios/servicio_masajes.png" alt="Depilacion con cera">
-              <div class="nameOff">
-                <div class="celesteServicioH6">
-                  <h6>SERVICIO SABADO Y DOMINGO</h6>
-                </div>
-                <div>
-                  <h3>Masajes relajantes</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="datosCardContainer">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
-                ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat
-                quisquam
-                hic aliquam error.
-              </p>
-
-            </div>
-
-            <div class="botonesServicios celesteServicio">
-              <div>
-                <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-              </div>
-              <div>
-                <a class="agendarButtonCelesteCotizar" id="agendarMasajes">Agendar Cita</a>
-              </div>
-            </div>
-
-          </div>
-          <div class="cardServicio">
-
-            <div class="imgServicio">
-              <img src="../img/servicios/servicio_acne.png" alt="Depilacion con cera">
-              <div class="nameOff">
-                <div class="amarilloServicioH6">
-                  <h6>SERVICIO SABADO Y DOMINGO</h6>
-                </div>
-                <div>
-                  <h3>Tratamiento de acne</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="datosCardContainer">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
-                ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat
-                quisquam
-                hic aliquam error.
-              </p>
-
-            </div>
-
-            <div class="botonesServicios amarilloServicio">
-              <div>
-                <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-              </div>
-              <div>
-                <a class="agendarButtonAmarilloCotizar" id="agendarAcne">Agendar Cita</a>
-              </div>
-            </div>
-
-          </div>
-          <div class="cardServicio">
-
-            <div class="imgServicio">
-              <img src="../img/servicios/servicio_gluteos.png" alt="Depilacion con cera">
-              <div class="nameOff">
-                <div class="rojoServicioH6">
-                  <h6>SERVICIO SABADO Y DOMINGO</h6>
-                </div>
-                <div>
-                  <h3>Gluteos</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="datosCardContainer">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis totam eum porro perspiciatis velit
-                ipsam laborum nulla consequatur aliquid, accusamus architecto nam ut molestiae voluptates placeat
-                quisquam
-                hic aliquam error.
-              </p>
-
-            </div>
-
-            <div class="botonesServicios rojoServicio">
-              <div>
-                <a class="cotizarButtonCelesteCotizar">Cotizar</a>
-              </div>
-              <div>
-                <a class="agendarButtonRojoCotizar" id="agendarGluteos">Agendar Cita</a>
-              </div>
-            </div>
-
-          </div>
-
-
-        </div>
-
-
-      </section>
-
-
-
-
-      <section class="__ubicacionIndexContainer">
-
-        <div class="_ubicacionIndexContainerLocales">
-          <div>
-            <h5>Locales</h5>
-          </div>
-          <select name="ubicacionLocales" id="">
-            <option value="quito" selected>Quito</option>
-          </select>
-        </div>
-
-        <div class="_ubicacionIndexContainerChild">
-
-          <div>
-            <div class="ubicacionIndexUbicacion">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
-                width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div>
-              <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito.
-                <br>
-                Horario : 09:00 - 18:00
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <div class="ubicacionIndexUbicacion">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
-                width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div>
-              <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito.
-                <br>
-                Horario : 09:00 - 18:00
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <div class="ubicacionIndexUbicacion">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
-                width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div>
-              <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito.
-                <br>
-                Horario : 09:00 - 18:00
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="_imgLocalIndex">
-          <div>
-            <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        <div>
+          <div class="ubicacionIndexUbicacion">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
+              width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <div>
-            <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-          </div>
-          <div>
-            <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-          </div>
-          <div>
-            <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-          </div>
-          <div>
-            <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-          </div>
-          <div>
-            <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-          </div>
-          <div>
-            <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
-          </div>
-          <div>
-            <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+            <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito.
+              <br>
+              Horario : 09:00 - 18:00
+            </p>
           </div>
         </div>
 
-      </section>
-
-
-      <section>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="nameOpiones">
-            <h5>OPINIONES</h5>
+        <div>
+          <div class="ubicacionIndexUbicacion">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
+              width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
           </div>
-          <div class="carousel-inner">
-
-            <div class="carousel-item active" data-bs-interval="3000">
-
-              <p>La atención es bastante amable, hacen un muy bien trabajo y en poco tiempo. Me encanta! 💚💚💚</p>
-
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-
-              <p>Fui ganadora de un concurso y la atención fue excelente, muy profesional. El concurso fue para una
-                depilación gratis. Completamente real. 🥰🥰🥰 El proceso fue rápido, amigable, y muy efectivo. Muy
-                recomendado. 💜</p>
-
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-
-              <p>el lugar muy bonito !Excelente servicio! muy amables y delicados al momento de trabajar .</p>
-
-            </div>
-
+          <div>
+            <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito.
+              <br>
+              Horario : 09:00 - 18:00
+            </p>
           </div>
         </div>
-      </section>
 
+        <div>
+          <div class="ubicacionIndexUbicacion">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
+              width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div>
+            <p><b>Quito - Ecuador</b> <br>Sector el condado en edificio Praga, frente al estadio de Liga de Quito.
+              <br>
+              Horario : 09:00 - 18:00
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="_imgLocalIndex">
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+        <div>
+          <img src="../img/conocenos/quienes-somos.jpg" width="250" alt="">
+        </div>
+      </div>
 
     </section>
+
+
+    <section>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="nameOpiones">
+          <h5>OPINIONES</h5>
+        </div>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active" data-bs-interval="3000">
+
+            <p>La atención es bastante amable, hacen un muy bien trabajo y en poco tiempo. Me encanta! 💚💚💚</p>
+
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+
+            <p>Fui ganadora de un concurso y la atención fue excelente, muy profesional. El concurso fue para una
+              depilación gratis. Completamente real. 🥰🥰🥰 El proceso fue rápido, amigable, y muy efectivo. Muy
+              recomendado. 💜</p>
+
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+
+            <p>el lugar muy bonito !Excelente servicio! muy amables y delicados al momento de trabajar .</p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
 
 
     {{> footer }}
