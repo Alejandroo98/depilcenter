@@ -126,28 +126,28 @@
   padding: 0 8px 8px 8px;
 }
 
-.cumpleanios-container-card::-webkit-scrollbar {
+.cumpleanios-container-cards::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-.cumpleanios-container-card::-webkit-scrollbar:horizontal {
+.cumpleanios-container-cards::-webkit-scrollbar:horizontal {
   height: 6px;
 }
 
-.cumpleanios-container-card::-webkit-scrollbar-thumb {
+.cumpleanios-container-cards::-webkit-scrollbar-thumb {
   background-color: #f8a9a9;
   border-radius: 10px;
 }
 
-.cumpleanios-container-card::-webkit-scrollbar-thumb:hover {
+.cumpleanios-container-cards::-webkit-scrollbar-thumb:hover {
   background-color: #f79090;
   border-radius: 10px;
 }
 
-.cumpleanios-container-card::-webkit-scrollbar-button {
+.cumpleanios-container-cards::-webkit-scrollbar-button {
   display: none;
 }
 
-.cumpleanios-container-card::-webkit-scrollbar-thumb:active {
+.cumpleanios-container-cards::-webkit-scrollbar-thumb:active {
   background-color: #f79090;
 }
