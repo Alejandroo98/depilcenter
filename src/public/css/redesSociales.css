@@ -1,110 +1,30 @@
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  position: relative;
-}
-
-.redesSocialesAll {
+.redesSocialesIcons {
   display: flex;
 }
 
-.redesSocialesAll img {
-  width: 18px;
-}
-
-.redesSocialesAll > div {
-  padding: 3px 6px;
-  margin: 0 0.3rem;
+.redesSocialesIcons > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: #f37e78;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid white;
+  background-color: white;
+  margin: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-/* .redesSocialesAll {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  left: 0;
-  top: 8%;
-  z-index: 150;
+.redesSocialesIcons > div > div {
+  width: 17px;
+  height: 17px;
+  margin-bottom: 1px;
+  margin-left: -2px;
 }
 
-.redesSocialesAll div img {
-  width: 30px;
-  transition: all 0.5s ease;
+.redesSocialesIcons i {
+  color: #f37e78;
+  font-size: 16px !important;
 }
-
-.redesSocialesAll div:hover img {
-  transform: translateX(20px) scale(1.2);
-}
-
-.redesSocialesAll > div {
-  padding: 7px;
-  width: 48px;
-  background-color: darkgreen;
-  border-radius: 0px 10px 10px 0px;
-}
-
-.redesSocialesAll div:nth-child(1) {
-  background-color: #faa0a9;
-  transition: all 0.5s ease;
-}
-.redesSocialesAll div:nth-child(2) {
-  background-color: #89e7f0;
-  transition: all 0.5s ease;
-}
-.redesSocialesAll div:nth-child(3) {
-  background-color: #f1e18e;
-  transition: all 0.5s ease;
-}
-.redesSocialesAll div:nth-child(4) {
-  background-color: rgb(87, 85, 87);
-  transition: all 0.5s ease;
-}
-
-.redesSocialesAll .img1:hover {
-  background-color: #f3818c;
-  width: 70px !important;
-}
-.redesSocialesAll .img2:hover {
-  background-color: #67e6f1;
-  width: 70px;
-}
-.redesSocialesAll .img3:hover {
-  background-color: #eed765;
-  width: 70px;
-}
-.redesSocialesAll .img4:hover {
-  background-color: rgb(58, 57, 58);
-  width: 70px;
-}
-
-@media screen and (max-width: 900px) {
-  .redesSocialesAll div img {
-    width: 23px;
-  }
-
-  .redesSocialesAll div:hover img {
-    transform: translateX(15px) scale(1.2);
-  }
-
-  .redesSocialesAll > div {
-    padding: 7px;
-    width: 38px;
-  }
-
-  .redesSocialesAll .img1:hover {
-    width: 50px !important;
-  }
-  .redesSocialesAll .img2:hover {
-    width: 50px;
-  }
-  .redesSocialesAll .img3:hover {
-    width: 50px;
-  }
-  .redesSocialesAll .img4:hover {
-    width: 50px;
-  }
-} */

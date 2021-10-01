@@ -10,14 +10,8 @@ body {
 }
 
 :root {
-  --fondo: #f5e0e3;
-  --general: #e8908b;
-  --amarillo: #ffffa6;
-  --celeste: #96e6e2;
-  --rojoSuave: #ffb7b7;
-  --amarilloText: #f6e330;
-  --celesteText: #3ddbd3;
-  --rojoText: #fa8072;
+  --fondo: #f3f3f3;
+  --base: #f37e78;
 }
 
 .cajaPrincipal {
