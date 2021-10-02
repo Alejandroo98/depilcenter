@@ -10,10 +10,16 @@ const { generarJWT } = require('../helpers/jwt');
 const { validarJWT } = require('../middleware/validarJWT');
 const { filterServicios } = require('../helpers/filtros');
 const ultimasPromociones = require('../DB/ultimas-promociones.json');
+const cors = require('cors');
 
 app.set('views', path.resolve(__dirname, '../public/views'));
 
-app.get('/', async (req, res) => {
+var corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200, // For legacy browser support
+};
+
+app.get('/', cors(corsOptions), async (req, res) => {
   const promoServicios = filterServicios('header', true);
   const servicios = filterServicios('selectForm', true);
 
