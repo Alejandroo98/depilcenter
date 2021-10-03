@@ -50,33 +50,65 @@
 
 /* ================ NAV CONTACTS ========== */
 .__mainNavContact {
-  background-color: var(--rojoSuave);
-  height: 45px;
+  background-color: var(--baseLess);
+  height: 50px;
 }
 
 .mainNavContact {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .datosContacto {
   display: flex;
-}
-
-.datosContacto > div {
-  margin: 0 10px;
-  display: flex;
   justify-content: center;
-}
-
-.datosContacto span {
-  color: white;
-  margin-right: 5px;
+  align-items: center;
 }
 
 .datosContacto p {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  color: white;
+  margin: 0 2px;
+}
+
+.title-count {
+  border-radius: 5px 0 0 5px;
+  padding: 8px 10px;
+  font-size: 15px;
+  color: #5e5e5e;
+  background-color: #fff;
+  border-left: 5px solid #5e5e5e;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.count-down-align {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.count-down-align p:first-child {
+  position: relative;
+  left: -5px;
+  padding: 5px 8px;
+  color: #fff;
+  background-color: #5e5e5e;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.count-down-align p:first-child::after {
+  content: 'DIAS';
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+  font-size: 10px;
+}
+
+.count-down-align p:last-child {
+  color: #5e5e5e;
+  padding: 5px 10px 5px 0;
+  font-weight: bold;
+  font-size: 20px;
 }

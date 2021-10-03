@@ -12,6 +12,7 @@ body {
 :root {
   --fondo: #f3f3f3;
   --base: #f37e78;
+  --baseLess: #ffb7b7;
 }
 
 .cajaPrincipal {
