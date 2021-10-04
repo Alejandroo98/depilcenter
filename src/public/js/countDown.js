@@ -1,5 +1,8 @@
 // Set the date we're counting down to
-var countDownDate = new Date('Jan 5, 2022 15:37:25').getTime();
+
+const untilTime = 'Nov 30, 2021 23:59:00';
+
+var countDownDate = new Date(untilTime).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -24,6 +27,7 @@ var x = setInterval(function () {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById('demo').innerHTML = 'EXPIRED';
+    document.getElementById('countDown').innerHTML = 'EXPIRED';
+    document.getElementById('countDownDays').innerHTML = `0`;
   }
 }, 1000);

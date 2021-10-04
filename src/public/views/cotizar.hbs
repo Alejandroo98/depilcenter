@@ -4,35 +4,55 @@
 <head>
   <meta charset="UTF-8" />
   <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{!-- bootstrap --}}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{!-- css --}}
+  <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/main.css" />
-  <link rel="stylesheet" type="text/css" href="../css/cotizar.css">
   <link rel="stylesheet" href="../css/redesSociales.css">
   <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/datosReservaPartial.css">
-  <link rel="stylesheet" href="../css/responsive/cotizar-combosResponsive.css">
+  <link rel="stylesheet" href="../css/reserva.css">
+  <link rel="stylesheet" href="../css/cotizar.css">
+
+
+  {{!-- google fonts - icons --}}
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="../css/responsive/mainResponsive.css">
-  <link rel="stylesheet" href="../css/navbar.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  {{!-- jQuery --}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  {{!-- semtantic ui --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.js"
+    integrity="sha512-G1LG2LwUb2/URw7SjZTTGGxxQYPE/rjr+1DYV+lAmXOhTrx/r/ORZyxv8h3+UG7M0TvrPoz7QlwDKM8ky3cI/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+  {{!-- animate --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 
 <body>
 
-  {{> redesSociales }}
   {{> navbar }}
 
-  <section class="agendarCita animate__animated animate__fadeIn">
-    {{> reservar }}
-  </section>
+  {{!-- <section class="agendarCita animate__animated animate__fadeIn">
+  </section> --}}
 
 
-
-
-  <main class="__cotizarContainer">
+  <main class="container __cotizarContainer">
 
     <section class="imgCotizarContainer">
     </section>
@@ -58,54 +78,62 @@
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
+
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
               {{> cotizarDepilacionCera }}
             </div>
+
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
               {{> cotizarDepilacionDefinitiva }}
             </div>
-          </div>
-        </div>
 
-        <div class="otrosServiciosBox">
 
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Otros servicios</button>
-            </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-
-              <div class="boxOtrosServicios">
-                {{#each otrosServicios}}
-                <div id="{{ cotizarData.id }}" class="{{ cotizarData.color }}">
-                  {{ cotizarData.nombre }}
-                  <i>{{ cotizarData.msg }}</i>
-                  <span id="precio_{{ cotizarData.id }}">$ {{cotizarData.precioIndividual}}</span>
-                </div>
-                {{/each}}
+            <div class="ui accordion">
+              <div class="title">
+                <i class="dropdown icon"></i>
+                Otros servicios
+              </div>
+              <div class="content">
+                {{> otrosServicios }}
               </div>
             </div>
+
+            <div class=" boxValorTotal">
+              <div class="boxBorder">
+                <p id="valorTotalZonas">Valor total : $ 0</p>
+                <button id="btnAgendarCita">Agendar Cita</button>
+              </div>
+            </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
   </main>
 
-
-
-
   {{> footer}}
 
+  {{!-- bootstrap --}}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
-  <script src="/socket.io/socket.io.js"></script>
+
+  {{!-- semantic ui --}}
   <script>
+    $('.ui.accordion')
+      .accordion()
+      ;
+
   </script>
-  <script src="../js/main.js"></script>
+
+
+
+
+
+  {{!-- js --}}
+  <script src="../js/countDown.js"></script>
   <script src=" ../js/cotizar.js" type="module"></script>
   <script src="../js/borderBottonNav.js"></script>
 

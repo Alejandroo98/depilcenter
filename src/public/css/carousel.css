@@ -118,9 +118,12 @@
 .btn-blanco {
   background-color: #eeecec !important;
   padding: 15px 25px !important;
+  box-shadow: var(--sombra);
 }
 
 .btn-rojo {
+  color: white !important;
+  box-shadow: var(--sombra);
   padding: 15px 25px !important;
-  background-color: var(--general) !important;
+  background-color: var(--base) !important;
 }

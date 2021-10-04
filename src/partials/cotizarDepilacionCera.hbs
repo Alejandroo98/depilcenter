@@ -9,9 +9,14 @@
         </div>
 
         {{#each corporal}}
-        <div id="{{ id }}" class="{{ color }}">
+        <div id="{{ id }}" class="{{ color }} zona-box-child">
             {{ nombre }}
-            <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
+            <div>
+                <p id="precio_{{ id }}">$ {{precioIndividual}}</p>
+                <p>
+                    <i class="check_{{ id }} check circle icon checkSeleccionadoBlack"></i>
+                </p>
+            </div>
         </div>
         {{/each}}
 
@@ -19,28 +24,28 @@
 
 
 
-    <div class=" boxCotizarFacial">
+    <div class="boxCotizarFacial">
 
         <div class="nombreZonas">
             <h5>Facial</h5>
         </div>
 
         {{#each facial}}
-        <div id="{{ id }}" class="{{ color }}">
+        <div id="{{ id }}" class="{{ color }} zona-box-child">
             {{ nombre }}
-            <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
+            <div>
+                <p id="precio_{{ id }}">$ {{precioIndividual}}</p>
+                <p>
+                    <i class="check_{{ id }} check circle icon checkSeleccionadoBlack"></i>
+                </p>
+            </div>
         </div>
         {{/each}}
 
     </div>
 
 
-    <div class=" boxValorTotal">
-        <div class="boxBorder">
-            <p id="valorTotalZonas">Valor total : $ 0</p>
-            <button id="btnAgendarCita">Agendar Cita</button>
-        </div>
-    </div>
+
 
 
 </div>

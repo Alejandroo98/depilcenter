@@ -67,7 +67,7 @@
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Blanqueamiento de axilas",
       "precioIndividual": "60",
-      "color": "rojo",
+      "color": "negro",
       "msg": "• 4 sesiones"
     }
   },
@@ -97,7 +97,7 @@
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Limpieza facial",
       "precioIndividual": "25",
-      "color": "rojo",
+      "color": "negro",
       "msg": "• Dos personas por $35"
     }
   },
@@ -138,7 +138,7 @@
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Masajes",
       "precioIndividual": "25",
-      "color": "rojo",
+      "color": "negro",
       "msg": ""
     },
     "data_desc": "2X1"
@@ -159,7 +159,7 @@
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Tratamiento para a acné",
       "precioIndividual": "80",
-      "color": "rojo",
+      "color": "negro",
       "msg": "• 10 sesiones"
     }
   },
@@ -179,7 +179,7 @@
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
       "nombre": "Levantamiento de gluteos",
       "precioIndividual": "100",
-      "color": "rojo",
+      "color": "negro",
       "msg": "• 10 sesiones"
     }
   }

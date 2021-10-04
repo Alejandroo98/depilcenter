@@ -74,9 +74,9 @@
   border-radius: 5px 0 0 5px;
   padding: 8px 10px;
   font-size: 15px;
-  color: #5e5e5e;
+  color: var(--base);
   background-color: #fff;
-  border-left: 5px solid #5e5e5e;
+  border-left: 5px solid var(--base);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
@@ -85,6 +85,7 @@
   background-color: white;
   border-radius: 5px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  text-align: center;
 }
 
 .count-down-align p:first-child {
@@ -92,10 +93,11 @@
   left: -5px;
   padding: 5px 8px;
   color: #fff;
-  background-color: #5e5e5e;
+  background-color: var(--base);
   font-weight: bold;
   font-size: 16px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  min-width: 35px;
 }
 
 .count-down-align p:first-child::after {
@@ -107,7 +109,7 @@
 }
 
 .count-down-align p:last-child {
-  color: #5e5e5e;
+  color: var(--base);
   padding: 5px 10px 5px 0;
   font-weight: bold;
   font-size: 20px;

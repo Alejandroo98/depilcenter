@@ -1,38 +1,17 @@
-html {
-  height: 100%;
-}
-
 body {
-  min-height: 100%;
-  position: relative;
-}
-
-:root {
-  --fondo: rgb(245, 224, 227);
-  --general: #e8908b;
-  --amarillo: rgb(255, 255, 166);
-  --celeste: rgb(150, 230, 226);
-  --rojo: rgb(250, 173, 173);
-  --letras: rgb(119, 119, 119);
-  --negro: rgb(56, 56, 56);
-  --sombra: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: var(--fondo);
 }
 
 .__cotizarContainer {
-  background-image: url(../img/backgroundDos-01.svg);
-  background-size: cover;
-  background-position: center;
-  background-size: cover;
   display: flex;
   justify-content: center;
-  margin-top: 55px;
   position: relative;
-  /* padding: 0 25px 423px 25px; */
-  background-color: var(--celeste);
 }
 
 .imgCotizarContainer {
   display: flex;
+  flex-grow: 3;
+  justify-content: center;
   align-items: flex-end;
   padding: 20px;
 }
@@ -42,16 +21,14 @@ body {
 }
 
 .cajaOpciones {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(min-content, 1060px));
-  border-radius: 15px;
-  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: aqua; */
+  flex-grow: 7;
 }
 
 .borraOpciones {
-  display: grid;
-  grid-template-columns: 7fr 3fr;
-  gap: 15px;
   animation-name: mostrarMujer;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -70,11 +47,15 @@ body {
 
 .tab-content {
   padding: 12px;
-  border-radius: 18px;
-  background-color: rgba(255, 255, 255, 0.479);
+  border-radius: 5px;
+  /* border: 1px solid #dddddd !important; */
+  background-color: rgb(240, 240, 240);
 }
 
 /* OPCIONES DE COTIZAR( MUJER - HOMBRE  ) */
+.nav-tabs {
+  border-bottom: none !important;
+}
 
 .nav-tabs a {
   outline: none;
@@ -86,15 +67,21 @@ body {
 }
 
 .nav-tabs .active {
-  border-radius: 17px 17px 0 0;
+  border: none !important;
+  border-radius: 5px 5px 0 0 !important;
   color: black !important;
   background-color: white !important;
-  border: none !important;
 }
 
 .nav-tabs .nav-link {
-  border-radius: 17px 17px 0 0;
-  background: rgba(255, 255, 255, 0.37);
+  border: none !important;
+  border-radius: 5px 5px 0 0 !important;
+  background-color: #f0f0f0;
+}
+
+.nav-tabs .nav-link:hover {
+  color: black;
+  background-color: #ffffff !important;
 }
 
 /* OPCIONES DE COTIZAR *FIN( MUJER - HOMBRE  ) */
@@ -125,13 +112,12 @@ body {
   grid-template-columns: 100%;
   gap: 10px;
   /* font-weight: 500; */
-  color: var(--negro);
 }
 
 .boxCotizarFacial {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.4em 0.5em;
+  gap: 0.4em 2em;
 }
 
 .boxCotizarFacial span {
@@ -141,65 +127,78 @@ body {
 .boxZonasCorporal {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.4em 0.5em;
+  gap: 0.4em 2em;
 }
 
 .boxZonasCorporal span {
   float: right;
 }
 
-.boxZonasCorporal > div {
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+.zona-box-child p {
+  margin: 0 3px;
 }
 
-.boxCotizarFacial > div {
-  padding: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.zona-box-child div {
+  display: flex;
 }
 
-.boxCotizarFacial > div {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.zona-box-child {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
   padding: 10px;
-}
-
-.boxOtrosServicios > div {
-  padding: 12px 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  margin-bottom: 0.4em;
+  border-radius: 5px;
   position: relative;
 }
 
-.boxOtrosServicios span {
-  float: right;
-}
+/*? OTROS SERVICIOS */
 
-.boxOtrosServicios i {
+.boxOtrosServicios .msg-cotizarData {
   position: absolute;
   bottom: 0;
   left: 10px;
   font-size: 12px;
+  color: rgb(139, 139, 139);
+}
+
+.margin-x {
+  margin: 0.4em 0;
+}
+
+.accordion {
+  margin-top: 10px;
+  box-shadow: var(--sombra) !important;
+  width: 100% !important;
+  /* background-color: #8e2f9b !important; */
+}
+
+.accordion .title {
+  background-color: #fff !important;
+  border-radius: 5px !important;
+  padding: 10px !important;
+  font-weight: bold;
+}
+
+.accordion .content {
+  padding: 5px 10px !important;
+  border: none !important;
+  margin: 0 !important;
+  background-color: #f4f3f3 !important;
 }
 
 .rojo {
-  background-color: rgb(247, 176, 176);
+  /* background-color: rgb(255, 234, 234); */
 }
 
 .negro {
-  background-color: rgb(102, 102, 102);
-  color: white;
+  background-color: #ffffff;
 }
 
 .celeste {
-  background-color: var(--celeste);
+  /* background-color: #9ee9fd; */
 }
 
 .nombreZonas {
-  background-color: var(--amarillo);
   grid-column: 1/-1;
 }
 
@@ -248,10 +247,19 @@ body {
 /* ============= AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */
 /* =========================================================================== */
 .zonaSeleccionada {
-  border-left: #ffffff solid 9px;
-  border-right: #ffffff solid 9px;
+  background-color: #0000000c !important;
+  border-left: var(--base) solid 6px;
   font-weight: bold;
 }
+
+.checkSeleccionado {
+  color: var(--base);
+}
+
+.checkSeleccionadoBlack {
+  color: rgb(163, 163, 163) !important;
+}
+
 /* =========================================================================== */
 /* ============= *FIN AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */
 /* =========================================================================== */

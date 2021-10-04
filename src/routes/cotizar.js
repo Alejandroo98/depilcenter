@@ -9,8 +9,6 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
 
   const otrosServicios = filterServicios('otroServicio', true);
 
-  console.log(otrosServicios);
-
   const { genero } = req.query;
 
   if (genero == 'mujer') {
@@ -32,7 +30,8 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
 
 router.get('/cotizar/depilacion-definitiva', (req, res) => {
   let zonas = [];
-  const otrosServicios = getOtrosServicios();
+
+  const otrosServicios = filterServicios('otroServicio', true);
 
   const { genero } = req.query;
 

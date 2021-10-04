@@ -6,7 +6,7 @@ changeActiveOption();
 
 /*  ================  PINTAR O DESPINTAR ZONA SELECCIONADA ======== */
 const cajaMainCotizar = document.querySelector('#nav-tabContent');
-const boxOtrosServicios = document.querySelector('.boxOtrosServicios');
+// const boxOtrosServicios = document.querySelector('.boxOtrosServicios');
 const cotizarConfig = new CotizarConfig();
 changeImg();
 
@@ -24,7 +24,7 @@ const startCalculoZonas = ({ target: { id } }) => {
   }
 };
 
-boxOtrosServicios.addEventListener('click', startCalculoZonas);
+// boxOtrosServicios.addEventListener('click', startCalculoZonas);
 cajaMainCotizar.addEventListener('click', startCalculoZonas);
 
 /*  ================  *FIN PINTAR O DESPINTAR ZONA SELECCIONADA ======== */

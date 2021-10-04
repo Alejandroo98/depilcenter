@@ -1,0 +1,14 @@
+<div class="boxOtrosServicios">
+    {{#each otrosServicios}}
+    <div id="{{ cotizarData.id }}" class=" margin-x zona-box-child">
+        {{ cotizarData.nombre }}
+        <p class="msg-cotizarData">{{ cotizarData.msg }}</p>
+        <div>
+            <span id="precio_{{ cotizarData.id }}">$ {{cotizarData.precioIndividual}}</span>
+            <p>
+                <i class="check_{{ cotizarData.id }} check circle icon checkSeleccionadoBlack"></i>
+            </p>
+        </div>
+    </div>
+    {{/each}}
+</div>

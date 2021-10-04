@@ -10,9 +10,10 @@ body {
 }
 
 :root {
-  --fondo: #f3f3f3;
+  --fondo: #e9e8e8;
   --base: #f37e78;
   --baseLess: #ffb7b7;
+  --sombra: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .cajaPrincipal {
