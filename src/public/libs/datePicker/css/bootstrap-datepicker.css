@@ -366,7 +366,6 @@
 .datepicker table tr td span.active:hover,
 .datepicker table tr td span.active.disabled,
 .datepicker table tr td span.active.disabled:hover {
-  background-color: #ff0000;
   background-image: -moz-linear-gradient(to bottom, salmon, salmon);
   background-image: -ms-linear-gradient(to bottom, salmon, salmon);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(salmon), to(salmon));

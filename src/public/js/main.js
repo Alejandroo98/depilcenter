@@ -34,8 +34,11 @@ import './serviciosActive.js';
 //novedades
 import './novedades.js';
 
-// selecionar servicios por medio de querry
+// selecionar servicios por medio de query
 import './selectServicios.js';
+
+//img cumpleanieros
+import './imgCumpleaniero.js';
 
 //Servicios
 const todosLosServicios_container = document.querySelector('.todosLosServicios-container');
@@ -47,8 +50,6 @@ todosLosServicios_container.addEventListener('click', ({ target }) => {
 });
 
 /* ==== *DATA_DESC ===== */
-
-/* IMPRIMIR IMG INSTAGRAM */
 
 window.onblur = function () {
   //Esta funcion se ejecuta cuando se cambia de pestaña en el navegador

@@ -186,18 +186,6 @@ body {
   background-color: #f8dfdf !important;
 }
 
-.rojo {
-  /* background-color: rgb(255, 234, 234); */
-}
-
-.negro {
-  background-color: #ffffff;
-}
-
-.celeste {
-  /* background-color: #9ee9fd; */
-}
-
 .nombreZonas {
   grid-column: 1/-1;
 }
@@ -265,5 +253,18 @@ body {
 }
 
 /* =========================================================================== */
-/* ============= *FIN AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */
+/* ============= *AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */
+/* =========================================================================== */
+
+/* =========================================================================== */
+/* ======================== CSS PARA DEPILACION DEFINITIVA =================== */
+/* =========================================================================== */
+.boxZonasCorporalIPL {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4em 2em;
+}
+
+/* =========================================================================== */
+/* ======================== *CSS PARA DEPILACION DEFINITIVA =================== */
 /* =========================================================================== */

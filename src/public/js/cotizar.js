@@ -3,6 +3,9 @@ import changeImg from './cotizar/changeImg.js';
 import changeActiveOption from './cotizar/changeActiveOption.js';
 import { printDataDesc, printSelectDataDesc } from './helpers.js';
 
+//datepicker
+import './printDateReserve.js';
+
 changeActiveOption();
 printSelectDataDesc();
 

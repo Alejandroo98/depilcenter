@@ -1,30 +1,52 @@
 <div class="cajaMainCotizar">
-    {{> selectHombreMujer }}
 
-    <div class="boxZonasCorporal">
+    <select class="depilacion_definitiva_select">
+        <option id="mujerOptionIPL" value="mujer">Mujer</option>
+        <option id="hombreOptionIPL" value="hombre">Hombre</option>
+    </select>
+
+
+    <div class="boxZonasCorporalIPL">
         <div class="nombreZonas">
             <h5>Corporal</h5>
         </div>
+
         {{#each corporal}}
-        <div id="{{ id }}" class="{{ color }}">
+        <div id="{{ id }}" class="{{ color }} zona-box-child">
             {{ nombre }}
-            <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
+            <div>
+                <p id="precio_{{ id }}">$ {{precioIndividual}}</p>
+                <p>
+                    <i class="check_{{ id }} check circle icon checkSeleccionadoBlack"></i>
+                </p>
+            </div>
         </div>
         {{/each}}
+
     </div>
+
 
 
     <div class="boxCotizarFacial">
+
         <div class="nombreZonas">
             <h5>Facial</h5>
         </div>
+
         {{#each facial}}
-        <div id="{{ id }}" class="{{ color }}">
+        <div id="{{ id }}" class="{{ color }} zona-box-child">
             {{ nombre }}
-            <span id="precio_{{ id }}">$ {{precioIndividual}}</span>
+            <div>
+                <p id="precio_{{ id }}">$ {{precioIndividual}}</p>
+                <p>
+                    <i class="check_{{ id }} check circle icon checkSeleccionadoBlack"></i>
+                </p>
+            </div>
         </div>
         {{/each}}
+
     </div>
+
 
 
 
