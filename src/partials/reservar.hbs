@@ -16,7 +16,10 @@
     </div>
     {{/if}}
 
-    <form class='registrarReserva  animate__animated  animate__fadeInUp' id='registrarReserva' method='POST'>
+    <form class='registrarReserva  animate__animated  animate__fadeInUp' id='registrarReserva' method='POST'
+      action="/reservar">
+
+      <input type="text" name="url" hidden value={{ url }}>
 
       <div class='infoReserva'>
         <span id="msg-client-reserva"></span>

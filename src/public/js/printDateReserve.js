@@ -17,8 +17,12 @@ if (day < 10) {
   dayCero = '';
 }
 
-let fullDate = `${dayCero}${day}-${monthCero}${month}-${year} `;
-let form_control_date = document.querySelector('.form-control-date');
-if (form_control_date.value == '') {
-  form_control_date.value = fullDate;
+try {
+  let fullDate = `${dayCero}${day}-${monthCero}${month}-${year} `;
+  let form_control_date = document.querySelector('.form-control-date');
+  if (form_control_date.value == '') {
+    form_control_date.value = fullDate;
+  }
+} catch (error) {
+  //
 }

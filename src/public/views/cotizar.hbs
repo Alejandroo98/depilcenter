@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/reserva.css">
   <link rel="stylesheet" href="../css/cotizar.css">
+  <link rel="stylesheet" href="../css/novedades.css">
 
 
   {{!-- google fonts - icons --}}
@@ -30,6 +31,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
     integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+    integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.js"
@@ -50,7 +54,9 @@
 
   {{!-- <section class="agendarCita animate__animated animate__fadeIn">
   </section> --}}
-
+  <div class="mt-3 mb-3">
+    {{> reservar }}
+  </div>
 
   <main class="container __cotizarContainer">
 
@@ -61,7 +67,7 @@
 
       <div class="nameCotizar">
         <h1>Arma tu combo y agenda tu cita.</h1>
-        <p>Elige las zonas deseadas a depilar dependiendo el genero o mira nuestros combos actuales.</p>
+        <p>Elige las zonas deseadas a depilar dependiendo el genero o mira nuestras promociones especiales.</p>
       </div>
 
       <div class="borraOpciones">
@@ -100,8 +106,10 @@
 
             <div class=" boxValorTotal">
               <div class="boxBorder">
-                <p id="valorTotalZonas">Valor total : $ 0</p>
-                <button id="btnAgendarCita">Agendar Cita</button>
+                <p id="valorTotalZonas">VALOR TOTAL : $ 0</p>
+              </div>
+              <div class="btn-button-reserve">
+                <button class="btn-cotizar-reserve">AGENDAR CITA</button>
               </div>
             </div>
 
@@ -112,6 +120,10 @@
       </div>
     </section>
   </main>
+
+  <section class="mt-3 mb-3">
+    {{> novedades }}
+  </section>
 
   {{> footer}}
 

@@ -13,6 +13,8 @@ app.use(require('./cotizar'));
 
 app.use(require('./conocenos'));
 
+app.use(require('./reservar'));
+
 app.use('/admin', require('./admin'));
 
 app.get('/blog', (req, res) => {

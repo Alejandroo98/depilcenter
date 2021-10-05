@@ -202,7 +202,7 @@ class cotizarConfig {
     });
 
     const valorTotal = cero + Number(precioIndividual) + Number(ceroOS);
-    this.valorTotalZonas.innerHTML = `Valor total: $ ${valorTotal}`;
+    this.valorTotalZonas.innerHTML = `VALOR TOTAL: $ ${valorTotal}`;
   }
 }
 

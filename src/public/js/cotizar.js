@@ -1,8 +1,19 @@
 import CotizarConfig from './cotizar/cotizarConfig.js';
 import changeImg from './cotizar/changeImg.js';
 import changeActiveOption from './cotizar/changeActiveOption.js';
+import { printDataDesc, printSelectDataDesc } from './helpers.js';
 
 changeActiveOption();
+printSelectDataDesc();
+
+// change servicios options
+import './serviciosActive.js';
+
+//novedades
+import './novedades.js';
+
+//select servicios url
+import './selectServicios.js';
 
 /*  ================  PINTAR O DESPINTAR ZONA SELECCIONADA ======== */
 const cajaMainCotizar = document.querySelector('#nav-tabContent');
@@ -26,14 +37,9 @@ const startCalculoZonas = ({ target: { id } }) => {
 
 // boxOtrosServicios.addEventListener('click', startCalculoZonas);
 cajaMainCotizar.addEventListener('click', startCalculoZonas);
-
-/*  ================  *FIN PINTAR O DESPINTAR ZONA SELECCIONADA ======== */
-
-/* =======================MOSTRAR EL CUADRO DE REGISTRO DE DATOS PARA GENDAR CITA DESDE COTIZAR =========*/
-import verAgendarCita from './cotizar/verAgendarCita.js';
-const agendarCita = new verAgendarCita();
-document.getElementById('btnAgendarCita').addEventListener('click', () => {
-  agendarCita.scroll();
+const btn_cotizar_reserve = document.querySelector('.btn-cotizar-reserve');
+btn_cotizar_reserve.addEventListener('click', ({ target }) => {
+  printDataDesc({ id: target.dataset.id, value: 'COTIZACION' });
 });
 
-/* =======================*FIN MOSTRAR EL CUADRO DE REGISTRO DE DATOS PARA GENDAR CITA DESDE COTIZAR =======*/
+/*  ================  *FIN PINTAR O DESPINTAR ZONA SELECCIONADA ======== */

@@ -1,11 +1,14 @@
 import { getMonth } from './getMesDia.js';
 import './printDateReserve.js';
-import { getQueryUrl, printDataDesc, printSelectDataDesc, scrollReserva } from './helpers.js';
-import { getInstagramPost } from './getInstagramPost.js';
+import { printDataDesc, printSelectDataDesc } from './helpers.js';
 
 /* =========== MES IMPRIMIR ( CUMPLEAÑIEROS ) ========= */
-const mesActual = getMonth();
-document.getElementById('mesCumpleanios').innerHTML = `Cumpleañeros de ${mesActual}`;
+try {
+  const mesActual = getMonth();
+  document.getElementById('mesCumpleanios').innerHTML = `Cumpleañeros de ${mesActual}`;
+} catch (error) {
+  //
+}
 /* =========== *MES IMPRIMIR ( CUMPLEAÑIEROS ) ========= */
 
 /* ==== DATA_DESC ===== */
@@ -25,21 +28,14 @@ btn_event_agendar.addEventListener('click', ({ target }) => {
   printDataDesc(values);
 });
 
-const serviciosActive = document.getElementById('serviciosActive');
-serviciosActive.addEventListener('change', ({ target }) => {
-  const data_set = document.getElementById(target.value);
-  const values = { id: data_set.id, value: data_set.dataset.desc };
-  printDataDesc(values);
-});
+// change servicios options
+import './serviciosActive.js';
 
-//Novedades
-const items_cards = document.querySelector('.items-cards');
-items_cards.addEventListener('click', ({ target }) => {
-  if (target.dataset.id) {
-    const values = { id: target.dataset.id, value: target.dataset.desc };
-    printDataDesc(values);
-  }
-});
+//novedades
+import './novedades.js';
+
+// selecionar servicios por medio de querry
+import './selectServicios.js';
 
 //Servicios
 const todosLosServicios_container = document.querySelector('.todosLosServicios-container');
@@ -51,21 +47,6 @@ todosLosServicios_container.addEventListener('click', ({ target }) => {
 });
 
 /* ==== *DATA_DESC ===== */
-
-/* ======== SELECCIONAR SERVICIOS Y HORA POR MEDIO DE QUERY ============ */
-try {
-  const { errors, servicio, hora } = getQueryUrl();
-
-  if (errors) {
-    scrollReserva();
-  }
-
-  document.getElementById(servicio).setAttribute('selected', '');
-  document.getElementById(hora).setAttribute('selected', '');
-} catch (error) {
-  console.log('');
-}
-/* ======== *SELECCIONAR SERVICIOS POR MEDIO DE QUERY ============ */
 
 /* IMPRIMIR IMG INSTAGRAM */
 

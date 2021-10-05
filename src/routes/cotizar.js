@@ -3,6 +3,8 @@ const { filterServicios } = require('../helpers/filtros');
 const router = Router();
 const { getDepilacionCera, getDepilacionDefinitiva } = require('../helpers/getDataZonas');
 const { comprovarQueryGenero } = require('../middleware/queryGenero');
+const ultimasPromociones = require('../DB/ultimas-promociones.json');
+const servicios = filterServicios('selectForm', true);
 
 router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
   let zonas = [];
@@ -25,7 +27,9 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
     return zona.tipo == 'facial';
   });
 
-  res.render('cotizar', { corporal, facial, otrosServicios });
+  const url = req.url;
+
+  res.render('cotizar', { corporal, facial, otrosServicios, ultimasPromociones, servicios, url });
 });
 
 router.get('/cotizar/depilacion-definitiva', (req, res) => {
@@ -49,7 +53,9 @@ router.get('/cotizar/depilacion-definitiva', (req, res) => {
     return zona.tipo == 'facial';
   });
 
-  res.render('cotizar', { corporal, facial, otrosServicios });
+  const url = req.url;
+
+  res.render('cotizar', { corporal, facial, otrosServicios, ultimasPromociones, servicios, url });
 });
 
 router.post('/getPreciosCombos', (req, res) => {
