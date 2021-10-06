@@ -68,7 +68,7 @@
       "nombre": "Blanqueamiento de axilas",
       "precioIndividual": "60",
       "color": "negro",
-      "msg": "• 4 sesiones"
+      "msg": "4 sesiones"
     }
   },
   {
@@ -98,7 +98,7 @@
       "nombre": "Limpieza facial",
       "precioIndividual": "25",
       "color": "negro",
-      "msg": "• Dos personas por $35"
+      "msg": "Dos personas por $35"
     }
   },
 
@@ -139,7 +139,7 @@
       "nombre": "Masajes",
       "precioIndividual": "25",
       "color": "negro",
-      "msg": ""
+      "msg": "Sin promocion"
     },
     "data_desc": "2X1"
   },
@@ -160,7 +160,7 @@
       "nombre": "Tratamiento para a acné",
       "precioIndividual": "80",
       "color": "negro",
-      "msg": "• 10 sesiones"
+      "msg": "10 sesiones"
     }
   },
   {
@@ -180,7 +180,7 @@
       "nombre": "Levantamiento de gluteos",
       "precioIndividual": "100",
       "color": "negro",
-      "msg": "• 10 sesiones"
+      "msg": "10 sesiones"
     }
   }
 ]

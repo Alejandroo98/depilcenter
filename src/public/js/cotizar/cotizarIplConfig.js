@@ -1,6 +1,7 @@
 class CotizarIplConfig {
-  constructor() {
+  constructor(otrosServicios) {
     this.zonasSeleccionadas = [];
+    this.otrosServicios = otrosServicios;
   }
 
   comprovarZonaExiste = ({ id, dataset }) => {
@@ -58,10 +59,11 @@ class CotizarIplConfig {
   };
 
   zumarValoresTotales = () => {
+    const otrosServicios = Number(this.otrosServicios.zumarValoresTotales());
     const sinDescuento = this.precioZonaTratamientoNormal();
     const conDescuento = this.precioZonaTratamientoDescuento();
-    document.querySelector('#valorNormalCotizar').innerHTML = ` ${sinDescuento}`;
-    document.querySelector('#valorTotalZonas').innerHTML = `${conDescuento}`;
+    document.querySelector('#valorNormalCotizar').innerHTML = `${sinDescuento + otrosServicios}`;
+    document.querySelector('#valorTotalZonas').innerHTML = `${conDescuento + otrosServicios}`;
   };
 
   printZonasSelect = () => {

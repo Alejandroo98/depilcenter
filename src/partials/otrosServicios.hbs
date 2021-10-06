@@ -1,8 +1,12 @@
 <div class="boxOtrosServicios">
     {{#each otrosServicios}}
     <div id="{{ cotizarData.id }}" class=" margin-x zona-box-child">
+        <div class="over-card" id="{{ cotizarData.id }}" data-id="{{ id }}" data-nombre="{{ cotizarData.nombre  }}"
+            data-desc="{{ cotizarData.msg }}" data-descuento="{{ cotizarData.descuento }}" data-precio="{{ cotizarData.precioIndividual
+            }}">
+        </div>
         {{ cotizarData.nombre }}
-        <p class="msg-cotizarData">{{ cotizarData.msg }}</p>
+        <p class="msg-cotizarData">• {{ cotizarData.msg }}</p>
         <div>
             <span id="precio_{{ cotizarData.id }}">$ {{cotizarData.precioIndividual}}</span>
             <p>

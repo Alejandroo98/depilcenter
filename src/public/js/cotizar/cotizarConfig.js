@@ -1,43 +1,13 @@
 import d_cera from '../../DB/depilacion-cera.js';
 import d_definitiva from '../../DB/depilacion-definitiva.js';
+import sumarValorTotal from './sumarValorTotal.js';
 
 class CotizarConfig {
-  constructor() {
+  constructor(otrosServicios) {
+    this.otrosServicios = otrosServicios;
     this.zonasSeleccionadas = [];
-    this.zonasSeleccionadasOS = [];
     this.zonas = [];
     this.valorTotalZonas = document.getElementById('valorTotalZonas');
-  }
-
-  comprovarZonaExisteOS = (id) => {
-    const existe = this.zonasSeleccionadasOS.find((zona) => {
-      return zona.id == id;
-    });
-
-    if (existe) {
-      this.eliminarZonaOS(id);
-    } else {
-      this.agregarZonaOS(id);
-    }
-
-    this.sumarZonas();
-  };
-
-  agregarZonaOS = (id) => {
-    const precioIndividual = this.getValueSpan(id);
-    this.zonasSeleccionadasOS = [...this.zonasSeleccionadasOS, { id, precioIndividual }];
-  };
-
-  eliminarZonaOS = (id) => {
-    this.zonasSeleccionadasOS = this.zonasSeleccionadasOS.filter((zona) => {
-      return zona.id != id;
-    });
-  };
-
-  getValueSpan(id) {
-    const zonaBox = document.getElementById(id);
-    const precio = zonaBox.getElementsByTagName('span')[0].textContent.split(' ')[1];
-    return precio;
   }
 
   comprovarZonaExiste = (id) => {
@@ -171,10 +141,11 @@ class CotizarConfig {
   }
 
   sumarZonas() {
-    let ceroOS = 0;
     let cero = 0;
+
     let id = '';
     let precioIndividual = 0;
+    const otrosServicios = Number(this.otrosServicios.zumarValoresTotales());
 
     try {
       const valorMasAlto = this.valorMasAlto();
@@ -185,18 +156,14 @@ class CotizarConfig {
       precioIndividual = 0;
     }
 
-    this.zonasSeleccionadasOS.forEach((zona) => {
-      ceroOS += Number(zona.precioIndividual);
-    });
-
     this.zonasSeleccionadas.forEach((zona) => {
       if (zona.id != id) {
         cero += Number(zona.precioCombo);
       }
     });
 
-    const valorTotal = cero + Number(precioIndividual) + Number(ceroOS);
-    this.valorTotalZonas.innerHTML = `VALOR TOTAL: $ ${valorTotal}`;
+    const valorTotal = cero + Number(precioIndividual);
+    this.valorTotalZonas.innerHTML = `${valorTotal + otrosServicios}`;
   }
 }
 
