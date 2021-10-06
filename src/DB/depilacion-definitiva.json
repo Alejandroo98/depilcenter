@@ -2,359 +2,403 @@
   {
     "mujer": [
       {
-        "id": "C_DDM1",
+        "id": "DD_C_DDM1",
         "nombre": "Media Pierna",
-        "precioIndividual": "13",
-        "precioCombo": "13",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM2",
+        "id": "DD_C_DDM2",
         "nombre": "Pierna Completa",
-        "precioIndividual": "15",
-        "precioCombo": "15",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM3",
+        "id": "DD_C_DDM3",
         "nombre": "Bikini",
-        "precioIndividual": "10",
-        "precioCombo": "6",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM4",
+        "id": "DD_C_DDM4",
         "nombre": "Bikini Brasilero",
-        "precioIndividual": "15",
-        "precioCombo": "10",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM5",
+        "id": "DD_C_DDM5",
         "nombre": "Atras",
-        "precioIndividual": "8",
-        "precioCombo": "5",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM6",
+        "id": "DD_C_DDM6",
         "nombre": "Axilas",
-        "precioIndividual": "6",
-        "precioCombo": "4",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM7",
+        "id": "DD_C_DDM7",
         "nombre": "Brazos Completos",
-        "precioIndividual": "11",
-        "precioCombo": "7",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM8",
+        "id": "DD_C_DDM8",
         "nombre": "Medio Brazo",
-        "precioIndividual": "7",
-        "precioCombo": "5",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM9",
+        "id": "DD_C_DDM9",
         "nombre": "Espalda Completa",
-        "precioIndividual": "14",
-        "precioCombo": "9",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM10",
+        "id": "DD_C_DDM10",
         "nombre": "Media Espalda",
-        "precioIndividual": "10",
-        "precioCombo": "6",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM11",
+        "id": "DD_C_DDM11",
         "nombre": "Estomago Completo",
-        "precioIndividual": "10",
-        "precioCombo": "6",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM12",
+        "id": "DD_C_DDM12",
         "nombre": "Medio Estomago",
-        "precioIndividual": "7",
-        "precioCombo": "5",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM13",
+        "id": "DD_C_DDM13",
         "nombre": "Linea Estomago",
-        "precioIndividual": "5",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM14",
+        "id": "DD_C_DDM14",
         "nombre": "Linea Espalda",
-        "precioIndividual": "5",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM15",
+        "id": "DD_C_DDM15",
         "nombre": "Gluteos",
-        "precioIndividual": "6",
-        "precioCombo": "4",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM16",
+        "id": "DD_C_DDM16",
         "nombre": "Hombros",
-        "precioIndividual": "5",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDM17",
+        "id": "DD_C_DDM17",
         "nombre": "Pecho",
-        "precioIndividual": "10",
-        "precioCombo": "8",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM18",
+        "id": "DD_F_DDM18",
         "nombre": "Barba",
-        "precioIndividual": "12",
-        "precioCombo": "12",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM19",
+        "id": "DD_F_DDM19",
         "nombre": "Cejas",
-        "precioIndividual": "5",
-        "precioCombo": "5",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM20",
+        "id": "DD_F_DDM20",
         "nombre": "Bigote",
-        "precioIndividual": "4",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM21",
+        "id": "DD_F_DDM21",
         "nombre": "Patilla",
-        "precioIndividual": "4",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM22",
+        "id": "DD_F_DDM22",
         "nombre": "Barbilla",
-        "precioIndividual": "4",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM23",
+        "id": "DD_F_DDM23",
         "nombre": "Pomulos",
-        "precioIndividual": "4",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM24",
+        "id": "DD_F_DDM24",
         "nombre": "Nariz",
-        "precioIndividual": "4",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM25",
+        "id": "DD_F_DDM25",
         "nombre": "Cuello",
-        "precioIndividual": "4",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDM26",
+        "id": "DD_F_DDM26",
         "nombre": "Entrecejo",
-        "precioIndividual": "2",
-        "precioCombo": "2",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "rojo"
+        "descuento": "20",
+        "nroSesiones": "8"
       }
     ],
     "hombre": [
       {
-        "id": "C_DDH1",
+        "id": "DD_C_DDH1",
         "nombre": "Media Pierna",
-        "precioIndividual": "13",
-        "precioCombo": "13",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH2",
+        "id": "DD_C_DDH2",
         "nombre": "Pierna Completa",
-        "precioIndividual": "15",
-        "precioCombo": "15",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH3",
+        "id": "DD_C_DDH3",
         "nombre": "Bikini",
-        "precioIndividual": "10",
-        "precioCombo": "6",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH4",
+        "id": "DD_C_DDH4",
         "nombre": "Bikini Brasilero",
-        "precioIndividual": "15",
-        "precioCombo": "10",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
 
       {
-        "id": "C_DDH6",
+        "id": "DD_C_DDH6",
         "nombre": "Axilas",
-        "precioIndividual": "6",
-        "precioCombo": "4",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH7",
+        "id": "DD_C_DDH7",
         "nombre": "Brazos Completos",
-        "precioIndividual": "11",
-        "precioCombo": "7",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH8",
+        "id": "DD_C_DDH8",
         "nombre": "Medio Brazo",
-        "precioIndividual": "7",
-        "precioCombo": "5",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH9",
+        "id": "DD_C_DDH9",
         "nombre": "Espalda Completa",
-        "precioIndividual": "14",
-        "precioCombo": "9",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH10",
+        "id": "DD_C_DDH10",
         "nombre": "Media Espalda",
-        "precioIndividual": "10",
-        "precioCombo": "6",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH11",
+        "id": "DD_C_DDH11",
         "nombre": "Estomago Completo",
-        "precioIndividual": "10",
-        "precioCombo": "6",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH12",
+        "id": "DD_C_DDH12",
         "nombre": "Medio Estomago",
-        "precioIndividual": "7",
-        "precioCombo": "5",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH13",
+        "id": "DD_C_DDH13",
         "nombre": "Linea Estomago",
-        "precioIndividual": "5",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH14",
+        "id": "DD_C_DDH14",
         "nombre": "Linea Espalda",
-        "precioIndividual": "5",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH15",
+        "id": "DD_C_DDH15",
         "nombre": "Gluteos",
-        "precioIndividual": "6",
-        "precioCombo": "4",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH16",
+        "id": "DD_C_DDH16",
         "nombre": "Hombros",
-        "precioIndividual": "5",
-        "precioCombo": "3",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "C_DDH17",
+        "id": "DD_C_DDH17",
         "nombre": "Pecho",
-        "precioIndividual": "10",
-        "precioCombo": "8",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "corporal",
-        "color": "celeste"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDH18",
+        "id": "DD_F_DDH18",
         "nombre": "Barba",
-        "precioIndividual": "12",
-        "precioCombo": "12",
+        "precioIndividual": "20",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "negro"
+        "descuento": "20",
+        "nroSesiones": "8"
       },
       {
-        "id": "F_DDH19",
+        "id": "DD_F_DDH19",
         "nombre": "Rostro completo",
         "precioIndividual": "20",
-        "precioCombo": "12",
+        "precioCombo": "20",
         "tipo": "facial",
-        "color": "negro"
+        "descuento": "20",
+        "nroSesiones": "8"
       }
     ]
   }

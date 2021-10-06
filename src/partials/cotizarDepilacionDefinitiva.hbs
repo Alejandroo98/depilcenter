@@ -12,13 +12,29 @@
         </div>
 
         {{#each corporal}}
-        <div id="{{ id }}" class="{{ color }} zona-box-child">
-            {{ nombre }}
-            <div>
-                <p id="precio_{{ id }}">$ {{precioIndividual}}</p>
+        <div id="{{ id }}" data-id="{{ corporal.id }}" data-desc="{{ corporal.descuento }}% DE DESCUENTO"
+            class="zona-box-child-ipl">
+            <div class="circle-card-ipl">
+                <p>
+                    {{ descuento }}%
+                </p>
+            </div>
+            <div class="card-title-ipl">
+                {{ mayuscula nombre }}
                 <p>
                     <i class="check_{{ id }} check circle icon checkSeleccionadoBlack"></i>
                 </p>
+            </div>
+            <div class="hr-ipl">
+                <hr>
+            </div>
+            <div class="extra-card-ipl">
+                PRECIO POR SESION
+            </div>
+            <div class="body-card-ipl">
+                <b> Nro sesiones: </b> {{ nroSesiones }}. <br>
+                <b> Precio normal:</b> ${{ precioIndividual }}. <br>
+                <b> Precio promo: </b> ${{ precioPromo precioIndividual descuento }} <br>
             </div>
         </div>
         {{/each}}
@@ -27,20 +43,34 @@
 
 
 
-    <div class="boxCotizarFacial">
+    <div class="boxZonasCorporalIPL">
 
         <div class="nombreZonas">
             <h5>Facial</h5>
         </div>
-
         {{#each facial}}
-        <div id="{{ id }}" class="{{ color }} zona-box-child">
-            {{ nombre }}
-            <div>
-                <p id="precio_{{ id }}">$ {{precioIndividual}}</p>
+        <div id="{{ id }}" class="{{ color }} zona-box-child-ipl">
+            <div class="circle-card-ipl">
+                <p>
+                    {{ descuento }}%
+                </p>
+            </div>
+            <div class="card-title-ipl">
+                {{ mayuscula nombre }}
                 <p>
                     <i class="check_{{ id }} check circle icon checkSeleccionadoBlack"></i>
                 </p>
+            </div>
+            <div class="hr-ipl">
+                <hr>
+            </div>
+            <div class="extra-card-ipl">
+                PRECIO POR SESION
+            </div>
+            <div class="body-card-ipl">
+                <b> Nro sesiones: </b> {{ nroSesiones }}. <br>
+                <b> Precio normal:</b> ${{ precioIndividual }}. <br>
+                <b> Precio promo: </b> ${{ precioPromo precioIndividual descuento }} <br>
             </div>
         </div>
         {{/each}}

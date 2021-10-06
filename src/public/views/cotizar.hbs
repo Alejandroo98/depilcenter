@@ -54,6 +54,28 @@
     <section class="imgCotizarContainer">
     </section>
 
+    <section class="indicaciones-container-ipl">
+      <div class="indc-color-box">
+        <div class="indc-childs">
+          {{#each indicaciones}}
+          <b>• {{ title }}</b>
+
+          <ol type="1">
+            {{#each body }}
+            <li>{{ desc }}
+              {{#if verMas}}
+              <a href="{{ verMas.href }}">Ver mas</a>
+              {{/if}}
+            </li>
+            {{/each }}
+          </ol>
+
+          <hr style="margin: 5px 0">
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
     <section class="cajaOpciones">
 
       <div class="nameCotizar">
@@ -85,7 +107,7 @@
             </div>
 
 
-            <div class="ui accordion">
+            <div class="ui accordion" id="otros_servicios">
               <div class="title">
                 <i class="dropdown icon"></i>
                 Otros servicios
@@ -112,7 +134,7 @@
     </section>
   </main>
 
-  <div class=" mb-3">
+  <div class="mt-3 mb-3">
     {{> reservar }}
   </div>
 

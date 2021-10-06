@@ -19,7 +19,9 @@ import './novedades.js';
 import './selectServicios.js';
 
 /*  ================  PINTAR O DESPINTAR ZONA SELECCIONADA ======== */
-const cajaMainCotizar = document.querySelector('#nav-tabContent');
+const box_d_cera = document.querySelector('#nav-home');
+const botros_servicios = document.querySelector('#otros_servicios');
+const nav_profile = document.querySelector('#nav-profile');
 // const boxOtrosServicios = document.querySelector('.boxOtrosServicios');
 const cotizarConfig = new CotizarConfig();
 changeImg();
@@ -34,12 +36,20 @@ const startCalculoZonas = ({ target: { id } }) => {
     } else if (idSplit == 'T') {
       cotizarConfig.pinarDespintar(id);
       cotizarConfig.comprovarZonaExisteOS(id);
+    } else if (idSplit == 'DD') {
+      console.log('TODO: Wotk!');
+      /* 
+      TODO: Aqui tienes que hacer la config para que las zonas en d_laser se sumen dependiendo el numero de zonas el valor de esta zona y la promo  que tiene
+      */
     }
   }
 };
 
 // boxOtrosServicios.addEventListener('click', startCalculoZonas);
-cajaMainCotizar.addEventListener('click', startCalculoZonas);
+box_d_cera.addEventListener('click', startCalculoZonas);
+botros_servicios.addEventListener('click', startCalculoZonas);
+nav_profile.addEventListener('click', startCalculoZonas);
+
 const btn_cotizar_reserve = document.querySelector('.btn-cotizar-reserve');
 btn_cotizar_reserve.addEventListener('click', ({ target }) => {
   printDataDesc({ id: target.dataset.id, value: 'COTIZACION' });
