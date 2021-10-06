@@ -3,15 +3,17 @@
     "mujer": [
       {
         "id": "DD_C_DDM1",
+        "categoria": "d_laser",
         "nombre": "Media Pierna",
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
         "id": "DD_C_DDM2",
+        "categoria": "d_laser",
         "nombre": "Pierna Completa",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -21,6 +23,7 @@
       },
       {
         "id": "DD_C_DDM3",
+        "categoria": "d_laser",
         "nombre": "Bikini",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -30,6 +33,7 @@
       },
       {
         "id": "DD_C_DDM4",
+        "categoria": "d_laser",
         "nombre": "Bikini Brasilero",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -39,6 +43,7 @@
       },
       {
         "id": "DD_C_DDM5",
+        "categoria": "d_laser",
         "nombre": "Atras",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -48,6 +53,7 @@
       },
       {
         "id": "DD_C_DDM6",
+        "categoria": "d_laser",
         "nombre": "Axilas",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -57,6 +63,7 @@
       },
       {
         "id": "DD_C_DDM7",
+        "categoria": "d_laser",
         "nombre": "Brazos Completos",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -66,6 +73,7 @@
       },
       {
         "id": "DD_C_DDM8",
+        "categoria": "d_laser",
         "nombre": "Medio Brazo",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -75,6 +83,7 @@
       },
       {
         "id": "DD_C_DDM9",
+        "categoria": "d_laser",
         "nombre": "Espalda Completa",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -84,6 +93,7 @@
       },
       {
         "id": "DD_C_DDM10",
+        "categoria": "d_laser",
         "nombre": "Media Espalda",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -93,6 +103,7 @@
       },
       {
         "id": "DD_C_DDM11",
+        "categoria": "d_laser",
         "nombre": "Estomago Completo",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -102,6 +113,7 @@
       },
       {
         "id": "DD_C_DDM12",
+        "categoria": "d_laser",
         "nombre": "Medio Estomago",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -111,6 +123,7 @@
       },
       {
         "id": "DD_C_DDM13",
+        "categoria": "d_laser",
         "nombre": "Linea Estomago",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -120,6 +133,7 @@
       },
       {
         "id": "DD_C_DDM14",
+        "categoria": "d_laser",
         "nombre": "Linea Espalda",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -129,6 +143,7 @@
       },
       {
         "id": "DD_C_DDM15",
+        "categoria": "d_laser",
         "nombre": "Gluteos",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -138,6 +153,7 @@
       },
       {
         "id": "DD_C_DDM16",
+        "categoria": "d_laser",
         "nombre": "Hombros",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -147,6 +163,7 @@
       },
       {
         "id": "DD_C_DDM17",
+        "categoria": "d_laser",
         "nombre": "Pecho",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -156,6 +173,7 @@
       },
       {
         "id": "DD_F_DDM18",
+        "categoria": "d_laser",
         "nombre": "Barba",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -165,6 +183,7 @@
       },
       {
         "id": "DD_F_DDM19",
+        "categoria": "d_laser",
         "nombre": "Cejas",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -174,6 +193,7 @@
       },
       {
         "id": "DD_F_DDM20",
+        "categoria": "d_laser",
         "nombre": "Bigote",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -183,6 +203,7 @@
       },
       {
         "id": "DD_F_DDM21",
+        "categoria": "d_laser",
         "nombre": "Patilla",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -192,6 +213,7 @@
       },
       {
         "id": "DD_F_DDM22",
+        "categoria": "d_laser",
         "nombre": "Barbilla",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -201,6 +223,7 @@
       },
       {
         "id": "DD_F_DDM23",
+        "categoria": "d_laser",
         "nombre": "Pomulos",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -210,6 +233,7 @@
       },
       {
         "id": "DD_F_DDM24",
+        "categoria": "d_laser",
         "nombre": "Nariz",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -219,6 +243,7 @@
       },
       {
         "id": "DD_F_DDM25",
+        "categoria": "d_laser",
         "nombre": "Cuello",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -228,6 +253,7 @@
       },
       {
         "id": "DD_F_DDM26",
+        "categoria": "d_laser",
         "nombre": "Entrecejo",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -239,6 +265,7 @@
     "hombre": [
       {
         "id": "DD_C_DDH1",
+        "categoria": "d_laser",
         "nombre": "Media Pierna",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -248,6 +275,7 @@
       },
       {
         "id": "DD_C_DDH2",
+        "categoria": "d_laser",
         "nombre": "Pierna Completa",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -257,6 +285,7 @@
       },
       {
         "id": "DD_C_DDH3",
+        "categoria": "d_laser",
         "nombre": "Bikini",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -266,6 +295,7 @@
       },
       {
         "id": "DD_C_DDH4",
+        "categoria": "d_laser",
         "nombre": "Bikini Brasilero",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -276,6 +306,7 @@
 
       {
         "id": "DD_C_DDH6",
+        "categoria": "d_laser",
         "nombre": "Axilas",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -285,6 +316,7 @@
       },
       {
         "id": "DD_C_DDH7",
+        "categoria": "d_laser",
         "nombre": "Brazos Completos",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -294,6 +326,7 @@
       },
       {
         "id": "DD_C_DDH8",
+        "categoria": "d_laser",
         "nombre": "Medio Brazo",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -303,6 +336,7 @@
       },
       {
         "id": "DD_C_DDH9",
+        "categoria": "d_laser",
         "nombre": "Espalda Completa",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -312,6 +346,7 @@
       },
       {
         "id": "DD_C_DDH10",
+        "categoria": "d_laser",
         "nombre": "Media Espalda",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -321,6 +356,7 @@
       },
       {
         "id": "DD_C_DDH11",
+        "categoria": "d_laser",
         "nombre": "Estomago Completo",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -330,6 +366,7 @@
       },
       {
         "id": "DD_C_DDH12",
+        "categoria": "d_laser",
         "nombre": "Medio Estomago",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -339,6 +376,7 @@
       },
       {
         "id": "DD_C_DDH13",
+        "categoria": "d_laser",
         "nombre": "Linea Estomago",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -348,6 +386,7 @@
       },
       {
         "id": "DD_C_DDH14",
+        "categoria": "d_laser",
         "nombre": "Linea Espalda",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -357,6 +396,7 @@
       },
       {
         "id": "DD_C_DDH15",
+        "categoria": "d_laser",
         "nombre": "Gluteos",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -366,6 +406,7 @@
       },
       {
         "id": "DD_C_DDH16",
+        "categoria": "d_laser",
         "nombre": "Hombros",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -375,6 +416,7 @@
       },
       {
         "id": "DD_C_DDH17",
+        "categoria": "d_laser",
         "nombre": "Pecho",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -384,6 +426,7 @@
       },
       {
         "id": "DD_F_DDH18",
+        "categoria": "d_laser",
         "nombre": "Barba",
         "precioIndividual": "20",
         "precioCombo": "20",
@@ -393,6 +436,7 @@
       },
       {
         "id": "DD_F_DDH19",
+        "categoria": "d_laser",
         "nombre": "Rostro completo",
         "precioIndividual": "20",
         "precioCombo": "20",

@@ -74,6 +74,12 @@ const printSelectDataDesc = () => {
   }
 };
 
+const pinarDespintar = (id) => {
+  document.getElementById(id).classList.toggle('zonaSeleccionada');
+  document.querySelector(`.check_${id}`).classList.toggle('checkSeleccionadoBlack');
+  document.querySelector(`.check_${id}`).classList.toggle('checkSeleccionado');
+};
+
 export {
   getQueryUrl,
   scrollReserva,
@@ -81,4 +87,5 @@ export {
   removeLocalStorage,
   printSelectDataDesc,
   printDataDesc,
+  pinarDespintar,
 };

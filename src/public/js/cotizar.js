@@ -1,7 +1,8 @@
 import CotizarConfig from './cotizar/cotizarConfig.js';
 import changeImg from './cotizar/changeImg.js';
 import changeActiveOption from './cotizar/changeActiveOption.js';
-import { printDataDesc, printSelectDataDesc } from './helpers.js';
+import { pinarDespintar, printDataDesc, printSelectDataDesc } from './helpers.js';
+import CotizarIplConfig from './cotizar/cotizarIplConfig.js';
 
 //datepicker
 import './printDateReserve.js';
@@ -20,24 +21,26 @@ import './selectServicios.js';
 
 /*  ================  PINTAR O DESPINTAR ZONA SELECCIONADA ======== */
 const box_d_cera = document.querySelector('#nav-home');
-const botros_servicios = document.querySelector('#otros_servicios');
+const box_otros_servicios = document.querySelector('#otros_servicios');
 const nav_profile = document.querySelector('#nav-profile');
-// const boxOtrosServicios = document.querySelector('.boxOtrosServicios');
 const cotizarConfig = new CotizarConfig();
+const cotizarIplConfig = new CotizarIplConfig();
 changeImg();
 
-const startCalculoZonas = ({ target: { id } }) => {
+const startCalculoZonas = ({ target }) => {
+  const id = target.id;
   const idSplit = id.split('_')[0];
 
   if (id != '') {
     if (idSplit == 'C' || idSplit == 'F') {
-      cotizarConfig.pinarDespintar(id);
+      pinarDespintar(id);
       cotizarConfig.comprovarZonaExiste(id);
     } else if (idSplit == 'T') {
-      cotizarConfig.pinarDespintar(id);
+      pinarDespintar(id);
       cotizarConfig.comprovarZonaExisteOS(id);
     } else if (idSplit == 'DD') {
-      console.log('TODO: Wotk!');
+      pinarDespintar(id);
+      cotizarIplConfig.comprovarZonaExiste(target);
       /* 
       TODO: Aqui tienes que hacer la config para que las zonas en d_laser se sumen dependiendo el numero de zonas el valor de esta zona y la promo  que tiene
       */
@@ -45,9 +48,8 @@ const startCalculoZonas = ({ target: { id } }) => {
   }
 };
 
-// boxOtrosServicios.addEventListener('click', startCalculoZonas);
 box_d_cera.addEventListener('click', startCalculoZonas);
-botros_servicios.addEventListener('click', startCalculoZonas);
+box_otros_servicios.addEventListener('click', startCalculoZonas);
 nav_profile.addEventListener('click', startCalculoZonas);
 
 const btn_cotizar_reserve = document.querySelector('.btn-cotizar-reserve');

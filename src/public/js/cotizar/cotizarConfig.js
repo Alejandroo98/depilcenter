@@ -1,19 +1,13 @@
 import d_cera from '../../DB/depilacion-cera.js';
 import d_definitiva from '../../DB/depilacion-definitiva.js';
 
-class cotizarConfig {
+class CotizarConfig {
   constructor() {
     this.zonasSeleccionadas = [];
     this.zonasSeleccionadasOS = [];
     this.zonas = [];
     this.valorTotalZonas = document.getElementById('valorTotalZonas');
   }
-
-  pinarDespintar = (id) => {
-    document.getElementById(id).classList.toggle('zonaSeleccionada');
-    document.querySelector(`.check_${id}`).classList.toggle('checkSeleccionadoBlack');
-    document.querySelector(`.check_${id}`).classList.toggle('checkSeleccionado');
-  };
 
   comprovarZonaExisteOS = (id) => {
     const existe = this.zonasSeleccionadasOS.find((zona) => {
@@ -206,4 +200,4 @@ class cotizarConfig {
   }
 }
 
-export default cotizarConfig;
+export default CotizarConfig;

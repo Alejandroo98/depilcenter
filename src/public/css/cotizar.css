@@ -201,14 +201,21 @@ body {
 }
 
 .boxBorder {
-  padding: 6px 0;
+  padding: 13px 0;
+  font-size: 16px;
   display: inline-block;
 }
 
-.boxValorTotal p {
+.boxBorder p:first-child {
   display: inline;
   margin: 0;
   font-weight: bold;
+  color: #2c2c2c;
+}
+
+.boxBorder p:last-child {
+  display: inline;
+  color: #6e6e6e;
 }
 
 .btn-button-reserve {
@@ -351,6 +358,15 @@ body {
   position: relative;
   overflow: hidden;
   min-height: 200px;
+}
+.over-card {
+  position: absolute;
+  z-index: 500;
+  background-color: #ffffff00;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .card-title-ipl {
