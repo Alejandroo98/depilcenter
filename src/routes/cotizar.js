@@ -1,7 +1,11 @@
 const { Router } = require('express');
 const { filterServicios } = require('../helpers/filtros');
 const router = Router();
-const { getDepilacionCera, getDepilacionDefinitiva } = require('../helpers/getDataZonas');
+const {
+  getDepilacionCera,
+  getDepilacionDefinitiva,
+  getInfo_d_Cera,
+} = require('../helpers/getDataZonas');
 const { comprovarQueryGenero } = require('../middleware/queryGenero');
 const ultimasPromociones = require('../DB/ultimas-promociones.json');
 const servicios = filterServicios('selectForm', true);
@@ -29,6 +33,7 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
   });
 
   const url = req.url;
+  const _info_d_cera = getInfo_d_Cera();
 
   res.render('cotizar', {
     corporal,
@@ -37,6 +42,7 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
     ultimasPromociones,
     servicios,
     url,
+    _info_d_cera,
   });
 });
 

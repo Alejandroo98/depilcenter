@@ -6,12 +6,22 @@
 
 
     <div class="boxZonasCorporal">
+        {{#if _info_d_cera.descuentoBool}}
+        <div class="data-promocion" data-descuento="{{ _info_d_cera.descuento }}"
+            data-bool="{{ _info_d_cera.descuentoBool }}">
+            {{ _info_d_cera.title }}
+        </div>
+        {{/if}}
+
         <div class="nombreZonas">
             <h5>Corporal</h5>
         </div>
 
         {{#each corporal}}
-        <div id="{{ id }}" class="{{ color }} zona-box-child">
+        <div id="{{ id }}" class="zona-box-child">
+            <div class="over-card" id="{{ id }}" data-id="{{ categoria }}" data-descuento="{{ descuento }}"
+                data-nombre="{{ nombre }}" data-precioindividual="{{ precioIndividual }}"
+                data-preciocombo="{{ precioCombo }}"></div>
             {{ nombre }}
             <div>
                 <p id="precio_{{ id }}">$ {{precioIndividual}}</p>
@@ -34,6 +44,9 @@
 
         {{#each facial}}
         <div id="{{ id }}" class="{{ color }} zona-box-child">
+            <div class="over-card" id="{{ id }}" data-id="{{ categoria }}" data-descuento="{{ descuento }}"
+                data-nombre="{{ nombre }}" data-precioindividual="{{ precioIndividual }}"
+                data-preciocombo="{{ precioCombo }}"></div>
             {{ nombre }}
             <div>
                 <p id="precio_{{ id }}">$ {{precioIndividual}}</p>

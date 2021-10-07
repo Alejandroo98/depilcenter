@@ -1,6 +1,5 @@
 import d_cera from '../../DB/depilacion-cera.js';
 import d_definitiva from '../../DB/depilacion-definitiva.js';
-import sumarValorTotal from './sumarValorTotal.js';
 
 class CotizarConfig {
   constructor(otrosServicios) {
@@ -10,7 +9,7 @@ class CotizarConfig {
     this.valorTotalZonas = document.getElementById('valorTotalZonas');
   }
 
-  comprovarZonaExiste = (id) => {
+  comprovarZonaExiste = ({ id, dataset }) => {
     const existe = this.zonasSeleccionadas.find((zona) => {
       return zona.id == id;
     });
@@ -19,7 +18,7 @@ class CotizarConfig {
       this.eliminarZona(id);
       this.numeroDeZonas();
     } else {
-      this.agregarZona(id);
+      this.agregarZona(id, dataset);
       this.numeroDeZonas();
     }
   };
@@ -105,7 +104,7 @@ class CotizarConfig {
       document.getElementById(`precio_${id}`).innerHTML = `$ ${precioIndividual}`;
     } catch (error) {}
 
-    this.sumarZonas();
+    this.imprimirValorTotal();
   };
 
   getDepilacionCera = (genero) => {
@@ -116,45 +115,43 @@ class CotizarConfig {
     }
   };
 
-  getDepilacionDefinitiva = (genero) => {
-    if (genero == 'mujer') {
-      return d_definitiva[0].mujer;
-    } else if (genero == 'hombre') {
-      return d_definitiva[0].hombre;
-    }
-  };
+  agregarZona(
+    id,
+    { descuento, precioindividual: precioIndividual, preciocombo: precioCombo, nombre }
+  ) {
+    this.zonasSeleccionadas = [
+      ...this.zonasSeleccionadas,
+      { id, nombre, descuento, precioIndividual, precioCombo },
+    ];
 
-  agregarZona(id) {
-    const zonas = this.getZonas('');
-
-    const precioFilter = zonas.find((zona) => {
-      return zona.id == id;
-    });
-
-    this.zonasSeleccionadas = [...this.zonasSeleccionadas, { ...precioFilter }];
+    console.log(this.zonasSeleccionadas);
   }
 
   eliminarZona(id) {
     this.zonasSeleccionadas = this.zonasSeleccionadas.filter((zona) => {
       return zona.id != id;
     });
+    console.log(this.zonasSeleccionadas);
   }
 
-  sumarZonas() {
-    let cero = 0;
-
-    let id = '';
-    let precioIndividual = 0;
-    const otrosServicios = Number(this.otrosServicios.zumarValoresTotales());
+  precioMasAlto = () => {
+    let valorMasAlto = {};
 
     try {
-      const valorMasAlto = this.valorMasAlto();
-      id = valorMasAlto.id;
-      precioIndividual = valorMasAlto.precioIndividual;
+      valorMasAlto = this.valorMasAlto();
     } catch (error) {
-      id = '';
-      precioIndividual = 0;
+      valorMasAlto = {};
     }
+
+    return {
+      ...valorMasAlto,
+    };
+  };
+
+  handleSinDescuento() {
+    const { id, precioIndividual } = this.precioMasAlto();
+
+    let cero = 0;
 
     this.zonasSeleccionadas.forEach((zona) => {
       if (zona.id != id) {
@@ -163,8 +160,48 @@ class CotizarConfig {
     });
 
     const valorTotal = cero + Number(precioIndividual);
-    this.valorTotalZonas.innerHTML = `${valorTotal + otrosServicios}`;
+    return valorTotal;
   }
+
+  handleDescuento = () => {
+    const { id, precioIndividual, descuento } = this.precioMasAlto();
+
+    const restarPrecio = Number(precioIndividual) * Number(`0.${descuento}`);
+    const valorTotalPrecioMasAlto = Number(precioIndividual) - restarPrecio;
+
+    let valorTotalConDescuento = 0;
+
+    this.zonasSeleccionadas.forEach((zona) => {
+      if (zona.id != id) {
+        const descuento = Number(`0.${zona.descuento}`);
+        const valorDeDescueneto = Number(zona.precioCombo) * descuento;
+        const valorZonaDescuento = Number(zona.precioCombo) - valorDeDescueneto;
+        valorTotalConDescuento = valorTotalConDescuento + valorZonaDescuento;
+      }
+    });
+
+    const valorTotal = valorTotalConDescuento + Number(valorTotalPrecioMasAlto);
+    return valorTotal;
+  };
+
+  imprimirValorTotal = () => {
+    const otrosServicios = Number(this.otrosServicios.zumarValoresTotales());
+    const sinDescuento = this.handleSinDescuento();
+    const conDescuento = this.handleDescuento();
+
+    if (!sinDescuento || !conDescuento) {
+      document.querySelector('#valorNormalCotizar').innerHTML = 0;
+      document.querySelector('#valorTotalZonas').innerHTML = 0;
+      return;
+    }
+
+    document.querySelector('#valorNormalCotizar').innerHTML = `${Math.round(
+      sinDescuento + otrosServicios
+    )}`;
+    document.querySelector('#valorTotalZonas').innerHTML = `${Math.round(
+      conDescuento + otrosServicios
+    )}`;
+  };
 }
 
 export default CotizarConfig;

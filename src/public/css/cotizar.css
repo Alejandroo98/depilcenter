@@ -7,6 +7,15 @@ body {
   justify-content: center;
   position: relative;
 }
+.data-promocion {
+  background-color: #f37e78;
+  font-size: 16px;
+  padding: 10px;
+  grid-column: span 3;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
 
 .imgCotizarContainer {
   display: none;

@@ -17,4 +17,8 @@ const getDepilacionDefinitiva = (genero) => {
   }
 };
 
-module.exports = { getDepilacionCera, getDepilacionDefinitiva };
+const getInfo_d_Cera = () => {
+  return depilacionCera[0]._info;
+};
+
+module.exports = { getDepilacionCera, getDepilacionDefinitiva, getInfo_d_Cera };

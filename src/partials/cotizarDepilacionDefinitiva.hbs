@@ -52,10 +52,11 @@
             <h5>Facial</h5>
         </div>
         {{#each facial}}
-        <div id="{{ id }}" class="zona-box-child-ipl" data-id="{{ categoria  }}"
-            data-desc="{{ descuento }}% DE DESCUENTO" data-descuento={{ descuento }} data-precio={{ precioIndividual }}
-            data-nrosesiones="{{ nroSesiones }}">
-            <div class="over-card" id="{{ id }}"></div>
+        <div id="{{ id }}" class="zona-box-child-ipl">
+            <div class="over-card" id="{{ id }}" data-id="{{ categoria }}" data-desc="{{ descuento }}% DE DESCUENTO"
+                data-descuento={{ descuento }} data-precio={{ precioIndividual }} data-nrosesiones="{{ nroSesiones }}"
+                data-nombre="{{ nombre }}">
+            </div>
             <div class="circle-card-ipl">
                 <p>
                     {{ descuento }}%

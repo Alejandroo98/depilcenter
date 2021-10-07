@@ -37,14 +37,14 @@ const startCalculoZonas = ({ target }) => {
   if (id != '') {
     if (idSplit == 'C' || idSplit == 'F') {
       pinarDespintar(id);
-      cotizarConfig.comprovarZonaExiste(id);
+      cotizarConfig.comprovarZonaExiste(target);
     } else if (idSplit == 'T') {
       const url = location.pathname;
       pinarDespintar(id);
       cotizarOsConfig.comprovarZonaExiste(target);
 
       if (url == '/cotizar/depilacion-cera') {
-        cotizarConfig.sumarZonas();
+        cotizarConfig.imprimirValorTotal();
       } else if (url == '/cotizar/depilacion-definitiva') {
         cotizarIplConfig.zumarValoresTotales();
       }
