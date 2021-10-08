@@ -63,18 +63,12 @@ class CotizarIplConfig {
     const sinDescuento = this.precioZonaTratamientoNormal();
     const conDescuento = this.precioZonaTratamientoDescuento();
 
-    if (!sinDescuento || !conDescuento) {
-      document.querySelector('#valorNormalCotizar').innerHTML = 0;
-      document.querySelector('#valorTotalZonas').innerHTML = 0;
-      return;
-    }
-
     document.querySelector('#valorNormalCotizar').innerHTML = `${sinDescuento + otrosServicios}`;
     document.querySelector('#valorTotalZonas').innerHTML = `${conDescuento + otrosServicios}`;
   };
 
   printZonasSelect = () => {
-    console.log(this.zonasSeleccionadas);
+    // console.log(this.zonasSeleccionadas);
   };
 }
 

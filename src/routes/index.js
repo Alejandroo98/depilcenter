@@ -11,15 +11,9 @@ app.use(require('./contacto'));
 
 app.use(require('./cotizar'));
 
-app.use(require('./conocenos'));
+app.use(require('./indicaciones'));
 
 app.use(require('./reservar'));
-
-app.use('/admin', require('./admin'));
-
-app.get('/blog', (req, res) => {
-  res.render('blog');
-});
 
 app.get('/*', (req, res) => {
   res.redirect('/');

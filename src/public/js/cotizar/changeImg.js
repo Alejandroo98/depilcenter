@@ -17,8 +17,6 @@ const changeImg = () => {
   const imgCotizarContainer = document.querySelector('.imgCotizarContainer');
   const indicaciones_container_ipl = document.querySelector('.indicaciones-container-ipl');
 
-  console.log(path, query);
-
   const queryMuejer = query == DM;
   const queryHombre = query == DH;
 

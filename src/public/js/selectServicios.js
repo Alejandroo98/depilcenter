@@ -11,6 +11,6 @@ try {
   document.getElementById(servicio).setAttribute('selected', '');
   document.getElementById(hora).setAttribute('selected', '');
 } catch (error) {
-  console.log('');
+  //
 }
 /* ======== *SELECCIONAR SERVICIOS POR MEDIO DE QUERY ============ */

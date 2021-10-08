@@ -123,15 +123,12 @@ class CotizarConfig {
       ...this.zonasSeleccionadas,
       { id, nombre, descuento, precioIndividual, precioCombo },
     ];
-
-    console.log(this.zonasSeleccionadas);
   }
 
   eliminarZona(id) {
     this.zonasSeleccionadas = this.zonasSeleccionadas.filter((zona) => {
       return zona.id != id;
     });
-    console.log(this.zonasSeleccionadas);
   }
 
   precioMasAlto = () => {
@@ -160,6 +157,11 @@ class CotizarConfig {
     });
 
     const valorTotal = cero + Number(precioIndividual);
+
+    if (!valorTotal) {
+      return 0;
+    }
+
     return valorTotal;
   }
 
@@ -181,6 +183,11 @@ class CotizarConfig {
     });
 
     const valorTotal = valorTotalConDescuento + Number(valorTotalPrecioMasAlto);
+
+    if (!valorTotal) {
+      return 0;
+    }
+
     return valorTotal;
   };
 
@@ -188,12 +195,6 @@ class CotizarConfig {
     const otrosServicios = Number(this.otrosServicios.zumarValoresTotales());
     const sinDescuento = this.handleSinDescuento();
     const conDescuento = this.handleDescuento();
-
-    if (!sinDescuento || !conDescuento) {
-      document.querySelector('#valorNormalCotizar').innerHTML = 0;
-      document.querySelector('#valorTotalZonas').innerHTML = 0;
-      return;
-    }
 
     document.querySelector('#valorNormalCotizar').innerHTML = `${Math.round(
       sinDescuento + otrosServicios
