@@ -9,7 +9,7 @@ const {
 const { comprovarQueryGenero } = require('../middleware/queryGenero');
 const ultimasPromociones = require('../DB/ultimas-promociones.json');
 const servicios = filterServicios('selectForm', true);
-const indicaciones = require('../DB/indicaciones-ipl.json');
+const indicacionesIPL = require('../DB/indicaciones.json');
 
 router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
   let zonas = [];
@@ -47,6 +47,8 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
 });
 
 router.get('/cotizar/depilacion-definitiva', comprovarQueryGenero, (req, res) => {
+  const servicio = indicacionesIPL[0].d_laser.indicaciones;
+
   let zonas = [];
 
   const otrosServicios = filterServicios('otroServicio', true);
@@ -76,7 +78,7 @@ router.get('/cotizar/depilacion-definitiva', comprovarQueryGenero, (req, res) =>
     ultimasPromociones,
     servicios,
     url,
-    indicaciones,
+    servicio,
   });
 });
 

@@ -57,15 +57,22 @@
     <section class="indicaciones-container-ipl">
       <div class="indc-color-box">
         <div class="indc-childs">
-          {{#each indicaciones}}
+          {{#each servicio}}
           <b>• {{ title }}</b>
 
           <ol type="1">
             {{#each body }}
-            <li>{{ desc }}
+            {{#if short_desc}}
+            <li>
+              {{ short_desc }}
               {{#if verMas}}
               <a href="{{ verMas.href }}">Ver mas</a>
               {{/if}}
+            </li>
+            {{ else }}
+            <li>{{ desc }}
+              {{/if}}
+
             </li>
             {{/each }}
           </ol>

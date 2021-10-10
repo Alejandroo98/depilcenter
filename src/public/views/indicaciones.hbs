@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="../css/redesSociales.css">
   <link rel="stylesheet" href="../css/navbar.css">
 
+  {{!-- jQuery --}}
+  <script src="../libs/jquery.js"></script>
 
   {{!-- google fonts --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
   {{!-- SEMANTIC UI --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
@@ -40,219 +43,80 @@
 </head>
 
 <body>
-  {{> navbar }}
+  <section>
 
 
-  <section class="container my-5 rounded" style="background-color: #fff;">
-    <div class="row p-4">
-      <div class="col-12 p-4">
-        <h4>DEPILACIÓN CON CERA</h4>
-      </div>
-      <div class="col-12">
-        <div class="row">
-          <div class="col-lg-10 p-0 px-4 pt-1  ">
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
+    {{> navbar }}
+
+    <section class="container container-servicios my-5 " style="position: relative; display: block;">
+      <div class="row">
+        <div class="col-9">
+          {{#each servicios }}
+          <div class="row p-5 rounded mb-5" style="background-color: #fff;">
+            <div class="col-12  p-0 px-3 title-seo">
+              <h4>{{ mayuscula seo.title }}</h4>
             </div>
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
+            <div class="col-12 p-0 ">
+              <div class="row">
+                <div class="col-lg-10 p-0 m-0 px-4">
+                  {{#each indicaciones}}
+                  <div class="my-4">
+                    <p class="title-body">
+                      <b> &#187; {{title}} </b>
+                    </p>
+                    <p>
+                      {{#each body}}
+                    <div class="texto-desc-body">
+                      <p>
+                        • {{{ desc }}}
+                      </p>
+                    </div>
+                    {{/each}}
+                    </p>
+                  </div>
+                  {{/each}}
+                </div>
+                <div class="col-lg-2 p-2 ">
+                  <div>
+                    {{#each img}}
+                    <div class="mb-4" style=" box-shadow: var(--sombra);">
+                      <img class="rounded mx-auto d-block" width="100%" src="{{ url }}" alt="{{ alt }}">
+                    </div>
+                    {{/each }}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
+            <div class="col-12">
+              <a class="btn" style="border:2px solid var(--base); color: var(--base); box-shadow: var(--sombra)"
+                href="#">Cotizar | Agendar</a>
             </div>
           </div>
-          <div class="col-lg-2 p-2 ">
-            <div>
-              <div class="mb-4" style="box-shadow: var(--sombra);">
-                <img class="rounded mx-auto d-block" width="100%"
-                  src="https://t1.uc.ltmcdn.com/images/9/2/3/img_como_depilarse_las_piernas_con_cera_25329_600.jpg"
-                  alt="">
-              </div>
-              <div class="mb-4" style="box-shadow: var(--sombra);">
-                <img class="rounded mx-auto d-block" width="100%"
-                  src="https://t1.uc.ltmcdn.com/images/9/2/3/img_como_depilarse_las_piernas_con_cera_25329_600.jpg"
-                  alt="">
-              </div>
+          {{/each }}
+        </div>
+
+        <div class="col p-0 rounded">
+          <div class="rounded items-links shadow-sm">
+            {{#each items}}
+            <div id="{{ seo.id }}">
+              <a href="/indicaciones?servicio={{ seo.id }}">
+                • {{ seo.title }}
+              </a>
             </div>
+            <hr>
+            {{/each}}
+
           </div>
         </div>
       </div>
-      <div class="col-12">
-        <a class="btn" style="border:2px solid var(--base); color: var(--base); box-shadow: var(--sombra)"
-          href="#">Cotizar | Agendar</a>
-      </div>
-    </div>
+
+    </section>
+
+
+
+    {{> footer }}
+
   </section>
-
-
-  <section class="container mt-5 mb-5 rounded" style="background-color: #fff;">
-    <div class="row p-4">
-      <div class="col-12 p-4">
-        <h4>DEPILACIÓN CON CERA</h4>
-      </div>
-      <div class="col-12">
-        <div class="row">
-          <div class="col-lg-10 p-0 px-4 pt-1  ">
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
-            </div>
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
-            </div>
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-2 p-2 ">
-            <div>
-              <div class="mb-4" style="box-shadow: var(--sombra);">
-                <img class="rounded mx-auto d-block" width="100%"
-                  src="https://t1.uc.ltmcdn.com/images/9/2/3/img_como_depilarse_las_piernas_con_cera_25329_600.jpg"
-                  alt="">
-              </div>
-              <div class="mb-4" style="box-shadow: var(--sombra);">
-                <img class="rounded mx-auto d-block" width="100%"
-                  src="https://t1.uc.ltmcdn.com/images/9/2/3/img_como_depilarse_las_piernas_con_cera_25329_600.jpg"
-                  alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <a class="btn" style="border:2px solid var(--base); color: var(--base); box-shadow: var(--sombra)"
-          href="#">Cotizar | Agendar</a>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="container mt-5 mb-5 rounded" style="background-color: #fff;">
-    <div class="row p-4">
-      <div class="col-12 p-4">
-        <h4>DEPILACIÓN CON CERA</h4>
-      </div>
-      <div class="col-12">
-        <div class="row">
-          <div class="col-lg-10 p-0 px-4 pt-1  ">
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
-            </div>
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
-            </div>
-            <div class="my-4">
-              <p>
-                <b>• Indicaciones</b>
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, accusamus non hic quis libero modi sunt
-                maxime earum minima maiores molestias nam ullam, illo placeat fugiat, nulla soluta ipsa eaque asperiores
-                velit pariatur nemo qui corrupti expedita. Beatae perspiciatis, tempore, similique praesentium sed,
-                minus
-                iste fuga ratione harum expedita minima?
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-2 p-2 ">
-            <div>
-              <div class="mb-4" style="box-shadow: var(--sombra);">
-                <img class="rounded mx-auto d-block" width="100%"
-                  src="https://t1.uc.ltmcdn.com/images/9/2/3/img_como_depilarse_las_piernas_con_cera_25329_600.jpg"
-                  alt="">
-              </div>
-              <div class="mb-4" style="box-shadow: var(--sombra);">
-                <img class="rounded mx-auto d-block" width="100%"
-                  src="https://t1.uc.ltmcdn.com/images/9/2/3/img_como_depilarse_las_piernas_con_cera_25329_600.jpg"
-                  alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <a class="btn" style="border:2px solid var(--base); color: var(--base); box-shadow: var(--sombra)"
-          href="#">Cotizar | Agendar</a>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  {{> footer }}
 
 
   {{!-- bootstrap --}}
@@ -261,7 +125,8 @@
     crossorigin="anonymous"></script>
 
   {{!-- js --}}
-  <script src="../js/indicaciones.js"></script>
+  <script src="../js/indicaciones.js" type="module"></script>
+  <script src="../js/calcularTamanoPantalla.js"></script>
   <script src="../js/borderBottonNav.js"></script>
   <script src="../js/countDown.js"></script>
 
