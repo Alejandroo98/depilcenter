@@ -2,12 +2,27 @@
   font-family: 'Poppins', sans-serif;
   line-height: 25px !important;
   color: rgb(97, 97, 97);
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .title-seo h4 {
   font-size: 25px;
   color: #353535;
+  margin: 0;
+}
+
+.descuento-note {
+  margin: 0;
+  padding: 0;
+}
+
+.descuento-note p {
+  display: inline-block;
+  background-color: var(--base);
+  margin: 0;
+  border-radius: 5px;
+  padding: 2px 18px;
+  color: #fff;
 }
 
 .title-body {
@@ -16,6 +31,9 @@
 
 .texto-desc-body {
   text-align: justify;
+}
+
+.texto-desc-body {
 }
 
 .texto-desc-body hr {
@@ -50,4 +68,14 @@
 .view-active {
   background-color: #fde6e6;
   font-weight: bold;
+}
+
+.note-card {
+  box-shadow: var(--sombra);
+  background-color: #f5f5f5;
+}
+.note-card p {
+  line-height: 5px;
+  color: #6d6d6d;
+  font-size: 13px;
 }

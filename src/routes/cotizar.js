@@ -47,7 +47,7 @@ router.get('/cotizar/depilacion-cera', comprovarQueryGenero, (req, res) => {
 });
 
 router.get('/cotizar/depilacion-definitiva', comprovarQueryGenero, (req, res) => {
-  const servicio = indicacionesIPL[0].d_laser.indicaciones;
+  const servicio = indicacionesIPL[0].d_definitiva.indicaciones;
 
   let zonas = [];
 
