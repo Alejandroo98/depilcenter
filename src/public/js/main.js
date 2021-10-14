@@ -2,6 +2,21 @@ import { getMonth } from './getMesDia.js';
 import './printDateReserve.js';
 import { printDataDesc, printSelectDataDesc } from './helpers.js';
 
+//overView
+import './overView.js';
+
+// change servicios options
+import './serviciosActive.js';
+
+//novedades
+import './novedades.js';
+
+// selecionar servicios por medio de query
+import './selectServicios.js';
+
+//img cumpleanieros
+import './imgCumpleaniero.js';
+
 /* =========== MES IMPRIMIR ( CUMPLEAÑIEROS ) ========= */
 try {
   const mesActual = getMonth();
@@ -27,18 +42,6 @@ btn_event_agendar.addEventListener('click', ({ target }) => {
   const values = { id: '', value: target.dataset.desc };
   printDataDesc(values);
 });
-
-// change servicios options
-import './serviciosActive.js';
-
-//novedades
-import './novedades.js';
-
-// selecionar servicios por medio de query
-import './selectServicios.js';
-
-//img cumpleanieros
-import './imgCumpleaniero.js';
 
 //Servicios
 const todosLosServicios_container = document.querySelector('.todosLosServicios-container');

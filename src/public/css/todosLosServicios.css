@@ -131,15 +131,24 @@
 }
 
 .card-btn {
-  padding: 10px 0;
   display: flex;
   justify-content: space-evenly;
+  margin: 10px 0;
   color: #f37e78;
 }
 
-.card-btn a {
+.card-btn a:nth-child(1) {
   flex-grow: 1;
-  color: white;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 4px;
+  background-color: #f37e78;
+  margin: 5px;
+  text-align: center;
+}
+.card-btn a:nth-child(2) {
+  flex-grow: 1;
+  color: #fff;
   padding: 5px 20px;
   border-radius: 4px;
   border: 2px solid #f37e78;
@@ -148,18 +157,30 @@
   text-align: center;
 }
 
-.card-btn a:first-child:hover {
+.card-btn a:nth-child(3) {
+  flex-grow: 1;
+  padding: 5px 20px;
+  border-radius: 4px;
+  border: 2px solid #acacac;
+  color: #acacac;
+  margin: 5px;
+  text-align: center;
+}
+
+.card-btn a:nth-child(1):hover {
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #f58680;
+  color: white;
+}
+
+.card-btn a:nth-child(2):hover {
   text-decoration: none;
   background-color: #f37e78;
   color: white;
 }
 
-.card-btn a:last-child {
-  border: 2px solid #acacac;
-  color: #acacac;
-}
-
-.card-btn a:last-child:hover {
+.card-btn a:nth-child(3):hover {
   background-color: #acacac;
   color: white;
 }

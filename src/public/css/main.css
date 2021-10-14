@@ -5,8 +5,10 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Raleway', sans-serif; */
   background-color: #f3f3f3 !important;
+  position: relative;
 }
 
 :root {
@@ -18,6 +20,7 @@ body {
 
 .cajaPrincipal {
   background-image: url(../img/backgroundIndex.png);
+  background-color: #edbcbc;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

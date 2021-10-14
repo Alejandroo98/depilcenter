@@ -2,7 +2,7 @@
   {
     "id": "d_cera",
     "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "desc": "Cuando se trata de eliminar el vello de forma rapida y con un bajo presupuesto la depilaciòn con cera tibia es la mejor opciòn. No te pierdas esta oportunidad, ahorra el 30% en todas las zonas.",
     "name": "Depilación con cera",
     "indicaciones": "Esta son las indicaciones de d_cera",
     "header": true,
@@ -15,15 +15,16 @@
     "active": "active",
     "alt": "Descuento promocion en depilacion con cera tibia",
     "agendarUrl": "#",
-    "cotizarUrl": "#",
+    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer",
+    "mas_info": "/indicaciones?servicio=d_cera",
     "otroServicio": false,
-    "data_desc": "40% DESCUENTO",
+    "data_desc": "30% DE DESCUENTO",
     "selectForm": true
   },
   {
     "id": "d_laser",
     "imgIcon": "https://i.ibb.co/XC4sC33/d-laser.png",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "desc": "La depilación definitiva es actualmente el método más eficaz para eliminar el vello indeseable para siempre, ya que además de sus buenos resultados mejora el aspecto de la piel, sobre todo aquellas zonas con sombra de vellos o folículos notorios. Aprovecha nuestra promociòn.",
     "name": "Depilación definitiva",
     "indicaciones": "Esta son las indicaciones de d_laser",
     "header": true,
@@ -36,7 +37,8 @@
     "active": "",
     "alt": "Descuento promocion en depilacion definitiva",
     "agendarUrl": "#",
-    "cotizarUrl": "#",
+    "cotizarUrl": "/cotizar/depilacion-definitiva?genero=mujer",
+    "mas_info": "indicaciones?servicio=d_definitiva",
     "otroServicio": false,
     "data_desc": "2 SESIONES GRATIS",
     "selectForm": true
@@ -44,7 +46,7 @@
   {
     "id": "b_axilas",
     "imgIcon": "https://i.ibb.co/9hJ4CzC/b-axilas.png",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "desc": "La exposición solar es una de las principales causas de la aparición de manchas oscuras en las axilas, la buena noticia esque tenemos la solucion, gracias a la tecnologia IPL junto a productos adeacuados a tu tipo de piel. ",
     "name": "Blanqueamiento de axilas",
     "indicaciones": "Esta son las indicaciones de b_axilas",
     "title": "BLANQUEMIENTO DE",
@@ -56,7 +58,8 @@
     "active": "",
     "alt": "Descuento promocion blanqueamiento de axilas",
     "agendarUrl": "#",
-    "cotizarUrl": "#",
+    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=b_axilas",
+    "mas_info": "/indicaciones?servicio=b_axilas",
     "header": true,
     "otroServicio": true,
     "data_desc": "%15 DESCUENTO",
@@ -74,7 +77,7 @@
   {
     "id": "l_facial",
     "imgIcon": "https://i.ibb.co/khYFYWj/t-acne.png",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "desc": "La limpieza de la piel de la cara es un hábito primordial para tener un rostro joven y lleno de vida. Esto se debe a que cada vez que lo limpiamos retiramos las impurezas tanto del maquillaje como de la contaminación que se encuentra en el medio ambiente. Aprovecha nuestro 2x1.",
     "name": "Limpiezas faciales",
     "indicaciones": "Esta son las indicaciones de l_facial",
     "header": true,
@@ -87,7 +90,8 @@
     "active": "",
     "alt": "Descuento promocion en limpiezas faciales",
     "agendarUrl": "#",
-    "cotizarUrl": "#",
+    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_facial",
+    "mas_info": "/indicaciones?servicio=l_facial",
     "otroServicio": true,
     "data_desc": "2X1",
     "selectForm": true,
@@ -101,11 +105,10 @@
       "msg": "Dos personas por $35"
     }
   },
-
   {
     "id": "d_hombre",
     "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "desc": "Por estética o por comodidad, los hombres se depilan cada vez más. Y uno de los métodos más efectivos la depilac[on con IPL. Si aún no te has animado a probarlo, despues de ver nuestras promociones, seguro lo haces.",
     "indicaciones": "Esta son las indicaciones de d_hombre",
     "name": "Depilacion masculina",
     "title": "DEPILACIÓN HOMBRE",
@@ -118,7 +121,8 @@
     "alt": "Descuento promocion en depilacion con cera tibia masculina",
     "header": true,
     "agendarUrl": "#",
-    "cotizarUrl": "#",
+    "cotizarUrl": "/cotizar/depilacion-cera?genero=hombre",
+    "mas_info": "/indicaciones?servicio=d_cera",
     "data_desc": "2 SESIONES GRATIS",
     "selectForm": true,
     "otroServicio": false
@@ -126,12 +130,15 @@
   {
     "id": "m_relajantes",
     "imgIcon": "https://i.ibb.co/NmwXVJ0/m-relajantes.png",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "desc": "Quieres disinuir el estres, reducir el dolor, eliminar tensiones musculares, mejorar la circulación sanguínea, un masaje relajante espera por tí.",
     "name": "Masajes relajantes",
     "indicaciones": "Esta son las indicaciones de m_relajantes",
     "header": false,
     "otroServicio": true,
     "selectForm": true,
+    "agendarUrl": "#",
+    "mas_info": "/indicaciones?servicio=m_relajantes",
+    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=m_relajantes",
     "cotizarData": {
       "id": "T_MA4",
       "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
@@ -146,12 +153,14 @@
   {
     "id": "t_acne",
     "imgIcon": "https://i.ibb.co/khYFYWj/t-acne.png",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "desc": "El tratamiento temprano y efectivo del acné puede reducir el riesgo de formación de cicatrices y daño permanente a su autoestima. No esperas mas, y ven a vernos.",
     "name": "Tratemiento para acné",
     "indicaciones": "Esta son las indicaciones de t_acne",
     "header": false,
     "otroServicio": true,
     "data_desc": "",
+    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=t_acne",
+    "mas_info": "/indicaciones?servicio=t_acne",
     "selectForm": true,
     "cotizarData": {
       "id": "T_TA5",
@@ -166,12 +175,14 @@
   {
     "id": "l_gluteos",
     "imgIcon": "https://i.ibb.co/L1M1VVS/l-gluteos.png",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
+    "desc": "Si tu sueño a sido durante años mejorar el aspecto de tus gluteos no tieens de que preocuparte, sin dolorosos metodos quirurgicos ni tiempo de recuperacion, resultados dese la primera sesión.",
     "name": "Levantamiento de gluteos",
     "indicaciones": "Esta son las indicaciones de l_gluteos",
     "header": false,
     "otroServicio": true,
     "data_desc": "",
+    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_gluteos",
+    "mas_info": "/indicaciones?servicio=l_gluteos",
     "selectForm": true,
     "cotizarData": {
       "id": "T_LG2",

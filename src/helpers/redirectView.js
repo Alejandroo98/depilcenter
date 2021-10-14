@@ -6,9 +6,8 @@ const redirectView = (url, servicio, hora) => {
   }
 
   const query = path[1].split('&&');
-  console.log(query);
 
-  return `${path[0]}?${query[0]}&&errors=true&&servicio=${servicio}&&hora=${hora}`;
+  return `${path[0]}?${query[0]}&&open=true&&servicio=${servicio}&&hora=${hora}`;
 };
 
 module.exports = redirectView;

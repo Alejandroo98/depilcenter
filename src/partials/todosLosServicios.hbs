@@ -18,7 +18,7 @@
             <div class="card-content">
                 <div class="card-title">
                     <div class="title-card-child">
-                        <p>{{ name }}</p>
+                        <p>{{ mayuscula name }}</p>
                         <div class="img-title">
                             <img src="{{ imgIcon }}" alt="{{ alt }}">
                         </div>
@@ -34,8 +34,12 @@
                         </p>
                     </div>
                     <div class="card-btn">
-                        <a data-id="{{ id }}" data-desc="{{ data_desc }}">Agendar</a>
-                        <a href="{{ cotizarUrl }}">Cotizar</a>
+                        <a data-id="{{ id }}" data-desc="{{ data_desc }}">
+                            AGENDAR
+                            <i class="calendar alternate outline icon" style="color: #fff"></i>
+                        </a>
+                        <a href="{{ cotizarUrl }}">COTIZAR</a>
+                        <a href="{{ mas_info }}">MAS...</a>
                     </div>
                 </div>
             </div>

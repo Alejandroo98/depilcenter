@@ -4,10 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <link rel="icon" href="../img/icon_header_depilcenter.png">
+
+  {{!-- SEO --}}
+  <title>{{ indicacionesTitle servicios }}</title>
+  <meta name="description" content="{{ indicacionesDesc servicios }}">
+  <meta name="keywords" content="{{ indicacionesKeyWords servicios }}" />
 
   {{!-- bootstrap --}}
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
 
 
@@ -17,6 +22,7 @@
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/redesSociales.css">
   <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/overView.css">
 
   {{!-- jQuery --}}
   <script src="../libs/jquery.js"></script>
@@ -43,9 +49,10 @@
 </head>
 
 <body>
-  <section>
 
+  {{> overView }}
 
+  <section class="container-master">
     {{> navbar }}
 
     <section class="container container-servicios my-5 " style="position: relative; display: block;">
@@ -158,6 +165,7 @@
   <script src="../js/calcularTamanoPantalla.js"></script>
   <script src="../js/borderBottonNav.js"></script>
   <script src="../js/countDown.js"></script>
+  <script src="../js/overView.js"></script>
 
 </body>
 

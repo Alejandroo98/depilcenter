@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Document</title>
+  <title>Cotizar - Depilcenter</title>
+  <link rel="icon" href="../img/icon_header_depilcenter.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   {{!-- bootstrap --}}
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="../css/reserva.css">
   <link rel="stylesheet" href="../css/cotizar.css">
   <link rel="stylesheet" href="../css/novedades.css">
+  <link rel="stylesheet" href="../css/overView.css">
 
   {{!-- datePicker --}}
   <script src="../libs/jquery.js"></script>
@@ -43,114 +45,120 @@
 
 <body>
 
-  {{> navbar }}
+  {{> overView }}
 
-  {{!-- <section class="agendarCita animate__animated animate__fadeIn">
-  </section> --}}
+  <section class="container-master">
 
+    {{> navbar }}
 
-  <main class="container __cotizarContainer">
+    {{!-- <section class="agendarCita animate__animated animate__fadeIn">
+    </section> --}}
 
-    <section class="imgCotizarContainer">
-    </section>
+    <main class="container __cotizarContainer">
 
-    <section class="indicaciones-container-ipl">
-      <div class="indc-color-box">
-        <div class="indc-childs">
-          {{#each servicio}}
-          <b>• {{ title }}</b>
+      <section class="imgCotizarContainer">
+      </section>
 
-          <ol type="1">
-            {{#each body }}
-            {{#if short_desc}}
-            <li>
-              {{ short_desc }}
-              {{#if verMas}}
-              <a href="{{ verMas.href }}">Ver mas</a>
-              {{/if}}
-            </li>
-            {{ else }}
-            <li>{{ desc }}
-              {{/if}}
+      <section class="indicaciones-container-ipl">
+        <div class="indc-color-box">
+          <div class="indc-childs">
+            {{#each servicio}}
+            <b>• {{ title }}</b>
 
-            </li>
-            {{/each }}
-          </ol>
+            <ol type="1">
+              {{#each body }}
+              {{#if short_desc}}
+              <li>
+                {{ short_desc }}
+                {{#if verMas}}
+                <a href="{{ verMas.href }}">Ver mas</a>
+                {{/if}}
+              </li>
+              {{ else }}
+              <li>{{ desc }}
+                {{/if}}
 
-          <hr style="margin: 5px 0">
-          {{/each}}
+              </li>
+              {{/each }}
+            </ol>
+
+            <hr style="margin: 5px 0">
+            {{/each}}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="cajaOpciones">
+      <section class="cajaOpciones">
 
-      <div class="nameCotizar">
-        <h1>Arma tu combo y agenda tu cita.</h1>
-        <p>Elige las zonas deseadas a depilar dependiendo el genero o mira nuestras promociones especiales.</p>
-      </div>
+        <div class="nameCotizar">
+          <h1>Arma tu combo y agenda tu cita.</h1>
+          <p>Elige las zonas deseadas a depilar dependiendo el genero o mira nuestras promociones especiales.</p>
+        </div>
 
-      <div class="borraOpciones">
+        <div class="borraOpciones">
 
-        <div>
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-link " id="nav-home-tab" data-bs-target="#nav-home" type="button" role="tab"
-                aria-controls="nav-home" href="/cotizar/depilacion-cera?genero=mujer">Depilacion con
-                cera</a>
-              <a class="nav-link" id="nav-profile-tab" data-bs-target="#nav-profile" type="button" role="tab"
-                aria-controls="nav-profile" href="/cotizar/depilacion-definitiva?genero=mujer">Depilacion definitiva</a>
+          <div>
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-link " id="nav-home-tab" data-bs-target="#nav-home" type="button" role="tab"
+                  aria-controls="nav-home" href="/cotizar/depilacion-cera?genero=mujer">Depilacion con
+                  cera</a>
+                <a class="nav-link" id="nav-profile-tab" data-bs-target="#nav-profile" type="button" role="tab"
+                  aria-controls="nav-profile" href="/cotizar/depilacion-definitiva?genero=mujer">Depilacion
+                  definitiva</a>
 
-            </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-
-            <div class="tab-pane" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-              {{> cotizarDepilacionCera }}
-            </div>
-
-            <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-              {{> cotizarDepilacionDefinitiva }}
-            </div>
-
-
-            <div class="ui accordion" id="otros_servicios">
-              <div class="title">
-                <i class="dropdown icon"></i>
-                Otros servicios
               </div>
-              <div class="content">
-                {{> otrosServicios }}
-              </div>
-            </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
 
-            <div class=" boxValorTotal">
-              <div class="boxBorder">
-                <p>VALOR PROMOCIONAL : $ <span id="valorTotalZonas">0</span>&nbsp&nbsp|&nbsp</p>
-                <p>VALOR NORMAL : $ <span id="valorNormalCotizar">0</span></p>
+              <div class="tab-pane" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                {{> cotizarDepilacionCera }}
               </div>
-              <div class="btn-button-reserve">
-                <button class="btn-cotizar-reserve">AGENDAR CITA</button>
+
+              <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                {{> cotizarDepilacionDefinitiva }}
               </div>
+
+
+              <div class="ui accordion" id="otros_servicios">
+                <div class="title">
+                  <i class="dropdown icon"></i>
+                  Otros servicios
+                </div>
+                <div class="content">
+                  {{> otrosServicios }}
+                </div>
+              </div>
+
+              <div class=" boxValorTotal">
+                <div class="boxBorder">
+                  <p>VALOR PROMOCIONAL : $ <span id="valorTotalZonas">0</span>&nbsp&nbsp|&nbsp</p>
+                  <p>VALOR NORMAL : $ <span id="valorNormalCotizar">0</span></p>
+                </div>
+                <div class="btn-button-reserve">
+                  <button class="btn-cotizar-reserve">AGENDAR CITA</button>
+                </div>
+              </div>
+
             </div>
 
           </div>
 
         </div>
+      </section>
+    </main>
 
-      </div>
+    <div class="mt-3 mb-3">
+      {{> reservar }}
+    </div>
+
+    <section class="mt-3 mb-3">
+      {{> novedades }}
     </section>
-  </main>
 
-  <div class="mt-3 mb-3">
-    {{> reservar }}
-  </div>
+    {{> footer}}
 
-  <section class="mt-3 mb-3">
-    {{> novedades }}
   </section>
-
-  {{> footer}}
 
   {{!-- bootstrap --}}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -163,6 +171,7 @@
   <script src=" ../js/cotizar.js" type="module"></script>
   <script src="../js/borderBottonNav.js"></script>
   <script src="../js/calcularTamanoPantalla.js"></script>
+  <script src="../js/overView.js"></script>
 
   {{!-- semantic ui --}}
   <script>

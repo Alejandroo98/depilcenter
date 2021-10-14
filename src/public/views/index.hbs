@@ -3,15 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Depilcenter - Centro de depialción</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DepilCenter</title>
+  <link rel="icon" href="../img/icon_header_depilcenter.png">
+
+  {{!-- SEO --}}
+  <meta name="description" content="" />
 
   {{!-- getbotstrap --}}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-  <meta name="description" content="" />
 
   {{!-- css --}}
   <link rel="stylesheet" href="../css/navbar.css">
@@ -25,10 +26,13 @@
   <link rel="stylesheet" href="../css/novedades.css">
   <link rel="stylesheet" href="../css/todosLosServicios.css">
   <link rel="stylesheet" href="../css/opiniones.css">
+  <link rel="stylesheet" href="../css/overView.css">
 
+
+  {{!-- jQuery ( Lo usa datePicket ) --}}
+  <script src="../libs/jquery.js"></script>
 
   {{!-- datePicker --}}
-  <script src="../libs/jquery.js"></script>
   <script src="../libs/datePicker/js/bootstrap-datepicker.js" charset="UTF-8"></script>
   <link rel="stylesheet" href="../libs/datePicker/css/bootstrap-datepicker.css">
 
@@ -43,6 +47,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
   {{!-- SEMANTIC UI --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
@@ -60,7 +65,9 @@
 
 <body>
 
-  <section>
+  {{> overView }}
+
+  <section class="container-master">
     {{!-- Este seccion encierra a toooodo el contenido es unicamente para que el navbar se desplase hasta llegar abajo
     --}}
 

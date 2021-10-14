@@ -83,8 +83,12 @@
       ],
       "nota": [
         {
-          "title": "Frecuencia de depilación recomendada.",
+          "title": "Frecuencia de depilación recomendada",
           "content": "1 vez cada 20 dias."
+        },
+        {
+          "title": "Tiempo por zona",
+          "content": " 10 minutos."
         }
       ]
     },
@@ -183,12 +187,13 @@
     "l_facial": {
       "seo": {
         "id": "l_facial",
-        "title": "Limpiezas faciales.",
+        "title": "Limpiezas faciales",
         "desc": "Limpiezas faciales porfundas, Quito"
       },
       "descuento": {
         "title": "Dos personas por $35"
       },
+      "url": "http://localhost:3000/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_facial",
       "indicaciones": [
         {
           "title": "",
@@ -307,72 +312,45 @@
         "title": "Blanqueamiento de axilas",
         "desc": "Esta es la descripcion"
       },
+      "url": "http://localhost:3000/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=b_axilas",
       "descuento": {
-        "title": "TRATAMIENTO COMPLETO 25% DE DESCUENTO "
+        "title": "TRATAMIENTO COMPLETO 15% DE DESCUENTO "
       },
       "indicaciones": [
         {
-          "title": "La tecnlogia que usamos",
+          "title": "",
           "body": [
             {
-              "desc": "La tecnologia que usamos es llamadao IPL, la mas efectiva al momento.",
-              "verMas": { "href": "#" }
+              "desc": "Diariamente la piel de las axilas entra en contacto con desodorantes o antitranspirantes que contienen fragancias y componentes químicos, y su uso a largo plazo provoca que las axilas se oscurezcan y no luzcan tan bonitas. <hr>  El blanqueamiento de axilas con tecnología IPL es la forma ideal para aclarar sus axilas en poco tiempo. <hr> EL proceso es sumamente efectivo y podra ver resultados desde la primera sesion  gracias a nuestra tecnica y productos dermatologicos adecuados a su tipo de piel."
             }
           ]
         },
         {
-          "title": "Indicaciones Previas al Uso de Depilación IPL:",
+          "title": "Indicaciones previas al blanqueamiento.",
           "body": [
             {
-              "desc": "Para asegurar que la energía lumínica se dirige correctamente a la raíz del pelo,asistir con el vello de 1 a 2mm de largo (rasurar 2 a 3 días antes aproximadamente la zona.) NO recién rasurado,debe estar en la superficie de la piel."
-            },
-            {
-              "desc": "En caso de decoloración del vello,asistir sólo si la raíz mantiene su color natural."
-            },
-            {
-              "desc": "Asistir con la piel libre de maquillaje."
+              "desc": "Asistir con el area totlamente depilada, sin importar el metodo de su preferencia. ( rasuradora, cera, laser, IPL )"
             },
             {
               "desc": "Evitar la exposición al sol, en forma intensa en las últimas 4 semanas."
             },
             {
-              "desc": "Evitar uso de autobronceantes,camas solares o cualquier método que modifique el color de la piel."
-            },
-            {
-              "desc": "No debe realizar tatuajes en zonas en las que desee eliminar el vello,hasta el término del tratamiento."
-            },
-            {
-              "desc": "No colocar desodorante previo a la sesión de axilas,puede utilizarlo inmediatamente eso si,luego de la sesión."
+              "desc": "Evitar uso de autobronceantes, camas solares o cualquier método que modifique el color de la piel."
             },
 
             {
-              "desc": "En caso de realizarse otro tipo de tgratamiento en la zona,peeling(físico,químico o mecánico,etc) debe transcurrir una semana entre ambos."
+              "desc": "No colocar desodorante previo a la sesión, puede utilizarlo inmediatamente eso si, luego de la sesión."
             }
           ]
         },
         {
-          "title": "Indicaciones POST TRATAMIENTO",
+          "title": "Indicaciones despues del blanqueamiento",
           "body": [
             {
-              "desc": "NO exponer la zona tratada con IPL al SOL."
+              "desc": "NO exponer la zona tratada al sol."
             },
             {
-              "desc": "Hidratar por las noche siempre con cremas y por la mañana SIEMPRE  utilizar fotoprotección (pantalla solar) en zonas expuestas que han sido tratadas con IPL.Si de igaul modo esta muy expuesto al sol,renovar la pantalla solar cada 2 hrs aprox. Ante cualquier molestia comunicarse con un profesional."
-            }
-          ]
-        },
-        {
-          "title": "Contraindicaciones:",
-          "body": [
-            {
-              "desc": "Embarazo y lactancia."
-            },
-            {
-              "desc": "Pacientes diabéticos descompensados o sin tratamiento."
-            },
-            {
-              "desc": "Pacientes con vitíligo",
-              "verMas": { "href": "#" }
+              "desc": "Aplicar creama idicada durante las noches."
             }
           ]
         }
@@ -381,15 +359,23 @@
         {
           "url": "https://i.ibb.co/3k4xfpG/b-axilas01.png",
           "alt": "Blanqueamiento de axilas antes y despues"
+        },
+        {
+          "url": "https://i.ibb.co/QHpk5bf/b-axilas02.png",
+          "alt": "Blanqueamiento de axilas antes y despues"
         }
       ],
       "nota": [
         {
           "title": "Sesiones recomendadas",
-          "content": "4 sesiones"
+          "content": "4."
         },
         {
-          "title": "Precio por sesion.",
+          "title": "Tiempo de duracion por sesion",
+          "content": "15 minutos."
+        },
+        {
+          "title": "Precio por sesion",
           "content": "$15."
         }
       ]
@@ -400,141 +386,106 @@
         "title": "Masajes relajantes",
         "desc": "Esta es la descripcion"
       },
+      "url": "http://localhost:3000/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=m_relajantes",
       "indicaciones": [
         {
-          "title": "La tecnlogia que usamos",
+          "title": "",
           "body": [
             {
-              "desc": "La tecnologia que usamos es llamadao IPL, la mas efectiva al momento.",
-              "verMas": { "href": "#" }
+              "desc": "Si desea mejorar un dolor, reducir o eliminar tensiones musculares, mejorar la circulación sanguínea y linfática le presentamos nuestros masajes relajantes <hr> Así mismo, son antiestrés, disminuyen la ansiedad y las tensiones del día a día. <hr> Ciertamente el objetivo principal es aliviar la tensión y conseguir un estado mental de relajación, priorizando las manipulaciones y pases suaves. Diferenciándose de los movimientos bruscos que son propios del masaje terapéutico o el descontracturante."
             }
           ]
         },
         {
-          "title": "Indicaciones Previas al Uso de Depilación IPL:",
+          "title": "Beneficios de los masajes realajantes",
           "body": [
             {
-              "desc": "Para asegurar que la energía lumínica se dirige correctamente a la raíz del pelo,asistir con el vello de 1 a 2mm de largo (rasurar 2 a 3 días antes aproximadamente la zona.) NO recién rasurado,debe estar en la superficie de la piel."
+              "desc": "Es importante entender que un masaje es importante para mantener su salud por estos y mas <b>beneficios que compartimos a continuaciòn:</b>"
             },
             {
-              "desc": "En caso de decoloración del vello,asistir sólo si la raíz mantiene su color natural."
+              "desc": "Libera endorfinas que son un analgésico natural."
             },
             {
-              "desc": "Asistir con la piel libre de maquillaje."
+              "desc": "Te ayuda a conciliar el sueño."
             },
             {
-              "desc": "Evitar la exposición al sol, en forma intensa en las últimas 4 semanas."
+              "desc": "Al disminuir la ansiedad, puede quitarte el deseo compulsivo de comer."
             },
             {
-              "desc": "Evitar uso de autobronceantes,camas solares o cualquier método que modifique el color de la piel."
+              "desc": "Disminuye y en muchos casos elimina las contracturas musculares."
             },
             {
-              "desc": "No debe realizar tatuajes en zonas en las que desee eliminar el vello,hasta el término del tratamiento."
+              "desc": "Aumenta tus defensas. Recuerda que la tensión muscular disminuye tus defensas y el masaje libera esas tensiones."
             },
             {
-              "desc": "No colocar desodorante previo a la sesión de axilas,puede utilizarlo inmediatamente eso si,luego de la sesión."
+              "desc": "Contrarresta malestares como: la retención de líquidos, dolores de espalda, cansancio."
             },
 
             {
-              "desc": "En caso de realizarse otro tipo de tgratamiento en la zona,peeling(físico,químico o mecánico,etc) debe transcurrir una semana entre ambos."
+              "desc": "Libera el exceso de adrenalina: Esta liberación de adrenalina produce tranquilidad y sensación de paz interior."
             }
           ]
-        },
+        }
+      ],
+      "img": [
         {
-          "title": "Indicaciones POST TRATAMIENTO",
-          "body": [
-            {
-              "desc": "NO exponer la zona tratada con IPL al SOL."
-            },
-            {
-              "desc": "Hidratar por las noche siempre con cremas y por la mañana SIEMPRE  utilizar fotoprotección (pantalla solar) en zonas expuestas que han sido tratadas con IPL.Si de igaul modo esta muy expuesto al sol,renovar la pantalla solar cada 2 hrs aprox. Ante cualquier molestia comunicarse con un profesional."
-            }
-          ]
-        },
-        {
-          "title": "Contraindicaciones:",
-          "body": [
-            {
-              "desc": "Embarazo y lactancia."
-            },
-            {
-              "desc": "Pacientes diabéticos descompensados o sin tratamiento."
-            },
-            {
-              "desc": "Pacientes con vitíligo",
-              "verMas": { "href": "#" }
-            }
-          ]
+          "url": "https://i.ibb.co/CvJ9GTx/m-relajante01.png",
+          "alt": "Mujer haciendo un masaje relajante"
         }
       ]
     },
     "t_acne": {
       "seo": { "id": "t_acne", "title": "Tratamiento para acné", "desc": "Esta es la descripcion" },
+      "url": "http://localhost:3000/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=t_acne",
       "indicaciones": [
         {
-          "title": "La tecnlogia que usamos",
+          "title": "",
           "body": [
             {
-              "desc": "La tecnologia que usamos es llamadao IPL, la mas efectiva al momento.",
-              "verMas": { "href": "#" }
+              "desc": "¿Te estan empezando a salir barros y espinillas?, ¿que puedo hacer para evitarlo? <hr> Malas noticias, no hay cura para el acne, la buena noticia esque el acne suele desaparecer con el tiempo, hasta ese momento hay ciertos tratamientos para que nos ayudan a mantener el acne bajo control, y que crees? nosotros conocemos estos tratamientos."
             }
           ]
         },
         {
-          "title": "Indicaciones Previas al Uso de Depilación IPL:",
+          "title": "Fototerapia para eliminar el acné.",
           "body": [
             {
-              "desc": "Para asegurar que la energía lumínica se dirige correctamente a la raíz del pelo,asistir con el vello de 1 a 2mm de largo (rasurar 2 a 3 días antes aproximadamente la zona.) NO recién rasurado,debe estar en la superficie de la piel."
+              "desc": "Hay que tener en cuenta que el acné no tiene un único tratamiento que sirva para todas las personas, pero la fototerapia con IPL es una de las mas efectivas. <hr> El enrojecimiento y la hinchazón que pueden ocurrir con el acné son causados por un tipo de bacteria que se puede eliminar al exponer la piel a diferentes tipos de luz, una de ellas IPL"
             },
             {
-              "desc": "En caso de decoloración del vello,asistir sólo si la raíz mantiene su color natural."
-            },
-            {
-              "desc": "Asistir con la piel libre de maquillaje."
-            },
-            {
-              "desc": "Evitar la exposición al sol, en forma intensa en las últimas 4 semanas."
-            },
-            {
-              "desc": "Evitar uso de autobronceantes,camas solares o cualquier método que modifique el color de la piel."
-            },
-            {
-              "desc": "No debe realizar tatuajes en zonas en las que desee eliminar el vello,hasta el término del tratamiento."
-            },
-            {
-              "desc": "No colocar desodorante previo a la sesión de axilas,puede utilizarlo inmediatamente eso si,luego de la sesión."
-            },
-
-            {
-              "desc": "En caso de realizarse otro tipo de tgratamiento en la zona,peeling(físico,químico o mecánico,etc) debe transcurrir una semana entre ambos."
+              "desc": "Nuestra tecnologia IPL junto con productos adecuados a cada tipo de piel logramos mejorar el aspecto de la piel."
             }
           ]
         },
         {
-          "title": "Indicaciones POST TRATAMIENTO",
+          "title": "Efectos secundarios:",
           "body": [
             {
-              "desc": "NO exponer la zona tratada con IPL al SOL."
+              "desc": "Enrojecimiento"
             },
             {
-              "desc": "Hidratar por las noche siempre con cremas y por la mañana SIEMPRE  utilizar fotoprotección (pantalla solar) en zonas expuestas que han sido tratadas con IPL.Si de igaul modo esta muy expuesto al sol,renovar la pantalla solar cada 2 hrs aprox. Ante cualquier molestia comunicarse con un profesional."
+              "desc": "Costras y descamación de la piel"
+            },
+            {
+              "desc": "Cambios en el color de la piel"
+            },
+            {
+              "desc": "Sensibilidad a la luz solar"
+            },
+            {
+              "desc": "Dolor"
             }
           ]
+        }
+      ],
+      "img": [
+        {
+          "url": "https://i.ibb.co/7gQbr0w/t-acne01.png",
+          "alt": "Tratamiento para acne antes y despues"
         },
         {
-          "title": "Contraindicaciones:",
-          "body": [
-            {
-              "desc": "Embarazo y lactancia."
-            },
-            {
-              "desc": "Pacientes diabéticos descompensados o sin tratamiento."
-            },
-            {
-              "desc": "Pacientes con vitíligo",
-              "verMas": { "href": "#" }
-            }
-          ]
+          "url": "https://i.ibb.co/KKWHMky/t-acne02.png",
+          "alt": "Tratamiento para acne antes y despues"
         }
       ]
     },
@@ -544,71 +495,52 @@
         "title": "Levantamiento de gluteos",
         "desc": "Esta es la descripcion"
       },
+      "url": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_gluteos",
       "indicaciones": [
         {
-          "title": "La tecnlogia que usamos",
+          "title": "",
           "body": [
             {
-              "desc": "La tecnologia que usamos es llamadao IPL, la mas efectiva al momento.",
-              "verMas": { "href": "#" }
+              "desc": "Si deseas mejorar el aspecto de tus gluteos con un presupuesto ajustado y en poco tiempo, este es tu lugar. <hr> EL tratamiento de levantamiento de gluteos esta diseñado para ayudar a reducir la flacidez, tonificar, dar firmeza y mejorar el tono muscular"
             }
           ]
         },
         {
-          "title": "Indicaciones Previas al Uso de Depilación IPL:",
+          "title": "Que incluye cada sesión",
           "body": [
             {
-              "desc": "Para asegurar que la energía lumínica se dirige correctamente a la raíz del pelo,asistir con el vello de 1 a 2mm de largo (rasurar 2 a 3 días antes aproximadamente la zona.) NO recién rasurado,debe estar en la superficie de la piel."
+              "desc": "<b>Masaje manual:</b> Estos masajes poseen un gran efecto drenante y de eliminación de grasas en todo el contorno en la zona a tratar. En este caso va amoldando el glúteo como también levantándolo ya que es uno de los musculos mas grandes del cuerpo humano tiene la posibilidad de trabajarse con resultados efectivos."
             },
             {
-              "desc": "En caso de decoloración del vello,asistir sólo si la raíz mantiene su color natural."
+              "desc": " <b>Electroestimulaciòn:</b> Mediante impulsos eléctricos, provocan contracciones musculares y, como consecuencia, un efecto similar al que se obtendría ejercitando los músculos. Por lo tanto tonifica la musculatura en la zona."
             },
             {
-              "desc": "Asistir con la piel libre de maquillaje."
+              "desc": " <b>Radiofrecuencia:</b>  Los tratamientos de RF para tensado de la piel funcionan junto con los procesos naturales de regeneración del cuerpo. El resultado es una piel con más tono y más tersa a la vista"
             },
             {
-              "desc": "Evitar la exposición al sol, en forma intensa en las últimas 4 semanas."
-            },
-            {
-              "desc": "Evitar uso de autobronceantes,camas solares o cualquier método que modifique el color de la piel."
-            },
-            {
-              "desc": "No debe realizar tatuajes en zonas en las que desee eliminar el vello,hasta el término del tratamiento."
-            },
-            {
-              "desc": "No colocar desodorante previo a la sesión de axilas,puede utilizarlo inmediatamente eso si,luego de la sesión."
-            },
-
-            {
-              "desc": "En caso de realizarse otro tipo de tgratamiento en la zona,peeling(físico,químico o mecánico,etc) debe transcurrir una semana entre ambos."
+              "desc": " <b> Copas Gluteas:</b> Esta técnica se aplica para levantar y aumentar el tejido muscular por medio de copas muy grandes que recogen todo el glúteo. Es considerada como una de las mejores alternativas terapéuticas para moldear, levantar y trabajar el reposicionamiento del gluteo."
             }
           ]
+        }
+      ],
+      "img": [
+        {
+          "url": "https://i.ibb.co/JrVGpw4/l-gluteos01.png",
+          "alt": "Mujer utilizando tecnica para levantar gluteos"
         },
         {
-          "title": "Indicaciones POST TRATAMIENTO",
-          "body": [
-            {
-              "desc": "NO exponer la zona tratada con IPL al SOL."
-            },
-            {
-              "desc": "Hidratar por las noche siempre con cremas y por la mañana SIEMPRE  utilizar fotoprotección (pantalla solar) en zonas expuestas que han sido tratadas con IPL.Si de igaul modo esta muy expuesto al sol,renovar la pantalla solar cada 2 hrs aprox. Ante cualquier molestia comunicarse con un profesional."
-            }
-          ]
+          "url": "https://i.ibb.co/ZBMzmXP/l-gluteos02.png",
+          "alt": "Copas gluteas"
+        }
+      ],
+      "nota": [
+        {
+          "title": "Tiempo por sesion",
+          "content": "Al rededor de 1 hora."
         },
         {
-          "title": "Contraindicaciones:",
-          "body": [
-            {
-              "desc": "Embarazo y lactancia."
-            },
-            {
-              "desc": "Pacientes diabéticos descompensados o sin tratamiento."
-            },
-            {
-              "desc": "Pacientes con vitíligo",
-              "verMas": { "href": "#" }
-            }
-          ]
+          "title": "Nro sesiones",
+          "content": "8"
         }
       ]
     }

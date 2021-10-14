@@ -23,7 +23,6 @@ const handleErrors = (req, res, next) => {
     const redirect = redirectView(datosRestantes.url, servicio, hora);
 
     req.flash('error', error);
-    console.log(redirect);
     return res.redirect(redirect);
   }
 

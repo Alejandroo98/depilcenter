@@ -8,6 +8,7 @@ app.get('/indicaciones', (req, res) => {
   const query = req.query.servicio;
   const servicios = getIndicaciones(query);
   const items = getIndicaciones('');
+
   res.render('indicaciones', { servicios, items });
 });
 

@@ -1,0 +1,43 @@
+.over-view-container {
+  transition: all 0.5s ease-in;
+  opacity: 1;
+  display: flex;
+  background-color: var(--base);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+  z-index: 500000;
+}
+
+.container-master {
+  display: none;
+}
+
+progress {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+progress::-webkit-progress-bar {
+  overflow: hidden;
+  background-color: rgb(253, 253, 253);
+  height: 8px;
+  border-radius: 5px;
+  color: rgb(10, 228, 94);
+  /* style rules */
+}
+
+progress::-webkit-progress-value {
+  background-color: #edbcbc;
+}
+
+/* progress::-moz-progress-bar {
+  background-color: red;
+  color: red;
+} */

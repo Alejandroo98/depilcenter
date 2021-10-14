@@ -98,6 +98,7 @@
 
 .agendarWhatsapp:hover {
   background-color: rgb(6, 131, 6);
+  color: white;
 }
 
 .agendarWhatsapp img {
@@ -194,12 +195,7 @@ select {
 }
 
 .reserva p {
-  color: var(--letras);
-}
-
-.errDatos {
-  color: rgb(246, 151, 151);
-  font-size: 13px;
+  color: rgb(97, 97, 97);
 }
 
 @keyframes ejectoReserva {

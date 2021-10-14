@@ -4,79 +4,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Contactos - Depilcenter</title>
+  <link rel="icon" href="../img/icon_header_depilcenter.png">
+
+
+  {{!-- jQuery ( Lo usa datePicket ) --}}
+  <script src="../libs/jquery.js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+  {{!-- css --}}
   <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/redesSociales.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/contactos.css">
-  <link rel="stylesheet" href="../css/form.css">
-  <link rel="stylesheet" href="../css/responsive/contactosResponsive.css">
-  <link rel="stylesheet" href="../css/responsive/conocenosResponsive.css">
-  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/overView.css">
+
+  {{!-- SEMANTIC UI --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+    integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  {{!-- google fonts --}}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
 
   {{> navbar }}
-  {{> redesSociales}}
-  <main class="__contactosContenedor">
-    <section class="ciudadDireccionContactos">
 
-      <div class="__childCiudadDireccionContactos">
+  {{> overView }}
 
-        <div>
-          <h1>Contactos</h1>
-          <p>Si tienes alguna pregunta, sugerencia o queja no dudes en escribirnos un mensaje de whatsapp o enviarnos un
-            correo</p>
-        </div>
+  <main class="container-contactos container-master">
+    <section class="container rounded shadow-sm my-5 bg-light">
+      {{!-- padre --}}
+      <div class="row">
+        <div class="col-lg-12 p-5 text-center">
+          <div class="row d-flex  align-items-center" style="min-height: 300px;">
+            <div class="col-4">
+              <h3>
+                WHATSAPP
+                <i class="whatsapp icon"></i>
+              </h3>
 
-        <div class="__selectInfoContactos">
-          <div>
-            <label for="localesCiudadesContactos">Elige una ciudad</label>
-            <select name="ciuadesContactos" id="localesCiudadesContactos">
-              <option value="Quito" selected>Quito</option>
-            </select>
+              <p>
+                <i class="ec flag"></i>
+                +593 984 266 244
+              </p>
+              <div class="rounded shadow-sm d-inline" style="padding: 5px 10px; background-color: green; color: #fff">
+                <a href='https://n9.cl/7ag1c' target="_blank" style="color: #fff;">
+                  Ir a whatsapp
+                  <i class="whatsapp icon"></i>
+                </a>
+
+              </div>
+            </div>
+            <div class="col-4">
+              <h3>
+                EMAIL
+                <i class="envelope icon"></i>
+              </h3>
+              <p>
+                depilcenter2021@gmail.com
+              </p>
+            </div>
+            <div class="col-4">
+              <h3>
+                HORARIO DE ATENCIÓN
+                <i class="clock icon"></i>
+              </h3>
+              <p class="m-0"><b>Lun - Sáb:</b> 9:00 a.m - 06:00 p.m</p>
+              <p class="m-0"><b>Dom: </b>Unicamente bajo cita previa. </p>
+            </div>
           </div>
-          <div>
-            <label for="localesDireccionContactos">Elige una direccion</label>
-            <select name="direccionContactos" id="localesDireccionContactos">
-              <option value="Condado" selected>Condado</option>
-            </select>
+        </div>
+        <div class="col-lg-12 p-0 bg-light">
+          <div class="row">
+
+            <div class="col-12 py-3 text-center">
+              <h3>
+                UBICACIÒN
+                <i class="map marker alternate icon"></i>
+              </h3>
+            </div>
+            <div class="col-12 " style="min-height: 300px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
+                width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-12 px-4 py-2 bg-light ">
+              <p>
+                <b>
+                  Ubicaciòn:
+                </b>
+                Sector el condado, calles Gustavo Lemos y Av. John F. Kennedy. Ref. Frente al estadio de
+                Liga de Quito.
+              </p>
+            </div>
           </div>
         </div>
-
-        <div class="numeroContactos">
-          <h1>+593 98 426 6244</h1>
-          <h4>depilcenter2020@gmail.com</h4>
-        </div>
-
       </div>
-
-      <div class="mapaContactos">
-        <div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8111976580185!2d-78.49364198466434!3d-0.10826373550738715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d58547be677289%3A0xfd29f56d2e4586c!2sDepilcenter%20-%20Centro%20de%20depilaci%C3%B3n!5e0!3m2!1ses-419!2sec!4v1613866208499!5m2!1ses-419!2sec"
-            width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
-          <p>Estamos ubicados en el sector El Condado Av. John F Kennedy y Gustavo Lemos ( En edificio Praga - Frente al
-            estadio de Liga de Quito).</p>
-        </div>
-        {{> form}}
-      </div>
-
+      {{!-- *padre --}}
     </section>
-
   </main>
+
 
   {{> footer}}
 
 
+
+  {{!-- bootstrap --}}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
-  <script src="../js/contactos.js"></script>
+
+  {{!-- js --}}
+  <script src="../js/countDown.js"></script>
   <script src="../js/borderBottonNav.js"></script>
+  <script src="../js/calcularTamanoPantalla.js"></script>
+  <script src="./js/overView.js"></script>
+
 </body>
 
 </html>

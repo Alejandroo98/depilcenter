@@ -2,9 +2,9 @@ import { getQueryUrl, scrollReserva } from './helpers.js';
 
 /* ======== SELECCIONAR SERVICIOS Y HORA POR MEDIO DE QUERY ============ */
 try {
-  const { errors, servicio, hora } = getQueryUrl();
+  const { open, servicio, hora } = getQueryUrl();
 
-  if (errors) {
+  if (open) {
     scrollReserva();
   }
 

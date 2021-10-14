@@ -9,6 +9,7 @@ const session = require('express-session');
 const http = require('http');
 const server = http.createServer(app);
 const socketIo = require('socket.io');
+const ProgressBar = require('progressbar.js');
 
 module.exports.io = socketIo(server);
 require('./socket/socket_servidor');
@@ -38,8 +39,6 @@ app.use(
 );
 
 app.use(flash());
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 app.use((req, res, next) => {
   res.locals.error = req.flash('error')[0];

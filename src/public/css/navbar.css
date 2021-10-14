@@ -39,6 +39,7 @@
 }
 
 .nav-item a {
+  position: relative;
   color: white !important;
   font-weight: 500;
 }
@@ -49,6 +50,24 @@
   align-items: center;
   margin: 0 20px;
   color: white;
+}
+
+.nav-item hr {
+  width: 0px;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  color: #fff;
+  bottom: -16px;
+  opacity: unset;
+}
+
+.nav-item a:hover hr {
+  display: block;
+  width: calc(100%);
+  transition: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
 }
 
 /* ================ NAV CONTACTS ========== */

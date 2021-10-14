@@ -21,6 +21,7 @@ const changeActiveOption = () => {
     activeOption('mujerOption');
     activeOption('mujerOptionIPL');
   } else if (myParam == 'hombre') {
+    activeOption('hombreOption');
     activeOption('hombreOptionIPL');
   }
 
