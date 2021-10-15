@@ -1,11 +1,11 @@
 .navbar {
   position: sticky;
   transition: all 0.3s ease-in-out;
-  background-color: #f37e78;
+  background-color: var(--base);
   z-index: 5000;
   top: 0;
   top: 0;
-  height: 140px;
+  min-height: 140px !important;
   font-size: 15px;
 }
 
@@ -31,6 +31,12 @@
   opacity: 0.9;
   position: absolute;
   right: 0px;
+  height: 140px;
+}
+
+.navBarCirulos img {
+  width: 100%;
+  height: 100%;
 }
 
 .navbarBoxShadow {
@@ -73,7 +79,8 @@
 /* ================ NAV CONTACTS ========== */
 .__mainNavContact {
   background-color: var(--baseLess);
-  height: 50px;
+  padding: 5px 0;
+  /* height: 50px; */
 }
 
 .mainNavContact {
@@ -103,14 +110,16 @@
 }
 
 .count-down-align {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: white;
+  max-width: min-content;
   border-radius: 5px;
   box-shadow: var(--sombra);
   text-align: center;
 }
 
-.count-down-align p:first-child {
+.count-down-align div:first-child {
   position: relative;
   left: -5px;
   padding: 5px 8px;
@@ -120,9 +129,10 @@
   font-size: 16px;
   box-shadow: var(--sombra);
   min-width: 35px;
+  max-width: 35px;
 }
 
-.count-down-align p:first-child::after {
+.count-down-align div:first-child::after {
   content: 'DIAS';
   position: absolute;
   bottom: 0;
@@ -130,11 +140,23 @@
   font-size: 10px;
 }
 
-.count-down-align p:last-child {
+.count-down-align div:nth-child(2) {
   color: var(--base);
   padding: 5px 10px 5px 0;
   font-weight: bold;
   font-size: 20px;
+  border-bottom: 1px solid #dfdfdf;
+  min-width: 94px;
+  /* max-width: 115px; */
+}
+
+.p_valida_responsive {
+  display: none;
+  grid-column: span 2;
+}
+
+.p_valida_responsive p {
+  font-size: 10px;
 }
 
 /* dropdown - mas */
@@ -149,4 +171,68 @@
 
 .menu a {
   color: var(--base) !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-item {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .img-nav {
+    padding: 30px 20px;
+  }
+
+  .navBarCirulos {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .__mainNavContact {
+    padding: 8px 0;
+  }
+
+  .title-count {
+    display: none;
+  }
+
+  .count-down-align {
+    box-shadow: var(--sombra);
+    overflow: hidden;
+  }
+
+  .count-down-align div:first-child {
+    font-size: 14px;
+    left: 0;
+    box-shadow: none;
+  }
+
+  .count-down-align div:nth-child(2) {
+    padding: 3px 5px 3px 0;
+    font-size: 17px;
+  }
+
+  .count-down-align div:first-child::after {
+    content: 'DIAS';
+    position: absolute;
+    bottom: -3px;
+    left: 8px;
+    font-size: 8px;
+  }
+
+  .p_valida_responsive {
+    display: block;
+  }
+
+  .title-count {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
 }

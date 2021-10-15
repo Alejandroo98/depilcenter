@@ -1,5 +1,6 @@
 .novedades-container-main {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background-color: var(--base);
   justify-content: center;
   color: rgb(71, 71, 71);
@@ -10,19 +11,13 @@
   background-size: cover;
 }
 
-.title-cards {
-  color: white;
-  padding: 0 0 20px 0;
-  text-align: center;
-  font-size: 25px;
-}
-
 .ui-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   width: 350px;
+  max-width: 417px;
   background-color: white;
   border-radius: 5px;
   padding: 14px;
@@ -91,4 +86,30 @@
   background-color: #707070;
   color: #fff;
   text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+  .circle-promo {
+    display: none;
+  }
+
+  .ui.cards {
+    margin: 0 !important;
+  }
+
+  .novedades-container-main {
+    width: 100%;
+    margin: 0;
+  }
+
+  .ui-card {
+    width: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 640px) {
 }

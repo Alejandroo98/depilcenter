@@ -1,5 +1,14 @@
+.cajaPrincipal {
+  background-image: url(../img/backgroundIndex.png);
+  background-color: #edbcbc;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+}
+
 .carouselContainer {
-  height: 100%;
+  /* height: 100%; */
 }
 
 #carouselExampleIndicators {
@@ -20,7 +29,6 @@
 
 ._servicioIndex {
   display: flex;
-  /* background-color: aqua; */
   text-align: left;
   max-width: 350px;
   justify-content: center;
@@ -126,4 +134,78 @@
   box-shadow: var(--sombra);
   padding: 15px 25px !important;
   background-color: var(--base) !important;
+}
+
+/*  RESPONDDIVE */
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  #carouselExampleIndicators {
+    height: 500px;
+  }
+
+  .flex-carousel-item img {
+    position: relative;
+    left: -15px;
+    max-width: 320px;
+  }
+
+  ._servicioIndex {
+    align-items: flex-start;
+    position: relative;
+    left: -60px;
+    max-width: auto;
+  }
+
+  .h1_box {
+    max-width: 200px;
+  }
+
+  ._servicioIndex h1 {
+    word-wrap: break-word;
+    font-size: 25px;
+  }
+
+  ._servicioIndexSub {
+    font-size: 35px;
+  }
+
+  .circuloServicioInfo {
+    width: 150px;
+    height: 150px;
+    border: 7px solid white;
+  }
+
+  .circuloServicioInfo h2 {
+    font-size: 45px;
+  }
+
+  .circuloServicioInfo i {
+    font-size: 12px;
+    margin-top: -12px;
+    font-weight: bold;
+  }
+
+  .button {
+    padding: 10px 0;
+  }
+
+  .buttons-ui a {
+    font-size: 10px !important;
+  }
+
+  .btn-blanco {
+    padding: 10px 20px !important;
+  }
+
+  .btn-rojo {
+    padding: 10px 20px !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
 }

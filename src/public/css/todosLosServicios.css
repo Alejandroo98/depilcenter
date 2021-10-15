@@ -98,7 +98,7 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  right: -30%;
+  right: -75px;
   top: -70%;
   padding: 10px;
   border-radius: 100px;
@@ -140,7 +140,7 @@
 .card-btn a:nth-child(1) {
   flex-grow: 1;
   color: #fff;
-  padding: 5px 20px;
+  padding: 5px 12px;
   border-radius: 4px;
   background-color: #f37e78;
   margin: 5px;
@@ -183,4 +183,38 @@
 .card-btn a:nth-child(3):hover {
   background-color: #acacac;
   color: white;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1024px) {
+  .todosLosServicios-container > div {
+    grid-column: span 2;
+  }
+
+  .todosLosServicios-container hr:first-child {
+    display: none;
+  }
+
+  .todosLosServicios-container hr:nth-child(2) {
+    position: absolute;
+    /* top: 12%; */
+    height: 95%;
+  }
+
+  .cotainer-content-card {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 1008px) {
+  .content-card-servicios {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 640px) {
 }

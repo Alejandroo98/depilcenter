@@ -36,21 +36,24 @@
         </p>
       </div>
 
-      <a class='agendarWhatsapp' href='https://n9.cl/7ag1c' target='_blank'>
-        <h6>Agendar por Whatsapp</h6>
-        <i class="whatsapp icon"></i>
-      </a>
+      <div class='agendarWhatsapp'>
+
+        <a href='https://n9.cl/7ag1c' target='_blank'>
+          <h6>Agendar por Whatsapp</h6>
+          <i class="whatsapp icon"></i>
+        </a>
+      </div>
 
 
 
-      <div class='locales'>
+      <div class='locales margin_15-0 margin_15-0-width'>
         <label class='labelLocales' for='local'>Lugar<span> *</span></label>
         <select name='locales'>
           <option value='Quito/Condado' selected>Quito/Condado</option>
         </select>
       </div>
 
-      <div class='serviciosSelect'>
+      <div class='serviciosSelect margin_15-0 margin_15-0-width'>
         <label for='serviciosSelect'>Servicio<span> *</span></label>
         <select name='servicio' id='serviciosActive'>
           {{#each servicios}}
@@ -60,8 +63,18 @@
       </div>
 
 
+      <div class='fecha margin_15-0 margin_15-0-width'>
+        <label for='fecha'>Fecha<span> *</span></label>
+        <div class='input-group date date-datapicker'>
+          <input type='text' class='form-control form-control-date' value="{{ error.fecha }}" name='fecha' /><span
+            class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
+        </div>
 
-      <div class='hora'>
+        <p class='errDatos errFecha'></p>
+      </div>
+
+
+      <div class='hora margin_15-0 margin_15-0-width'>
         <label for='hora'>Hora<span> *</span></label>
         <select name='hora'>
           <option id="09:00_AM" value='09:00_AM'>09:00 AM</option>
@@ -78,18 +91,9 @@
         {{! <input id='hora' type='time' name='hora' min='07:59' value='08:00' /> }}
       </div>
 
-      <div class='fecha'>
-        <label for='fecha'>Fecha<span> *</span></label>
-        <div class='input-group date date-datapicker'>
-          <input type='text' class='form-control form-control-date' value="{{ error.fecha }}" name='fecha' /><span
-            class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
-        </div>
 
-        <p class='errDatos errFecha'></p>
-      </div>
-
-      <div class='datoNombres'>
-        <label for='nombres'>Nombres<span> *</span></label>
+      <div class='datoNombres margin_15-0 margin_15-0-width'>
+        <label for='nombres'>Nombres.<span> *</span></label>
         <input value="{{ error.nombres }}" id='nombres' type='text' name='nombres' autocomplete='off'
           placeholder='Un nombre y un apellido' />
         {{! <p class="errDatos errNombres"><span class="material-icons errIcon">error_outline</span>Ingresa un nombre
@@ -97,8 +101,8 @@
         <p class='errDatos errNombres'></p>
       </div>
 
-      <div class='datoNum'>
-        <label for='numeroTelefono'>Telefono<span> *</span></label>
+      <div class='datoNum margin_15-0 margin_15-0-width'>
+        <label for='numeroTelefono'>Telefono.<span> *</span></label>
         <input value="{{ error.numeroTelefono }}" id='numeroCelular' type='text' name='numeroTelefono'
           autocomplete='off' placeholder='Ejm. 0991234567' />
         {{! <p class="errDatos errNumero">Ingresa un numero valido<span
@@ -106,8 +110,8 @@
         <p class='errDatos errNumero'></p>
       </div>
 
-      <div class='datoFechaCumple'>
-        <label for='fechaCumpleaios'>Fecha Cumpleaños
+      <div class='datoFechaCumple margin_15-0 margin_15-0-width'>
+        <label for='fechaCumpleaios'>Fecha nacimiento.
           <div class="popup-birthday"
             data-html="<b>Este campoo es opcional, llenalo solo la primera vez</b>, solo llenalo si deseas obtener un descuento especial en tu dia de cumpleaños, esta informacion aparecera en nuestra app web."
             data-position="top left" style="display:inline">
@@ -124,7 +128,7 @@
 
 
 
-      <div class='terminosButton'>
+      <div class='terminosButton margin_15-0 '>
         <div>
           <input id='terminos' type='checkbox' name='suscrito' checked />
           <label for='terminos'>Aceptar terminos y condiciones</label>

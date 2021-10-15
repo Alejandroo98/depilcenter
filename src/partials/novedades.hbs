@@ -1,41 +1,35 @@
-<section class="novedades-container-main">
-    <div class=" novedades-center">
+<div class="ui cards items-cards novedades-container-main">
+    {{#each ultimasPromociones}}
 
-        <div class="ui cards items-cards">
-
-            {{#each ultimasPromociones}}
-            <div class="ui-card">
-                <div class="circle-promo">
-                    <p>{{ circleName }}</p>
-                </div>
-                <div class="content-card">
-                    <div class="card-header-ui">
-                        <h4>{{ title }}</h4>
-                    </div>
-                    <div class="card-meta">
-                        {{ subtitle }}
-                    </div>
-                    <div class="card-description">
-                        <p>
-                            • Nro sesiones: {{ nroSesiones }} <br>
-                            • Precio normal: {{ precio.normal }} <br>
-                            • Promo: {{ precio.promo }}
-                        </p>
-                    </div>
-                </div>
-                <div class="desc_cards">
-                    <p>
-                        {{ desc }}
-                    </p>
-                </div>
-                <div class="btn-container">
-                    <a data-id="{{ id }}" class="btn-items-cards" data-desc="{{ data_desc }}">Agendar</a>
-                    <a href="{{ btn.masInfo }}">Mas info</a>
-                </div>
-            </div>
-            {{/each}}
-
+    <div class="ui-card">
+        <div class="circle-promo">
+            <p>{{ circleName }}</p>
         </div>
-
+        <div class="content-card">
+            <div class="card-header-ui">
+                <h4>{{ title }}</h4>
+            </div>
+            <div class="card-meta">
+                {{ subtitle }}
+            </div>
+            <div class="card-description">
+                <p>
+                    • Nro sesiones: {{ nroSesiones }} <br>
+                    • Precio normal: {{ precio.normal }} <br>
+                    • Promo: {{ precio.promo }}
+                </p>
+            </div>
+        </div>
+        <div class="desc_cards">
+            <p>
+                {{ desc }}
+            </p>
+        </div>
+        <div class="btn-container">
+            <a data-id="{{ id }}" class="btn-items-cards" data-desc="{{ data_desc }}">Agendar</a>
+            <a href="{{ btn.masInfo }}">Mas info</a>
+        </div>
     </div>
-</section>
+    {{/each}}
+
+</div>
