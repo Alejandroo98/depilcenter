@@ -291,6 +291,7 @@ body {
 
 .indc-childs {
   border-radius: 5px;
+  min-width: 235px;
   background-color: #fff;
   width: 100%;
   margin: 1em;
@@ -337,8 +338,8 @@ body {
   bottom: -60px;
   border-radius: 40%;
   background-color: var(--base);
-  width: 70%;
-  height: 70%;
+  width: 180px;
+  height: 150px;
   color: #fff;
   font-weight: bold;
   font-size: 30px;
@@ -410,3 +411,64 @@ body {
 /* =========================================================================== */
 /* ======================== *CSS PARA DEPILACION DEFINITIVA =================== */
 /* =========================================================================== */
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1024px) {
+  .imgCotizarContainer,
+  .indicaciones-container-ipl {
+    display: none !important;
+  }
+
+  .__cotizarContainer {
+    max-width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .boxZonasCorporalIPL {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .nombreZonas {
+    grid-column: auto;
+  }
+
+  .data-promocion {
+    font-size: 13px;
+  }
+
+  .circle-card-ipl p::after {
+    bottom: -42%;
+    left: 30%;
+  }
+
+  .nameCotizar h1 {
+    font-size: 20px;
+  }
+
+  .nameCotizar p {
+    font-size: 14px;
+  }
+
+  .boxBorder p:first-child {
+    display: block;
+  }
+
+  .data-promocion {
+    grid-column: auto;
+  }
+
+  .boxZonasCorporal {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .boxCotizarFacial {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+}
