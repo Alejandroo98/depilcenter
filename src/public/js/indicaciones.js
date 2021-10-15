@@ -4,6 +4,7 @@ import { getQueryUrl } from './helpers.js';
 try {
   const servicio = getQueryUrl().servicio;
   document.getElementById(servicio).classList.toggle('view-active');
+  document.getElementById(`${servicio}_`).classList.toggle('view-active');
 } catch (error) {
   //
 }

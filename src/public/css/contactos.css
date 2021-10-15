@@ -1,3 +1,13 @@
 .container-contactos {
   font-family: 'Poppins', sans-serif;
 }
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 975px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 640px) {
+}

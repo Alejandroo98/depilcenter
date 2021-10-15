@@ -16,6 +16,7 @@ const changeImg = () => {
   const { path, query } = getPath();
   const imgCotizarContainer = document.querySelector('.imgCotizarContainer');
   const indicaciones_container_ipl = document.querySelector('.indicaciones-container-ipl');
+  const indicaciones_responsive = document.querySelector('#indicaciones_responsive');
 
   const queryMuejer = query == DM;
   const queryHombre = query == DH;
@@ -26,6 +27,7 @@ const changeImg = () => {
   } else if (path == DC) {
     imgCotizarContainer.style.display = 'flex';
     indicaciones_container_ipl.style.display = 'none';
+    indicaciones_responsive.style.display = 'none';
 
     if (queryMuejer) {
       imgCotizarContainer.innerHTML = `<img src="../img/cotizar_combos/mujer_modelo_cotizar.png" alt="Modelo cotizar mujer - Depilcenter - Centro de depilacion"></img>`;

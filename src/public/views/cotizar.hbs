@@ -130,6 +130,42 @@
                 </div>
               </div>
 
+              <div class="ui accordion" id="indicaciones_responsive">
+                <div class="title">
+                  <i class="dropdown icon"></i>
+                  INDICACIONES
+                </div>
+                <div class="content padding-cero">
+
+                  <div class="indc-color-box">
+                    <div class="indc-childs">
+                      {{#each servicio}}
+                      <b>• {{ title }}</b>
+
+                      <ol type="1">
+                        {{#each body }}
+                        {{#if short_desc}}
+                        <li>
+                          {{ short_desc }}
+                          {{#if verMas}}
+                          <a href="{{ verMas.href }}">Ver mas</a>
+                          {{/if}}
+                        </li>
+                        {{ else }}
+                        <li>{{ desc }}
+                          {{/if}}
+
+                        </li>
+                        {{/each }}
+                      </ol>
+
+                      <hr style="margin: 5px 0">
+                      {{/each}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class=" boxValorTotal">
                 <div class="boxBorder">
                   <p>VALOR PROMOCIONAL : $ <span id="valorTotalZonas">0</span>&nbsp&nbsp|&nbsp</p>

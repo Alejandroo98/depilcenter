@@ -282,6 +282,10 @@ body {
   max-width: 280px;
 }
 
+#indicaciones_responsive {
+  display: none;
+}
+
 .indc-color-box {
   display: flex;
   width: 100%;
@@ -368,6 +372,7 @@ body {
   position: relative;
   overflow: hidden;
   min-height: 200px;
+  min-width: 235px;
 }
 .over-card {
   position: absolute;
@@ -414,11 +419,33 @@ body {
 
 /* RESPONSIVE */
 @media screen and (max-width: 1280px) {
+  .indicaciones-container-ipl {
+    display: none !important;
+  }
+
+  .accordion .padding-cero {
+    padding: 5px 0 !important;
+  }
+
+  .indc-childs {
+    margin: 0;
+  }
+
+  #indicaciones_responsive {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  .imgCotizarContainer,
-  .indicaciones-container-ipl {
+  .boxZonasCorporalIPL {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nombreZonas {
+    grid-column: 2;
+  }
+
+  .imgCotizarContainer {
     display: none !important;
   }
 
@@ -430,6 +457,11 @@ body {
 @media screen and (max-width: 768px) {
   .boxZonasCorporalIPL {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .circle-card-ipl {
+    width: 180px;
+    height: 150px;
   }
 
   .nombreZonas {
