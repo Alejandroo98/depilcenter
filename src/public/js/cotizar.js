@@ -3,13 +3,16 @@ import CotizarIplConfig from './cotizar/cotizarIplConfig.js';
 import CotizarOsConfig from './cotizar/cotizarOsConfig.js';
 import changeImg from './cotizar/changeImg.js';
 import changeActiveOption from './cotizar/changeActiveOption.js';
-import { pinarDespintar, printDataDesc, printSelectDataDesc } from './helpers.js';
+import { pinarDespintar, printDataDesc, printSelectDataDesc, changeTitle } from './helpers.js';
+changeTitle();
+changeActiveOption();
+printSelectDataDesc();
 
 //datepicker
 import './printDateReserve.js';
 
-changeActiveOption();
-printSelectDataDesc();
+//send message
+import './sendMsg.js';
 
 // change servicios options
 import './serviciosActive.js';
@@ -44,7 +47,6 @@ const startCalculoZonas = ({ target }) => {
       cotizarOsConfig.comprovarZonaExiste(target);
 
       if (url == '/cotizar/depilacion-cera') {
-        console.log('cera');
         cotizarConfig.imprimirValorTotal();
       } else if (url == '/cotizar/depilacion-definitiva') {
         console.log('laser');
@@ -63,7 +65,9 @@ box_otros_servicios.addEventListener('click', startCalculoZonas);
 
 const btn_cotizar_reserve = document.querySelector('.btn-cotizar-reserve');
 btn_cotizar_reserve.addEventListener('click', ({ target }) => {
-  printDataDesc({ id: target.dataset.id, value: 'COTIZACION' });
+  const $promo_cera_title = document.querySelector('.data-promocion-cera');
+  const $promocion = $promo_cera_title.dataset.titlecera;
+  printDataDesc({ id: target.dataset.id, value: $promocion });
 });
 
 /*  ================  *FIN PINTAR O DESPINTAR ZONA SELECCIONADA ======== */

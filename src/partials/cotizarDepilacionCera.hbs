@@ -7,7 +7,8 @@
 
     <div class="boxZonasCorporal">
         {{#if _info_d_cera.descuentoBool}}
-        <div class="data-promocion" data-descuento="{{ _info_d_cera.descuento }}"
+        <div class="data-promocion data-promocion-cera" data-serviciocera="{{ _info_d_cera.servicio }}"
+            data-titlecera="{{ _info_d_cera.title }}" data-descuento="{{ _info_d_cera.descuento }}"
             data-bool="{{ _info_d_cera.descuentoBool }}">
             {{ _info_d_cera.title }}
         </div>

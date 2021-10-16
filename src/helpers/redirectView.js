@@ -2,7 +2,7 @@ const redirectView = (url, servicio, hora) => {
   const path = url.split('?');
 
   if (path[0] == '/') {
-    return `/?errors=true&&servicio=${servicio}&&hora=${hora}`;
+    return `/?open=true&&servicio=${servicio}&&hora=${hora}`;
   }
 
   const query = path[1].split('&&');

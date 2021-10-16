@@ -1,5 +1,11 @@
 [
   {
+    "_info": {
+      "title": "Hasta 40% de descuento",
+      "descuentoBool": true,
+      "descuento": "0",
+      "servicio": "Depilación definitiva."
+    },
     "mujer": [
       {
         "id": "DD_C_DDM1",

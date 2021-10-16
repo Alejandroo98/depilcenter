@@ -1,3 +1,24 @@
+const changeTitle = () => {
+  try {
+    const $promo_cera_title = document.querySelector('.data-promocion-cera');
+    const capitalizar = $promo_cera_title.dataset.titlecera;
+    const minusculas = capitalizar.toLowerCase();
+    const title_promo_cera = minusculas.replace(/^\w/, (c) => c.toUpperCase());
+
+    const servicio_cera = $promo_cera_title.dataset.serviciocera;
+
+    document.title = `${servicio_cera} | ${title_promo_cera} | Quito-Ecuador`;
+  } catch (error) {
+    //
+  }
+};
+
+const sendWhatsapp = (msg = '') => {
+  const url = `https://api.whatsapp.com/send?phone=593984266244&text=${msg}`;
+  window.open(url, '_blank');
+  // window.location.href = 'https://www.facebook.com';
+};
+
 const getQueryUrl = () => {
   let querys = {};
   const params = new URLSearchParams(window.location.search);
@@ -33,7 +54,7 @@ const selectedServicios = (id) => {
     const addSelected = document.getElementById(id);
     addSelected.setAttribute('selected', '');
   } catch (error) {
-    console.log('');
+    //
   }
 };
 
@@ -88,4 +109,6 @@ export {
   printSelectDataDesc,
   printDataDesc,
   pinarDespintar,
+  sendWhatsapp,
+  changeTitle,
 };

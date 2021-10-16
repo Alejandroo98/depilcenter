@@ -33,8 +33,9 @@
 }
 
 ._datosCumpleanios h6 {
-  margin: 5px 0 !important;
+  margin: 5px 0;
 }
+
 .mini {
   padding: 5px 8px !important;
   margin: 0 5px !important;
@@ -43,10 +44,6 @@
 .popup-cumpleanios {
   background-color: rgb(252, 231, 231);
   padding: 3px 0 4px 0;
-}
-
-._datosCumpleanios h6 {
-  margin: 0;
 }
 
 .__cumpleaniosContainer p {
@@ -150,4 +147,17 @@
 
 .cumpleanios-container-cards::-webkit-scrollbar-thumb:active {
   background-color: #f79090;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+  ._datosCumpleanios h6 {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 640px) {
 }

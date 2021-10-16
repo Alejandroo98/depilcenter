@@ -18,10 +18,26 @@ var x = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  let horaCero = '';
+  let minutosCero = '';
+  let segundosCero = '';
+
+  if (hours < 10) {
+    horaCero = 0;
+  }
+
+  if (minutes < 10) {
+    minutosCero = 0;
+  }
+
+  if (seconds < 10) {
+    segundosCero = 0;
+  }
+
   // Display the result in the element with id="demo"
   document.getElementById('countDownDays').innerHTML = `${days}`;
   document.getElementById('countDown').innerHTML = `
-  ${hours}:${minutes}:${seconds} 
+  ${horaCero}${hours}:${minutosCero}${minutes}:${segundosCero}${seconds} 
   `;
 
   // If the count down is finished, write some text

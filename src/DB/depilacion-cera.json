@@ -3,7 +3,8 @@
     "_info": {
       "title": "40% DE DESCUENTO EN TODAS LAS ZONAS.",
       "descuentoBool": true,
-      "descuento": "40"
+      "descuento": "40",
+      "servicio": "Depilación con cera"
     },
     "mujer": [
       {

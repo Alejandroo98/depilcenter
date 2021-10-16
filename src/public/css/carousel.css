@@ -144,6 +144,21 @@
 }
 
 @media screen and (max-width: 768px) {
+  .btn-event-agendar {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .btn-event-agendar a {
+    border-radius: 5px !important;
+    margin: 2px 0 !important;
+    width: 130px;
+    box-shadow: var(--sombra) !important;
+  }
+
+  .or {
+    display: none;
+  }
+
   #carouselExampleIndicators {
     height: 500px;
   }

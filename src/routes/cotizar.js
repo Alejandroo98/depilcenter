@@ -5,6 +5,7 @@ const {
   getDepilacionCera,
   getDepilacionDefinitiva,
   getInfo_d_Cera,
+  getInfo_d_Definitiva,
 } = require('../helpers/getDataZonas');
 const { comprovarQueryGenero } = require('../middleware/queryGenero');
 const ultimasPromociones = require('../DB/ultimas-promociones.json');
@@ -70,7 +71,7 @@ router.get('/cotizar/depilacion-definitiva', comprovarQueryGenero, (req, res) =>
   });
 
   const url = req.url;
-
+  const _info_d_definitiva = getInfo_d_Definitiva();
   res.render('cotizar', {
     corporal,
     facial,
@@ -79,6 +80,7 @@ router.get('/cotizar/depilacion-definitiva', comprovarQueryGenero, (req, res) =>
     servicios,
     url,
     servicio,
+    _info_d_definitiva,
   });
 });
 

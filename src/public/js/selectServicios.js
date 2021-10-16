@@ -5,7 +5,9 @@ try {
   const { open, servicio, hora } = getQueryUrl();
 
   if (open) {
-    scrollReserva();
+    setTimeout(() => {
+      scrollReserva();
+    }, 900);
   }
 
   document.getElementById(servicio).setAttribute('selected', '');

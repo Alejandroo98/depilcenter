@@ -88,7 +88,7 @@
                                         <b>Zonas:</b> {{ reservaData.zonas }}
                                     </td>
                                     <td colspan="1" bgcolor="#f1f0f0">
-                                        <b>Valor total:</b> {{ reservaData.valorTotal }}
+                                        <b>Valor total:</b>$ {{ reservaData.valorTotal }}
                                     </td>
                                 </tr>
                                 {{/if}}
@@ -101,9 +101,9 @@
                         Si deseas cancelar, reagendar o tienes alguna duda por favor cumunicate con nosotros...
                     </div>
                     <div class="recomendaciones-content">
-                        <b>Recomendaciones:</b> {{ reservaData.indicaciones }}
+                        <b>Indicaciones:</b>Sigue estas indicaciones antes y después de tu tratamiento.
                         <b>
-                            <a href="#">
+                            <a href="/indicaciones">
                                 Ver mas...</a>
                         </b>
                     </div>
@@ -114,8 +114,8 @@
                         </b>
                     </div>
                     <div class="ui two buttons">
-                        <div class="ui basic green button ui-btn-whtpp">
-                            <a href="#" class="">
+                        <div class="ui basic green button ui-btn-whtpp succes-wh">
+                            <a>
                                 Whatsapp
                                 <i class="whatsapp icon"></i>
                             </a>
@@ -161,10 +161,10 @@
         crossorigin="anonymous"></script>
 
     {{!-- js --}}
+    <script src="../js/succes.js" type="module"></script>
     <script src="../js/calcularTamanoPantalla.js"></script>
     <script src="../js/borderBottonNav.js"></script>
     <script src="../js/countDown.js"></script>
-    <script src="../js/succes.js"></script>
 </body>
 
 </html>

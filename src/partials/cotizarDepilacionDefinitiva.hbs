@@ -7,6 +7,15 @@
 
 
     <div class="boxZonasCorporalIPL">
+
+        {{#if _info_d_definitiva.descuentoBool}}
+        <div class="data-promocion data-promocion-cera" data-serviciocera="{{ _info_d_definitiva.servicio }}"
+            data-titlecera="{{ _info_d_definitiva.title }}" data-descuento="{{ _info_d_definitiva.descuento }}"
+            data-bool="{{ _info_d_definitiva.descuentoBool }}">
+            {{ _info_d_definitiva.title }}
+        </div>
+        {{/if}}
+
         <div class="nombreZonas">
             <h5>Corporal</h5>
         </div>
@@ -51,6 +60,7 @@
         <div class="nombreZonas">
             <h5>Facial</h5>
         </div>
+
         {{#each facial}}
         <div id="{{ id }}" class="zona-box-child-ipl">
             <div class="over-card" id="{{ id }}" data-id="{{ categoria }}" data-desc="{{ descuento }}% DE DESCUENTO"

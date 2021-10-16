@@ -50,7 +50,7 @@ class cotizarOsConfig {
   };
 
   printZonasSelect = () => {
-    // console.log(this.zonasSeleccionadas);
+    return this.zonasSeleccionadas;
   };
 
   //   getValueSpan = (id) => {

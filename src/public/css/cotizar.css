@@ -11,7 +11,7 @@ body {
   background-color: #f37e78;
   font-size: 16px;
   padding: 10px;
-  grid-column: span 3;
+  grid-column: 1/-1;
   color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -336,6 +336,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 1em 1em;
 }
+
 .circle-card-ipl {
   position: absolute;
   right: -70px;
@@ -438,11 +439,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   .boxZonasCorporalIPL {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .nombreZonas {
-    grid-column: 2;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .imgCotizarContainer {
@@ -462,10 +459,6 @@ body {
   .circle-card-ipl {
     width: 180px;
     height: 150px;
-  }
-
-  .nombreZonas {
-    grid-column: auto;
   }
 
   .data-promocion {

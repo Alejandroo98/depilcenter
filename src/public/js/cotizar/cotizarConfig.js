@@ -191,17 +191,39 @@ class CotizarConfig {
     return valorTotal;
   };
 
+  handleZonasForm = () => {
+    let zonasSelecciondas = '';
+    let zonasSelecciondasOS = '';
+    let otrosServicios = this.otrosServicios.printZonasSelect();
+
+    this.zonasSeleccionadas.forEach((zona) => {
+      zonasSelecciondas += ` ${zona.nombre},`;
+    });
+
+    otrosServicios.forEach((zona) => {
+      zonasSelecciondasOS += ` ${zona.nombre},`;
+    });
+
+    const zonasSeleccionadasFinal = zonasSelecciondas + zonasSelecciondasOS;
+    zonasId.value = zonasSeleccionadasFinal.toString().slice(0, -1) + '.';
+  };
+
   imprimirValorTotal = () => {
+    const valorFindalForm = document.getElementById('valorTotalId');
+    this.handleZonasForm();
+
     const otrosServicios = Number(this.otrosServicios.zumarValoresTotales());
     const sinDescuento = this.handleSinDescuento();
     const conDescuento = this.handleDescuento();
 
-    document.querySelector('#valorNormalCotizar').innerHTML = `${Math.round(
-      sinDescuento + otrosServicios
-    )}`;
-    document.querySelector('#valorTotalZonas').innerHTML = `${Math.round(
-      conDescuento + otrosServicios
-    )}`;
+    const valorFindalSinDescuento = `${Math.round(sinDescuento + otrosServicios)}`;
+
+    const valorFindalConDescuento = `${Math.round(conDescuento + otrosServicios)}`;
+
+    document.querySelector('#valorNormalCotizar').innerHTML = valorFindalSinDescuento;
+    document.querySelector('#valorTotalZonas').innerHTML = valorFindalConDescuento;
+
+    valorFindalForm.value = valorFindalConDescuento;
   };
 }
 

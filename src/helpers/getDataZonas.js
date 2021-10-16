@@ -21,4 +21,13 @@ const getInfo_d_Cera = () => {
   return depilacionCera[0]._info;
 };
 
-module.exports = { getDepilacionCera, getDepilacionDefinitiva, getInfo_d_Cera };
+const getInfo_d_Definitiva = () => {
+  return depilacionDefinitiva[0]._info;
+};
+
+module.exports = {
+  getDepilacionCera,
+  getDepilacionDefinitiva,
+  getInfo_d_Cera,
+  getInfo_d_Definitiva,
+};

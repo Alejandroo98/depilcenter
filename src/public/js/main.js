@@ -2,6 +2,9 @@ import { getMonth } from './getMesDia.js';
 import './printDateReserve.js';
 import { printDataDesc, printSelectDataDesc } from './helpers.js';
 
+//send message
+import './sendMsg.js';
+
 //overView
 import './overView.js';
 
