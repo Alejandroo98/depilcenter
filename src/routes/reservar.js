@@ -9,6 +9,7 @@ const { generarJWT } = require('../helpers/jwt');
 app.post('/reservar', [validaciones, handleErrors], async (req, res) => {
   const datosReserva = req.datosReserva;
   const reserva = req.reserva;
+  console.log(datosReserva, reserva);
 
   try {
     guardarDatosUsuario(datosReserva);

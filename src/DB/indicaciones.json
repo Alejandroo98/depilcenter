@@ -3,11 +3,11 @@
     "d_cera": {
       "seo": {
         "id": "d_cera",
-        "title": "Depilación con cera tibia",
+        "title": "Depilación con cera tibia.",
         "desc": "Depilación con cera tibia en Quito"
       },
       "descuento": {
-        "title": "40% DE DESCUENTO EN TODOS LAS ZONAS"
+        "title": "30% DE DESCUENTO EN TODOS LAS ZONAS"
       },
       "url": "/cotizar/depilacion-cera?genero=mujer",
       "indicaciones": [
@@ -16,8 +16,7 @@
           "body": [
             {
               "short_desc": "Depilaciòn con cera tibia y con bandas desechables",
-              "desc": "La depilación con cera puede eliminar el vello desde la raíz, ralentizando su crecimiento durante una media de 4 semanas. Se puede utilizar en casi todas las zonas del cuerpo, desde el rostro hasta grandes zonas como las piernas o brazos. Y lo mejor es que puede aportar beneficios para tu piel.",
-              "verMas": { "href": "#" }
+              "desc": "La depilación con cera puede eliminar el vello desde la raíz, ralentizando su crecimiento durante una media de 4 semanas. Se puede utilizar en casi todas las zonas del cuerpo, desde el rostro hasta grandes zonas como las piernas o brazos. Y lo mejor es que puede aportar beneficios para tu piel."
             }
           ]
         },
@@ -99,7 +98,7 @@
         "desc": "Esta es la descripcion que ira en el header del view"
       },
       "descuento": {
-        "title": "Hasta 50% de descuento"
+        "title": "Hasta 40% de descuento."
       },
       "url": "/cotizar/depilacion-definitiva?genero=mujer",
       "indicaciones": [
@@ -107,20 +106,20 @@
           "title": "Tecnología IPL.",
           "body": [
             {
-              "short_desc": "Tecnologia mas efectiva para la depilacion definitiva.",
-              "desc": "La tecnologia que usamos es IPL o luz pulsada intensa (por sus siglas en inglés) que actualmente se asocia el término de fotodepilación, la cual reliza la depilacion po fotodermolisis selectiva, es decir, mediante la aplicación de calor (hasta 70º C) a la base del folículo piloso para quemarlo, gracias a que la luz es captada por la melanina, que es el pigmento celular que da color al pelo y la piel. <hr> La mayor eficacia depilatoria se obtiene en personas con piel clara y vello oscuro, puesto que la luz actúa allí donde hay una mayor concentración de melanina. Por tanto, no afecta a las canas, que carecen completamente de melanina, y su efectividad se ve muy limitada en el caso del vello rubio y pelirrojo, aunque en estos casos es superior a la del láser. No obstante, su eficacia depilatoria no depende prácticamente del calibre del vello, como sucede con la depilación láser.<hr> La mayor eficacia depilatoria se obtiene en personas con piel clara y vello oscuro, puesto que la luz actúa allí donde hay una mayor concentración de melanina. Por tanto, no afecta a las canas, que carecen completamente de melanina, y su efectividad se ve muy limitada en el caso del vello rubio y pelirrojo, aunque en estos casos es superior a la del láser. No obstante, su eficacia depilatoria no depende prácticamente del calibre del vello, como sucede con la depilación láser. <hr> La depilación con IPL aporta dos importantes ventajas. La primera es que permite tratar una amplia superficie en cada disparo, lo que reduce el tiempo necesario para cada sesión y facilita la depilación de grandes extensiones de piel, como es el caso del pecho y la espalda en los hombres. La otra es que su aplicación es prácticamente indolora y por ello es ideal para depilar las zonas más sensibles, como la cara, las axilas, la zona interior de los muslos o las ingles. <hr> Antes de cada sesión se aplica un gel frío sobre la zona de la piel que se va a tratar y a continuación se activa la máquina de IPL y se realizan los disparos a una distancia de 1-5 mm de la piel. Cada uno de ellos destruye varios pelos y debilita otros. Los primeros se eliminan al retirar el gel y los otros se caen por sí solos al cabo de unos días. Sin embargo, hay que tener en cuenta que existen muchos folículos inactivos sobre los que no actúa la luz pulsada y que generarán nuevos vellos con el paso del tiempo. <hr> De ahí que para obtener una depilación definitiva se necesiten una media de <b> 8 sesiones 1 vez cada mes </b>. El número de sesiones que necesitará una persona, no obstante, está sujeto a las características individuales: tipo de vello y piel, densidad del vello, extensión de la zona a tratar, estado hormonal, genética, etc. <hr> También es conveniente realizar con posterioridad al menos una sesión de mantenimiento al año para eliminar el nuevo vello que haya podido salir.",
-              "verMas": { "href": "#" }
+              "short_desc": "IPL, la tecnología más efectiva para la depilación definitiva.",
+              "desc": "La tecnologia que usamos es IPL o luz pulsada intensa (por sus siglas en inglés) que actualmente se asocia al término de fotodepilación, la cual realiza la depilacion po fotodermolisis selectiva, es decir, mediante la aplicación de calor (hasta 70º C) a la base del folículo piloso para quemarlo, gracias a que la luz es captada por la melanina, que es el pigmento celular que da color al pelo y la piel. <hr> La mayor eficacia depilatoria se obtiene en personas con piel clara y vello oscuro, puesto que la luz actúa allí donde hay una mayor concentración de melanina. Por tanto, no afecta a las canas, que carecen completamente de melanina, y su efectividad se ve muy limitada en el caso del vello rubio y pelirrojo, aunque en estos casos es superior a la del láser. No obstante, su eficacia depilatoria no depende prácticamente del calibre del vello, como sucede con la depilación láser.<hr> La mayor eficacia depilatoria se obtiene en personas con piel clara y vello oscuro, puesto que la luz actúa allí donde hay una mayor concentración de melanina. Por tanto, no afecta a las canas, que carecen completamente de melanina, y su efectividad se ve muy limitada en el caso del vello rubio y pelirrojo, aunque en estos casos es superior a la del láser. No obstante, su eficacia depilatoria no depende prácticamente del calibre del vello, como sucede con la depilación láser. <hr> La depilación con IPL aporta dos importantes ventajas. La primera es que permite tratar una amplia superficie en cada disparo, lo que reduce el tiempo necesario para cada sesión y facilita la depilación de grandes extensiones de piel, como es el caso del pecho y la espalda en los hombres. La otra es que su aplicación es prácticamente indolora y por ello es ideal para depilar las zonas más sensibles, como la cara, las axilas, la zona interior de los muslos o las ingles. <hr> Antes de cada sesión se aplica un gel frío sobre la zona de la piel que se va a tratar y a continuación se activa la máquina de IPL y se realizan los disparos a una distancia de 1-5 mm de la piel. Cada uno de ellos destruye varios pelos y debilita otros. Los primeros se eliminan al retirar el gel y los otros se caen por sí solos al cabo de unos días. Sin embargo, hay que tener en cuenta que existen muchos folículos inactivos sobre los que no actúa la luz pulsada y que generarán nuevos vellos con el paso del tiempo. <hr> De ahí que para obtener una depilación definitiva se necesiten una media de <b> 8 sesiones 1 vez cada mes </b>. El número de sesiones que necesitará una persona, no obstante, está sujeto a las características individuales: tipo de vello y piel, densidad del vello, extensión de la zona a tratar, estado hormonal, genética, etc. <hr> También es conveniente realizar con posterioridad al menos una sesión de mantenimiento al año para eliminar el nuevo vello que haya podido salir.",
+              "verMas": { "href": "/indicaciones?servicio=d_definitiva" }
             }
           ]
         },
         {
-          "title": "Indicaciones Previas al Uso de Depilación IPL:",
+          "title": "Indicaciones previas al uso de depilación IPL:",
           "body": [
             {
-              "desc": "Para asegurar que la energía lumínica se dirige correctamente a la raíz del pelo,asistir con el vello de 1 a 2mm de largo (rasurar 2 a 3 días antes aproximadamente la zona.) NO recién rasurado,debe estar en la superficie de la piel."
+              "desc": "Para asegurar que la energía lumínica se dirige correctamente a la raíz del pelo, asistir con el vello de 1 a 2mm de largo (rasurar 2 a 3 días antes aproximadamente la zona.) NO recién rasurado, debe estar en la superficie de la piel."
             },
             {
-              "desc": "En caso de decoloración del vello,asistir sólo si la raíz mantiene su color natural."
+              "desc": "En caso de decoloración del vello, asistir sólo si la raíz mantiene su color natural."
             },
             {
               "desc": "Asistir con la piel libre de maquillaje."
@@ -129,28 +128,28 @@
               "desc": "Evitar la exposición al sol, en forma intensa en las últimas 4 semanas."
             },
             {
-              "desc": "Evitar uso de autobronceantes,camas solares o cualquier método que modifique el color de la piel."
+              "desc": "Evitar uso de autobronceantes, camas solares o cualquier método que modifique el color de la piel."
             },
             {
-              "desc": "No debe realizar tatuajes en zonas en las que desee eliminar el vello,hasta el término del tratamiento."
+              "desc": "No debe realizar tatuajes en zonas en las que desee eliminar el vello, hasta el término del tratamiento."
             },
             {
-              "desc": "No colocar desodorante previo a la sesión de axilas,puede utilizarlo inmediatamente eso si,luego de la sesión."
+              "desc": "No colocar desodorante previo a la sesión de axilas, puede utilizarlo inmediatamente eso si,luego de la sesión."
             },
 
             {
-              "desc": "En caso de realizarse otro tipo de tgratamiento en la zona,peeling(físico,químico o mecánico,etc) debe transcurrir una semana entre ambos."
+              "desc": "En caso de realizarse otro tipo de tratamiento en la zona, peeling (físico, químico o mecánico, etc) debe transcurrir una semana entre ambos."
             }
           ]
         },
         {
-          "title": "Indicaciones POST TRATAMIENTO",
+          "title": "Indicaciones post tratamiento",
           "body": [
             {
               "desc": "NO exponer la zona tratada con IPL al SOL."
             },
             {
-              "desc": "Hidratar por las noche siempre con cremas y por la mañana SIEMPRE  utilizar fotoprotección (pantalla solar) en zonas expuestas que han sido tratadas con IPL.Si de igaul modo esta muy expuesto al sol,renovar la pantalla solar cada 2 hrs aprox. Ante cualquier molestia comunicarse con un profesional."
+              "desc": "Hidratar por las noche siempre con cremas y por la mañana siempre utilizar fotoprotección (pantalla solar) en zonas expuestas que han sido tratadas con IPL.Si de igaul modo esta muy expuesto al sol,renovar la pantalla solar cada 2 hrs aprox. Ante cualquier molestia comunicarse con un profesional."
             }
           ]
         },
@@ -193,7 +192,7 @@
       "descuento": {
         "title": "Dos personas por $35"
       },
-      "url": "http://localhost:3000/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_facial",
+      "url": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_facial",
       "indicaciones": [
         {
           "title": "",
@@ -312,7 +311,7 @@
         "title": "Blanqueamiento de axilas",
         "desc": "Esta es la descripcion"
       },
-      "url": "http://localhost:3000/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=b_axilas",
+      "url": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=b_axilas",
       "descuento": {
         "title": "TRATAMIENTO COMPLETO 15% DE DESCUENTO "
       },
@@ -386,7 +385,7 @@
         "title": "Masajes relajantes",
         "desc": "Esta es la descripcion"
       },
-      "url": "http://localhost:3000/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=m_relajantes",
+      "url": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=m_relajantes",
       "indicaciones": [
         {
           "title": "",
@@ -436,7 +435,7 @@
     },
     "t_acne": {
       "seo": { "id": "t_acne", "title": "Tratamiento para acné", "desc": "Esta es la descripcion" },
-      "url": "http://localhost:3000/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=t_acne",
+      "url": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=t_acne",
       "indicaciones": [
         {
           "title": "",

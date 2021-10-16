@@ -343,8 +343,8 @@ body {
   bottom: -60px;
   border-radius: 40%;
   background-color: var(--base);
-  width: 180px;
-  height: 150px;
+  width: 170px;
+  height: 140px;
   color: #fff;
   font-weight: bold;
   font-size: 30px;
@@ -398,8 +398,17 @@ body {
   height: 1px;
   color: rgb(71, 71, 71);
 }
-.extra-card-ipl {
+.extra-card-ipl-box {
   margin: 15px 10px;
+}
+
+.extra-card-ipl-box p {
+  font-size: 12px;
+  text-align: center;
+  color: #7e7e7e;
+}
+
+.extra-card-ipl {
   text-align: center;
   font-size: 12px;
   background-color: #e4e4e4;

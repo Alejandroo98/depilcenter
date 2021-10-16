@@ -11,10 +11,11 @@ try {
 //Desde novedades
 try {
   document.querySelector('.novedades-container-main').addEventListener('click', ({ target }) => {
+    const salto = '%0A';
     if (target.dataset.wh) {
-      const msg = target.dataset.wh;
+      const msg = encodeURI(target.dataset.wh);
       sendWhatsapp(
-        `Hola 👋, estoy interesado en la promoción de:  ${msg}. Quiero mas información 📲.`
+        `Hola 👋, estoy interesado en la promoción de:  ${msg}.${salto} Quiero mas información 📲.`
       );
     }
   });
@@ -22,7 +23,7 @@ try {
   //
 }
 
-//wh fototerapia
+//wh footer
 try {
   document.querySelector('.wh-footer').addEventListener('click', () => {
     sendWhatsapp('');
@@ -43,17 +44,27 @@ try {
 //Desde el formulario de reserva
 try {
   //Esta palabra nos permite un salto de linea wn whatsapp, le llaman salto de liena que entiende la URL
-  const salto = '%0A';
 
-  document
-    .querySelector('.agendarCitaWh')
-    .addEventListener('click', () =>
-      sendWhatsapp(
-        `Hola 👋, quiero una cita.${salto}• Nombres:${salto}• Servicio:${salto}• Fecha cita:${salto}• Hora cita: ${salto}• Fecha nacimiento: *opcional`
-      )
-    );
+  const sendMsg = () => {
+    const salto = '%0A';
+    let promo = '';
+    let servicioOption = '';
+
+    const descLocalStorage = localStorage.getItem('data_desc');
+    if (descLocalStorage) {
+      const { id, value } = JSON.parse(descLocalStorage);
+      promo = encodeURI(`• Promo: ${value}.`);
+      servicioOption = document.getElementById(id).textContent;
+    }
+
+    const txt = `Hola 👋, quiero una cita.${salto}• Servicio: ${servicioOption}.${salto}${promo}${salto}• Nombres:${salto}• Fecha cita:${salto}• Hora cita: ${salto}• Fecha nacimiento: *opcional`;
+
+    sendWhatsapp(txt);
+  };
+
+  document.querySelector('.agendarCitaWh').addEventListener('click', sendMsg);
 } catch (error) {
-  //
+  sendWhatsapp('');
 }
 
 //Desde el view de succes, es decir cuando muestras los datos de la cita

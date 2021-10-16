@@ -3,7 +3,7 @@
     "id": "d_laser",
     "circleName": "NUEVO",
     "title": "AXILAS 2X1",
-    "subtitle": "Deilación definitiva",
+    "subtitle": "Depilación definitiva",
     "nroSesiones": "8",
     "precio": {
       "normal": "$320",
@@ -20,7 +20,7 @@
     "id": "d_laser",
     "circleName": "NUEVO",
     "title": "ROSTRO COMPLETO",
-    "subtitle": "Deilación definitiva",
+    "subtitle": "Depilación definitiva",
     "nroSesiones": "8",
     "precio": {
       "normal": "$320",
@@ -37,7 +37,7 @@
     "id": "d_laser",
     "circleName": "NUEVO",
     "title": "TERCER ZONA GRATIS",
-    "subtitle": "Deilación definitiva",
+    "subtitle": "Depilación definitiva",
     "nroSesiones": "8",
     "precio": {
       "normal": "$480",
@@ -48,6 +48,23 @@
       "masInfo": "#"
     },
     "desc": "Elige dos zonas y el tratamiento completo de la tercera te la obsequiamos completamente gratis.",
-    "data_desc": "3ER ZONA GRATIS   "
+    "data_desc": "3ER ZONA GRATIS"
+  },
+  {
+    "id": "d_cera",
+    "circleName": "NUEVO",
+    "title": "2X1 LUNES Y MARTES",
+    "subtitle": "Depilación con cera tibia.",
+    "nroSesiones": "∞",
+    "precio": {
+      "normal": "100%",
+      "promo": "50% DE DESCUENTO"
+    },
+    "btn": {
+      "agendar": "#",
+      "masInfo": "#"
+    },
+    "desc": "Visítenos con un acompañante los dias lunes y martes y page solo la mitad del valor total.",
+    "data_desc": "2X1 LUNES Y MARTES"
   }
 ]

@@ -23,6 +23,7 @@ const generarJWT = (reservaData) => {
   );
 
   return new Promise((resolve, reject) => {
+    reservaData.servicioid = reservaData.servicio;
     reservaData.servicio = nameServicio;
     reservaData.hora = nameHora;
     reservaData.indicaciones = indicaciones;
@@ -33,7 +34,7 @@ const generarJWT = (reservaData) => {
       payload,
       'TOKE_SECRET_KEY',
       {
-        expiresIn: '5h',
+        expiresIn: '24h',
       },
       (err, token) => {
         if (err) {

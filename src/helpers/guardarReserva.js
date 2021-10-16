@@ -13,7 +13,7 @@ guardarDB.guardarDatosUsuario = async ({ numeroTelefono, ...rest }) => {
     return true;
   } catch (error) {
     console.log(error);
-    throw new Error('Error interno, intenta mas tarde');
+    throw new Error('Error en guardarReserva.js');
   }
 };
 
