@@ -8,7 +8,7 @@ const validarJWT = (req, res, next) => {
   }
 
   try {
-    const datosReserva = jwt.verify(token, 'TOKE_SECRET_KEY');
+    const datosReserva = jwt.verify(token, process.env.SECRET_KEY_TOKEN);
     req.datosReserva = datosReserva;
   } catch (error) {
     console.log(error);

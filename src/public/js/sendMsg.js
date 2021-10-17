@@ -64,7 +64,7 @@ try {
 
   document.querySelector('.agendarCitaWh').addEventListener('click', sendMsg);
 } catch (error) {
-  sendWhatsapp('');
+  // sendWhatsapp('');
 }
 
 //Desde el view de succes, es decir cuando muestras los datos de la cita

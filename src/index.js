@@ -6,16 +6,8 @@ const hbs = require('hbs');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
-const http = require('http');
-const server = http.createServer(app);
-const socketIo = require('socket.io');
-const ProgressBar = require('progressbar.js');
-
-module.exports.io = socketIo(server);
-require('./socket/socket_servidor');
 
 mongoose.set('useCreateIndex', true);
-require('./passport/passport-auth');
 require('./config/config');
 
 // parse application/json
@@ -62,6 +54,6 @@ mongoose.connect(
 );
 
 //Empezando el servidor
-server.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log('Puerto conectado en ', process.env.PORT);
 });
