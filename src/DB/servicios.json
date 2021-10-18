@@ -108,7 +108,7 @@
   {
     "id": "d_hombre",
     "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
-    "desc": "Por estética o por comodidad, los hombres se depilan cada vez más. Y uno de los métodos más efectivos la depilac[on con IPL. Si aún no te has animado a probarlo, despues de ver nuestras promociones, seguro lo haces.",
+    "desc": "Por estética o por comodidad, los hombres se depilan cada vez más. Y uno de los métodos más efectivos la depilación con IPL. Si aún no te has animado a probarlo, despues de ver nuestras promociones, seguro lo haces.",
     "indicaciones": "Esta son las indicaciones de d_hombre",
     "name": "Depilacion masculina",
     "title": "DEPILACIÓN HOMBRE",
@@ -130,7 +130,7 @@
   {
     "id": "m_relajantes",
     "imgIcon": "https://i.ibb.co/NmwXVJ0/m-relajantes.png",
-    "desc": "Quieres disinuir el estres, reducir el dolor, eliminar tensiones musculares, mejorar la circulación sanguínea, un masaje relajante espera por tí.",
+    "desc": "Quieres disminuir el estres, reducir el dolor, eliminar tensiones musculares, mejorar la circulación sanguínea, un masaje relajante espera por tí.",
     "name": "Masajes relajantes",
     "indicaciones": "Esta son las indicaciones de m_relajantes",
     "header": false,
@@ -153,7 +153,7 @@
   {
     "id": "t_acne",
     "imgIcon": "https://i.ibb.co/khYFYWj/t-acne.png",
-    "desc": "El tratamiento temprano y efectivo del acné puede reducir el riesgo de formación de cicatrices y daño permanente a su autoestima. No esperas mas, y ven a vernos.",
+    "desc": "El tratamiento temprano y efectivo del acné puede reducir el riesgo de formación de cicatrices y daño permanente a su autoestima. No esperes mas, y ven a vernos.",
     "name": "Tratemiento para acné",
     "indicaciones": "Esta son las indicaciones de t_acne",
     "header": false,
@@ -175,7 +175,7 @@
   {
     "id": "l_gluteos",
     "imgIcon": "https://i.ibb.co/L1M1VVS/l-gluteos.png",
-    "desc": "Si tu sueño a sido durante años mejorar el aspecto de tus gluteos no tieens de que preocuparte, sin dolorosos metodos quirurgicos ni tiempo de recuperacion, resultados dese la primera sesión.",
+    "desc": "Si tu sueño a sido durante años mejorar el aspecto de tus gluteos no tienes de que preocuparte, sin dolorosos metodos quirurgicos ni tiempo de recuperacion, resultados desde la primera sesión.",
     "name": "Levantamiento de gluteos",
     "indicaciones": "Esta son las indicaciones de l_gluteos",
     "header": false,
