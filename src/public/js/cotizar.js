@@ -64,6 +64,7 @@ box_d_laser.addEventListener('click', startCalculoZonas);
 box_otros_servicios.addEventListener('click', startCalculoZonas);
 
 const btn_cotizar_reserve = document.querySelector('.btn-cotizar-reserve');
+
 btn_cotizar_reserve.addEventListener('click', ({ target }) => {
   const $promo_cera_title = document.querySelector('.data-promocion-cera');
   const $promocion = $promo_cera_title.dataset.titlecera;

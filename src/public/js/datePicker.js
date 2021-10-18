@@ -1,3 +1,25 @@
+import { getDate } from './helpers.js';
+
+const date_input = document.querySelector('.fecha-input');
+const todayDate = getDate();
+
+date_input.addEventListener('click', () => {
+  const today = document.querySelector('.today');
+  if (date_input.value == todayDate) {
+    today.classList.add('active');
+  } else if (date_input.value == '') {
+    today.classList.add('active');
+    date_input.value = todayDate;
+  }
+  if (date_input.value != todayDate) {
+    today.classList.remove('active');
+  }
+
+  // if( today =  )
+
+  console.log();
+});
+
 $.fn.datepicker.dates['es'] = {
   days: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
   daysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],

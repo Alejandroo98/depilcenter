@@ -1,3 +1,27 @@
+const getDate = () => {
+  let dateInput = new Date();
+  const month = dateInput.getMonth() + 1;
+  const day = dateInput.getDate();
+  const year = dateInput.getFullYear();
+  let dayCero = '';
+  let monthCero = '';
+
+  if (month < 10) {
+    monthCero = 0;
+  } else {
+    monthCero = '';
+  }
+
+  if (day < 10) {
+    dayCero = 0;
+  } else {
+    dayCero = '';
+  }
+
+  const fullDate = `${dayCero}${day}-${monthCero}${month}-${year} `;
+  return fullDate;
+};
+
 const changeTitle = () => {
   try {
     const $promo_cera_title = document.querySelector('.data-promocion-cera');
@@ -59,6 +83,7 @@ const selectedServicios = (id) => {
 };
 
 const scrollReserva = () => {
+  console.log('scroll');
   const box_reserva_partial = document.querySelector('.box-reserva-partial');
   box_reserva_partial.style.display = 'flex';
   box_reserva_partial.scrollIntoView({ block: 'center', behavior: 'smooth' });
@@ -111,4 +136,5 @@ export {
   pinarDespintar,
   sendWhatsapp,
   changeTitle,
+  getDate,
 };

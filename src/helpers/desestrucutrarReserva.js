@@ -8,6 +8,8 @@ const desestrucutrarReserva = ({
   suscrito,
   ...rest
 }) => {
+  if (fechaCumpleanios == '') fechaCumpleanios = '00-00-0000';
+
   const fechaRegistro = `${getDate()} | ${getHour()}`;
   const img = imgRandom();
   const reservaData = { nombres };

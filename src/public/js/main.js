@@ -1,6 +1,8 @@
 import { getMonth } from './getMesDia.js';
-import './printDateReserve.js';
 import { printDataDesc, printSelectDataDesc } from './helpers.js';
+
+//seleccionar la fecha de hoy en el formulario de reserva
+import './printDateReserve.js';
 
 //send message
 import './sendMsg.js';

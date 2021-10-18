@@ -1,8 +1,6 @@
 const getHour = () => {
   const date = new Date();
-
   const hora = `${date.getHours()}:${date.getMinutes()}`;
-
   return hora;
 };
 

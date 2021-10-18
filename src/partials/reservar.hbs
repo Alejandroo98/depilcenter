@@ -65,8 +65,8 @@
       <div class='fecha margin_15-0 margin_15-0-width'>
         <label for='fecha'>Fecha<span> *</span></label>
         <div class='input-group date date-datapicker'>
-          <input type='text' class='form-control form-control-date' value="{{ error.fecha }}" name='fecha' /><span
-            class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
+          <input type='text' class='form-control form-control-date fecha-input' value="{{ error.fecha }}" name='fecha'
+            placeholder="dd-mm-aaaa" /><span class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
         </div>
 
         <p class='errDatos errFecha'></p>
@@ -119,7 +119,7 @@
         </label>
         <div class='input-group date date-datapicker-cumpleanios'>
           <input value="{{ error.fechaCumpleanios }}" type='text' class='form-control form-control-date-cumpleanios'
-            value="{{ error.fechaCumpleanios }}" name='fechaCumpleanios' placeholder='dd-mm-yyyy' /><span
+            value="{{ error.fechaCumpleanios }}" name='fechaCumpleanios' placeholder='dd-mm-aaaa' /><span
             class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
         </div>
         <p class='errDatos errFechaCumpleanios'></p>

@@ -44,29 +44,29 @@ const validaciones = [
   check('nombres')
     .not()
     .isEmpty()
-    .withMessage('El campo "nombres" es obligatorio')
+    .withMessage('Ingrese sus nombres eh intente de nuevo.')
     .not()
     .isNumeric()
     .custom(haveNumber)
-    .withMessage('Ingresa nombres validos')
+    .withMessage('Ingrese nombres validos')
     .isLength({ min: 4 })
-    .withMessage('Tus nombres son muy cortos, inenta de nuevo')
+    .withMessage('Sus nombres son muy cortos, intente de nuevo')
     .isLength({ max: 30 })
-    .withMessage('Tus nombres son muy largos, inenta de nuevo'),
+    .withMessage('Sus nombres son muy largos, intente de nuevo'),
   check('numeroTelefono')
     .not()
     .isEmpty()
-    .withMessage('El campo "telefono" es obligatorio')
+    .withMessage('Ingrese su telefono, eh intente de nuevo')
     .isLength({ min: 10, max: 10 })
     .withMessage('El numero de telefono debe tener 10 numeros')
     .isNumeric()
-    .withMessage('Ingresa un numero de telfono valido')
+    .withMessage('Ingrese un numero de telefono valido')
     .custom(correctNumber)
-    .withMessage('Ingresa un numero de telfono valido'),
-  check('locales', 'Servicio no encontrado, intenta de nuevo').not().isEmpty(),
-  check('servicio', 'Ingresa un servicio valido.').not().isEmpty().isIn(serviciosObject()),
-  check('hora', 'Hora no encontrada, intenta de nuevo').not().isEmpty().isIn(horarios),
-  check('fecha', 'Ingresa un fecha eh intenta de nuevo').not().isEmpty(),
+    .withMessage('Ingrese un numero de telefono valido'),
+  check('locales', 'Servicio no encontrado, intente de nuevo').not().isEmpty(),
+  check('servicio', 'Ingrese un servicio valido.').not().isEmpty().isIn(serviciosObject()),
+  check('hora', 'Hora no encontrada, intente de nuevo').not().isEmpty().isIn(horarios),
+  check('fecha', 'Ingrese un fecha eh intenta de nuevo').not().isEmpty(),
 ];
 
 module.exports = { validaciones };

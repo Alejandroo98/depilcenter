@@ -30,9 +30,11 @@ const generarJWT = (reservaData) => {
 
     const payload = { reservaData };
 
+    const key_token_dev = process.env.SECRET_KEY_TOKEN || 'secret_key';
+
     jwt.sign(
       payload,
-      process.env.SECRET_KEY_TOKEN,
+      key_token_dev,
       {
         expiresIn: '24h',
       },

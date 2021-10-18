@@ -1,6 +1,6 @@
 // Set the date we're counting down to
 
-const untilTime = 'Nov 30, 2021 23:59:00';
+const untilTime = 'Oct 30, 2021 23:59:00';
 
 var countDownDate = new Date(untilTime).getTime();
 
