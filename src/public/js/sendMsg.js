@@ -54,7 +54,15 @@ try {
     if (descLocalStorage) {
       const { id, value } = JSON.parse(descLocalStorage);
       promo = encodeURI(`• Promo: ${value}.`);
-      servicioOption = document.getElementById(id).textContent;
+      if (id) {
+        try {
+          servicioOption = document.getElementById(id).textContent;
+        } catch (error) {
+          servicioOption = '';
+        }
+      } else {
+        servicioOption = '';
+      }
     }
 
     const txt = `Hola 👋, quiero una cita.${salto}• Servicio: ${servicioOption}.${salto}${promo}${salto}• Nombres:${salto}• Fecha cita:${salto}• Hora cita: ${salto}• Fecha nacimiento: *opcional`;

@@ -1,9 +1,9 @@
 [
   {
     "_info": {
-      "title": "Hasta 40% de descuento",
+      "title": "50% DE DESCUENTO EN TODAS LAS ZONAS",
       "descuentoBool": true,
-      "descuento": "0",
+      "descuento": "50",
       "servicio": "Depilación definitiva."
     },
     "mujer": [
@@ -14,7 +14,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "10",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Una zona. Muslo o canilla."
       },
@@ -25,7 +25,7 @@
         "precioIndividual": "40",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Dos zonas. Muslo y canilla."
       },
@@ -36,7 +36,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Bordes del bikini."
       },
@@ -47,7 +47,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Toda la parte frontal."
       },
@@ -58,7 +58,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "40",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Linea de cola."
       },
@@ -69,7 +69,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Con acompañante 2x1."
       },
@@ -80,7 +80,7 @@
         "precioIndividual": "40",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Dos zonas. Brazo y antebrazo."
       },
@@ -91,7 +91,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "10",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Una zona. Brazo o antebrazo."
       },
@@ -102,7 +102,7 @@
         "precioIndividual": "40",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Dos zonas. Espalda baja y alta."
       },
@@ -113,7 +113,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "10",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Una zona. Espalda baja o alta."
       },
@@ -124,7 +124,7 @@
         "precioIndividual": "40",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Dos zonas."
       },
@@ -135,7 +135,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "40",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -145,7 +145,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "40",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -155,7 +155,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -165,7 +165,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "facial",
-        "descuento": "40",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -175,7 +175,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "facial",
-        "descuento": "40",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -185,7 +185,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "facial",
-        "descuento": "40",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -195,7 +195,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "facial",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -205,7 +205,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "facial",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8"
       }
     ],
@@ -217,7 +217,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "10",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Una zona. Muslo o canilla."
       },
@@ -228,7 +228,7 @@
         "precioIndividual": "40",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Dos zonas. Muslo y canilla."
       },
@@ -239,7 +239,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Bordes del bikini."
       },
@@ -250,7 +250,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "20",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Toda la parte frontal."
       },
@@ -262,7 +262,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Con acompañante 2x1."
       },
@@ -273,7 +273,7 @@
         "precioIndividual": "40",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Dos zonas. Brazo y antebrazo."
       },
@@ -284,7 +284,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "10",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Una zona. Brazo o antebrazo."
       },
@@ -295,7 +295,7 @@
         "precioIndividual": "40",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Dos zonas. Espalda baja y alta."
       },
@@ -305,7 +305,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "10",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Una zona. Espalda baja o alta."
       },
@@ -316,7 +316,7 @@
         "precioIndividual": "40",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8",
         "zonas": "Dos zonas."
       },
@@ -327,7 +327,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "40",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -337,7 +337,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "40",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -347,7 +347,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -357,7 +357,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "corporal",
-        "descuento": "15",
+        "descuento": "50",
         "nroSesiones": "8"
       },
       {
@@ -367,7 +367,7 @@
         "precioIndividual": "20",
         "precioCombo": "20",
         "tipo": "facial",
-        "descuento": "25",
+        "descuento": "50",
         "nroSesiones": "8"
       }
     ]
