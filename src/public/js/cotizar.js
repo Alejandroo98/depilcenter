@@ -4,9 +4,13 @@ import CotizarOsConfig from './cotizar/cotizarOsConfig.js';
 import changeImg from './cotizar/changeImg.js';
 import changeActiveOption from './cotizar/changeActiveOption.js';
 import { pinarDespintar, printDataDesc, printSelectDataDesc, changeTitle } from './helpers.js';
+
 changeTitle();
 changeActiveOption();
 printSelectDataDesc();
+
+//Handle caja de confirmacion de reserva
+import './confirmed.js';
 
 //datepicker
 import './printDateReserve.js';

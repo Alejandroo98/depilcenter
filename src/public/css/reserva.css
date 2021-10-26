@@ -1,6 +1,5 @@
 .infoReserva {
   position: absolute;
-  background-color: aqua;
   top: 0;
   left: 0;
 }
@@ -212,7 +211,7 @@ select {
 }
 
 .reserva p {
-  color: rgb(97, 97, 97);
+  color: #616161;
 }
 
 @keyframes ejectoReserva {

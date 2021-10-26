@@ -1,156 +1,161 @@
 <section class="box-reserva-partial">
 
-  <div class="__imgEmojisContenedor" class="rotarEmoji">
-    <img id="emojisImg" src="../img/emojis/emojis-1.svg" alt="taall">
-  </div>
 
-  <div class="divReservaGrid">
-    {{#if error}}
-    <div class="ui negative message negative-message">
-      <div class="header">
-        <p>
-          {{ error.msg }}
-          <i class="eye icon"></i>
-        </p>
+  <form id='registrarReserva' method='POST' action="/reservar">
+    {{> confirmed }}
+
+    <div class="__imgEmojisContenedor" class="rotarEmoji">
+      <img id="emojisImg" src="../img/emojis/emojis-1.svg" alt="taall">
+    </div>
+
+    <div class="divReservaGrid">
+      {{#if error}}
+      <div class="ui negative message negative-message">
+        <div class="header">
+          <p>
+            {{ error.msg }}
+            <i class="eye icon"></i>
+          </p>
+        </div>
+      </div>
+      {{/if}}
+
+      <div class='registrarReserva  animate__animated  animate__fadeInUp'>
+
+
+
+
+        <input type="text" name="url" hidden value={{ url }}>
+
+        <div class='infoReserva'>
+          <span id="msg-client-reserva"></span>
+          <input type='text' id='infoReserva' name='infoReserva' hidden />
+          <input type='text' id='zonasId' name='zonas' hidden />
+          <input type='text' id='valorTotalId' name='valorTotal' hidden />
+        </div>
+
+        <div class='reserva'>
+          <h5>¿DONDE Y CUANDO?</h5>
+          <p>
+            <i class="clock outline icon"></i>
+            Lun - Vier, 9AM - 6PM
+          </p>
+        </div>
+
+        <div class='agendarWhatsapp'>
+          <a class="agendarCitaWh">
+            <h6>Agendar por Whatsapp</h6>
+            <i class="whatsapp icon"></i>
+          </a>
+        </div>
+
+
+
+        <div class='locales margin_15-0 margin_15-0-width'>
+          <label class='labelLocales' for='local'>Lugar<span> *</span></label>
+          <select name='locales'>
+            <option value='Quito/Condado' selected>Quito/Condado</option>
+          </select>
+        </div>
+
+        <div class='serviciosSelect margin_15-0 margin_15-0-width'>
+          <label for='serviciosSelect'>Servicio<span> *</span></label>
+          <select name='servicio' id='serviciosActive'>
+            {{#each servicios}}
+            <option id="{{ id }}" data-desc="{{ data_desc }}" data-name="{{ name }}" value='{{ id }}'>{{ name }}
+            </option>
+            {{/each}}
+          </select>
+        </div>
+
+
+        <div class='fecha margin_15-0 margin_15-0-width'>
+          <label for='fecha'>Fecha<span> *</span></label>
+          <div class='input-group date date-datapicker'>
+            <input type='text' class='form-control form-control-date fecha-input' value="{{ error.fecha }}" name='fecha'
+              placeholder="dd-mm-aaaa" /><span class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
+          </div>
+
+          <p class='errDatos errFecha'></p>
+        </div>
+
+
+        <div class='hora margin_15-0 margin_15-0-width'>
+          <label for='hora'>Hora<span> *</span></label>
+          <select name='hora'>
+            <option id="09:00_AM" value='09:00_AM'>09:00 AM</option>
+            <option id="10:00_AM" value='10:00_AM'>10:00 AM</option>
+            <option id="11:00_AM" value='11:00_AM'>11:00 AM</option>
+            <option id="12:00_AM" value='12:00_AM'>12:00 AM</option>
+            <option id="01:00_PM" value='01:00_PM'>01:00 PM</option>
+            <option id="02:00_PM" value='02:00_PM'>02:00 PM</option>
+            <option id="03:00_PM" value='03:00_PM'>03:00 PM</option>
+            <option id="04:00_PM" value='04:00_PM'>04:00 PM</option>
+            <option id="05:00_PM" value='05:00_PM'>05:00 PM</option>
+            <option id="06:00_PM" value='06:00_PM'>06:00 PM</option>
+          </select>
+        </div>
+
+
+        <div class='datoNombres margin_15-0 margin_15-0-width'>
+          <label for='nombres'>Nombres.<span> *</span></label>
+          <input value="{{ error.nombres }}" id='nombres' type='text' name='nombres' autocomplete='off'
+            placeholder='Un nombre y un apellido' />
+          <p class='errDatos errNombres'></p>
+        </div>
+
+        <div class='datoNum margin_15-0 margin_15-0-width'>
+          <label for='numeroTelefono'>Teléfono.<span> *</span></label>
+          <input value="{{ error.numeroTelefono }}" id='numeroCelular' type='text' name='numeroTelefono'
+            autocomplete='off' placeholder='Ejm. 0991234567' />
+          <p class='errDatos errNumero'></p>
+        </div>
+
+        <div class='datoFechaCumple margin_15-0 margin_15-0-width'>
+          <label for='fechaCumpleaios'>Fecha nacimiento.
+            <div class="popup-birthday"
+              data-html="Si deseas obtener un descuento especial por tu cumpleaños, llena este campo 🖊. Esta informacion aparecera en nuestra app web. <b>Llenalo solo la primera vez.</b>"
+              data-position="top left" style="display:inline">
+              <i class="question circle icon"></i>
+            </div>
+          </label>
+          <div class='input-group date date-datapicker-cumpleanios'>
+            <input value="{{ error.fechaCumpleanios }}" type='text' class='form-control form-control-date-cumpleanios'
+              value="{{ error.fechaCumpleanios }}" name='fechaCumpleanios' placeholder='dd-mm-aaaa' /><span
+              class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
+          </div>
+          <p class='errDatos errFechaCumpleanios'></p>
+        </div>
+
+
+
+        <div class='terminosButton margin_15-0 '>
+          <div>
+            <input id='terminos' type='checkbox' name='suscrito' checked />
+            <label for='terminos'>Aceptar terminos y condiciones</label>
+          </div>
+
+          <div class='btn-agendar-cita'>
+            <button type='button' id="btn-agendar-reserve">
+              AGENDAR CITA
+              <i class="calendar outline icon"></i>
+            </button>
+
+
+          </div>
+        </div>
+
       </div>
     </div>
-    {{/if}}
 
-    <form class='registrarReserva  animate__animated  animate__fadeInUp' id='registrarReserva' method='POST'
-      action="/reservar">
-
-      <input type="text" name="url" hidden value={{ url }}>
-
-      <div class='infoReserva'>
-        <span id="msg-client-reserva"></span>
-        <input type='text' id='infoReserva' name='infoReserva' hidden />
-        <input type='text' id='zonasId' name='zonas' hidden />
-        <input type='text' id='valorTotalId' name='valorTotal' hidden />
-      </div>
-
-      <div class='reserva'>
-        <h5>¿DONDE Y CUANDO?</h5>
-        <p>
-          <i class="clock outline icon"></i>
-          Lun - Vier, 9AM - 6PM
-        </p>
-      </div>
-
-      <div class='agendarWhatsapp'>
-        <a class="agendarCitaWh">
-          <h6>Agendar por Whatsapp</h6>
-          <i class="whatsapp icon"></i>
-        </a>
-      </div>
+    <script>
+      $('.popup-birthday')
+        .popup({
+          on: 'hover'
+        });
+    </script>
 
 
-
-      <div class='locales margin_15-0 margin_15-0-width'>
-        <label class='labelLocales' for='local'>Lugar<span> *</span></label>
-        <select name='locales'>
-          <option value='Quito/Condado' selected>Quito/Condado</option>
-        </select>
-      </div>
-
-      <div class='serviciosSelect margin_15-0 margin_15-0-width'>
-        <label for='serviciosSelect'>Servicio<span> *</span></label>
-        <select name='servicio' id='serviciosActive'>
-          {{#each servicios}}
-          <option id="{{ id }}" data-desc="{{ data_desc }}" value='{{ id }}'>{{ name }} </option>
-          {{/each}}
-        </select>
-      </div>
-
-
-      <div class='fecha margin_15-0 margin_15-0-width'>
-        <label for='fecha'>Fecha<span> *</span></label>
-        <div class='input-group date date-datapicker'>
-          <input type='text' class='form-control form-control-date fecha-input' value="{{ error.fecha }}" name='fecha'
-            placeholder="dd-mm-aaaa" /><span class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
-        </div>
-
-        <p class='errDatos errFecha'></p>
-      </div>
-
-
-      <div class='hora margin_15-0 margin_15-0-width'>
-        <label for='hora'>Hora<span> *</span></label>
-        <select name='hora'>
-          <option id="09:00_AM" value='09:00_AM'>09:00 AM</option>
-          <option id="10:00_AM" value='10:00_AM'>10:00 AM</option>
-          <option id="11:00_AM" value='11:00_AM'>11:00 AM</option>
-          <option id="12:00_AM" value='12:00_AM'>12:00 AM</option>
-          <option id="01:00_PM" value='01:00_PM'>01:00 PM</option>
-          <option id="02:00_PM" value='02:00_PM'>02:00 PM</option>
-          <option id="03:00_PM" value='03:00_PM'>03:00 PM</option>
-          <option id="04:00_PM" value='04:00_PM'>04:00 PM</option>
-          <option id="05:00_PM" value='05:00_PM'>05:00 PM</option>
-          <option id="06:00_PM" value='06:00_PM'>06:00 PM</option>
-        </select>
-        {{! <input id='hora' type='time' name='hora' min='07:59' value='08:00' /> }}
-      </div>
-
-
-      <div class='datoNombres margin_15-0 margin_15-0-width'>
-        <label for='nombres'>Nombres.<span> *</span></label>
-        <input value="{{ error.nombres }}" id='nombres' type='text' name='nombres' autocomplete='off'
-          placeholder='Un nombre y un apellido' />
-        {{! <p class="errDatos errNombres"><span class="material-icons errIcon">error_outline</span>Ingresa un nombre
-          valido</p> }}
-        <p class='errDatos errNombres'></p>
-      </div>
-
-      <div class='datoNum margin_15-0 margin_15-0-width'>
-        <label for='numeroTelefono'>Telefono.<span> *</span></label>
-        <input value="{{ error.numeroTelefono }}" id='numeroCelular' type='text' name='numeroTelefono'
-          autocomplete='off' placeholder='Ejm. 0991234567' />
-        {{! <p class="errDatos errNumero">Ingresa un numero valido<span
-            class="material-icons errIcon">error_outline</span></p> }}
-        <p class='errDatos errNumero'></p>
-      </div>
-
-      <div class='datoFechaCumple margin_15-0 margin_15-0-width'>
-        <label for='fechaCumpleaios'>Fecha nacimiento.
-          <div class="popup-birthday"
-            data-html="Si deseas obtener un descuento especial por tu cumpleaños, llena este campo 🖊. Esta informacion aparecera en nuestra app web. <b>Llenalo solo la primera vez.</b>"
-            data-position="top left" style="display:inline">
-            <i class="question circle icon"></i>
-          </div>
-        </label>
-        <div class='input-group date date-datapicker-cumpleanios'>
-          <input value="{{ error.fechaCumpleanios }}" type='text' class='form-control form-control-date-cumpleanios'
-            value="{{ error.fechaCumpleanios }}" name='fechaCumpleanios' placeholder='dd-mm-aaaa' /><span
-            class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
-        </div>
-        <p class='errDatos errFechaCumpleanios'></p>
-      </div>
-
-
-
-      <div class='terminosButton margin_15-0 '>
-        <div>
-          <input id='terminos' type='checkbox' name='suscrito' checked />
-          <label for='terminos'>Aceptar terminos y condiciones</label>
-        </div>
-
-        <div class='btn-agendar-cita'>
-          <button type='submit'>
-            AGENDAR CITA
-            <i class="calendar outline icon"></i>
-          </button>
-
-
-        </div>
-      </div>
-
-    </form>
-  </div>
-
-  <script>
-    $('.popup-birthday')
-      .popup({
-        on: 'hover'
-      });
-  </script>
+  </form>
 
 </section>
