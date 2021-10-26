@@ -1,6 +1,5 @@
 .infoReserva {
   position: absolute;
-  background-color: aqua;
   top: 0;
   left: 0;
 }
@@ -17,8 +16,8 @@
 }
 
 .box-reserva-partial {
-  display: flex;
-  /* display: none; */
+  /* display: flex; */
+  display: none;
   position: relative;
   background-color: rgb(255, 231, 231);
   border-top: 4px solid #ffc5c5;
@@ -212,7 +211,7 @@ select {
 }
 
 .reserva p {
-  color: rgb(97, 97, 97);
+  color: #616161;
 }
 
 @keyframes ejectoReserva {

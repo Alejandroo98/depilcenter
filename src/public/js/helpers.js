@@ -83,7 +83,6 @@ const selectedServicios = (id) => {
 };
 
 const scrollReserva = () => {
-  console.log('scroll');
   const box_reserva_partial = document.querySelector('.box-reserva-partial');
   box_reserva_partial.style.display = 'flex';
   box_reserva_partial.scrollIntoView({ block: 'center', behavior: 'smooth' });
