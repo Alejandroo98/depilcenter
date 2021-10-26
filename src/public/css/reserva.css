@@ -14,6 +14,10 @@
   padding: 5px 10px;
   max-width: 200px;
 }
+#registrarReserva {
+  display: flex;
+  justify-content: center;
+}
 
 .box-reserva-partial {
   /* display: flex; */
@@ -74,7 +78,6 @@
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  /* grid-template-columns: repeat(7, minmax(min-content, 190px)); */
   max-width: 1650px;
 }
 
@@ -265,10 +268,6 @@ form {
 
   .margin_15-0-width {
     max-width: 100%;
-  }
-
-  .registrarReserva > div {
-    flex-basis: 100%;
   }
 }
 @media screen and (max-width: 640px) {
