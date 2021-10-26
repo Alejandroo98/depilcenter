@@ -98,7 +98,7 @@
         "desc": "Esta es la descripcion que ira en el header del view"
       },
       "descuento": {
-        "title": "Hasta 40% de descuento."
+        "title": "50% de descuento en todas las zonas."
       },
       "url": "/cotizar/depilacion-definitiva?genero=mujer",
       "indicaciones": [
