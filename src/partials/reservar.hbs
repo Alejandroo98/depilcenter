@@ -1,5 +1,9 @@
 <section class="box-reserva-partial">
 
+
+  {{> confirmed }}
+
+
   <div class="__imgEmojisContenedor" class="rotarEmoji">
     <img id="emojisImg" src="../img/emojis/emojis-1.svg" alt="taall">
   </div>
@@ -87,7 +91,6 @@
           <option id="05:00_PM" value='05:00_PM'>05:00 PM</option>
           <option id="06:00_PM" value='06:00_PM'>06:00 PM</option>
         </select>
-        {{! <input id='hora' type='time' name='hora' min='07:59' value='08:00' /> }}
       </div>
 
 
@@ -95,17 +98,13 @@
         <label for='nombres'>Nombres.<span> *</span></label>
         <input value="{{ error.nombres }}" id='nombres' type='text' name='nombres' autocomplete='off'
           placeholder='Un nombre y un apellido' />
-        {{! <p class="errDatos errNombres"><span class="material-icons errIcon">error_outline</span>Ingresa un nombre
-          valido</p> }}
         <p class='errDatos errNombres'></p>
       </div>
 
       <div class='datoNum margin_15-0 margin_15-0-width'>
-        <label for='numeroTelefono'>Telefono.<span> *</span></label>
+        <label for='numeroTelefono'>Teléfono.<span> *</span></label>
         <input value="{{ error.numeroTelefono }}" id='numeroCelular' type='text' name='numeroTelefono'
           autocomplete='off' placeholder='Ejm. 0991234567' />
-        {{! <p class="errDatos errNumero">Ingresa un numero valido<span
-            class="material-icons errIcon">error_outline</span></p> }}
         <p class='errDatos errNumero'></p>
       </div>
 

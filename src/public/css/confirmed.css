@@ -1,0 +1,120 @@
+.confirmed-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.616);
+  justify-content: center;
+  align-items: center;
+  z-index: 4000;
+}
+
+.box-center-confirmed {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.title-box-confirmed {
+  background-color: rgb(238, 238, 238);
+  padding: 15px 0;
+  /* margin: 5px; */
+  text-align: center;
+}
+
+.title-box-confirmed h4 {
+  margin: 0;
+}
+
+.title-box-confirmed span {
+  color: rgb(145, 145, 145);
+}
+
+.flex-items-confirmed {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-items-confirmed hr {
+  width: 100%;
+  height: 1px;
+  color: rgb(150, 150, 150);
+  margin: 0;
+}
+
+.values-confirmed {
+  display: flex;
+  align-items: center;
+  /* background-color: aqua; */
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 5px;
+  min-width: 100px;
+}
+
+.values-confirmed p {
+  margin: 0;
+}
+
+.values-confirmed span {
+  color: rgb(119, 117, 117);
+  font-size: 13px;
+}
+
+.btn-reserve-confirmed {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.btn-reserve-confirmed button:nth-child(1) {
+  background-color: rgb(68, 68, 68);
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 8px 3px 8px 8px;
+}
+
+.btn-reserve-confirmed button:nth-child(2) {
+  background-color: var(--base);
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin: 8px 13px 8px 3px;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+  .flex-items-confirmed {
+    justify-content: flex-start;
+  }
+
+  .btn-reserve-confirmed {
+    margin: 14px 0;
+  }
+
+  .values-confirmed {
+    flex-basis: 100%;
+    margin: 20px 15px;
+    align-items: flex-start;
+  }
+
+  .btn-reserve-confirmed button:nth-child(2) {
+    margin: 8px 8px 8px 3px;
+  }
+}
+@media screen and (max-width: 640px) {
+}
