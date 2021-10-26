@@ -51,9 +51,12 @@ try {
     let servicioOption = '';
 
     const descLocalStorage = localStorage.getItem('data_desc');
+
     if (descLocalStorage) {
       const { id, value } = JSON.parse(descLocalStorage);
+
       promo = encodeURI(`• Promo: ${value}.`);
+
       if (id) {
         try {
           servicioOption = document.getElementById(id).textContent;
