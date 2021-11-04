@@ -11,6 +11,10 @@
   background-size: cover;
 }
 
+.ui.cards {
+  margin: 0 !important;
+}
+
 .ui-card {
   display: flex;
   flex-direction: column;

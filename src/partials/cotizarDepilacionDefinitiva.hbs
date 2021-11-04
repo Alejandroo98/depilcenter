@@ -26,11 +26,13 @@
                 data-descuento={{ descuento }} data-precio={{ precioIndividual }} data-nrosesiones="{{ nroSesiones }}"
                 data-nombre="{{ nombre }}">
             </div>
+            {{#if descuentoBool}}
             <div class="circle-card-ipl">
                 <p>
                     {{ descuento }}%
                 </p>
             </div>
+            {{/if}}
             <div class="card-title-ipl">
                 {{ mayuscula nombre }}
                 <p>
@@ -56,7 +58,9 @@
             <div class="body-card-ipl">
                 <b> Nro sesiones: </b> {{ nroSesiones }}. <br>
                 <b> Precio normal:</b> ${{ precioIndividual }}. <br>
+                {{#if descuentoBool}}
                 <b> Precio promo: </b> ${{ precioPromo precioIndividual descuento }} <br>
+                {{/if}}
             </div>
         </div>
         {{/each}}
@@ -77,11 +81,14 @@
                 data-descuento={{ descuento }} data-precio={{ precioIndividual }} data-nrosesiones="{{ nroSesiones }}"
                 data-nombre="{{ nombre }}">
             </div>
+            {{#if descuentoBool}}
             <div class="circle-card-ipl">
                 <p>
                     {{ descuento }}%
                 </p>
             </div>
+            {{/if}}
+
             <div class="card-title-ipl">
                 {{ mayuscula nombre }}
                 <p>
@@ -91,13 +98,22 @@
             <div class="hr-ipl">
                 <hr>
             </div>
-            <div class="extra-card-ipl">
-                PRECIO POR SESION
+            <div class="extra-card-ipl-box">
+                <div class="extra-card-ipl">
+                    PRECIO POR SESION
+                </div>
+                {{#if zonas}}
+                <p>
+                    {{ zonas }}
+                </p>
+                {{/if}}
             </div>
             <div class="body-card-ipl">
                 <b> Nro sesiones: </b> {{ nroSesiones }}. <br>
                 <b> Precio normal:</b> ${{ precioIndividual }}. <br>
+                {{#if descuentoBool}}
                 <b> Precio promo: </b> ${{ precioPromo precioIndividual descuento }} <br>
+                {{/if}}
             </div>
         </div>
         {{/each}}

@@ -1,16 +1,16 @@
 [
   {
     "_info": {
-      "title": "30% DE DESCUENTO EN TODAS LAS ZONAS.",
-      "descuentoBool": true,
-      "descuento": "30",
+      "title": "",
+      "descuentoBool": false,
+      "descuento": "0",
       "servicio": "Depilación con cera"
     },
     "mujer": [
       {
         "id": "C_DCM1",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Media Pierna",
         "precioIndividual": "11",
         "precioCombo": "11",
@@ -20,7 +20,7 @@
       {
         "id": "C_DCM2",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Pierna Completa",
         "precioIndividual": "14",
         "precioCombo": "14",
@@ -30,7 +30,7 @@
       {
         "id": "C_DCM3",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Bikini",
         "precioIndividual": "6",
         "precioCombo": "2",
@@ -40,7 +40,7 @@
       {
         "id": "C_DCM4",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Bikini Brasilero",
         "precioIndividual": "12",
         "precioCombo": "7",
@@ -50,7 +50,7 @@
       {
         "id": "C_DCM5",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Atras",
         "precioIndividual": "6",
         "precioCombo": "3",
@@ -60,7 +60,7 @@
       {
         "id": "C_DCM6",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Axilas",
         "precioIndividual": "6",
         "precioCombo": "2",
@@ -70,7 +70,7 @@
       {
         "id": "C_DCM7",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Brazo Completo",
         "precioIndividual": "9",
         "precioCombo": "6",
@@ -80,7 +80,7 @@
       {
         "id": "C_DCM8",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Medio Brazo",
         "precioIndividual": "6",
         "precioCombo": "4",
@@ -90,7 +90,7 @@
       {
         "id": "C_DCM9",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Espalda Completa",
         "precioIndividual": "8",
         "precioCombo": "6",
@@ -100,7 +100,7 @@
       {
         "id": "C_DCM10",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Media Espalda",
         "precioIndividual": "6",
         "precioCombo": "4",
@@ -110,7 +110,7 @@
       {
         "id": "C_DCM11",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Estomago Completo",
         "precioIndividual": "6",
         "precioCombo": "4",
@@ -120,7 +120,7 @@
       {
         "id": "C_DCM12",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Medio Estomago",
         "precioIndividual": "4",
         "precioCombo": "3",
@@ -130,7 +130,7 @@
       {
         "id": "C_DCM13",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Linea Estomago",
         "precioIndividual": "3",
         "precioCombo": "2",
@@ -140,7 +140,7 @@
       {
         "id": "C_DCM14",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Linea Espalda",
         "precioIndividual": "4",
         "precioCombo": "3",
@@ -150,7 +150,7 @@
       {
         "id": "C_DCM15",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Gluteos",
         "precioIndividual": "5",
         "precioCombo": "3",
@@ -160,7 +160,7 @@
       {
         "id": "F_DCM19",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Cejas",
         "precioIndividual": "5",
         "precioCombo": "5",
@@ -170,7 +170,7 @@
       {
         "id": "F_DCM20",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Bigote",
         "precioIndividual": "3",
         "precioCombo": "2",
@@ -180,7 +180,7 @@
       {
         "id": "F_DCM21",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Patilla",
         "precioIndividual": "3",
         "precioCombo": "2",
@@ -190,7 +190,7 @@
       {
         "id": "F_DCM22",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Barbilla",
         "precioIndividual": "3",
         "precioCombo": "2",
@@ -200,7 +200,7 @@
       {
         "id": "F_DCM23",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Pomulos",
         "precioIndividual": "3",
         "precioCombo": "2",
@@ -210,7 +210,7 @@
       {
         "id": "F_DCM24",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Nariz",
         "precioIndividual": "3",
         "precioCombo": "2",
@@ -220,7 +220,7 @@
       {
         "id": "F_DCM26",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Entrecejo",
         "precioIndividual": "2",
         "precioCombo": "2",
@@ -232,7 +232,7 @@
       {
         "id": "C_DCH1",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Media Pierna",
         "precioIndividual": "13",
         "precioCombo": "13",
@@ -242,7 +242,7 @@
       {
         "id": "C_DCH2",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Pierna Completa",
         "precioIndividual": "15",
         "precioCombo": "15",
@@ -252,7 +252,7 @@
       {
         "id": "C_DCH3",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Bikini",
         "precioIndividual": "10",
         "precioCombo": "6",
@@ -262,7 +262,7 @@
       {
         "id": "C_DCH4",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Bikini Brasilero",
         "precioIndividual": "15",
         "precioCombo": "10",
@@ -272,7 +272,7 @@
       {
         "id": "C_DCH5",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Atras",
         "precioIndividual": "8",
         "precioCombo": "5",
@@ -282,7 +282,7 @@
       {
         "id": "C_DCH6",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Axilas",
         "precioIndividual": "6",
         "precioCombo": "4",
@@ -292,7 +292,7 @@
       {
         "id": "C_DCH7",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Brazos Completos",
         "precioIndividual": "11",
         "precioCombo": "7",
@@ -302,7 +302,7 @@
       {
         "id": "C_DCH8",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Medio Brazo",
         "precioIndividual": "7",
         "precioCombo": "5",
@@ -312,7 +312,7 @@
       {
         "id": "C_DCH9",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Espalda Completa",
         "precioIndividual": "14",
         "precioCombo": "9",
@@ -322,7 +322,7 @@
       {
         "id": "C_DCH10",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Media Espalda",
         "precioIndividual": "10",
         "precioCombo": "6",
@@ -332,7 +332,7 @@
       {
         "id": "C_DCH11",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Estomago Completo",
         "precioIndividual": "10",
         "precioCombo": "6",
@@ -342,7 +342,7 @@
       {
         "id": "C_DCH12",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Medio Estomago",
         "precioIndividual": "7",
         "precioCombo": "5",
@@ -352,7 +352,7 @@
       {
         "id": "C_DCH13",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Linea Estomago",
         "precioIndividual": "5",
         "precioCombo": "3",
@@ -362,7 +362,7 @@
       {
         "id": "C_DCH14",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Linea Espalda",
         "precioIndividual": "5",
         "precioCombo": "3",
@@ -372,7 +372,7 @@
       {
         "id": "C_DCH15",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Gluteos",
         "precioIndividual": "6",
         "precioCombo": "4",
@@ -382,7 +382,7 @@
       {
         "id": "C_DCH16",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Hombros",
         "precioIndividual": "5",
         "precioCombo": "3",
@@ -392,7 +392,7 @@
       {
         "id": "C_DCH17",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Pecho",
         "precioIndividual": "10",
         "precioCombo": "8",
@@ -402,7 +402,7 @@
       {
         "id": "F_DCH18",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Barba",
         "precioIndividual": "12",
         "precioCombo": "12",
@@ -412,7 +412,7 @@
       {
         "id": "F_DCH19",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Cejas",
         "precioIndividual": "5",
         "precioCombo": "5",
@@ -422,7 +422,7 @@
       {
         "id": "F_DCH20",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Bigote",
         "precioIndividual": "4",
         "precioCombo": "3",
@@ -432,7 +432,7 @@
       {
         "id": "F_DCH21",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Patilla",
         "precioIndividual": "4",
         "precioCombo": "3",
@@ -442,7 +442,7 @@
       {
         "id": "F_DCH22",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Barbilla",
         "precioIndividual": "4",
         "precioCombo": "3",
@@ -452,7 +452,7 @@
       {
         "id": "F_DCH23",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Pomulos",
         "precioIndividual": "4",
         "precioCombo": "3",
@@ -462,7 +462,7 @@
       {
         "id": "F_DCH24",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Nariz",
         "precioIndividual": "4",
         "precioCombo": "3",
@@ -472,7 +472,7 @@
       {
         "id": "F_DCH25",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Cuello",
         "precioIndividual": "4",
         "precioCombo": "3",
@@ -482,7 +482,7 @@
       {
         "id": "F_DCH26",
         "categoria": "d_cera",
-        "descuento": "30",
+        "descuento": "0",
         "nombre": "Entrecejo",
         "precioIndividual": "2",
         "precioCombo": "2",

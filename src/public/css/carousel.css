@@ -23,8 +23,21 @@
 
 .flex-carousel-item {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  /* min-height: 500px; */
+}
+
+.btn-header {
+  display: flex;
+  position: absolute;
+  bottom: 80px;
+}
+
+.btn-header a {
+  box-shadow: var(--sombra);
 }
 
 ._servicioIndex {
@@ -136,7 +149,7 @@
   background-color: var(--base) !important;
 }
 
-/*  RESPONDDIVE */
+/*  RESPONSIVE */
 @media screen and (max-width: 1280px) {
 }
 
@@ -160,13 +173,13 @@
   }
 
   #carouselExampleIndicators {
-    height: 500px;
+    /* height: 500px; */
   }
 
   .flex-carousel-item img {
+    object-fit: cover;
     position: relative;
-    left: -15px;
-    max-width: 320px;
+    max-width: 100%;
   }
 
   ._servicioIndex {
@@ -209,16 +222,23 @@
     padding: 10px 0;
   }
 
+  .btn-header {
+    top: -10px;
+    right: 10px;
+    bottom: auto;
+    /* right: 10px; */
+  }
+
   .buttons-ui a {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
 
   .btn-blanco {
-    padding: 10px 20px !important;
+    padding: 5px 10px !important;
   }
 
   .btn-rojo {
-    padding: 10px 20px !important;
+    padding: 5px 10px !important;
   }
 }
 
