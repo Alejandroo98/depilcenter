@@ -1,5 +1,22 @@
 [
   {
+    "id": "d_cera",
+    "circleName": "NUEVO",
+    "title": "PROMO NOVIEMBRE",
+    "subtitle": "Depilación con cera tibia",
+    "nroSesiones": "∞",
+    "precio": {
+      "normal": "$35",
+      "promo": "$29.99"
+    },
+    "btn": {
+      "agendar": "#",
+      "masInfo": "#"
+    },
+    "desc": "Piernas completas + bikini brasilero full + estómago + brazos + axilas",
+    "data_desc": "PROMO NOVIEMBRE"
+  },
+  {
     "id": "d_laser",
     "circleName": "NUEVO",
     "title": "AXILAS 2X1",
@@ -13,7 +30,7 @@
       "agendar": "#",
       "masInfo": "#"
     },
-    "desc": "Tratamiento completo de depilacion definitiva de axilas. ¡Ultimos días!",
+    "desc": "Tratamiento completo de depilacion definitiva de axilas",
     "data_desc": "AXILAS 2X1"
   },
   {
@@ -23,33 +40,17 @@
     "subtitle": "Depilación definitiva",
     "nroSesiones": "8",
     "precio": {
-      "normal": "$320",
-      "promo": "$160"
+      "normal": "$160",
+      "promo": "$104"
     },
     "btn": {
       "agendar": "#",
       "masInfo": "#"
     },
-    "desc": "El rostro tiene mas de una zona, pero en esta promocion la consideraremos como una sola.",
+    "desc": "8 sesiones de $12.99 cada una.",
     "data_desc": "ROSTRO COMPLETO"
   },
-  {
-    "id": "d_laser",
-    "circleName": "NUEVO",
-    "title": "TERCER ZONA GRATIS",
-    "subtitle": "Depilación definitiva",
-    "nroSesiones": "8",
-    "precio": {
-      "normal": "$480",
-      "promo": "$320"
-    },
-    "btn": {
-      "agendar": "#",
-      "masInfo": "#"
-    },
-    "desc": "Elige dos zonas y el tratamiento completo de la tercera te la obsequiamos completamente gratis.",
-    "data_desc": "3ER ZONA GRATIS"
-  },
+
   {
     "id": "d_cera",
     "circleName": "NUEVO",

@@ -5,18 +5,14 @@
                 aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner">
             {{#each promoServicios}}
             <div class="carousel-item {{active}}">
                 <div class="flex-carousel-item">
                     <img src="{{ img }}" alt="{{ alt }}">
+
+                    {{#if onlyImg}}
                     <div class="_servicioIndex">
                         <div class="h1_box">
                             <h1>
@@ -44,6 +40,9 @@
                             </div>
                         </div>
                     </div>
+                    {{/if}}
+
+
                 </div>
             </div>
             {{/each}}

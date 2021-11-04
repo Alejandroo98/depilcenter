@@ -7,7 +7,7 @@
         "desc": "Depilación con cera tibia en Quito"
       },
       "descuento": {
-        "title": "30% DE DESCUENTO EN TODOS LAS ZONAS"
+        "title": ""
       },
       "url": "/cotizar/depilacion-cera?genero=mujer",
       "indicaciones": [
@@ -98,7 +98,7 @@
         "desc": "Esta es la descripcion que ira en el header del view"
       },
       "descuento": {
-        "title": "50% DE DESCUENTO EN TODOS LAS ZONAS"
+        "title": ""
       },
       "url": "/cotizar/depilacion-definitiva?genero=mujer",
       "indicaciones": [
@@ -190,7 +190,7 @@
         "desc": "Limpiezas faciales porfundas, Quito"
       },
       "descuento": {
-        "title": "Dos personas por $35"
+        "title": ""
       },
       "url": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_facial",
       "indicaciones": [
@@ -313,7 +313,7 @@
       },
       "url": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=b_axilas",
       "descuento": {
-        "title": "TRATAMIENTO COMPLETO 15% DE DESCUENTO "
+        "title": ""
       },
       "indicaciones": [
         {

@@ -38,18 +38,22 @@ try {
 printSelectDataDesc();
 
 const carousel_inner = document.querySelector('.carousel-inner');
-carousel_inner.addEventListener('click', ({ target }) => {
-  if (target.dataset.desc) {
-    const values = { id: target.dataset.id, value: target.dataset.desc };
-    printDataDesc(values);
-  }
-});
+try {
+  carousel_inner.addEventListener('click', ({ target }) => {
+    if (target.dataset.desc) {
+      const values = { id: target.dataset.id, value: target.dataset.desc };
+      printDataDesc(values);
+    }
+  });
+} catch (error) {}
 
 const btn_event_agendar = document.querySelector('#btn-event-agendar');
-btn_event_agendar.addEventListener('click', ({ target }) => {
-  const values = { id: '', value: target.dataset.desc };
-  printDataDesc(values);
-});
+try {
+  btn_event_agendar.addEventListener('click', ({ target }) => {
+    const values = { id: '', value: target.dataset.desc };
+    printDataDesc(values);
+  });
+} catch (error) {}
 
 //Servicios
 const todosLosServicios_container = document.querySelector('.todosLosServicios-container');

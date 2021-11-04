@@ -11,14 +11,14 @@
     "porcentaje": "%30",
     "porcentajeTxt": "DE DESCUENTO",
     "bar": "¡En todas las zonas!",
-    "img": "../img/header/mujer3.png",
+    "img": "../img/header/d_cera_v1.png",
     "active": "active",
     "alt": "Descuento promocion en depilacion con cera tibia",
     "agendarUrl": "#",
     "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer",
     "mas_info": "/indicaciones?servicio=d_cera",
     "otroServicio": false,
-    "data_desc": "30% DE DESCUENTO",
+    "data_desc": "",
     "selectForm": true
   },
   {
@@ -40,7 +40,7 @@
     "cotizarUrl": "/cotizar/depilacion-definitiva?genero=mujer",
     "mas_info": "indicaciones?servicio=d_definitiva",
     "otroServicio": false,
-    "data_desc": "50% DE DESCUENTO EN TODAS LAS ZONAS",
+    "data_desc": "",
     "selectForm": true
   },
   {
@@ -60,9 +60,9 @@
     "agendarUrl": "#",
     "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=b_axilas",
     "mas_info": "/indicaciones?servicio=b_axilas",
-    "header": true,
+    "header": false,
     "otroServicio": true,
-    "data_desc": "%15 DESCUENTO",
+    "data_desc": "",
     "selectForm": true,
     "cotizarData": {
       "id": "T_BA3",
@@ -80,7 +80,7 @@
     "desc": "La limpieza de la piel de la cara es un hábito primordial para tener un rostro joven y lleno de vida. Esto se debe a que cada vez que lo limpiamos retiramos las impurezas tanto del maquillaje como de la contaminación que se encuentra en el medio ambiente. Aprovecha nuestro 2x1.",
     "name": "Limpiezas faciales",
     "indicaciones": "Esta son las indicaciones de l_facial",
-    "header": true,
+    "header": false,
     "title": "LIMPIEZA FACIAL",
     "subTitle": "profunda",
     "porcentaje": "2x1",
@@ -93,7 +93,7 @@
     "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_facial",
     "mas_info": "/indicaciones?servicio=l_facial",
     "otroServicio": true,
-    "data_desc": "2X1",
+    "data_desc": "",
     "selectForm": true,
     "cotizarData": {
       "id": "T_LF1",
@@ -103,95 +103,6 @@
       "precioIndividual": "25",
       "color": "negro",
       "msg": "Dos personas por $35"
-    }
-  },
-  {
-    "id": "d_hombre",
-    "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
-    "desc": "Por estética o por comodidad, los hombres se depilan cada vez más. Y uno de los métodos más efectivos la depilación con IPL. Si aún no te has animado a probarlo, despues de ver nuestras promociones, seguro lo haces.",
-    "indicaciones": "Esta son las indicaciones de d_hombre",
-    "name": "Depilacion masculina",
-    "title": "DEPILACIÓN HOMBRE",
-    "subTitle": "definitiva",
-    "porcentaje": "%40",
-    "porcentajeTxt": "DESCUENTO",
-    "bar": "Hasta 40% de descuento.",
-    "img": "../img/header/hombre1.png",
-    "active": "",
-    "alt": "Descuento promocion en depilacion con cera tibia masculina",
-    "header": true,
-    "agendarUrl": "#",
-    "cotizarUrl": "/cotizar/depilacion-cera?genero=hombre",
-    "mas_info": "/indicaciones?servicio=d_cera",
-    "data_desc": "2 SESIONES GRATIS",
-    "selectForm": true,
-    "otroServicio": false
-  },
-  {
-    "id": "m_relajantes",
-    "imgIcon": "https://i.ibb.co/NmwXVJ0/m-relajantes.png",
-    "desc": "Quieres disminuir el estres, reducir el dolor, eliminar tensiones musculares, mejorar la circulación sanguínea, un masaje relajante espera por tí.",
-    "name": "Masajes relajantes",
-    "indicaciones": "Esta son las indicaciones de m_relajantes",
-    "header": false,
-    "otroServicio": true,
-    "selectForm": true,
-    "agendarUrl": "#",
-    "mas_info": "/indicaciones?servicio=m_relajantes",
-    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=m_relajantes",
-    "cotizarData": {
-      "id": "T_MA4",
-      "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
-      "nombre": "Masajes",
-      "precioIndividual": "25",
-      "color": "negro",
-      "msg": "Sin promocion"
-    },
-    "data_desc": "2X1"
-  },
-  {
-    "id": "t_acne",
-    "imgIcon": "https://i.ibb.co/khYFYWj/t-acne.png",
-    "desc": "El tratamiento temprano y efectivo del acné puede reducir el riesgo de formación de cicatrices y daño permanente a su autoestima. No esperes mas, y ven a vernos.",
-    "name": "Tratemiento para acné",
-    "indicaciones": "Esta son las indicaciones de t_acne",
-    "header": false,
-    "otroServicio": true,
-    "data_desc": "",
-    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=t_acne",
-    "mas_info": "/indicaciones?servicio=t_acne",
-    "selectForm": true,
-    "cotizarData": {
-      "id": "T_TA5",
-      "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
-      "nombre": "Tratamiento para a acné",
-      "precioIndividual": "80",
-      "color": "negro",
-      "msg": "10 sesiones"
-    }
-  },
-  {
-    "id": "l_gluteos",
-    "imgIcon": "https://i.ibb.co/L1M1VVS/l-gluteos.png",
-    "desc": "Si tu sueño a sido durante años mejorar el aspecto de tus gluteos no tienes de que preocuparte, sin dolorosos metodos quirurgicos ni tiempo de recuperacion, resultados desde la primera sesión.",
-    "name": "Levantamiento de gluteos",
-    "indicaciones": "Esta son las indicaciones de l_gluteos",
-    "header": false,
-    "otroServicio": true,
-    "data_desc": "",
-    "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer&&open=true&&servicio=l_gluteos",
-    "mas_info": "/indicaciones?servicio=l_gluteos",
-    "selectForm": true,
-    "cotizarData": {
-      "id": "T_LG2",
-      "imgIcon": "https://i.ibb.co/zVwjL9J/d-cera.png",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cum, qui aspernatur quam ipsa quo eaque, odit non quasi repellat commodi fuga veniam dolores provident alias hic rem tempore ipsam!",
-      "nombre": "Levantamiento de gluteos",
-      "precioIndividual": "100",
-      "color": "negro",
-      "msg": "10 sesiones"
     }
   }
 ]
