@@ -12,6 +12,12 @@
                 <div class="flex-carousel-item">
                     <img src="{{ img }}" alt="{{ alt }}">
 
+                    <div class="btn-header buttons-ui">
+                        <a data-desc="{{ data_desc }}" data-id="{{ id }}" class="ui button btn-rojo">AGENDAR
+                            CITA</a>
+                        <a href="{{ cotizarUrl }}" class="ui  button btn-blanco">COTIZAR</a>
+                    </div>
+
                     {{#if onlyImg}}
                     <div class="_servicioIndex">
                         <div class="h1_box">

@@ -18,7 +18,7 @@
     "cotizarUrl": "/cotizar/depilacion-cera?genero=mujer",
     "mas_info": "/indicaciones?servicio=d_cera",
     "otroServicio": false,
-    "data_desc": "",
+    "data_desc": "ZONA GRATIS (PRIMERA VISITA)",
     "selectForm": true
   },
   {
@@ -33,14 +33,14 @@
     "porcentaje": "%40",
     "porcentajeTxt": "DESCUENTO",
     "bar": "¡Hasta 40$ de descuento!",
-    "img": "../img/header/mujer5.png",
+    "img": "../img/header/d_laser_v1.png",
     "active": "",
     "alt": "Descuento promocion en depilacion definitiva",
     "agendarUrl": "#",
     "cotizarUrl": "/cotizar/depilacion-definitiva?genero=mujer",
     "mas_info": "indicaciones?servicio=d_definitiva",
     "otroServicio": false,
-    "data_desc": "",
+    "data_desc": "AXILAS $9.99",
     "selectForm": true
   },
   {
