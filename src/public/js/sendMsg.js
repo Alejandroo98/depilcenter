@@ -84,3 +84,16 @@ try {
 } catch (error) {
   //
 }
+
+//Desde el black fiday
+try {
+  const sendMsg = () => {
+    const salto = '%0A';
+    const txt = `Hola 👋, quiero una cita.${salto}• Servicio: Depilación definitiva. ${salto}• Zona: Axilas.${salto}• Nombres:${salto}• Fecha cita:${salto}• Hora cita:`;
+
+    sendWhatsapp(txt);
+  };
+  document.querySelector('.btn-agendar-cita').addEventListener('click', sendMsg);
+} catch (error) {
+  console.log(error);
+}

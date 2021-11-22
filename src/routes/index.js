@@ -15,6 +15,10 @@ app.use(require('./indicaciones'));
 
 app.use(require('./reservar'));
 
+app.get('/black-friday', (req, res) => {
+  res.render('blackFriday');
+});
+
 app.get('/*', (req, res) => {
   res.redirect('/');
 });
