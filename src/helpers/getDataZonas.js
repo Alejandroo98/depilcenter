@@ -1,11 +1,19 @@
 const depilacionCera = require('../DB/depilacion-cera.json');
-const depilacionDefinitiva = require('../DB/depilacion-definitiva.json');
+const depilacionDefinitiva = require('../DB/depilacion-definitiva-navidad.json');
 
 const getDepilacionCera = (genero) => {
   if (genero == 'mujer') {
     return depilacionCera[0].mujer;
   } else if (genero == 'hombre') {
     return depilacionCera[0].hombre;
+  }
+};
+
+const getDepilacionDefinitivaNavidad = (genero) => {
+  if (genero == 'mujer') {
+    return depilacionDefinitiva[0].mujer;
+  } else if (genero == 'hombre') {
+    return depilacionDefinitiva[0].hombre;
   }
 };
 
@@ -30,4 +38,5 @@ module.exports = {
   getDepilacionDefinitiva,
   getInfo_d_Cera,
   getInfo_d_Definitiva,
+  getDepilacionDefinitivaNavidad,
 };

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEPILACION DE AXILAS - 50% DE DESCUENTO</title>
+  <link rel="icon" href="./img/icon_header_depilcenter.png">
+
+
+
+  {{!-- getbotstrap --}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  {{!-- css --}}
+  <link rel="stylesheet" href="../css/blackFriday.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/cotizar-navidad.css">
+
+
+  {{!-- SEMANTIC UI --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  {{!-- google fonts - icons --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="container-main">
+    <img src="./img/hader_navidad3.png" alt="">
+  </div>
+
+
+  <div class="container">
+    <div class="title-navidad">
+      <h1>
+        Me lo merezco. 🎁
+      </h1>
+      <p>
+        Elige una zona a tratar y envianos un mensaje, resolveremos todas tus dudas en cuanto antes.
+      </p>
+    </div>
+    {{> cotizarDepilacionDefinitivaNavidad }}
+    <div class="btn-enviar-mensaje">
+      <a id="enviar-mensaje-navidad">
+        ENVIAR MENSAJE
+        <i class="whatsapp icon"></i>
+      </a>
+
+    </div>
+
+    <div class="footer-navidad">
+      <div>
+        <a href="https://www.instagram.com/depilcenter.ecu/" target="_blank">
+          <i class="instagram icon"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://www.facebook.com/depilcenter.ecu" target="_blank">
+          <i class="facebook icon"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://n9.cl/n4ry0" target="_blank">
+          <i class="map marker alternate icon"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+
+  {{!-- bootstrap --}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+
+  <script src="../js/sendMsg.js" type="module"></script>
+</body>
+
+</html>

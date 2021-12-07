@@ -17,6 +17,14 @@ function precioPromo(precioNormal, porcentaje) {
   return precioNormal - descuento;
 }
 
+function precioPromoNavidad(precioNormal, porcentaje) {
+  const porcentajeDecimal = `0.${porcentaje}`;
+  const descuento = Number(porcentajeDecimal) * precioNormal;
+  let totalNormal = precioNormal - descuento;
+  let totalMenosUno = totalNormal - 1;
+  return totalMenosUno + '.90';
+}
+
 function mayuscula(nombre) {
   return nombre.toUpperCase();
 }
@@ -61,4 +69,5 @@ module.exports = {
   indicacionesTitle,
   indicacionesDesc,
   indicacionesKeyWords,
+  precioPromoNavidad,
 };

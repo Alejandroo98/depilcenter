@@ -1,0 +1,510 @@
+body {
+  background-color: var(--fondo);
+}
+
+.__cotizarContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.data-promocion {
+  background-color: #f37e78;
+  font-size: 16px;
+  padding: 10px;
+  grid-column: 1/-1;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.imgCotizarContainer {
+  display: none;
+  flex-grow: 3;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.imgCotizarContainer img {
+  height: 800px;
+}
+
+.cajaOpciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 7;
+}
+
+.borraOpciones {
+  animation-name: mostrarMujer;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes mostrarMujer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-content {
+  padding: 12px;
+  border-radius: 5px;
+  /* border: 1px solid #dddddd !important; */
+  background-color: rgb(248, 223, 223);
+}
+
+/* OPCIONES DE COTIZAR( MUJER - HOMBRE  ) */
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+.nav-tabs a {
+  outline: none;
+  color: rgb(32, 32, 32);
+}
+
+.nav .nav-link {
+  margin: 0 12px;
+}
+
+.nav-tabs .active {
+  border: none !important;
+  border-radius: 5px 5px 0 0 !important;
+  color: black !important;
+  background-color: #f8dfdf !important;
+}
+
+.nav-tabs .nav-link {
+  border: none !important;
+  border-radius: 5px 5px 0 0 !important;
+  background-color: #f0f0f0;
+}
+
+.nav-tabs .nav-link:hover {
+  color: black;
+  background-color: #f8dfdf !important;
+}
+
+/* OPCIONES DE COTIZAR *FIN( MUJER - HOMBRE  ) */
+
+/* ====COTIZAR MUJER ===== */
+.cajaOpciones .nameCotizar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  padding: 25px 0;
+  word-wrap: word-break;
+}
+
+.nameCotizar h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.nameCotizar p {
+  margin: 0;
+}
+
+.cajaMainCotizar {
+  margin: 0 10px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 100%;
+  gap: 10px;
+  /* font-weight: 500; */
+}
+
+.boxCotizarFacial {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4em 2em;
+}
+
+.boxCotizarFacial span {
+  float: right;
+}
+
+.boxZonasCorporal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4em 2em;
+}
+
+.boxZonasCorporal span {
+  float: right;
+}
+
+.zona-box-child {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+.zona-box-child p {
+  margin: 0 3px;
+}
+
+.zona-box-child div {
+  display: flex;
+}
+
+/*? OTROS SERVICIOS */
+
+.boxOtrosServicios .msg-cotizarData {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  font-size: 12px;
+  color: rgb(139, 139, 139);
+}
+
+.margin-x {
+  margin: 0.4em 0;
+}
+
+.accordion {
+  margin-top: 10px;
+  box-shadow: var(--sombra) !important;
+  width: 100% !important;
+  /* background-color: #8e2f9b !important; */
+}
+
+.accordion .title {
+  background-color: #fff !important;
+  border-radius: 5px !important;
+  padding: 10px !important;
+  font-weight: bold;
+}
+
+.accordion .content {
+  padding: 5px 10px !important;
+  border: none !important;
+  margin: 0 !important;
+  background-color: #f8dfdf !important;
+}
+
+.nombreZonas {
+  grid-column: 1/-1;
+}
+
+/* ================================================== */
+/* ================ CAJA DE VALOR TOTAL ============== */
+/* ================================================== */
+
+.boxValorTotal {
+  border-radius: 5px;
+  margin-top: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.boxBorder {
+  padding: 13px 0;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.boxBorder p:first-child {
+  display: inline;
+  margin: 0;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
+.boxBorder p:last-child {
+  display: inline;
+  color: #6e6e6e;
+}
+
+.btn-button-reserve {
+  display: flex;
+  justify-content: center;
+  background-color: var(--base);
+}
+
+.btn-button-reserve button {
+  padding: 12px 0;
+  border: none;
+  color: #fff;
+  width: 100%;
+  background-color: var(--base);
+  font-weight: bold;
+}
+
+.btn-button-reserve button:hover {
+  background-color: #ff8484;
+}
+/* ================================================== */
+/* ================ *FIN  CAJA DE VALOR TOTAL ============== */
+/* ================================================== */
+
+/* =========================================================================== */
+/* ============= AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */
+/* =========================================================================== */
+.zonaSeleccionada {
+  background-color: #ffffff7a !important;
+  border-left: var(--base) solid 6px;
+  font-weight: bold;
+}
+
+.checkSeleccionado {
+  color: var(--base);
+}
+
+.checkSeleccionadoBlack {
+  color: #c20b23 !important;
+}
+
+/* =========================================================================== */
+/* ============= *AÑADE ESTAS CLASES CUANDO SELECCIONAMOS UNA ZONA ============ */
+/* =========================================================================== */
+
+/* =========================================================================== */
+/* ======================== CSS PARA DEPILACION DEFINITIVA =================== */
+/* =========================================================================== */
+.indicaciones-container-ipl {
+  padding: 134px 0 0 0;
+  display: none;
+  flex-grow: 4;
+  margin: 0 10px;
+  min-width: 280px;
+  max-width: 280px;
+}
+
+#indicaciones_responsive {
+  display: none;
+}
+
+.indc-color-box {
+  display: flex;
+  width: 100%;
+  background-color: #f8dfdf;
+  border-radius: 5px;
+}
+
+.indc-childs {
+  border-radius: 5px;
+  min-width: 235px;
+  background-color: #fff;
+  width: 100%;
+  margin: 1em;
+  padding: 10px;
+}
+
+.indc-childs b {
+  position: relative;
+  margin: 25px 0;
+  color: #535353;
+}
+
+.indc-childs li {
+  position: relative;
+  color: #646464;
+  padding: 10px 0;
+}
+
+.indc-childs ol {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.indc-childs a {
+  color: var(--base);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.indc-childs a:hover {
+  color: #f59696;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.boxZonasCorporalIPL {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em 1em;
+}
+
+.circle-card-ipl {
+  position: absolute;
+  right: -70px;
+  bottom: -60px;
+  border-radius: 40%;
+  background-color: #c20b23;
+  width: 170px;
+  height: 140px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.circle-card-ipl p {
+  position: relative;
+  top: 18px;
+  right: 30px;
+}
+.circle-card-ipl p::after {
+  position: absolute;
+  bottom: -45%;
+  left: 25%;
+  font-size: 12px;
+  content: 'DESCUENTO';
+}
+
+.zona-box-child-ipl {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 196, 196);
+  box-shadow: var(--sombra);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  min-width: 235px;
+}
+.over-card {
+  position: absolute;
+  z-index: 500;
+  background-color: #ffffff00;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.card-title-ipl {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.hr-ipl hr {
+  margin: 0;
+  width: 100%;
+  height: 1px;
+  color: rgb(71, 71, 71);
+}
+.extra-card-ipl-box {
+  margin: 15px 10px;
+}
+
+.extra-card-ipl-box p {
+  font-size: 12px;
+  text-align: center;
+  color: #7e7e7e;
+}
+
+.extra-card-ipl {
+  text-align: center;
+  font-size: 12px;
+  background-color: #fc7a8c;
+  color: #fff;
+}
+
+.body-card-ipl {
+  padding: 0 10px;
+}
+
+.zona-box-child-ipl p {
+  margin: 0 3px;
+}
+
+/* =========================================================================== */
+/* ======================== *CSS PARA DEPILACION DEFINITIVA =================== */
+/* =========================================================================== */
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+  .indicaciones-container-ipl {
+    display: none !important;
+  }
+
+  .accordion .padding-cero {
+    padding: 5px 0 !important;
+  }
+
+  .indc-childs {
+    margin: 0;
+  }
+
+  #indicaciones_responsive {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .boxZonasCorporalIPL {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .imgCotizarContainer {
+    display: none !important;
+  }
+
+  .__cotizarContainer {
+    max-width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .boxZonasCorporalIPL {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .circle-card-ipl {
+    width: 180px;
+    height: 150px;
+  }
+
+  .data-promocion {
+    font-size: 13px;
+  }
+
+  .circle-card-ipl p::after {
+    bottom: -42%;
+    left: 30%;
+  }
+
+  .nameCotizar h1 {
+    font-size: 20px;
+  }
+
+  .nameCotizar p {
+    font-size: 14px;
+  }
+
+  .boxBorder p:first-child {
+    display: block;
+  }
+
+  .data-promocion {
+    grid-column: auto;
+  }
+
+  .boxZonasCorporal {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .boxCotizarFacial {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+}

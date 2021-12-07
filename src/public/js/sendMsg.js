@@ -89,11 +89,11 @@ try {
 try {
   const sendMsg = () => {
     const salto = '%0A';
-    const txt = `Hola 👋, quiero una cita.${salto}• Servicio: Depilación definitiva. ${salto}• Zona: Axilas.${salto}• Nombres:${salto}• Fecha cita:${salto}• Hora cita:`;
+    const txt = `Hola 👋, mis nombres son:${salto}• Servicio: Depilación definitiva. ${salto}• Zona: ${salto} Quiero más información.`;
 
     sendWhatsapp(txt);
   };
-  document.querySelector('.btn-agendar-cita').addEventListener('click', sendMsg);
+  document.querySelector('#enviar-mensaje-navidad').addEventListener('click', sendMsg);
 } catch (error) {
-  console.log(error);
+  // console.log(error);
 }

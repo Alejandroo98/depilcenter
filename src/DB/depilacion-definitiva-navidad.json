@@ -1,0 +1,342 @@
+[
+  {
+    "_info": {
+      "title": "",
+      "descuentoBool": true,
+      "descuento": "50",
+      "servicio": "Depilación definitiva."
+    },
+    "mujer": [
+      {
+        "id": "DD_C_DDM1",
+        "categoria": "d_laser",
+        "nombre": "Media Pierna",
+        "precioIndividual": "26",
+        "precioCombo": "20",
+        "descuentoBool": true,
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Una zona. Muslo o canilla."
+      },
+      {
+        "id": "DD_C_DDM2",
+        "categoria": "d_laser",
+        "nombre": "Piernas Completas",
+        "precioIndividual": "40",
+        "descuentoBool": true,
+        "precioCombo": "40",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Dos zonas. Muslo y canilla."
+      },
+      {
+        "id": "DD_C_DDM3",
+        "categoria": "d_laser",
+        "nombre": "Bikini",
+        "precioIndividual": "24",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Bordes del bikini."
+      },
+      {
+        "id": "DD_C_DDM4",
+        "categoria": "d_laser",
+        "nombre": "Bikini Brasilero",
+        "precioIndividual": "38",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Toda la parte frontal."
+      },
+      {
+        "id": "DD_C_DDM5",
+        "categoria": "d_laser",
+        "nombre": "Atras",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Linea de cola."
+      },
+      {
+        "id": "DD_C_DDM6",
+        "categoria": "d_laser",
+        "nombre": "Axilas",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": ""
+      },
+      {
+        "id": "DD_C_DDM7",
+        "categoria": "d_laser",
+        "nombre": "Brazos Completos",
+        "precioIndividual": "36",
+        "descuentoBool": true,
+        "precioCombo": "23",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Dos zonas. Brazo y antebrazo."
+      },
+      {
+        "id": "DD_C_DDM8",
+        "categoria": "d_laser",
+        "nombre": "Medio Brazo",
+        "precioIndividual": "24",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Una zona. Brazo o antebrazo."
+      },
+      {
+        "id": "DD_C_DDM9",
+        "categoria": "d_laser",
+        "nombre": "Espalda Completa",
+        "precioIndividual": "40",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Dos zonas. Espalda baja y alta."
+      },
+      {
+        "id": "DD_C_DDM11",
+        "categoria": "d_laser",
+        "nombre": "Estómago Completo",
+        "precioIndividual": "30",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10",
+        "zonas": "Dos zonas."
+      },
+      {
+        "id": "DD_C_DDM15",
+        "categoria": "d_laser",
+        "nombre": "Gluteos",
+        "precioIndividual": "24",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "10"
+      },
+      {
+        "id": "DD_F_DDM25",
+        "categoria": "d_laser",
+        "nombre": "Rostro completo",
+        "precioIndividual": "26",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "facial",
+        "descuento": "50",
+        "nroSesiones": "10"
+      },
+      {
+        "id": "DD_F_DDM20",
+        "categoria": "d_laser",
+        "nombre": "Bigote",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "facial",
+        "descuento": "50",
+        "nroSesiones": "8"
+      },
+      {
+        "id": "DD_F_DDM21",
+        "categoria": "d_laser",
+        "nombre": "Patilla",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "facial",
+        "descuento": "50",
+        "nroSesiones": "8"
+      },
+      {
+        "id": "DD_F_DDM22",
+        "categoria": "d_laser",
+        "nombre": "Barbilla",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "facial",
+        "descuento": "50",
+        "nroSesiones": "8"
+      },
+      {
+        "id": "DD_F_DDM23",
+        "categoria": "d_laser",
+        "nombre": "Pomulos",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "facial",
+        "descuento": "50",
+        "nroSesiones": "10"
+      }
+    ],
+    "hombre": [
+      {
+        "id": "DD_C_DDH1",
+        "categoria": "d_laser",
+        "nombre": "Media Pierna",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Una zona. Muslo o canilla."
+      },
+      {
+        "id": "DD_C_DDH2",
+        "categoria": "d_laser",
+        "nombre": "Piernas Completas",
+        "precioIndividual": "40",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Dos zonas. Muslo y canilla."
+      },
+      {
+        "id": "DD_C_DDH3",
+        "categoria": "d_laser",
+        "nombre": "Bikini",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Bordes del bikini."
+      },
+      {
+        "id": "DD_C_DDH4",
+        "categoria": "d_laser",
+        "nombre": "Bikini Brasilero",
+        "precioIndividual": "30",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Toda la parte frontal."
+      },
+
+      {
+        "id": "DD_C_DDH6",
+        "categoria": "d_laser",
+        "nombre": "Axilas",
+        "precioIndividual": "12",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Con acompañante 2x1."
+      },
+      {
+        "id": "DD_C_DDH7",
+        "categoria": "d_laser",
+        "nombre": "Brazos Completos",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Dos zonas. Brazo y antebrazo."
+      },
+      {
+        "id": "DD_C_DDH8",
+        "categoria": "d_laser",
+        "nombre": "Medio Brazo",
+        "precioIndividual": "18",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Una zona. Brazo o antebrazo."
+      },
+      {
+        "id": "DD_C_DDH9",
+        "categoria": "d_laser",
+        "nombre": "Espalda Completa",
+        "precioIndividual": "40",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Dos zonas. Espalda baja y alta."
+      },
+      {
+        "id": "DD_C_DDH11",
+        "categoria": "d_laser",
+        "nombre": "Estomago Completo",
+        "precioIndividual": "40",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8",
+        "zonas": "Dos zonas."
+      },
+      {
+        "id": "DD_C_DDH15",
+        "categoria": "d_laser",
+        "nombre": "Gluteos",
+        "precioIndividual": "18",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8"
+      },
+      {
+        "id": "DD_C_DDH17",
+        "categoria": "d_laser",
+        "nombre": "Pecho",
+        "precioIndividual": "20",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "corporal",
+        "descuento": "50",
+        "nroSesiones": "8"
+      },
+      {
+        "id": "DD_F_DDH18",
+        "categoria": "d_laser",
+        "nombre": "Barba",
+        "precioIndividual": "15",
+        "descuentoBool": true,
+        "precioCombo": "20",
+        "tipo": "facial",
+        "descuento": "50",
+        "nroSesiones": "8"
+      }
+    ]
+  }
+]
