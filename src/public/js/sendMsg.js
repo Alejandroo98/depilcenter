@@ -97,3 +97,15 @@ try {
 } catch (error) {
   // console.log(error);
 }
+
+try {
+  const sendMsg = () => {
+    const salto = '%0A';
+    const txt = `Hola 👋, mis nombres son:${salto}• Servicio: Depilación definitiva. ${salto}• Zona: ${salto} Quiero más información.`;
+
+    sendWhatsapp(txt);
+  };
+  document.querySelector('#enviar-mensaje-navidad-dos').addEventListener('click', sendMsg);
+} catch (error) {
+  // console.log(error);
+}
