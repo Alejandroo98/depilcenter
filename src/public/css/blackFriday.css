@@ -3,6 +3,7 @@ body {
 }
 
 .container-main {
+  position: relative;
   background-color: #f7442d;
 }
 
@@ -10,11 +11,65 @@ body {
   padding: 0;
 }
 
+.botton-header {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.nota {
+  padding: 8px;
+  background-color: #c7c6c6;
+  font-size: 13px;
+  margin-top: 11px !important;
+  border-radius: 5px;
+}
+
+.botton-header a {
+  background-color: #ffb800;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 10px 1px 10px;
+  font-weight: bold;
+  display: block;
+  color: #72000f;
+}
+
+.botton-header a:hover {
+  color: #72000f;
+  background-color: #f7ba1f;
+  box-shadow: var(--sombra);
+}
+
+.second-button {
+  display: flex;
+  justify-content: center;
+  background-color: #860214;
+  padding: 5px 0;
+}
+
+.second-button-child i {
+  color: #fff;
+}
+
+.second-button-child a {
+  color: #fff;
+  margin: 0;
+}
+
+.second-button-child a:hover {
+  color: #fac8c8;
+}
+
 .container-main img {
   margin: 0;
   padding: 0;
   object-fit: cover;
   width: 100%;
+}
+
+.container-main img:nth-child(2) {
+  display: none;
 }
 
 .title-navidad {
@@ -60,19 +115,31 @@ body {
 }
 
 .footer-navidad {
-  display: flex;
-  align-items: center;
-  font-size: 25px;
-  height: 40px;
-}
-
-.footer-navidad i {
-  color: #c20b23;
+  height: 15px;
+  background-color: #c20b23;
 }
 
 @media screen and (max-width: 768px) {
   .title-navidad h1 {
     font-size: 18px;
+  }
+
+  .botton-header a {
+    background-color: #ffb800;
+    font-size: 19px;
+    text-align: center;
+    padding: 7px;
+    font-weight: bold;
+    display: block;
+    color: #72000f;
+  }
+
+  .container-main img:nth-child(1) {
+    display: none;
+  }
+
+  .container-main img:nth-child(2) {
+    display: block;
   }
 
   .title-navidad p {
