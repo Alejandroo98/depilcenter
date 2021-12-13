@@ -1,0 +1,74 @@
+body {
+  /* background-color: red; */
+  background-image: url('https://i.ibb.co/nspycJ5/pages-background.png') !important;
+}
+
+.container-main-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  width: 100vw;
+  /* background-color: red; */
+}
+
+.container-main-color a {
+  font-weight: bold;
+  text-decoration: none;
+  /* color: #ff362b; */
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #ff362bc5;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  padding: 10px 5px;
+  margin: 5px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 97%;
+}
+
+.container-main-color a:hover {
+  text-decoration: none;
+  color: #ff362bc5;
+  background-color: #fff;
+}
+
+.container-main-color p {
+  font-weight: 100;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-desc h3,
+.header-desc p {
+  text-align: center;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header img {
+  max-width: 250px;
+  display: inline-block;
+  /* width: 100%; */
+}
+
+.icons-redes {
+  /* margin: 0 0 100px 0; */
+}
+
+.icons-redes i {
+  font-size: 25px !important;
+  color: #fff;
+}
+
+.header-desc {
+  margin: 50px 0;
+  color: #fff;
+}

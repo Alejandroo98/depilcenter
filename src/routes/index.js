@@ -19,6 +19,10 @@ app.use(require('./indicaciones'));
 
 app.use(require('./reservar'));
 
+app.get('/pages', (req, res) => {
+  res.render('pages');
+});
+
 app.get('/depilacion-definitiva-promocion', (req, res) => {
   let zonas = getDepilacionDefinitivaNavidad('mujer');
   const corporal = zonas.filter((zona) => {
