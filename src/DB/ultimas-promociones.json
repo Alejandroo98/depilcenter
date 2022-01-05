@@ -2,19 +2,19 @@
   {
     "id": "d_cera",
     "circleName": "NUEVO",
-    "title": "PROMO NOVIEMBRE",
+    "title": "PROMO ENERO",
     "subtitle": "Depilación con cera tibia",
     "nroSesiones": "∞",
     "precio": {
-      "normal": "$35",
-      "promo": "$29.99"
+      "normal": "$30",
+      "promo": "$25.99"
     },
     "btn": {
       "agendar": "#",
       "masInfo": "#"
     },
-    "desc": "Piernas completas + bikini brasilero full + estómago + brazos + axilas",
-    "data_desc": "PROMO NOVIEMBRE"
+    "desc": "Piernas completas + bikini brasilero full + axilas",
+    "data_desc": "PROMO ENERO"
   },
   {
     "id": "d_laser",
@@ -38,16 +38,16 @@
     "circleName": "NUEVO",
     "title": "ROSTRO COMPLETO",
     "subtitle": "Depilación definitiva",
-    "nroSesiones": "8",
+    "nroSesiones": "10",
     "precio": {
-      "normal": "$160",
-      "promo": "$104"
+      "normal": "$260",
+      "promo": "$182"
     },
     "btn": {
       "agendar": "#",
       "masInfo": "#"
     },
-    "desc": "8 sesiones por $12.99 cada una.",
+    "desc": "10 sesiones por $17.99 cada una.",
     "data_desc": "ROSTRO COMPLETO"
   },
 
