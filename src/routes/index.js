@@ -40,7 +40,7 @@ app.get('/depilacion-definitiva-promocion', (req, res) => {
 
 app.get('/wh', (req, res) => {
   console.log(req.body);
-
+  console.log('AQUIIIIIIIIIIIIII');
   res.json();
 });
 
