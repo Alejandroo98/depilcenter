@@ -21,7 +21,7 @@ app.post('/wh', (req, res) => {
   // const resultadoCoincidenciaSaludo = coincidenciasSaludo.indexOf('papas'); //Si el resultado es -1 significa que no existe
 
   const { id } = req.headers;
-  if (id != 8080) res.json({});
+  if (id != 8080) res.json({ reply: 'MAL' });
 
   if (message == 'clave') {
     // all: `Message: ${message} - Phone: ${phone} - Sender: ${sender}`,
@@ -30,7 +30,7 @@ app.post('/wh', (req, res) => {
     });
   }
 
-  res.json();
+  res.json({ reply: 'END' });
 });
 
 module.exports = app;
