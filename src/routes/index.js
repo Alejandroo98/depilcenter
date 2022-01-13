@@ -38,8 +38,18 @@ app.get('/depilacion-definitiva-promocion', (req, res) => {
   res.redirect('/');
 });
 
+app.get('/wh', (req, res) => {
+  console.log('GET - DEPILCENTER');
+  res.json({
+    msg: 'Seguro este no es el lugar que buscaba, pero encontro el robot de mensajerias Depilcenter',
+  });
+});
+
 app.post('/wh', (req, res) => {
   console.log(req.body);
+
+  console.log('POST - DEPILCENTER');
+
   console.log('AQUIIIIIIIIIIIIII');
   res.json({ reply: 'AHORA?' });
 });
