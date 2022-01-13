@@ -16,7 +16,7 @@ app.post('/wh', (req, res) => {
   const { app, sender, message, group_name, phone } = req.body;
   // const nombreRegistradoCliente = 'Jefferson Alava';
   const nombreRegistradoCliente = sender;
-
+  console.log({ app, sender, message, group_name, phone });
   // const coincidenciasSaludo = chatBotsJson[0].saludo.coincidencias;
   // const resultadoCoincidenciaSaludo = coincidenciasSaludo.indexOf('papas'); //Si el resultado es -1 significa que no existe
 
