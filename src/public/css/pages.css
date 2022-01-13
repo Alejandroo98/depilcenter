@@ -5,6 +5,14 @@ body {
   /* background-image: url('https://i.ibb.co/jhpQCdM/pages-background.png') !important; */
 }
 
+.margin-z {
+  margin: 20px 0;
+}
+
+.padding-botton p {
+  padding-bottom: 10px;
+}
+
 .container-main-color {
   display: flex;
   flex-direction: column;
@@ -16,6 +24,16 @@ body {
 .container-main-color p {
   margin: 0;
   margin: 18px 0;
+}
+
+.container-main-color .green {
+  background-color: #19a119;
+  color: white;
+  /* border: 4px solid #fff; */
+}
+
+.container-main-color .green a {
+  background-color: white;
 }
 
 .container-main-color .black {
@@ -73,36 +91,31 @@ body {
 }
 
 .mision_2022 {
-  display: flex;
   background: none !important;
-  justify-content: center;
-  padding: 0 !important;
   max-width: 500px;
-  margin: 15px 0 0 0 !important;
+  /* margin: 5px 0 5px 0 !important; */
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 4px;
+  padding: 15px;
 }
 
 .mision_2022 p {
   text-align: justify !important;
-  background-color: #fd8b89;
   /* border: 2px linear #fff; */
-  margin: 0;
-  border-radius: 4px;
-  padding: 15px;
-  color: white;
+  margin: 0 !important;
+  color: #2e2e2e;
 }
 
 .garantia_2022 {
-  display: flex;
-  margin: 5px 0 15px 0 !important;
-  justify-content: center;
   background-color: #636363 !important;
+  margin: 20px 0 0 0 !important;
 }
 
 .garantia_2022 p {
+  text-align: center;
   margin: 0;
   color: #fff;
   font-size: 10px;
-  text-align: justify !important;
   padding: 0 !important;
 }
 
