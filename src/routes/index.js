@@ -24,16 +24,24 @@ app.get('/pages', (req, res) => {
 });
 
 app.get('/depilacion-definitiva-promocion', (req, res) => {
-  let zonas = getDepilacionDefinitivaNavidad('mujer');
-  const corporal = zonas.filter((zona) => {
-    return zona.tipo == 'corporal';
-  });
+  // let zonas = getDepilacionDefinitivaNavidad('mujer');
+  // const corporal = zonas.filter((zona) => {
+  //   return zona.tipo == 'corporal';
+  // });
 
-  const facial = zonas.filter((zona) => {
-    return zona.tipo == 'facial';
-  });
+  // const facial = zonas.filter((zona) => {
+  //   return zona.tipo == 'facial';
+  // });
 
-  res.render('diciembre', { corporal, facial });
+  // res.render('diciembre', { corporal, facial });
+
+  res.redirect('/');
+});
+
+app.get('/wh', (req, res) => {
+  console.log(req.body);
+
+  res.json();
 });
 
 app.get('/*', (req, res) => {
