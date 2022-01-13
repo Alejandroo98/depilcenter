@@ -53,7 +53,7 @@ const startCalculoZonas = ({ target }) => {
       if (url == '/cotizar/depilacion-cera') {
         cotizarConfig.imprimirValorTotal();
       } else if (url == '/cotizar/depilacion-definitiva') {
-        console.log('laser');
+        // console.log('laser');
         cotizarIplConfig.zumarValoresTotales();
       }
     } else if (idSplit == 'DD') {

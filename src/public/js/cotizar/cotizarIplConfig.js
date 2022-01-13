@@ -37,11 +37,13 @@ class CotizarIplConfig {
     let valorTotalConDescuento = 0;
 
     this.zonasSeleccionadas.forEach((zona) => {
-      const valorSinDescueneto = zona.nroSesiones * zona.precio;
-      const descuento = Number(`0.${zona.descuento}`);
-      const valorConDescuento = valorSinDescueneto * descuento;
-      const totalTratamiento = valorSinDescueneto - valorConDescuento;
-      valorTotalConDescuento = valorTotalConDescuento + totalTratamiento;
+      // const valorSinDescueneto = zona.nroSesiones * zona.precio;
+      // const descuento = Number(`0.${zona.descuento}`);
+      // const valorConDescuento = valorSinDescueneto * descuento;
+      // const totalTratamiento = valorSinDescueneto - valorConDescuento;
+      // valorTotalConDescuento = valorTotalConDescuento + totalTratamiento;
+      const valorSinDescueneto = zona.precio * 1;
+      valorTotalConDescuento = valorTotalConDescuento + valorSinDescueneto;
     });
 
     return valorTotalConDescuento;
@@ -51,8 +53,11 @@ class CotizarIplConfig {
     let valorTotalSinDescuento = 0;
 
     this.zonasSeleccionadas.forEach((zona) => {
-      const valorSinDescueneto = zona.nroSesiones * zona.precio;
-      valorTotalSinDescuento = valorTotalSinDescuento + valorSinDescueneto;
+      const valorSinDescueneto = zona.precio;
+      const descuento = Number(`0.${zona.descuento}`);
+      const valorConDescuento = valorSinDescueneto * descuento;
+      const totalTratamiento = valorSinDescueneto - valorConDescuento;
+      valorTotalSinDescuento = valorTotalSinDescuento + totalTratamiento;
     });
 
     return valorTotalSinDescuento;

@@ -39,8 +39,7 @@
             </div>
             <div class="extra-card-ipl-box">
                 <div class="extra-card-ipl">
-                    PRECIO POR SESION
-
+                    PAGO AL CONTADO - 40% OFF
                 </div>
                 {{#if zonas}}
                 <p>
@@ -51,8 +50,9 @@
             <div>
             </div>
             <div class="body-card-ipl">
+                <b> Precio total:</b> ${{ precioIndividual }}. <br>
                 <b> Nro sesiones: </b> {{ nroSesiones }}. <br>
-                <b> Precio normal:</b> ${{ precioIndividual }}. <br>
+                <b> Valor por sesion: </b> {{ valorPorSesion precioIndividual nroSesiones }}. <br>
                 {{#if descuentoBool}}
                 <b> Precio promo: </b> ${{ precioPromo precioIndividual descuento }} <br>
                 {{/if}}

@@ -61,6 +61,10 @@ function indicacionesKeyWords(servicios) {
   }
 }
 
+function valorPorSesion(precioIndividual, nroSesiones) {
+  return `$${precioIndividual / nroSesiones}`;
+}
+
 module.exports = {
   sliceDate,
   namesplit,
@@ -70,4 +74,5 @@ module.exports = {
   indicacionesDesc,
   indicacionesKeyWords,
   precioPromoNavidad,
+  valorPorSesion,
 };
