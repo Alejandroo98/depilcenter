@@ -38,7 +38,7 @@ app.get('/depilacion-definitiva-promocion', (req, res) => {
   res.redirect('/');
 });
 
-app.get('/wh', (req, res) => {
+app.post('/wh', (req, res) => {
   console.log(req.body);
   console.log('AQUIIIIIIIIIIIIII');
   res.json({ reply: 'AHORA?' });
