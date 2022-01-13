@@ -46,9 +46,14 @@ app.get('/wh', (req, res) => {
 });
 
 app.post('/wh', (req, res) => {
-  console.log(req.body);
+  const { app, sender, message, group_name, phone } = req.body;
 
-  res.json({ reply: `¡Hola!, responderemos lo antes posible 🏃‍♀️` });
+  if (message == 'clave') {
+    console.log('ESOS SON LOS DATOS ->', app, sender, message, group_name, phone);
+    res.json({ reply: `¡Hola!, responderemos lo antes posible 🏃‍♀️` });
+  }
+
+  res.json();
 });
 
 app.get('/*', (req, res) => {
