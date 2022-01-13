@@ -19,6 +19,8 @@ app.use(require('./indicaciones'));
 
 app.use(require('./reservar'));
 
+app.use(require('./chatbot'));
+
 app.get('/pages', (req, res) => {
   res.render('pages');
 });
@@ -36,24 +38,6 @@ app.get('/depilacion-definitiva-promocion', (req, res) => {
   // res.render('diciembre', { corporal, facial });
 
   res.redirect('/');
-});
-
-app.get('/wh', (req, res) => {
-  console.log('GET - DEPILCENTER');
-  res.json({
-    msg: 'Seguro este no es el lugar que buscaba, pero encontro el robot de mensajerias Depilcenter',
-  });
-});
-
-app.post('/wh', (req, res) => {
-  const { app, sender, message, group_name, phone } = req.body;
-
-  if (message == 'clave') {
-    console.log('ESOS SON LOS DATOS ->', app, sender, message, group_name, phone);
-    res.json({ reply: `Message: ${message} - Phone: ${phone} - Sender: ${sender}` });
-  }
-
-  res.json();
 });
 
 app.get('/*', (req, res) => {

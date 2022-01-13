@@ -1,0 +1,15 @@
+[
+  {
+    "saludo": {
+      "coincidencias": [
+        "buen dia",
+        "buenos dias",
+        "muy buenos dias",
+        "como esta",
+        "hola",
+        "buenas tardes",
+        "buenas noches"
+      ]
+    }
+  }
+]

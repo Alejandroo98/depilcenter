@@ -69,4 +69,4 @@ const validaciones = [
   check('fecha', 'Ingrese un fecha eh intenta de nuevo').not().isEmpty(),
 ];
 
-module.exports = { validaciones };
+module.exports = { validaciones, haveNumber };
