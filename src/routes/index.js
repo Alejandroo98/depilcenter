@@ -48,10 +48,7 @@ app.get('/wh', (req, res) => {
 app.post('/wh', (req, res) => {
   console.log(req.body);
 
-  console.log('POST - DEPILCENTER');
-
-  console.log('AQUIIIIIIIIIIIIII');
-  res.json({ reply: 'AHORA?' });
+  res.json({ reply: `¡Hola!, responderemos lo antes posible 🏃‍♀️` });
 });
 
 app.get('/*', (req, res) => {
