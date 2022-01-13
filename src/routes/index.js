@@ -50,7 +50,7 @@ app.post('/wh', (req, res) => {
 
   if (message == 'clave') {
     console.log('ESOS SON LOS DATOS ->', app, sender, message, group_name, phone);
-    res.json({ reply: `¡Hola!, responderemos lo antes posible 🏃‍♀️` });
+    res.json({ reply: `Message: ${message} - Phone: ${phone} - Sender: ${sender}` });
   }
 
   res.json();
