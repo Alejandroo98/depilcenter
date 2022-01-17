@@ -27,11 +27,11 @@ const zonasValidas = [
 ];
 
 const comprovarZonas = (zonas) => {
-  for (let i = 0; i < zonasValidas.length; i++) {
-    if (!zonas.includes(zonasValidas[i])) {
-      return 'noResponder';
-    }
-  }
+  // for (let i = 0; i < zonasValidas.length; i++) {
+  //   if (!zonas.includes(zonasValidas[i])) {
+  //     return 'noResponder';
+  //   }
+  // }
 
   try {
     zonas = zonas.replace(/^\s*|\s*$/g, '');
