@@ -34,10 +34,12 @@ app.post('/wh', (req, res) => {
       //TODO: Limpia el nombre de las zonas antes de pasar a buscarlo
       //TODO: Busca las zonas y enivalas al cient
 
-      console.log(validZonas);
-
       return res.json({
         reply: validZonas,
+      });
+    } else if (validZonas == 'noResponder') {
+      return res.json({
+        reply: '',
       });
     } else {
       return res.json({

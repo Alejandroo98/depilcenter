@@ -2,12 +2,40 @@ const { getHour } = require('../helpers/getTime');
 const { haveNumber } = require('./validaciones');
 const zonasDB = require('../DB/chat-bot-zonas.json');
 
+const zonasValidas = [
+  'indefinida',
+  'axilas',
+  'media pierna',
+  'piernas completas',
+  'piernas',
+  'bikini',
+  'bikni brasilero',
+  'bikni completo',
+  'bikni brasileño',
+  'brazos completos',
+  'medio brazo',
+  'espalda',
+  'estomago',
+  'rostro',
+  'rostro completo',
+  'facial',
+  'facial completo',
+  'gluteos',
+  'patilla',
+  'patillas',
+  'bigote',
+];
+
 const comprovarZonas = (zonas) => {
+  for (let i = 0; i < zonasValidas.length; i++) {
+    if (!zonas.includes(zonasValidas[i])) {
+      return 'noResponder';
+    }
+  }
+
   try {
     zonas = zonas.replace(/^\s*|\s*$/g, '');
     zonas = zonas.toLowerCase();
-
-    console.log('aquiiiiiiiiiis', zonas);
 
     const zonasSplit = zonas.split(',');
 
