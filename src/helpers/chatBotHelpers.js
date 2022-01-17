@@ -14,9 +14,19 @@ const comprovarZonas = (zonas) => {
     let zonasSendsClient = '';
     for (let i = 0; i < zonasSplit.length; i++) {
       const findZona = zonasDB[0][zonasSplit[i]];
-      zonasSendsClient = zonasSendsClient + findZona;
+
+      if (findZona == undefined) {
+        zonasSendsClient = zonasSendsClient + zonasDB[0].indefinida;
+      } else {
+        zonasSendsClient = zonasSendsClient + findZona;
+      }
     }
-    return zonasSendsClient + '\n  0️⃣ *MENU PRINCIPAL*';
+
+    if (zonasSendsClient == 'undefined') {
+      return false;
+    } else {
+      return zonasSendsClient + '\n  0️⃣ *MENU PRINCIPAL*';
+    }
   } catch (error) {
     return false;
   }

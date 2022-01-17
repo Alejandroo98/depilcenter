@@ -1,15 +1,43 @@
 [
   {
+    "indefinida": "PAGO AL CONTADO \n Zona: No encontrada \n ",
+
     "axilas": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "media pierna": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "piernas_completas": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "bikini": "PAGO AL CONTADO \n Zona: Bikini normal \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "bikni_brasilero": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "rostro": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "facial": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "patillas": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "medio_brazo": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "brazons_completos": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
-    "gluteos": "PAGO AL CONTADO \n Zona: Axilas \n Nro sesiones: 8 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Axilas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n"
+
+    "media pierna": "PAGO AL CONTADO \n Zona: Media pierna \n Nro sesiones: 10 \n Precio normal: $260 \n Precio al contado ( 40% OFF ): $156 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Media pierna \n Precio normal por sesión: $26 \n Precio actual por sesión( 20% OFF ): $20.90 \n \n",
+
+    "piernas_completas": "PAGO AL CONTADO \n Zona: Piernas completas \n Nro sesiones: 10 \n Precio normal: $400 \n Precio al contado ( 40% OFF ): $240 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Piernas completas \n Precio normal por sesión: $40 \n Precio actual por sesión( 20% OFF ): $31.90 \n \n",
+
+    "bikini": "PAGO AL CONTADO \n Zona: Bikini normal \n Nro sesiones: 10 \n Precio normal: $240 \n Precio al contado ( 40% OFF ): $144 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Bikini normal \n Precio normal por sesión: $24 \n Precio actual por sesión( 20% OFF ): $18.90 \n \n",
+
+    "bikni brasilero": "PAGO AL CONTADO \n Zona: Bikini brasilero \n Nro sesiones: 10 \n Precio normal: $380 \n Precio al contado ( 40% OFF ): $228 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Bikini brasilero \n Precio normal por sesión: $38 \n Precio actual por sesión( 20% OFF ): $29.90 \n \n",
+
+    "bikni completo": "PAGO AL CONTADO \n Zona: Bikini completo \n Nro sesiones: 10 \n Precio normal: $380 \n Precio al contado ( 40% OFF ): $228 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Bikini completo \n Precio normal por sesión: $38 \n Precio actual por sesión( 20% OFF ): $29.90 \n \n",
+
+    "bikni brasileño": "PAGO AL CONTADO \n Zona: Bikini brasileño \n Nro sesiones: 10 \n Precio normal: $380 \n Precio al contado ( 40% OFF ): $228 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Bikini brasileño \n Precio normal por sesión: $38 \n Precio actual por sesión( 20% OFF ): $29.90 \n \n",
+
+    "brazos completos": "PAGO AL CONTADO \n Zona: Brazos completos \n Nro sesiones: 10 \n Precio normal: $360 \n Precio al contado ( 40% OFF ): $216 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Brazos completos \n Precio normal por sesión: $36 \n Precio actual por sesión( 20% OFF ): $28.90 \n \n",
+
+    "medio brazo": "PAGO AL CONTADO \n Zona: Medio brazo \n Nro sesiones: 10 \n Precio normal: $240 \n Precio al contado ( 40% OFF ): $144 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Medio brazo \n Precio normal por sesión: $24 \n Precio actual por sesión( 20% OFF ): $18.90 \n \n",
+
+    "espalda": "PAGO AL CONTADO \n Zona: Espalda completa \n Nro sesiones: 10 \n Precio normal: $400 \n Precio al contado ( 40% OFF ): $240 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Espalda completa \n Precio normal por sesión: $40 \n Precio actual por sesión( 20% OFF ): $31.90 \n \n",
+
+    "estomago": "PAGO AL CONTADO \n Zona: Estómago \n Nro sesiones: 10 \n Precio normal: $300 \n Precio al contado ( 40% OFF ): $180 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Estómago \n Precio normal por sesión: $30 \n Precio actual por sesión( 20% OFF ): $23.90 \n \n",
+
+    "rostro": "PAGO AL CONTADO \n Zona: Rostro completo \n Nro sesiones: 10 \n Precio normal: $260 \n Precio al contado ( 40% OFF ): $156 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Rostro completo \n Precio normal por sesión: $26 \n Precio actual por sesión( 20% OFF ): $20s.90 \n \n",
+
+    "rostro completo": "PAGO AL CONTADO \n Zona: Rostro completo \n Nro sesiones: 10 \n Precio normal: $260 \n Precio al contado ( 40% OFF ): $156 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Rostro completo \n Precio normal por sesión: $26 \n Precio actual por sesión( 20% OFF ): $20s.90 \n \n",
+
+    "facial": "PAGO AL CONTADO \n Zona: Rostro completo \n Nro sesiones: 10 \n Precio normal: $260 \n Precio al contado ( 40% OFF ): $156 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: stro completo \n Precio normal por sesión: $26 \n Precio actual por sesión( 20% OFF ): $20s.90 \n \n",
+
+    "facial completo": "PAGO AL CONTADO \n Zona: Rostro completo \n Nro sesiones: 10 \n Precio normal: $260 \n Precio al contado ( 40% OFF ): $156 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Rostro completo \n Precio normal por sesión: $26 \n Precio actual por sesión( 20% OFF ): $20s.90 \n \n",
+
+    "gluteos": "PAGO AL CONTADO \n Zona: Gluteos \n Nro sesiones: 10 \n Precio normal: $240 \n Precio al contado ( 40% OFF ): $144 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Gluteos \n Precio normal por sesión: $24 \n Precio actual por sesión( 20% OFF ): $18.90 \n \n",
+
+    "patilla": "PAGO AL CONTADO \n Zona: Patillas \n Nro sesiones: 10 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Patillas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
+
+    "patillas": "PAGO AL CONTADO \n Zona: Patillas \n Nro sesiones: 10 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Patillas \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n",
+
+    "bigote": "PAGO AL CONTADO \n Zona: Bigote \n Nro sesiones: 10 \n Precio normal: $160 \n Precio al contado ( 40% OFF ): $96 \n \n PAGO LUEGO DE CADA SESIÓN \n Zona: Bigote \n Precio normal por sesión: $20 \n Precio actual por sesión( 20% OFF ): $15.90 \n \n"
   }
 ]
