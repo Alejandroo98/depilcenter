@@ -15,40 +15,9 @@ app.post('/wh', (req, res) => {
 
   const { app, sender, message, group_name, phone } = req.body;
 
-  console.log({ app, sender, message, group_name, phone });
-
-  const { id } = req.headers;
-  if (id != 8080) return res.json({ reply: 'INGRESA EL ID' });
-
-  if (message == 8) {
-    //TODO: en el if, lo que haras es ver si existe una zona entre el texto, si no existe entocnes unicamente dale indicaciones
-    return res.json({
-      reply: `Por favor, ingresa la zona. Si es mas de una separala con una coma. Ej. axilas,bikini,media pierna,etc`,
-    });
-  } else {
-    //TODO: En el fin primera mira si el formato enviado es correcto, y si las zonas existen antes de pasar a lo siguiente
-
-    const validZonas = comprovarZonas(message);
-
-    if (validZonas) {
-      //TODO: Limpia el nombre de las zonas antes de pasar a buscarlo
-      //TODO: Busca las zonas y enivalas al cient
-
-      return res.json({
-        reply: validZonas,
-      });
-    } else if (validZonas == 'noResponder') {
-      return res.json({
-        reply: '',
-      });
-    } else {
-      return res.json({
-        reply: `Mil disculpas, las zonas ingresadas no fueron encontradas, por favor intente de nuevo. Recuerde separar la zonas por una coma. \n *0️⃣ MENU PRINCIPAL*`,
-      });
-    }
-  }
-
-  res.json({ reply: '' });
+  return res.json({
+    reply: '',
+  });
 });
 
 module.exports = app;

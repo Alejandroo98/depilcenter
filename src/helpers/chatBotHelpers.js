@@ -27,12 +27,6 @@ const zonasValidas = [
 ];
 
 const comprovarZonas = (zonas) => {
-  // for (let i = 0; i < zonasValidas.length; i++) {
-  //   if (!zonas.includes(zonasValidas[i])) {
-  //     return 'noResponder';
-  //   }
-  // }
-
   try {
     zonas = zonas.replace(/^\s*|\s*$/g, '');
     zonas = zonas.toLowerCase();
@@ -44,7 +38,9 @@ const comprovarZonas = (zonas) => {
       const findZona = zonasDB[0][zonasSplit[i]];
 
       if (findZona == undefined) {
-        zonasSendsClient = zonasSendsClient + zonasDB[0].indefinida;
+        // zonasSendsClient = zonasSendsClient + zonasDB[0].indefinida;
+        zonasSendsClient =
+          '¿Pregunta personalizada? Por favor, ingresa el numero 9. \n 9⃣ Pregunta personalizada \n 0️⃣ *MENU PRINCIPAL* \n ';
       } else {
         zonasSendsClient = zonasSendsClient + findZona;
       }
