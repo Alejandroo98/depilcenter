@@ -2,45 +2,24 @@ const { getHour } = require('../helpers/getTime');
 const { haveNumber } = require('./validaciones');
 const zonasDB = require('../DB/chat-bot-zonas.json');
 
-const zonasArray = [
-  'axilas',
-  'media',
-  'piernas completas',
-  'media pierna',
-  'bikini',
-  'bikini brasilero',
-  'rostro',
-  'facial',
-  'patillas',
-  'medio brazo',
-  'brazos completos',
-  'gluteos',
-];
-
 const comprovarZonas = (zonas) => {
-  zonas = zonas.replace(/^\s*|\s*$/g, '');
-  zonas.toLocaleLowerCase();
-  const zonasSplit = zonas.split(',');
+  try {
+    zonas = zonas.replace(/^\s*|\s*$/g, '');
+    zonas = zonas.toLowerCase();
 
-  let zonasSendsClient = '';
-  for (let i = 0; i < zonasSplit.length; i++) {
-    const findZona = zonasDB[0][zonasSplit[i]];
-    zonasSendsClient = zonasSendsClient + findZona;
-  }
+    console.log('aquiiiiiiiiiis', zonas);
 
-  return zonasSendsClient + '0️⃣ *MENU PRINCIPAL*';
-};
+    const zonasSplit = zonas.split(',');
 
-const validarZonas = (zonas) => {
-  zonas.toLocaleLowerCase();
-
-  for (let i = 0; i < zonasArray.length; i++) {
-    if (zonas.includes(zonasArray[i])) {
-      return true;
+    let zonasSendsClient = '';
+    for (let i = 0; i < zonasSplit.length; i++) {
+      const findZona = zonasDB[0][zonasSplit[i]];
+      zonasSendsClient = zonasSendsClient + findZona;
     }
+    return zonasSendsClient + '\n  0️⃣ *MENU PRINCIPAL*';
+  } catch (error) {
+    return false;
   }
-
-  return false;
 };
 
 const palabraClave = (message) => {
@@ -89,6 +68,5 @@ module.exports = {
   timeDay,
   saludo,
   palabraClave,
-  validarZonas,
   comprovarZonas,
 };

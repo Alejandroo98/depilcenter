@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const zonas = require('../DB/chat-bot-zonas.json');
-const { validarZonas, comprovarZonas } = require('../helpers/chatBotHelpers');
+const { comprovarZonas } = require('../helpers/chatBotHelpers');
 
 app.get('/wh', (req, res) => {
   console.log('GET - DEPILCENTER');
@@ -20,7 +20,7 @@ app.post('/wh', (req, res) => {
   const { id } = req.headers;
   if (id != 8080) return res.json({ reply: 'INGRESA EL ID' });
 
-  if (!validarZonas(message)) {
+  if (message == 8) {
     //TODO: en el if, lo que haras es ver si existe una zona entre el texto, si no existe entocnes unicamente dale indicaciones
     return res.json({
       reply: `Por favor, ingresa la zona. Si es mas de una separala con una coma. Ej. axilas,bikini,media pierna,etc`,
@@ -34,8 +34,9 @@ app.post('/wh', (req, res) => {
       //TODO: Limpia el nombre de las zonas antes de pasar a buscarlo
       //TODO: Busca las zonas y enivalas al cient
 
+      console.log(validZonas);
+
       return res.json({
-        ok: true,
         reply: validZonas,
       });
     } else {
