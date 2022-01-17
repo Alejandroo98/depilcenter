@@ -10,6 +10,7 @@ const timeDay = () => {
   const saludo = ['buen día ☀', 'buenas tardes ☁', 'buenas noches 🌓'];
   const hora = getHour().split(':')[0];
   const minutos = getHour().split(':')[1];
+  console.log('Esta es la hora', hora);
 
   if (hora >= 19) {
     return saludo[2];

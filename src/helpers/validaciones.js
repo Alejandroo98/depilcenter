@@ -2,13 +2,17 @@ const { check } = require('express-validator');
 const serviciosJson = require('../DB/servicios.json');
 
 const haveNumber = (nombres) => {
-  let numeros = '0123456789';
-  for (let i = 0; i < nombres.length; i++) {
-    if (numeros.indexOf(nombres.charAt(i), 0) != -1) {
-      return false;
+  try {
+    let numeros = '0123456789';
+    for (let i = 0; i < nombres.length; i++) {
+      if (numeros.indexOf(nombres.charAt(i), 0) != -1) {
+        return false;
+      }
     }
+    return true;
+  } catch (error) {
+    return false;
   }
-  return true;
 };
 
 const correctNumber = (telefono) => {
