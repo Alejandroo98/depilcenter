@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-const chatBotsJson = require('../DB/chat-bot.json');
-const { saludo } = require('../helpers/chatBotHelpers');
+const { saludo, palabraClave } = require('../helpers/chatBotHelpers');
 
 app.get('/wh', (req, res) => {
   console.log('GET - DEPILCENTER');
@@ -23,10 +22,22 @@ app.post('/wh', (req, res) => {
   const { id } = req.headers;
   if (id != 8080) return res.json({ reply: 'INGRESA EL ID' });
 
-  if (message == 'clave') {
-    // all: `Message: ${message} - Phone: ${phone} - Sender: ${sender}`,
+  if (message == 'pepe') {
     return res.json({
-      reply: `${saludo(nombreRegistradoCliente)}`,
+      reply: `PAGO AL CONTADO
+      Zona: Axilas
+      Nro sesiones: 8
+      Precio normal: $160
+      Precio al contado ( 40% OFF ): $96
+      
+      PAGO LUEGO DE CADA SESIÓN
+      Zona: Axilas
+      Precio normal por sesión: $20
+      Precio actual por sesión( 20% OFF ): $15.90`,
+    });
+  } else {
+    return res.json({
+      reply: `Mil disculpas, las zonas ingresadas no fueron encontradas, por favor intente de nuevo. Recuerde separar la zonas por una coma. \n *0️⃣ MENU PRINCIPAL*`,
     });
   }
 

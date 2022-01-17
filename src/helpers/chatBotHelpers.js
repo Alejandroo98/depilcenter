@@ -1,6 +1,13 @@
 const { getHour } = require('../helpers/getTime');
 const { haveNumber } = require('./validaciones');
 
+const palabraClave = (message) => {
+  const palabraClave = message.toLocaleLowerCase().includes('promo axilas');
+  if (palabraClave) return true;
+
+  return false;
+};
+
 const oneName = (nombres) => {
   const nombre = nombres.split(' ');
   return nombre[0];
@@ -39,4 +46,5 @@ module.exports = {
   oneName,
   timeDay,
   saludo,
+  palabraClave,
 };
