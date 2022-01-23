@@ -21,6 +21,8 @@ app.use(require('./reservar'));
 
 app.use(require('./chatbot'));
 
+app.use(require('./registroFormulario'));
+
 app.get('/pages', (req, res) => {
   res.render('pages');
 });

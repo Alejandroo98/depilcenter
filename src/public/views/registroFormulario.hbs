@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    {{!-- getbotstrap --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/registroFormulario.css">
+    <link rel="stylesheet" href="../css/main.css" />
+
+
+
+    {{!-- google icons --}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    {{!-- SEMANTIC UI --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {{!-- Animate.css --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+</head>
+
+<body>
+
+    <header class="background-logo">
+        <img width="220" src="../img/logo_sin_fondo_2022-04.png" alt="Logo depilcenter">
+    </header>
+
+
+    <section class="container container-main">
+
+
+
+
+        <form action="/form" method="POST" class="formContainer">
+
+            <div class="title_form">
+                <h4>DATOS PERSONALES ✍</h4>
+                <i>Por favor completa el formulario.</i>
+            </div>
+
+            {{!-- INPUTS --}}
+            <div class="container_inputs">
+                <label for="">Fecha registro</label>
+                <input type="text" name="Nombres" autocomplete="off" placeholder="23/01/2022" disabled>
+            </div>
+            <div class="container_inputs">
+                <label for="">Nombres</label>
+                <input type="text" name="Nombres" autocomplete="off" placeholder="Dos nombres dos apellidos">
+            </div>
+
+            <div class="container_inputs">
+                <label for="">Nro. whatsapp</label>
+                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. 0984266244">
+            </div>
+
+            <div class="container_inputs">
+                <label for="">Edad</label>
+                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. 0984266244">
+            </div>
+
+            <div class="container_inputs">
+                <label for="">Ocupacion.</label>
+                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. Doctor">
+            </div>
+
+            <div class="container_inputs">
+                <label for="">Email <span>OPCIONAL</span></label>
+                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. 0984266244">
+            </div>
+
+            <div class="container_inputs">
+                <label for="">Fecha nacimiento <span>OPCIONAL</span> </label>
+                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. 0984266244">
+            </div>
+
+            <div class="container_inputs">
+                <label for="">¿Como nos conocio? </label>
+                <select name="" id="">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="">Facebook</option>
+                    <option value="">Instagram</option>
+                    <option value="">Referido</option>
+                    <option value="">Otro</option>
+                </select>
+            </div>
+            {{!-- FIN INPUTS --}}
+
+            <div class="container_inputs">
+                <label for="">¿Que le motivo a iniciar un tratamiento de depilacion?</label>
+                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. No me gustan los vellos">
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿A iniciado un tratamiento antes?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="tratamientoAntes" />Si</label>
+                    <label class=""><input type="radio" name="tratamientoAntes" />No</label>
+                </div>
+
+            </div>
+
+
+            <label class="tyc"><input type="checkbox" name="TYC" />Aceptar terminos y condiciones</label>
+
+            <button type="submit">ENVIAR</button>
+
+        </form>
+    </section>
+
+</body>
+
+</html>
