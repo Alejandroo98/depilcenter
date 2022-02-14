@@ -2,10 +2,6 @@ const express = require('express');
 const router = express.Router(); //Aqui definimos las rutas de nuestro servidor
 const app = express();
 const path = require('path');
-const {
-  getDepilacionDefinitiva,
-  getDepilacionDefinitivaNavidad,
-} = require('../helpers/getDataZonas');
 
 app.set('views', path.resolve(__dirname, '../public/views'));
 

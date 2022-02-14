@@ -42,8 +42,14 @@
 
     <section class="container container-main">
 
-
-
+        {{#if error}}
+        <div class="error_form">
+            <b>
+                OOPS, A OCURRIDO UN ERROR ☹ <br>
+            </b>
+            Por favor, llena todos los campos e intenta de nuevo.
+        </div>
+        {{/if}}
 
         <form action="/form" method="POST" class="formContainer">
 
@@ -53,10 +59,7 @@
             </div>
 
             {{!-- INPUTS --}}
-            <div class="container_inputs">
-                <label for="">Fecha registro</label>
-                <input type="text" name="Nombres" autocomplete="off" placeholder="23/01/2022" disabled>
-            </div>
+
             <div class="container_inputs">
                 <label for="">Nombres</label>
                 <input type="text" name="Nombres" autocomplete="off" placeholder="Dos nombres dos apellidos">
@@ -64,55 +67,215 @@
 
             <div class="container_inputs">
                 <label for="">Nro. whatsapp</label>
-                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. 0984266244">
+                <input type="number" name="Telefono" autocomplete="off" placeholder="Ej. 0984266244">
             </div>
 
             <div class="container_inputs">
                 <label for="">Edad</label>
-                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. 0984266244">
+                <input type="number" name="Edad" autocomplete="off" placeholder="">
             </div>
 
             <div class="container_inputs">
                 <label for="">Ocupacion.</label>
-                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. Doctor">
+                <input type="text" name="Ocupacion" autocomplete="off" placeholder="Ej. Doctor">
+            </div>
+
+            <div class="container_inputs">
+                <label for="">Sector de recidencia.</label>
+                <input type="text" name="Sector_recidencia" autocomplete="off" placeholder="Ej. Sector el condado">
             </div>
 
             <div class="container_inputs">
                 <label for="">Email <span>OPCIONAL</span></label>
-                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. 0984266244">
+                <input type="email" name="Email" autocomplete="off" placeholder="Ej. example@gmail.com">
             </div>
 
             <div class="container_inputs">
                 <label for="">Fecha nacimiento <span>OPCIONAL</span> </label>
-                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. 0984266244">
+                <input type="date" name="Fecha_nacimiento" autocomplete="off" placeholder="Ej. 05-08-2001">
             </div>
 
             <div class="container_inputs">
                 <label for="">¿Como nos conocio? </label>
-                <select name="" id="">
-                    <option value="" disabled selected>Seleccionar</option>
-                    <option value="">Facebook</option>
-                    <option value="">Instagram</option>
-                    <option value="">Referido</option>
-                    <option value="">Otro</option>
+                <select name="Como_nos_conocio" id="">
+                    <option disabled selected>Seleccionar</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Google">Google</option>
+                    <option value="Conocido">Conocido</option>
+                    <option value="Otro">Otro</option>
                 </select>
             </div>
             {{!-- FIN INPUTS --}}
 
             <div class="container_inputs">
                 <label for="">¿Que le motivo a iniciar un tratamiento de depilacion?</label>
-                <input type="number" name="Nombres" autocomplete="off" placeholder="Ej. No me gustan los vellos">
+                <input type="text" name="Que_motivo_su_visita" autocomplete="off"
+                    placeholder="Ej. No me gustan los vellos">
             </div>
 
             <div class="container_inputs container_inputs_radio">
                 <label class="inputRadio" for="">¿A iniciado un tratamiento antes?</label>
-                <div class="container_inputs_radio_childs">
-                    <label class=""><input type="radio" name="tratamientoAntes" />Si</label>
-                    <label class=""><input type="radio" name="tratamientoAntes" />No</label>
+                <div class="container_inputs_radio_childs container_radio_option">
+                    <label class=""><input type="radio" name="A_iniciado_tratamiento_antes" />Si</label>
+                    <label class=""><input type="radio" name="A_iniciado_tratamiento_antes" />No</label>
                 </div>
-
             </div>
 
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Posee usted marcapaso?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Posee_marcapaso" />Si</label>
+                    <label class=""><input type="radio" name="Posee_marcapaso" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Esta embarazada?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Esta_embarazada" />Si</label>
+                    <label class=""><input type="radio" name="Esta_embarazada" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Esta en proceso de lactancia?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Proceso_de_lactancia" />Si</label>
+                    <label class=""><input type="radio" name="Proceso_de_lactancia" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Posee insuficiencia cardiaca?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Insuficiencia_cardiaca" />Si</label>
+                    <label class=""><input type="radio" name="Insuficiencia_cardiaca" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Cardiopatias?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Cardiopatias" />Si</label>
+                    <label class=""><input type="radio" name="Cardiopatias" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Ha sido tratada por tumores?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Tratada_por_tumores" />Si</label>
+                    <label class=""><input type="radio" name="Tratada_por_tumores" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Tiene alteraciones en la coagulacion?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Alteraciones_en_la_coagulacion" />Si</label>
+                    <label class=""><input type="radio" name="Alteraciones_en_la_coagulacion" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Posee protesis medicas?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Protesis_medicas" />Si</label>
+                    <label class=""><input type="radio" name="Protesis_medicas" />No</label>
+                </div>
+            </div>
+
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Sufre de Gastrica?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Sufre_de_gastrica" />Si</label>
+                    <label class=""><input type="radio" name="Sufre_de_gastrica" />No</label>
+                </div>
+            </div>
+
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Operado de cinturon gastrico?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Cinturon_gastrico" />Si</label>
+                    <label class=""><input type="radio" name="Cinturon_gastrico" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Tiene algun proceso de sicatrizacion?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Algun_proceso_de_sicatrizacion" />Si</label>
+                    <label class=""><input type="radio" name="Algun_proceso_de_sicatrizacion" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Flebitis o trombosis?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Flebitis_o_trombosis" />Si</label>
+                    <label class=""><input type="radio" name="Flebitis_o_trombosis" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Tiene varices de gran tamaño?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Varices_de_gran_tamaño" />Si</label>
+                    <label class=""><input type="radio" name="Varices_de_gran_tamaño" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Alteraciones vasculares?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Alteraciones_vasculares" />Si</label>
+                    <label class=""><input type="radio" name="Alteraciones_vasculares" />No</label>
+                </div>
+            </div>
+
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Algun proceso infeccioso?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Algun_proceso_infeccioso" />Si</label>
+                    <label class=""><input type="radio" name="Algun_proceso_infeccioso" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Patologia en el sistema digestico?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Patologia_en_sistema_digestico" />Si</label>
+                    <label class=""><input type="radio" name="Patologia_en_sistema_digestico" />No</label>
+                </div>
+            </div>
+
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Patologia en el sistema urinario?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Patologia_en_sistema_urinario" />Si</label>
+                    <label class=""><input type="radio" name="Patologia_en_sistema_urinario" />No</label>
+                </div>
+            </div>
+
+
+            <div class="container_inputs container_inputs_radio">
+                <label class="inputRadio" for="">¿Higado graso?</label>
+                <div class="container_inputs_radio_childs">
+                    <label class=""><input type="radio" name="Higado_graso" />Si</label>
+                    <label class=""><input type="radio" name="Higado_graso" />No</label>
+                </div>
+            </div>
+
+            <div class="container_inputs">
+                <label for="">Observacion</label>
+                <input type="text" name="Observacion" autocomplete="off"
+                    placeholder="Ej. Tengo piel sensible, tener cuidado">
+            </div>
 
             <label class="tyc"><input type="checkbox" name="TYC" />Aceptar terminos y condiciones</label>
 
@@ -120,6 +283,9 @@
 
         </form>
     </section>
+
+    <script src="../js/registroFormulario.js"></script>
+
 
 </body>
 
