@@ -23,6 +23,10 @@ app.get('/pages', (req, res) => {
   res.render('pages');
 });
 
+app.get('/redirect', (req, res) => {
+  res.redirect('https://n9.cl/ifgkx');
+});
+
 app.get('/depilacion-definitiva-promocion', (req, res) => {
   // let zonas = getDepilacionDefinitivaNavidad('mujer');
   // const corporal = zonas.filter((zona) => {
