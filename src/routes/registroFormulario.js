@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { Client } = require('@notionhq/client');
+const { validarJWT } = require('../middleware/validarJWT');
+const { JwtFormClient, restoreJWT } = require('../helpers/jwt');
 
 app.set('views', path.resolve(__dirname, '../public/views'));
 
@@ -12,9 +14,18 @@ const notion = new Client({ auth: 'secret_eXDjdxuCf3oIBXJ8AkLz8oaatHtQfjVKPnf11y
 
 const databaseId = '5b2d7d9c4ba04d48b65f0e51a2fc4acb';
 
-// addItem('Juanito Perez');
+app.get('/redirect-form', async (req, res) => {
+  //Cada toke tiene una validez de 5h
 
-app.get('/form', async (req, res) => {
+  try {
+    const token = await restoreJWT();
+    res.redirect(`form?token=${token}`);
+  } catch (error) {
+    res.redirect('/');
+  }
+});
+
+app.get('/form', validarJWT, async (req, res) => {
   let properties = [];
 
   try {
@@ -27,7 +38,7 @@ app.get('/form', async (req, res) => {
     //   console.log(properties.results);
     // });
 
-    console.log(propertiesObjet);
+    // console.log(propertiesObjet);
   } catch (error) {
     console.error(error.body);
     properties = [];
@@ -39,41 +50,40 @@ app.get('/form', async (req, res) => {
 });
 
 app.post('/form', async (req, res) => {
-  const {
-    Nombres,
-    Telefono,
-    Edad,
-    Ocupacion,
-    Sector_recidencia,
-    Email,
-    Fecha_nacimiento,
-    Como_nos_conocio = 'Desconocido',
-    Que_motivo_su_visita,
-    A_iniciado_tratamiento_antes = 'off',
-    Posee_marcapaso = 'off',
-    Esta_embarazada = 'off',
-    Proceso_de_lactancia = 'off',
-    Insuficiencia_cardiaca = 'off',
-    Cardiopatias = 'off',
-    Tratada_por_tumores = 'off',
-    Alteraciones_en_la_coagulacion = 'off',
-    Protesis_medicas = 'off',
-    Sufre_de_gastrica = 'off',
-    Cinturon_gastrico = 'off',
-    Algun_proceso_de_sicatrizacion = 'off',
-    Flebitis_o_trombosis = 'off',
-    Varices_de_gran_tamaño = 'off',
-    Alteraciones_vasculares = 'off',
-    Algun_proceso_infeccioso = 'off',
-    Patologia_en_sistema_digestico = 'off',
-    Patologia_en_sistema_urinario = 'off',
-    Higado_graso = 'off',
-    TYC = 'off',
-    Observacion = '',
-  } = req.body;
+  let body = req.body;
+
+  let Nombres = body.Nombres;
+  let Telefono = body.Telefono;
+  let Edad = (body.Edad = '0');
+  let Ocupacion = body.Ocupacion || 'Desconocido';
+  let Sector_recidencia = body.Sector_recidencia || 'Desconocido';
+  let Email = body.Email || 'Desconocido';
+  let Fecha_nacimiento = body.Fecha_nacimiento;
+  let Como_nos_conocio = body.Como_nos_conocio || 'Desconocido';
+  let Que_motivo_su_visita = body.Que_motivo_su_visita || 'Desconocido';
+  let A_iniciado_tratamiento_antes = body.A_iniciado_tratamiento_antes || 'off';
+  let Posee_marcapaso = body.Posee_marcapaso || 'off';
+  let Esta_embarazada = (body.Esta_embarazada = 'off');
+  let Proceso_de_lactancia = body.Proceso_de_lactancia || 'off';
+  let Insuficiencia_cardiaca = body.Insuficiencia_cardiaca || 'off';
+  let Cardiopatias = body.Cardiopatias || 'off';
+  let Tratada_por_tumores = body.Tratada_por_tumores || 'off';
+  let Alteraciones_en_la_coagulacion = body.Alteraciones_en_la_coagulacion || 'off';
+  let Protesis_medicas = body.Protesis_medicas || 'off';
+  let Sufre_de_gastrica = body.Sufre_de_gastrica || 'off';
+  let Cinturon_gastrico = body.Cinturon_gastrico || 'off';
+  let Algun_proceso_de_sicatrizacion = (body.Algun_proceso_de_sicatrizacion = 'off');
+  let Flebitis_o_trombosis = body.Flebitis_o_trombosis || 'off';
+  let Varices_de_gran_tamaño = body.Varices_de_gran_tamaño || 'off';
+  let Alteraciones_vasculares = body.Alteraciones_vasculares || 'off';
+  let Algun_proceso_infeccioso = body.Algun_proceso_infeccioso || 'off';
+  let Patologia_en_sistema_digestico = body.Patologia_en_sistema_digestico || 'off';
+  let Patologia_en_sistema_urinario = body.Patologia_en_sistema_urinario || 'off';
+  let Higado_graso = body.Higado_graso || 'off';
+  let TYC = (body.TYC = 'off');
+  let Observacion = body.Observacion || 'Ninguna';
 
   let fecha_option = {};
-  let email_option = {};
 
   if (Fecha_nacimiento) {
     fecha_option = {
@@ -81,14 +91,6 @@ app.post('/form', async (req, res) => {
         date: {
           start: Fecha_nacimiento,
         },
-      },
-    };
-  }
-
-  if (Email) {
-    email_option = {
-      Email: {
-        email: Email,
       },
     };
   }
@@ -153,7 +155,10 @@ app.post('/form', async (req, res) => {
           ],
         },
 
-        ...email_option,
+        Email: {
+          email: Email,
+        },
+
         ...fecha_option,
 
         Como_nos_conocio: {
@@ -255,13 +260,19 @@ app.post('/form', async (req, res) => {
     });
     // console.log(response);
     // console.log('Success! Entry added.');
-    res.json(response);
+    const dataClient = await JwtFormClient({ Nombres, Telefono });
+    res.redirect(`/form-success?token=${dataClient}`);
   } catch (error) {
-    req.flash('error', 'Estes es un error');
+    req.flash('error', 'Este es un error');
     if (error) res.redirect('/form');
     // console.error(error.body);
     // res.json(error.body);
   }
+});
+
+app.get('/form-success', validarJWT, (req, res) => {
+  const { Nombres } = req.datosReserva;
+  res.render('form-success', { Nombres });
 });
 
 module.exports = app;

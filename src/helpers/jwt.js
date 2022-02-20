@@ -50,6 +50,56 @@ const generarJWT = (reservaData) => {
   });
 };
 
+const JwtFormClient = (client) => {
+  const { Nombres } = client;
+
+  return new Promise((resolve, reject) => {
+    const payload = { Nombres };
+
+    const key_token_dev = process.env.SECRET_KEY_TOKEN || 'secret_key';
+
+    jwt.sign(
+      payload,
+      key_token_dev,
+      {
+        expiresIn: '2h',
+      },
+      (err, token) => {
+        if (err) {
+          console.log(err);
+          reject('No se puedo generar el token');
+        }
+        resolve(token);
+      }
+    );
+  });
+};
+
+const restoreJWT = () => {
+  return new Promise((resolve, reject) => {
+    const payload = {};
+
+    const key_token_dev = process.env.SECRET_KEY_TOKEN || 'secret_key';
+
+    jwt.sign(
+      payload,
+      key_token_dev,
+      {
+        expiresIn: '2h',
+      },
+      (err, token) => {
+        if (err) {
+          reject(err);
+        }
+
+        resolve(token);
+      }
+    );
+  });
+};
+
 module.exports = {
   generarJWT,
+  JwtFormClient,
+  restoreJWT,
 };
