@@ -264,7 +264,7 @@ app.post('/form', async (req, res) => {
     res.redirect(`/form-success?token=${dataClient}`);
   } catch (error) {
     req.flash('error', 'Este es un error');
-    if (error) res.redirect('/form');
+    if (error) res.redirect('/back');
     // console.error(error.body);
     // res.json(error.body);
   }
