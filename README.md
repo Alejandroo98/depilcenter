@@ -11,3 +11,6 @@
   • Inlcuir en el archivo package.json -> "nodemonConfig": { "ext": "js,json,hbs" }
   • Crear un archivo en la raiz de tu proyecto llamado <nodemon.json> e ingresar -> { "ext": "js,json,hbs" }
   • Ultima opcion, puedes hacerlo desde la consola asi -> nodemon -e js,json,hbs index.js
+
+CONTINAUR ->
+ELIMINA EL TEMA DEL LOCAL STORAGE, Y LA RUTA "redirect-form" agregale una clave, algo asi -> &token=se71ev68t78wre

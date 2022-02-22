@@ -17,6 +17,11 @@ const databaseId = '5b2d7d9c4ba04d48b65f0e51a2fc4acb';
 app.get('/redirect-form', async (req, res) => {
   //Cada toke tiene una validez de 5h
 
+  const tokenURI = req.query.token;
+  if (tokenURI != '5b27c4b04da48b3a41eq55f0ef51sa2faacb') {
+    return res.redirect('/');
+  }
+
   try {
     const token = await restoreJWT();
     res.redirect(`form?token=${token}`);
@@ -264,14 +269,15 @@ app.post('/form', async (req, res) => {
     res.redirect(`/form-success?token=${dataClient}`);
   } catch (error) {
     req.flash('error', 'Este es un error');
-    if (error) res.redirect('/back');
+    if (error) res.redirect('back');
     // console.error(error.body);
     // res.json(error.body);
   }
 });
 
 app.get('/form-success', validarJWT, (req, res) => {
-  const { Nombres } = req.datosReserva;
+  // const { Nombres } = req.datosReserva;
+  const { Nombres } = { Nombres: 'Alejandro' };
   res.render('form-success', { Nombres });
 });
 

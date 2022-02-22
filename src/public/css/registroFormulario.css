@@ -3,6 +3,67 @@ body {
   position: relative;
 }
 
+.product-1 {
+  display: flex;
+}
+
+.product-1 img {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.salir-btn {
+  margin-top: 15px;
+  background-color: #f37e78;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  /* width: 50%; */
+  padding: 10px 50px;
+  display: block;
+}
+
+.redes-go {
+  margin-top: 15px;
+  background-color: #ececec;
+  color: #4d4d4d;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px;
+}
+
+.alig-bnt-salir-item a {
+  font-size: 12px;
+}
+
+.text {
+  text-align: center;
+}
+
+.alig-bnt-salir {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alig-bnt-salir-item {
+  display: flex;
+  /* align-items: center; */
+  /* flex-direction: column; */
+}
+
+.text h1,
+.text p {
+  margin: 0;
+}
+
+.text h1 {
+  margin: 15px 0;
+  color: #363636;
+  font-size: 20px;
+}
+
 /* ========= */
 
 .error_form {
@@ -15,9 +76,6 @@ body {
 }
 
 /* ========= */
-
-.container-main {
-}
 
 :root {
   --letterForm: #363636;
@@ -56,7 +114,7 @@ body {
 
 .formContainer {
   border-radius: 4px;
-  margin-top: 12px;
+  margin: 12px 0;
   background-color: #ffffffe8;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   padding: 15px;
