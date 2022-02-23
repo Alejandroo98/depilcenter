@@ -276,8 +276,8 @@ app.post('/form', async (req, res) => {
 });
 
 app.get('/form-success', validarJWT, (req, res) => {
-  // const { Nombres } = req.datosReserva;
-  const { Nombres } = { Nombres: 'Alejandro' };
+  const { Nombres } = req.datosReserva;
+  // const { Nombres } = { Nombres: 'Alejandro' };
   res.render('form-success', { Nombres });
 });
 
