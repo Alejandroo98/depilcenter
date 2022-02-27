@@ -1,11 +1,91 @@
 body {
-  /* background-color: red; */
-  /* background-color: #fcd8d8 !important; */
-  background-color: #f79493 !important;
-  /* background-image: url('https://i.ibb.co/jhpQCdM/pages-background.png') !important; */
+  background-color: #fff !important;
 }
 
-.margin-z {
+.container-pages {
+  display: flex;
+  justify-content: center;
+}
+
+.body-content {
+  max-width: 500px;
+}
+
+.header-logo {
+  background-color: #ef7673;
+}
+
+.header-logo img {
+  width: 100%;
+  padding: 100px 80px;
+}
+
+.over-block {
+  margin-top: -25px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 30px 10px;
+  background-color: #cbd5df;
+}
+
+.over-block h4 {
+  text-align: center;
+  color: #3b3b3b;
+}
+
+.over-block p {
+  color: #474747;
+  text-align: center;
+  font-size: 15px;
+}
+
+.items-content hr {
+  margin: 0;
+}
+
+.item-all {
+  padding: 20px;
+  display: flex;
+}
+
+.item-all h5 {
+  margin: 0;
+}
+
+.item-all p {
+  color: #777777;
+}
+
+.txt-pages {
+  display: flex;
+  padding: 0 10px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icon-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  /* background-color: red; */
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.icon-pages i {
+  font-size: 30px !important;
+}
+
+.items-content a {
+  color: #303030;
+}
+
+.items-content a:hover {
+  color: #303030;
+}
+
+/* .margin-z {
   margin: 20px 0;
 }
 
@@ -18,7 +98,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
 }
 
 .container-main-color p {
@@ -29,7 +108,6 @@ body {
 .container-main-color .green {
   background-color: #19a119;
   color: white;
-  /* border: 4px solid #fff; */
 }
 
 .container-main-color .green a {
@@ -39,7 +117,6 @@ body {
 .container-main-color .black {
   background-color: #fa6e6c;
   color: white;
-  /* border: 4px solid #fff; */
 }
 
 .container-main-color .black a {
@@ -50,8 +127,6 @@ body {
   font-weight: bold;
   text-decoration: none;
   color: #424242;
-  /* border: 2px solid #fff; */
-  /* background-color: #f38482; */
   background-color: #ffffff;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px;
@@ -85,7 +160,6 @@ body {
 
 .header {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
 }
@@ -93,7 +167,6 @@ body {
 .mision_2022 {
   background: none !important;
   max-width: 500px;
-  /* margin: 5px 0 5px 0 !important; */
   background-color: rgb(255, 255, 255) !important;
   border-radius: 4px;
   padding: 15px;
@@ -101,7 +174,6 @@ body {
 
 .mision_2022 p {
   text-align: justify !important;
-  /* border: 2px linear #fff; */
   margin: 0 !important;
   color: #2e2e2e;
 }
@@ -122,7 +194,6 @@ body {
 .header h4 {
   color: white;
   margin: 0;
-  /* margin: 13px 0 0 13px; */
 }
 
 .header p {
@@ -142,11 +213,9 @@ body {
 .header img {
   max-width: 100px;
   display: inline-block;
-  /* width: 100%; */
 }
 
 .icons-redes {
-  /* margin: 0 0 100px 0; */
   margin: 15px 0;
 }
 
@@ -162,4 +231,4 @@ body {
   justify-content: center;
   margin: 25px 0;
   color: #fff;
-}
+} */
