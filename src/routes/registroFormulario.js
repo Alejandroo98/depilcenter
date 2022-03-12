@@ -101,7 +101,7 @@ app.post('/form', async (req, res) => {
   }
 
   const onOff = (value) => {
-    return value === 'on' ? true : false;
+    return value == 'on' ? true : false;
   };
 
   try {
