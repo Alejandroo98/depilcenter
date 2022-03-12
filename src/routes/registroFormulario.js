@@ -59,7 +59,7 @@ app.post('/form', async (req, res) => {
 
   let Nombres = body.Nombres;
   let Telefono = body.Telefono;
-  let Edad = (body.Edad = '0');
+  let Edad = body.Edad || '0';
   let Ocupacion = body.Ocupacion || 'Desconocido';
   let Sector_recidencia = body.Sector_recidencia || 'Desconocido';
   let Email = body.Email || 'Desconocido';
@@ -68,7 +68,7 @@ app.post('/form', async (req, res) => {
   let Que_motivo_su_visita = body.Que_motivo_su_visita || 'Desconocido';
   let A_iniciado_tratamiento_antes = body.A_iniciado_tratamiento_antes || 'off';
   let Posee_marcapaso = body.Posee_marcapaso || 'off';
-  let Esta_embarazada = (body.Esta_embarazada = 'off');
+  let Esta_embarazada = body.Esta_embarazada || 'off';
   let Proceso_de_lactancia = body.Proceso_de_lactancia || 'off';
   let Insuficiencia_cardiaca = body.Insuficiencia_cardiaca || 'off';
   let Cardiopatias = body.Cardiopatias || 'off';
@@ -77,7 +77,7 @@ app.post('/form', async (req, res) => {
   let Protesis_medicas = body.Protesis_medicas || 'off';
   let Sufre_de_gastrica = body.Sufre_de_gastrica || 'off';
   let Cinturon_gastrico = body.Cinturon_gastrico || 'off';
-  let Algun_proceso_de_sicatrizacion = (body.Algun_proceso_de_sicatrizacion = 'off');
+  let Algun_proceso_de_sicatrizacion = body.Algun_proceso_de_sicatrizacion || 'off';
   let Flebitis_o_trombosis = body.Flebitis_o_trombosis || 'off';
   let Varices_de_gran_tamaño = body.Varices_de_gran_tamaño || 'off';
   let Alteraciones_vasculares = body.Alteraciones_vasculares || 'off';
@@ -85,7 +85,7 @@ app.post('/form', async (req, res) => {
   let Patologia_en_sistema_digestico = body.Patologia_en_sistema_digestico || 'off';
   let Patologia_en_sistema_urinario = body.Patologia_en_sistema_urinario || 'off';
   let Higado_graso = body.Higado_graso || 'off';
-  let TYC = (body.TYC = 'off');
+  let TYC = body.TYC || 'off';
   let Observacion = body.Observacion || 'Ninguna';
 
   let fecha_option = {};
@@ -101,7 +101,12 @@ app.post('/form', async (req, res) => {
   }
 
   const onOff = (value) => {
-    return value == 'on' ? true : false;
+    console.log(value, 'VALORES');
+    if (value == 'on') {
+      return false;
+    } else if (value == 'off') {
+      return false;
+    }
   };
 
   try {
