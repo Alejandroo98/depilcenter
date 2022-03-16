@@ -1,5 +1,5 @@
 const depilacionCera = require('../DB/depilacion-cera.json');
-const depilacionDefinitiva = require('../DB/depilacion-definitiva-navidad.json');
+const depilacionDefinitiva = require('../DB/depilacion-definitiva.json');
 
 const getDepilacionCera = (genero) => {
   if (genero == 'mujer') {
