@@ -5,6 +5,23 @@
   font-size: 15px;
 }
 
+.title-body-img {
+  background-color: #f3f3f3;
+  color: rgb(49, 49, 49);
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.img-servicio img {
+  object-fit: cover;
+}
+
+.title-body-img p {
+  font-size: 15px;
+  padding: 3px 0;
+}
+
 .title-seo h4 {
   font-size: 25px;
   color: #353535;

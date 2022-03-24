@@ -7,83 +7,55 @@
         "desc": "Depilación con cera tibia en Quito"
       },
       "descuento": {
-        "title": ""
+        "title": "HASTA 30% DE DESCUENTO"
       },
       "url": "/cotizar/depilacion-cera?genero=mujer",
       "indicaciones": [
         {
-          "title": "Método.",
+          "title": "Indicaciones y recomendaciones.",
           "body": [
             {
-              "short_desc": "Depilaciòn con cera tibia y con bandas desechables",
-              "desc": "La depilación con cera puede eliminar el vello desde la raíz, ralentizando su crecimiento durante una media de 4 semanas. Se puede utilizar en casi todas las zonas del cuerpo, desde el rostro hasta grandes zonas como las piernas o brazos. Y lo mejor es que puede aportar beneficios para tu piel."
-            }
-          ]
-        },
-        {
-          "title": "Indicaciones antes de la depilación con cera.",
-          "body": [
-            {
-              "desc": "Es conveniente que la piel esté bien exfoliada, solo así eliminaremos las células muertas y será más fácil que la cera actúe correctamente para que nuestra piel luzca más limpia y saludable. "
+              "short_desc": "Depilación con cera tibia y con bandas desechables",
+              "desc": "El vello debe tener unas medidas adecuadas, de entre 3 y 5 milímetros, para que se agarre bien a la tira de cera y evitar tirones innecesarios."
             },
             {
-              "desc": "Otro consejo que te será de gran ayuda para hacer que la depilación sea más efectiva y menos dolorosa, es ducharte con agua tibia o caliente justo antes de depilarte, pues de este modo se dilatan los poros y el vello podrá salir con más facilidad."
-            }
-          ]
-        },
-        {
-          "title": "Indicaciones despues de la depilación con cera",
-          "body": [
-            {
-              "desc": "NO exponer al sol la zona depilada al menos 24 horas despues de la depilación con cera, el sol puede irritar la zona y perjudicar la recuperación de la piel tras la depilación. <b> Si decide aun exponer la zona al sol, utilizar protector solar con un volumen alto </b>."
+              "desc": "La piel ha de estar bien seca. Por lo tanto, no te aplicar cremas antes de la depilación pues la cera no se adherirá correctamente."
             },
             {
-              "desc": "Mojar la piel con agua fría o aplicar un cubito de hielo envuelto en una toalla sobre la zona. De esa forma, la piel se calmará y los poros abiertos se cerrarán."
+              "desc": "Exfoliar la piel uno o dos días antes constituye un excelente paso previo que le ayudará a conseguir mejores resultados. Así, si tiene algún vello encarnado, podrá hacer que aflore y además habrá eliminado las células muertas de su piel consiguiendo así que la cera se agarre mejor."
             },
             {
-              "desc": "Aplicar una buena crema hidratante, precisamente para que la piel se quede hidratada correctamente y pueda recuperarse sin problemas, evitando la resequedad."
-            }
-          ]
-        },
-        {
-          "title": "Ventajas:",
-          "body": [
-            {
-              "desc": "La cera ofrece un efecto más duradero que otras técnicas de depilación."
+              "desc": "Si tiene acné o la piel sensibilizada por alguna circunstancia, no es recomendable depilar esa zona y convendría esperar unos días."
             },
             {
-              "desc": "Otras opciones, como la máquina de afeitar, facilitan que la piel se irrite. La cera, por su parte, deja la piel sedosa.  "
-            },
-            {
-              "desc": "Puede que no lo sepas, pero este tipo de depilación es una de las más eficientes y también económicas."
-            },
-            {
-              "desc": "Cuando te depilas con cera, su retirada se lleva células muertas que permanecen adheridas a las bandas, por lo que además de retirar el vello es un tratamiento de exfoliación"
-            },
-            {
-              "desc": "Ciertas áreas son más fáciles de definir con cera, como sucede en el caso del vello de la parte superior del labio, las cejas o el área del bikini. Tan solo hay que aplicar un poco de producto en la zona y conseguir el efecto deseado."
+              "desc": "Llevar a cabo la depilación durante los días del ciclo menstrual puede acentuar el dolor de la extracción del vello. Esto se debe a que la piel está muy sensible y se vuelve más delicada, por lo que si es una persona que no soporta el dolor, será mejor dejar la depilación para cuando termine."
             }
           ]
         }
       ],
       "img": [
         {
-          "url": "https://i.ibb.co/c6KC9pg/cera-facial.png",
-          "alt": "Tarro de depilacion facial"
-        },
-        {
-          "url": "https://i.ibb.co/C0yDN81/cera-pieles-sensibles.png",
-          "alt": "Tarro de depilacion para pieles sensibles"
-        },
-        {
-          "url": "https://i.ibb.co/pKtyqTB/cera-corporal.png",
-          "alt": "Tarro de depilacion corporal"
+          "title": "Nuestra cera",
+          "body": [
+            {
+              "url": "https://i.ibb.co/c6KC9pg/cera-facial.png",
+              "alt": "Tarro de depilacion facial"
+            },
+            {
+              "url": "https://i.ibb.co/C0yDN81/cera-pieles-sensibles.png",
+              "alt": "Tarro de depilación para pieles sensibles"
+            },
+            {
+              "url": "https://i.ibb.co/pKtyqTB/cera-corporal.png",
+              "alt": "Tarro de depilación corporal"
+            }
+          ]
         }
       ],
       "nota": [
         {
           "title": "Frecuencia de depilación recomendada",
-          "content": "1 vez cada 20 dias."
+          "content": "1 vez cada 20 días."
         },
         {
           "title": "Tiempo por zona",
@@ -94,38 +66,30 @@
     "d_definitiva": {
       "seo": {
         "id": "d_definitiva",
-        "title": "Depilacion definitiva",
-        "desc": "Esta es la descripcion que ira en el header del view"
+        "title": "Depilación permanente",
+        "desc": "Esta es la descripción que ira en el header del view"
       },
       "descuento": {
-        "title": ""
+        "title": "HASTA 40% DE DESCUENTO"
       },
       "url": "/cotizar/depilacion-definitiva?genero=mujer",
       "indicaciones": [
         {
-          "title": "Nuestra tecnología SHR/OPT",
+          "title": "Indicaciones y recomendaciones.",
           "body": [
             {
               "short_desc": "SHR/OPT es una tecnología de depilación que está teniendo un gran éxito.",
-              "desc": "SHR/OPT es una tecnología de depilación que está teniendo un gran éxito. El sistema combina la tecnología láser y los beneficios del método de luz pulsante logrando resultados prácticamente indoloras, Incluso los pelos que hasta ahora han sido difíciles o incluso imposibles de eliminar, ahora pueden ser tratados.  Esta tecnología realiza la depilacion por fototermolisis selectiva, es decir, mediante la aplicación de calor (hasta 70º C) a la base del folículo piloso para quemarlo, gracias a que la luz es captada por la melanina, que es el pigmento celular que da color al pelo y la piel. <hr> Esta tecnología aporta dos importantes ventajas. La primera es que permite tratar una amplia superficie en cada disparo, lo que reduce el tiempo necesario para cada sesión y facilita la depilación de grandes extensiones de piel, como es el caso del pecho y la espalda en los hombres. La otra es que su aplicación es prácticamente indolora y por ello es ideal para depilar las zonas más sensibles, como la cara, las axilas, la zona interior de los muslos o las ingles. <hr> Antes de cada sesión se aplica un gel frío sobre la zona de la piel que se va a tratar y a continuación se activa la máquina de IPL y se realizan los disparos a una distancia de 1-5 mm de la piel. Cada uno de ellos destruye varios pelos y debilita otros. Los primeros se eliminan al retirar el gel y los otros se caen por sí solos al cabo de unos días. Sin embargo, hay que tener en cuenta que existen muchos folículos inactivos sobre los que no actúa la luz pulsada y que generarán nuevos vellos con el paso del tiempo. <hr> De ahí que para obtener una depilación definitiva se necesiten una media de <b> 8 sesiones 1 vez cada mes </b>. El número de sesiones que necesitará una persona, no obstante, está sujeto a las características individuales: tipo de vello y piel, densidad del vello, extensión de la zona a tratar, estado hormonal, genética, etc. <hr> También es conveniente realizar con posterioridad al menos una sesión de mantenimiento al año para eliminar el nuevo vello que haya podido salir.",
+              "desc": "Rasurar el area antes de visitarnos ( No pinzas, no cera, no cremas ). De preferencia 3 días antes de iniciar su tratamiento. <b> Si prefiere no hacerlo nos encargaremos nosotros.</b>",
               "verMas": { "href": "/indicaciones?servicio=d_definitiva" }
-            }
-          ]
-        },
-        {
-          "title": "Indicaciones previas a su sesión de depilación:",
-          "body": [
+            },
             {
-              "desc": "Para asegurar que la energía lumínica se dirige correctamente a la raíz del pelo, asistir con el vello de 1 a 2mm de largo (rasurar 2 a 3 días antes aproximadamente la zona.) NO recién rasurado, debe estar en la superficie de la piel."
+              "desc": "Haber evitado la exposición al sol en forma intensa en las últimas 2 semanas."
             },
             {
               "desc": "En caso de decoloración del vello, asistir sólo si la raíz mantiene su color natural."
             },
             {
               "desc": "Asistir con la piel libre de maquillaje."
-            },
-            {
-              "desc": "Evitar la exposición al sol, en forma intensa en las últimas 4 semanas."
             },
             {
               "desc": "Evitar uso de autobronceantes, camas solares o cualquier método que modifique el color de la piel."
@@ -136,35 +100,14 @@
             {
               "desc": "No colocar desodorante previo a la sesión de axilas, puede utilizarlo inmediatamente eso si,luego de la sesión."
             },
-
             {
               "desc": "En caso de realizarse otro tipo de tratamiento en la zona, peeling (físico, químico o mecánico, etc) debe transcurrir una semana entre ambos."
-            }
-          ]
-        },
-        {
-          "title": "Indicaciones post tratamiento:",
-          "body": [
-            {
-              "desc": "NO exponer la zona tratada con IPL al SOL."
             },
             {
-              "desc": "Hidratar por las noche siempre con cremas y por la mañana siempre utilizar fotoprotección (pantalla solar) en zonas expuestas que han sido tratadas con IPL.Si de igaul modo esta muy expuesto al sol,renovar la pantalla solar cada 2 hrs aprox. Ante cualquier molestia comunicarse con un profesional."
-            }
-          ]
-        },
-        {
-          "title": "Contraindicaciones:",
-          "body": [
-            {
-              "desc": "Embarazo y lactancia."
+              "desc": "Evitar prendas ajustadas sobre la zona a tratar."
             },
             {
-              "desc": "Pacientes diabéticos descompensados o sin tratamiento."
-            },
-            {
-              "desc": "Pacientes con vitíligo",
-              "verMas": { "href": "#" }
+              "desc": "Utilizar prendas que faciliten la transpiración."
             }
           ]
         }

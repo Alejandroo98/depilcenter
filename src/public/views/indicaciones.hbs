@@ -55,34 +55,13 @@
   <section class="container-master">
     {{> navbar }}
 
-    <section class="container mt-5 mb-3">
-      <div class="row rounded margin-x">
-        <div class="ui accordion servicios-responsive py-3">
-          <div class="title">
-            <i class="dropdown icon"></i>
-            SERVICIOS
-          </div>
-          <div class="content">
-            <div class="rounded shadow-sm servicios-items-box">
-              {{#each items}}
-              <div id="{{ seo.id }}_" class="servicios-items">
-                <a href="/indicaciones?servicio={{ seo.id }}">
-                  • {{ seo.title }}
-                </a>
-              </div>
-              <hr>
-              {{/each}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <section class="container container-servicios mb-5" style="position: relative; display: block;">
       <div class="row">
         <div class="col-lg-9 col-md-12">
           {{#each servicios }}
-          <div class="row p-lg-5 padding-xy rounded mb-5 margin-x" style="background-color: #fff;">
+          <div class="row p-lg-5 padding-xy rounded  margin-x" style="background-color: #fff;">
             <div class="col-12  p-0 px-3 title-seo">
               <h4>{{ mayuscula seo.title }}</h4>
               {{#if descuento}}
@@ -95,7 +74,7 @@
             </div>
             <div class="col-12 p-0 ">
               <div class="row m-0">
-                <div class="col-lg-10 ">
+                <div class="col-lg-10 p-sm-0 p-md-5">
                   {{#each indicaciones}}
                   <div class="my-4">
                     {{#if title }}
@@ -118,12 +97,20 @@
                   {{/each}}
                 </div>
                 {{#if img}}
-                <div class="col-lg-2 p-2 ">
-                  <div>
+                <div class="col-lg-2 p-2">
+                  <div class="row">
                     {{#each img}}
-                    <div class="mb-4" style=" box-shadow: var(--sombra);">
-                      <img class="rounded mx-auto d-block" width="100%" src="{{ url }}" alt="{{ alt }}">
+                    {{#if title }}
+                    <div class="title-body-img">
+                      <p> {{title}} </p>
                     </div>
+                    {{/if}}
+                    {{#each body }}
+                    <div class="mb-4 col-4 col-lg-12  img-servicio"
+                      style="box-shadow: var(--sombra); padding-right: 0 !important; padding-left: 0 !important">
+                      <img class="" width="100%" src="{{ url }}" alt="{{ alt }}">
+                    </div>
+                    {{/each}}
                     {{/each }}
                   </div>
                 </div>
@@ -133,30 +120,28 @@
             </div>
 
 
-            {{#if nota}}
+            {{!-- #if nota
             <div class="col-12 p-4 mb-3 rounded note-card">
-              {{#each nota}}
+              #each nota
 
               <p>
-                • <b>{{ title }}: </b>{{ content }} <br>
+                • <b> title : </b> content <br>
               </p>
-              {{/each }}
+              /each
             </div>
-            {{/if}}
+            /if --}}
 
 
             <div class="col-12">
               <a class="btn" style="border:2px solid var(--base); color: var(--base); box-shadow: var(--sombra)"
-                href="{{ url }}">Cotizar | Agendar</a>
+                href="{{url}}">Cotizar</a>
             </div>
           </div>
           {{/each }}
         </div>
 
 
-
-
-        <div class="col-3 p-0 rounded servicios-enlaces">
+        <div class="col-3 pt-5 rounded servicios-enlaces">
           <div class="rounded items-links shadow-sm">
             {{#each items}}
             <div id="{{ seo.id }}">
@@ -172,11 +157,12 @@
             {{/each}}
           </div>
         </div>
-
-
       </div>
 
+
+
     </section>
+
 
 
 
