@@ -2,7 +2,7 @@
   {
     "id": "d_cera",
     "circleName": "NUEVO",
-    "title": "PROMO MARZO",
+    "title": "PROMO MAYO",
     "subtitle": "Depilación con cera tibia",
     "nroSesiones": "∞",
     "precio": {
@@ -14,7 +14,7 @@
       "masInfo": "#"
     },
     "desc": "Piernas completas + bikini full + axilas",
-    "data_desc": "PROMO MARZO"
+    "data_desc": "PROMO MAYO"
   },
   {
     "id": "d_laser",

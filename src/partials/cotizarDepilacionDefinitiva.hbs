@@ -50,9 +50,9 @@
             <div>
             </div>
             <div class="body-card-ipl">
-                <b> Precio total:</b> ${{ precioIndividual }}. <br>
                 <b> Nro sesiones: </b> {{ nroSesiones }}. <br>
-                <b> Precio por sesion: </b> {{ valorPorSesion precioIndividual nroSesiones }}. <br>
+                <b> Precio normal:</b> ${{ precioIndividual }}. <br>
+                {{!-- <b> Precio por sesion: </b> {{ valorPorSesion precioIndividual nroSesiones. <br> --}}
                 {{#if descuentoBool}}
                 <b> Precio promo: </b> ${{ precioPromo precioIndividual descuento }} <br>
                 {{/if}}
@@ -104,9 +104,9 @@
                 {{/if}}
             </div>
             <div class="body-card-ipl">
-                <b> Precio normal:</b> ${{ precioIndividual }}. <br>
                 <b> Nro sesiones: </b> {{ nroSesiones }}. <br>
-                <b> Precio por sesion: </b> {{ valorPorSesion precioIndividual nroSesiones }}. <br>
+                <b> Precio normal:</b> ${{ precioIndividual }}. <br>
+                {{!-- <b> Precio por sesion: </b> {{ valorPorSesion precioIndividual nroSesiones . <br> --}}
                 {{#if descuentoBool}}
                 <b> Precio promo: </b> ${{ precioPromo precioIndividual descuento }} <br>
                 {{/if}}
