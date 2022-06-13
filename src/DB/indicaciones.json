@@ -124,6 +124,58 @@
         }
       ]
     },
+    "despigmentacion": {
+      "seo": {
+        "id": "despigmentacion",
+        "title": "Despigmentacion",
+        "desc": "Esta es la descripción que ira en el header del view"
+      },
+      "descuento": {
+        "title": "HASTA 40% DE DESCUENTO"
+      },
+      "url": "/cotizar/depilacion-definitiva?genero=despigmentacion",
+      "indicaciones": [
+        {
+          "title": "Indicaciones y recomendaciones.",
+          "body": [
+            {
+              "short_desc": "SHR/OPT es una tecnología de depilación que está teniendo un gran éxito.",
+              "desc": "Depilar el area antes de visitarnos con el método de su preferencia, a menos que la promoción incluya depilación.",
+              "verMas": { "href": "/indicaciones?servicio=despigmentacion" }
+            },
+            {
+              "desc": "Haber evitado la exposición al sol en forma intensa en las últimas 2 semanas."
+            },
+            {
+              "desc": "Recomendamos postergar su cita si la zona sufre de alguna lesion. ( Quemadura, vellos incrustados etc )"
+            },
+            {
+              "desc": "Asistir con la piel libre de maquillaje, desodorante etc."
+            },
+            {
+              "desc": "En caso de realizarse otro tipo de tratamiento en la zona, peeling (físico, químico o mecánico, etc) debe transcurrir una semana entre ambos."
+            },
+            {
+              "desc": "Evitar prendas ajustadas sobre la zona a tratar."
+            },
+            {
+              "desc": "Utilizar prendas que faciliten la transpiración."
+            }
+          ]
+        }
+      ],
+      "img": [],
+      "nota": [
+        {
+          "title": "Numero sesiones",
+          "content": "8 ( Esto variara de acuerdo a cada paciente )"
+        },
+        {
+          "title": "Precio por zona",
+          "content": "$20"
+        }
+      ]
+    },
     "l_facial": {
       "seo": {
         "id": "l_facial",
